@@ -290,7 +290,13 @@ class _ProductosWidgetState extends State<ProductosWidget> {
                                         24.0, 0.0, 24.0, 0.0),
                                     iconPadding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 0.0, 0.0),
-                                    color: Color(0xFFE8A479),
+                                    color: _model.pageCategories
+                                            .contains(getJsonField(
+                                      categoryAllItem,
+                                      r'''$._id._id''',
+                                    ).toString())
+                                        ? Color(0xFFEE5F01)
+                                        : Color(0xFFE8A479),
                                     textStyle: FlutterFlowTheme.of(context)
                                         .titleSmall
                                         .override(
