@@ -22,6 +22,11 @@ class ProductosModel extends FlutterFlowModel {
   PagingController<ApiPagingParams, dynamic>? listViewPagingController1;
   Function(ApiPagingParams nextPageMarker)? listViewApiCall1;
 
+  // State field(s) for ListView widget.
+
+  PagingController<ApiPagingParams, dynamic>? listViewPagingController2;
+  Function(ApiPagingParams nextPageMarker)? listViewApiCall2;
+
   /// Initialization and disposal methods.
 
   void initState(BuildContext context) {}
@@ -30,6 +35,7 @@ class ProductosModel extends FlutterFlowModel {
     unfocusNode.dispose();
     textController?.dispose();
     listViewPagingController1?.dispose();
+    listViewPagingController2?.dispose();
   }
 
   /// Action blocks are added here.
@@ -72,6 +78,46 @@ class ProductosModel extends FlutterFlowModel {
                   nextPageNumber: nextPageMarker.nextPageNumber + 1,
                   numItems: newNumItems,
                   lastResponse: listViewCategoryallResponse,
+                )
+              : null,
+        );
+      });
+
+  PagingController<ApiPagingParams, dynamic> setListViewController2(
+    Function(ApiPagingParams) apiCall,
+  ) {
+    listViewApiCall2 = apiCall;
+    return listViewPagingController2 ??= _createListViewController2(apiCall);
+  }
+
+  PagingController<ApiPagingParams, dynamic> _createListViewController2(
+    Function(ApiPagingParams) query,
+  ) {
+    final controller = PagingController<ApiPagingParams, dynamic>(
+      firstPageKey: ApiPagingParams(
+        nextPageNumber: 0,
+        numItems: 0,
+        lastResponse: null,
+      ),
+    );
+    return controller..addPageRequestListener(listViewProductallPage2);
+  }
+
+  void listViewProductallPage2(ApiPagingParams nextPageMarker) =>
+      listViewApiCall2!(nextPageMarker).then((listViewProductallResponse) {
+        final pageItems = (ShopGroup.productallCall.allProducts(
+                  listViewProductallResponse.jsonBody,
+                )! ??
+                [])
+            .toList() as List;
+        final newNumItems = nextPageMarker.numItems + pageItems.length;
+        listViewPagingController2?.appendPage(
+          pageItems,
+          (pageItems.length > 0)
+              ? ApiPagingParams(
+                  nextPageNumber: nextPageMarker.nextPageNumber + 1,
+                  numItems: newNumItems,
+                  lastResponse: listViewProductallResponse,
                 )
               : null,
         );
