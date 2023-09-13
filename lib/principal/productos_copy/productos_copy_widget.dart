@@ -336,11 +336,8 @@ class _ProductosCopyWidgetState extends State<ProductosCopyWidget> {
                 ),
                 FutureBuilder<ApiCallResponse>(
                   future: ShopGroup.productallCall.call(
-                    filterCategoriesJson: getJsonField(
-                      functions.transformToJSON(
-                          FFAppState().pageCategories.toList()),
-                      r'''$''',
-                    ),
+                    filterCategoriesJson: functions
+                        .transformToJSON(FFAppState().pageCategories.toList()),
                     authToken: FFAppState().authUser.accessToken,
                     pageNum: 1,
                   ),
