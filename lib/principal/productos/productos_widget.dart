@@ -259,12 +259,26 @@ class _ProductosWidgetState extends State<ProductosWidget> {
                                     categoryAll[categoryAllIndex];
                                 return FFButtonWidget(
                                   onPressed: () async {
-                                    setState(() {
-                                      _model.addToPageCategories(getJsonField(
-                                        listViewCategoryallResponse.jsonBody,
-                                        r'''$._id._id''',
-                                      ).toString());
-                                    });
+                                    if (_model.pageCategories
+                                        .contains(getJsonField(
+                                      categoryAllItem,
+                                      r'''$._id._id''',
+                                    ).toString())) {
+                                      setState(() {
+                                        _model.removeFromPageCategories(
+                                            getJsonField(
+                                          categoryAllItem,
+                                          r'''$._id._id''',
+                                        ).toString());
+                                      });
+                                    } else {
+                                      setState(() {
+                                        _model.addToPageCategories(getJsonField(
+                                          listViewCategoryallResponse.jsonBody,
+                                          r'''$._id._id''',
+                                        ).toString());
+                                      });
+                                    }
                                   },
                                   text: getJsonField(
                                     categoryAllItem,
