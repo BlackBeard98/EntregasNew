@@ -6,6 +6,7 @@ import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:infinite_scroll_pagination/infinite_scroll_pagination.dart';
 import 'package:provider/provider.dart';
 import 'productos_model.dart';
 export 'productos_model.dart';
@@ -127,20 +128,6 @@ class _ProductosWidgetState extends State<ProductosWidget> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 0.0, 0.0),
-                  child: Text(
-                    FFLocalizations.of(context).getText(
-                      '3xhea9zo' /* Stay up to date with the lates... */,
-                    ),
-                    style: FlutterFlowTheme.of(context).labelMedium.override(
-                          fontFamily: 'Plus Jakarta Sans',
-                          color: Color(0xFF606A85),
-                          fontSize: 14.0,
-                          fontWeight: FontWeight.w500,
-                        ),
-                  ),
-                ),
-                Padding(
                   padding:
                       EdgeInsetsDirectional.fromSTEB(16.0, 16.0, 16.0, 8.0),
                   child: TextFormField(
@@ -220,105 +207,106 @@ class _ProductosWidgetState extends State<ProductosWidget> {
                   child: Padding(
                     padding:
                         EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
-                    child: FutureBuilder<ApiCallResponse>(
-                      future: ShopGroup.categoryallCall.call(
-                        pageNum: 1,
-                        authToken: FFAppState().authUser.accessToken,
+                    child: PagedListView<ApiPagingParams, dynamic>.separated(
+                      pagingController: _model.setListViewController1(
+                        (nextPageMarker) => ShopGroup.categoryallCall.call(
+                          pageNum: nextPageMarker.nextPageNumber + 1,
+                          authToken: FFAppState().authUser.accessToken,
+                        ),
                       ),
-                      builder: (context, snapshot) {
-                        // Customize what your widget looks like when it's loading.
-                        if (!snapshot.hasData) {
-                          return Center(
-                            child: SizedBox(
-                              width: 50.0,
-                              height: 50.0,
-                              child: CircularProgressIndicator(
-                                valueColor: AlwaysStoppedAnimation<Color>(
-                                  FlutterFlowTheme.of(context).primary,
-                                ),
+                      padding: EdgeInsets.symmetric(horizontal: 16.0),
+                      shrinkWrap: true,
+                      reverse: false,
+                      scrollDirection: Axis.horizontal,
+                      separatorBuilder: (_, __) => SizedBox(width: 16.0),
+                      builderDelegate: PagedChildBuilderDelegate<dynamic>(
+                        // Customize what your widget looks like when it's loading the first page.
+                        firstPageProgressIndicatorBuilder: (_) => Center(
+                          child: SizedBox(
+                            width: 50.0,
+                            height: 50.0,
+                            child: CircularProgressIndicator(
+                              valueColor: AlwaysStoppedAnimation<Color>(
+                                FlutterFlowTheme.of(context).primary,
                               ),
                             ),
-                          );
-                        }
-                        final listViewCategoryallResponse = snapshot.data!;
-                        return Builder(
-                          builder: (context) {
-                            final categoryAll = getJsonField(
-                              listViewCategoryallResponse.jsonBody,
-                              r'''$[*]''',
-                            ).toList();
-                            return ListView.separated(
-                              padding: EdgeInsets.symmetric(horizontal: 16.0),
-                              shrinkWrap: true,
-                              scrollDirection: Axis.horizontal,
-                              itemCount: categoryAll.length,
-                              separatorBuilder: (_, __) =>
-                                  SizedBox(width: 16.0),
-                              itemBuilder: (context, categoryAllIndex) {
-                                final categoryAllItem =
-                                    categoryAll[categoryAllIndex];
-                                return FFButtonWidget(
-                                  onPressed: () async {
-                                    if (FFAppState()
-                                        .pageCategories
-                                        .contains(getJsonField(
-                                          categoryAllItem,
-                                          r'''$._id._id''',
-                                        ).toString())) {
-                                      setState(() {
-                                        FFAppState().removeFromPageCategories(
-                                            getJsonField(
-                                          categoryAllItem,
-                                          r'''$._id._id''',
-                                        ).toString());
-                                      });
-                                    } else {
-                                      setState(() {
-                                        FFAppState()
-                                            .addToPageCategories(getJsonField(
-                                          categoryAllItem,
-                                          r'''$._id._id''',
-                                        ).toString());
-                                      });
-                                    }
-                                  },
-                                  text: getJsonField(
+                          ),
+                        ),
+                        // Customize what your widget looks like when it's loading another page.
+                        newPageProgressIndicatorBuilder: (_) => Center(
+                          child: SizedBox(
+                            width: 50.0,
+                            height: 50.0,
+                            child: CircularProgressIndicator(
+                              valueColor: AlwaysStoppedAnimation<Color>(
+                                FlutterFlowTheme.of(context).primary,
+                              ),
+                            ),
+                          ),
+                        ),
+
+                        itemBuilder: (context, _, categoryAllIndex) {
+                          final categoryAllItem = _model
+                              .listViewPagingController1!
+                              .itemList![categoryAllIndex];
+                          return FFButtonWidget(
+                            onPressed: () async {
+                              if (FFAppState()
+                                  .pageCategories
+                                  .contains(getJsonField(
                                     categoryAllItem,
-                                    r'''$.name''',
-                                  ).toString(),
-                                  options: FFButtonOptions(
-                                    height: 10.0,
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        24.0, 0.0, 24.0, 0.0),
-                                    iconPadding: EdgeInsetsDirectional.fromSTEB(
-                                        0.0, 0.0, 0.0, 0.0),
-                                    color: FFAppState()
-                                            .pageCategories
-                                            .contains(getJsonField(
-                                              categoryAllItem,
-                                              r'''$._id._id''',
-                                            ).toString())
-                                        ? Color(0xFFEE5F01)
-                                        : Color(0xFFE8A479),
-                                    textStyle: FlutterFlowTheme.of(context)
-                                        .titleSmall
-                                        .override(
-                                          fontFamily: 'Readex Pro',
-                                          color: Colors.white,
-                                        ),
-                                    elevation: 3.0,
-                                    borderSide: BorderSide(
-                                      color: Colors.transparent,
-                                      width: 1.0,
-                                    ),
-                                    borderRadius: BorderRadius.circular(8.0),
+                                    r'''$._id._id''',
+                                  ).toString())) {
+                                setState(() {
+                                  FFAppState()
+                                      .removeFromPageCategories(getJsonField(
+                                    categoryAllItem,
+                                    r'''$._id._id''',
+                                  ).toString());
+                                });
+                              } else {
+                                setState(() {
+                                  FFAppState().addToPageCategories(getJsonField(
+                                    categoryAllItem,
+                                    r'''$._id._id''',
+                                  ).toString());
+                                });
+                              }
+                            },
+                            text: getJsonField(
+                              categoryAllItem,
+                              r'''$.name''',
+                            ).toString(),
+                            options: FFButtonOptions(
+                              height: 10.0,
+                              padding: EdgeInsetsDirectional.fromSTEB(
+                                  24.0, 0.0, 24.0, 0.0),
+                              iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                  0.0, 0.0, 0.0, 0.0),
+                              color: FFAppState()
+                                      .pageCategories
+                                      .contains(getJsonField(
+                                        categoryAllItem,
+                                        r'''$._id._id''',
+                                      ).toString())
+                                  ? Color(0xFFEE5F01)
+                                  : Color(0xFFE8A479),
+                              textStyle: FlutterFlowTheme.of(context)
+                                  .titleSmall
+                                  .override(
+                                    fontFamily: 'Readex Pro',
+                                    color: Colors.white,
                                   ),
-                                );
-                              },
-                            );
-                          },
-                        );
-                      },
+                              elevation: 3.0,
+                              borderSide: BorderSide(
+                                color: Colors.transparent,
+                                width: 1.0,
+                              ),
+                              borderRadius: BorderRadius.circular(8.0),
+                            ),
+                          );
+                        },
+                      ),
                     ),
                   ),
                 ),

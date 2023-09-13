@@ -165,10 +165,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // Productos
   {
-    '3xhea9zo': {
-      'es': 'Stay up to date with the latest news below.',
-      'en': '',
-    },
     'h4c8ksu0': {
       'es': 'Buscar Producto',
       'en': '',
