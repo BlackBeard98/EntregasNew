@@ -59,7 +59,10 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
             FFRoute(
               name: 'Productos',
               path: 'productos',
-              builder: (context, params) => ProductosWidget(),
+              builder: (context, params) => ProductosWidget(
+                categorySelected: params.getParam<String>(
+                    'categorySelected', ParamType.String, true),
+              ),
             )
           ].map((r) => r.toRoute(appStateNotifier)).toList(),
         ),

@@ -379,7 +379,16 @@ class _LoginWidgetState extends State<LoginWidget> {
                                           );
                                         });
 
-                                        context.goNamed('Productos');
+                                        context.goNamed(
+                                          'Productos',
+                                          queryParameters: {
+                                            'categorySelected': serializeParam(
+                                              [],
+                                              ParamType.String,
+                                              true,
+                                            ),
+                                          }.withoutNulls,
+                                        );
                                       } else {
                                         ScaffoldMessenger.of(context)
                                             .showSnackBar(

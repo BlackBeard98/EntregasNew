@@ -12,7 +12,12 @@ import 'productos_model.dart';
 export 'productos_model.dart';
 
 class ProductosWidget extends StatefulWidget {
-  const ProductosWidget({Key? key}) : super(key: key);
+  const ProductosWidget({
+    Key? key,
+    required this.categorySelected,
+  }) : super(key: key);
+
+  final List<String>? categorySelected;
 
   @override
   _ProductosWidgetState createState() => _ProductosWidgetState();
