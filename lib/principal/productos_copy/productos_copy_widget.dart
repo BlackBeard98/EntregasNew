@@ -31,15 +31,7 @@ class _ProductosCopyWidgetState extends State<ProductosCopyWidget> {
 
     // On page load action.
     SchedulerBinding.instance.addPostFrameCallback((_) async {
-      if (FFAppState().authUser.isLogued) {
-        setState(() {
-          FFAppState().pageCategories = [].toList().cast<String>();
-          FFAppState().pageCategories = functions
-              .checkNullabilty(FFAppState().pageCategories.toList())
-              .toList()
-              .cast<String>();
-        });
-      } else {
+      if (!FFAppState().authUser.isLogued) {
         context.pushNamed('login');
       }
     });
