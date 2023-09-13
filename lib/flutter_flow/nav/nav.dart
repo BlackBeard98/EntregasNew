@@ -59,12 +59,28 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
             FFRoute(
               name: 'Productos',
               path: 'productos',
-              builder: (context, params) => ProductosWidget(),
+              builder: (context, params) => params.isEmpty
+                  ? NavBarPage(initialPage: 'Productos')
+                  : ProductosWidget(),
             ),
             FFRoute(
               name: 'Carrito',
               path: 'carrito',
-              builder: (context, params) => CarritoWidget(),
+              builder: (context, params) => params.isEmpty
+                  ? NavBarPage(initialPage: 'Carrito')
+                  : CarritoWidget(),
+            ),
+            FFRoute(
+              name: 'prof',
+              path: 'prof',
+              builder: (context, params) => ProfWidget(),
+            ),
+            FFRoute(
+              name: 'Cuenta',
+              path: 'cuenta',
+              builder: (context, params) => params.isEmpty
+                  ? NavBarPage(initialPage: 'Cuenta')
+                  : CuentaWidget(),
             )
           ].map((r) => r.toRoute(appStateNotifier)).toList(),
         ),

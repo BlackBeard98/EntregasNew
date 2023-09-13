@@ -5,6 +5,7 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'login_model.dart';
@@ -26,6 +27,13 @@ class _LoginWidgetState extends State<LoginWidget> {
   void initState() {
     super.initState();
     _model = createModel(context, () => LoginModel());
+
+    // On page load action.
+    SchedulerBinding.instance.addPostFrameCallback((_) async {
+      if (FFAppState().authUser.isLogued) {
+        context.pushNamed('Productos');
+      }
+    });
 
     _model.emailAddressController ??= TextEditingController();
     _model.passwordController ??= TextEditingController();
@@ -170,7 +178,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                                           ),
                                       enabledBorder: OutlineInputBorder(
                                         borderSide: BorderSide(
-                                          color: Color(0xFFE0E3E7),
+                                          color: Color(0xFFECC1A4),
                                           width: 2.0,
                                         ),
                                         borderRadius:
@@ -178,7 +186,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                                       ),
                                       focusedBorder: OutlineInputBorder(
                                         borderSide: BorderSide(
-                                          color: Color(0xFF4B39EF),
+                                          color: Color(0xFFEE5F01),
                                           width: 2.0,
                                         ),
                                         borderRadius:
@@ -246,7 +254,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                                           ),
                                       enabledBorder: OutlineInputBorder(
                                         borderSide: BorderSide(
-                                          color: Color(0xFFE0E3E7),
+                                          color: Color(0xFFECC1A4),
                                           width: 2.0,
                                         ),
                                         borderRadius:
@@ -254,7 +262,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                                       ),
                                       focusedBorder: OutlineInputBorder(
                                         borderSide: BorderSide(
-                                          color: Color(0xFF4B39EF),
+                                          color: Color(0xFFEE5F01),
                                           width: 2.0,
                                         ),
                                         borderRadius:
@@ -410,7 +418,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                                       iconPadding:
                                           EdgeInsetsDirectional.fromSTEB(
                                               0.0, 0.0, 0.0, 0.0),
-                                      color: Color(0xFF4B39EF),
+                                      color: Color(0xFFEE5F01),
                                       textStyle: FlutterFlowTheme.of(context)
                                           .titleSmall
                                           .override(

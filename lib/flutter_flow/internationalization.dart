@@ -233,7 +233,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': '',
     },
     'huv737bh': {
-      'es': 'Home',
+      'es': 'Productos',
       'en': '',
     },
   },
@@ -329,13 +329,67 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': '',
     },
     '0swvummf': {
-      'es': 'Home',
+      'es': 'Carrito',
+      'en': '',
+    },
+  },
+  // prof
+  {
+    'xgzo6tm4': {
+      'es': 'Edit Profile',
+      'en': '',
+    },
+    'lab1wa0t': {
+      'es': 'Change Password',
+      'en': '',
+    },
+    'c5ccqkmj': {
+      'es': 'Notification Settings',
+      'en': '',
+    },
+    'kc98cdpi': {
+      'es': 'Terms of Services',
+      'en': '',
+    },
+    '4e8p7929': {
+      'es': 'Log Out',
+      'en': '',
+    },
+  },
+  // Cuenta
+  {
+    'ixn2xl9q': {
+      'es': 'Cuenta',
+      'en': '',
+    },
+    'fxy31tyl': {
+      'es': 'Mis Direcciones',
+      'en': '',
+    },
+    'cfgza21n': {
+      'es': 'Mis Pedidods',
+      'en': '',
+    },
+    'ubwh3cy0': {
+      'es': 'Editar Perfil',
+      'en': '',
+    },
+    'mk2iuj27': {
+      'es': 'Mi Carrito',
+      'en': '',
+    },
+    '7y5t6zh6': {
+      'es': 'Cerrar Sesión ',
+      'en': '',
+    },
+    'q0brshwt': {
+      'es': 'Cuenta',
       'en': '',
     },
   },
   // ProductosVacio
   {
-    'k6qchx4n': {
+    '4xe3xccq': {
       'es': 'No Hay Productos',
       'en': '',
     },
