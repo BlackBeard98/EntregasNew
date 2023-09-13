@@ -34,7 +34,10 @@ class _ProductosCopyWidgetState extends State<ProductosCopyWidget> {
       if (FFAppState().authUser.isLogued) {
         setState(() {
           FFAppState().pageCategories = [].toList().cast<String>();
-          FFAppState().pageCategories = [].toList().cast<String>();
+          FFAppState().pageCategories = functions
+              .checkNullabilty(FFAppState().pageCategories.toList())
+              .toList()
+              .cast<String>();
         });
       } else {
         context.pushNamed('login');
@@ -274,7 +277,7 @@ class _ProductosCopyWidgetState extends State<ProductosCopyWidget> {
                                 });
                               }
 
-                              context.pushNamed('ProductosCopy');
+                              context.pushNamed('Productos');
                             },
                             text: getJsonField(
                               categoryAllItem,
