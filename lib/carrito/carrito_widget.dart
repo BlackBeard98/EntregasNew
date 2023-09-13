@@ -30,7 +30,11 @@ class _CarritoWidgetState extends State<CarritoWidget> {
     _model = createModel(context, () => CarritoModel());
 
     // On page load action.
-    SchedulerBinding.instance.addPostFrameCallback((_) async {});
+    SchedulerBinding.instance.addPostFrameCallback((_) async {
+      if (!FFAppState().authUser.isLogued) {
+        context.pushNamed('login');
+      }
+    });
 
     WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
