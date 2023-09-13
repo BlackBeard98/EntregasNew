@@ -333,6 +333,13 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': '',
     },
   },
+  // ProductosVacio
+  {
+    'k6qchx4n': {
+      'es': 'No Hay Productos',
+      'en': '',
+    },
+  },
   // Miscellaneous
   {
     'z8l0t4cu': {

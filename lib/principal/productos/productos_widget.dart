@@ -1,4 +1,5 @@
 import '/backend/api_requests/api_calls.dart';
+import '/components/productos_vacio_widget.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
@@ -370,7 +371,7 @@ class _ProductosWidgetState extends State<ProductosWidget> {
                         ),
                       ),
                     ),
-
+                    noItemsFoundIndicatorBuilder: (_) => ProductosVacioWidget(),
                     itemBuilder: (context, _, productosIndex) {
                       final productosItem = _model
                           .listViewPagingController2!.itemList![productosIndex];
