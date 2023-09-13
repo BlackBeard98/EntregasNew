@@ -469,6 +469,11 @@ class _LoginWidgetState extends State<LoginWidget> {
                                                 fontSize: 14.0,
                                                 fontWeight: FontWeight.w600,
                                               ),
+                                          mouseCursor: SystemMouseCursors.click,
+                                          recognizer: TapGestureRecognizer()
+                                            ..onTap = () async {
+                                              context.pushNamed('registro');
+                                            },
                                         )
                                       ],
                                       style: FlutterFlowTheme.of(context)

@@ -335,54 +335,54 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // prof
   {
-    'z8sjz2i1': {
+    'pftsqfg4': {
       'es': 'Edit Profile',
       'en': '',
     },
-    'ztf3panw': {
+    'gtnqp6mc': {
       'es': 'Change Password',
       'en': '',
     },
-    '9huxixh4': {
+    'duwadtcn': {
       'es': 'Notification Settings',
       'en': '',
     },
-    '49ps4fil': {
+    'sx76ae9s': {
       'es': 'Terms of Services',
       'en': '',
     },
-    'v121ndgk': {
+    '0l54u1qc': {
       'es': 'Log Out',
       'en': '',
     },
   },
   // Cuenta
   {
-    '3ze8jno1': {
+    'hvbwwzb3': {
       'es': 'Cuenta',
       'en': '',
     },
-    'e5sukugg': {
+    'aotzbzzd': {
       'es': 'Mis Direcciones',
       'en': '',
     },
-    'vz2ra0gz': {
+    'vec1gphi': {
       'es': 'Mis Pedidods',
       'en': '',
     },
-    'p4vvuxwb': {
+    '6xd693ky': {
       'es': 'Editar Perfil',
       'en': '',
     },
-    'ol3xjw75': {
+    '6k50k074': {
       'es': 'Mi Carrito',
       'en': '',
     },
-    '0rmr6hs8': {
+    'c78qzvt7': {
       'es': 'Cerrar Sesión ',
       'en': '',
     },
-    'a70y2ubw': {
+    'o2t4urq7': {
       'es': 'Cuenta',
       'en': '',
     },
@@ -440,7 +440,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // ProductosVacio
   {
-    'n2f8gwdi': {
+    'pafh0d47': {
       'es': 'No Hay Productos',
       'en': '',
     },
