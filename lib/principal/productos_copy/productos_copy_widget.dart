@@ -274,7 +274,7 @@ class _ProductosCopyWidgetState extends State<ProductosCopyWidget> {
                                 });
                               }
 
-                              context.pushNamed('Productos');
+                              context.pushNamed('ProductosCopy');
                             },
                             text: getJsonField(
                               categoryAllItem,
