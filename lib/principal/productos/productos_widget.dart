@@ -211,7 +211,7 @@ class _ProductosWidgetState extends State<ProductosWidget> {
                   width: MediaQuery.sizeOf(context).width * 1.0,
                   height: 35.0,
                   decoration: BoxDecoration(
-                    color: FlutterFlowTheme.of(context).secondaryBackground,
+                    color: Colors.white,
                   ),
                   child: Padding(
                     padding:
@@ -258,7 +258,7 @@ class _ProductosWidgetState extends State<ProductosWidget> {
                                     print('Button pressed ...');
                                   },
                                   text: getJsonField(
-                                    listViewCategoryallResponse.jsonBody,
+                                    categoryAllItem,
                                     r'''$.name''',
                                   ).toString(),
                                   options: FFButtonOptions(
