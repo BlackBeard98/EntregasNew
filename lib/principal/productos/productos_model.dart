@@ -67,10 +67,15 @@ class ProductosModel extends FlutterFlowModel {
 
   void listViewProductallPage2(ApiPagingParams nextPageMarker) =>
       listViewApiCall2!(nextPageMarker).then((listViewProductallResponse) {
-        final pageItems = (getJsonField(
-                  listViewProductallResponse.jsonBody,
-                  r'''$[*]''',
-                ) ??
+        final pageItems = (ShopGroup.productallCall
+                    .allProducts(
+                      listViewProductallResponse.jsonBody,
+                    )!
+                    .where((e) => _model.pageCategories.contains(getJsonField(
+                          e,
+                          r'''$.categoryId._id''',
+                        ).toString().toString()))
+                    .toList() ??
                 [])
             .toList() as List;
         final newNumItems = nextPageMarker.numItems + pageItems.length;
