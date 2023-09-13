@@ -11,6 +11,16 @@ import 'package:infinite_scroll_pagination/infinite_scroll_pagination.dart';
 import 'package:provider/provider.dart';
 
 class ProductosModel extends FlutterFlowModel {
+  ///  Local state fields for this page.
+
+  List<String> pageCategories = [];
+  void addToPageCategories(String item) => pageCategories.add(item);
+  void removeFromPageCategories(String item) => pageCategories.remove(item);
+  void removeAtIndexFromPageCategories(int index) =>
+      pageCategories.removeAt(index);
+  void updatePageCategoriesAtIndex(int index, Function(String) updateFn) =>
+      pageCategories[index] = updateFn(pageCategories[index]);
+
   ///  State fields for stateful widgets in this page.
 
   final unfocusNode = FocusNode();

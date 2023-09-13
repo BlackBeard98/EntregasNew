@@ -36,7 +36,12 @@ class _ProductosWidgetState extends State<ProductosWidget> {
 
     // On page load action.
     SchedulerBinding.instance.addPostFrameCallback((_) async {
-      if (!FFAppState().authUser.isLogued) {
+      if (FFAppState().authUser.isLogued) {
+        setState(() {
+          _model.pageCategories =
+              widget.categorySelected!.toList().cast<String>();
+        });
+      } else {
         context.pushNamed('login');
       }
     });
@@ -266,7 +271,7 @@ class _ProductosWidgetState extends State<ProductosWidget> {
                                       queryParameters: {
                                         'categorySelected': serializeParam(
                                           functions.addOrRemoveCat(
-                                              widget.categorySelected!.toList(),
+                                              _model.pageCategories.toList(),
                                               getJsonField(
                                                 categoryAllItem,
                                                 r'''$._id._id''',
