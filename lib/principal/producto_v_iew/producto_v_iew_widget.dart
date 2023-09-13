@@ -5,8 +5,8 @@ import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import '/flutter_flow/custom_functions.dart' as functions;
 import 'package:badges/badges.dart' as badges;
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
@@ -201,66 +201,51 @@ class _ProductoVIewWidgetState extends State<ProductoVIewWidget>
                 mainAxisSize: MainAxisSize.min,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Padding(
-                    padding:
-                        EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 16.0),
-                    child: Hero(
-                      tag: functions.getImages(getJsonField(
-                        widget.producto,
-                        r'''$.images''',
-                      )!),
-                      transitionOnUserGestures: true,
-                      child: ClipRRect(
-                        borderRadius: BorderRadius.circular(0.0),
-                        child: Image.network(
-                          functions.getImages(getJsonField(
-                            widget.producto,
-                            r'''$.images''',
-                          )!),
-                          width: double.infinity,
-                          height: 430.0,
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                    ),
-                  ),
                   Container(
-                    width: 100.0,
-                    height: 100.0,
+                    width: double.infinity,
+                    height: 300.0,
                     decoration: BoxDecoration(
                       color: FlutterFlowTheme.of(context).secondaryBackground,
                     ),
                     child: Builder(
                       builder: (context) {
-                        final images = getJsonField(
+                        final carouselImg = getJsonField(
                           widget.producto,
                           r'''$.images''',
                         ).toList();
-                        return ListView.separated(
-                          padding: EdgeInsets.zero,
-                          scrollDirection: Axis.horizontal,
-                          itemCount: images.length,
-                          separatorBuilder: (_, __) => SizedBox(width: 10.0),
-                          itemBuilder: (context, imagesIndex) {
-                            final imagesItem = images[imagesIndex];
-                            return Container(
-                              width: 100.0,
-                              height: 100.0,
-                              decoration: BoxDecoration(
-                                color: FlutterFlowTheme.of(context)
-                                    .secondaryBackground,
-                              ),
-                              child: ClipRRect(
+                        return Container(
+                          width: double.infinity,
+                          height: 180.0,
+                          child: CarouselSlider.builder(
+                            itemCount: carouselImg.length,
+                            itemBuilder: (context, carouselImgIndex, _) {
+                              final carouselImgItem =
+                                  carouselImg[carouselImgIndex];
+                              return ClipRRect(
                                 borderRadius: BorderRadius.circular(8.0),
                                 child: Image.network(
-                                  imagesItem,
+                                  carouselImgItem,
                                   width: 300.0,
                                   height: 200.0,
                                   fit: BoxFit.cover,
                                 ),
-                              ),
-                            );
-                          },
+                              );
+                            },
+                            carouselController: _model.carouselController ??=
+                                CarouselController(),
+                            options: CarouselOptions(
+                              initialPage: min(1, carouselImg.length - 1),
+                              viewportFraction: 0.5,
+                              disableCenter: true,
+                              enlargeCenterPage: true,
+                              enlargeFactor: 0.25,
+                              enableInfiniteScroll: true,
+                              scrollDirection: Axis.horizontal,
+                              autoPlay: false,
+                              onPageChanged: (index, _) =>
+                                  _model.carouselCurrentIndex = index,
+                            ),
+                          ),
                         );
                       },
                     ),
