@@ -81,6 +81,11 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               builder: (context, params) => params.isEmpty
                   ? NavBarPage(initialPage: 'Cuenta')
                   : CuentaWidget(),
+            ),
+            FFRoute(
+              name: 'registro',
+              path: 'registro',
+              builder: (context, params) => RegistroWidget(),
             )
           ].map((r) => r.toRoute(appStateNotifier)).toList(),
         ),

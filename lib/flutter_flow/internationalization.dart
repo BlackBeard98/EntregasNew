@@ -335,61 +335,112 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // prof
   {
-    'u9w58ih3': {
+    'xvdh1a8k': {
       'es': 'Edit Profile',
       'en': '',
     },
-    'db1alw0a': {
+    'yfedy11t': {
       'es': 'Change Password',
       'en': '',
     },
-    '70hex572': {
+    'ufpl3d5c': {
       'es': 'Notification Settings',
       'en': '',
     },
-    '8zn6jpc1': {
+    'qytov7z3': {
       'es': 'Terms of Services',
       'en': '',
     },
-    'w0o0aiqv': {
+    'je9xmycv': {
       'es': 'Log Out',
       'en': '',
     },
   },
   // Cuenta
   {
-    '9ay1vxos': {
+    'friyr6ie': {
       'es': 'Cuenta',
       'en': '',
     },
-    'ylw24mfz': {
+    '711oh1ed': {
       'es': 'Mis Direcciones',
       'en': '',
     },
-    'ezw2fnvf': {
+    'wodfdmog': {
       'es': 'Mis Pedidods',
       'en': '',
     },
-    'u79ll9u5': {
+    '1sxbgy29': {
       'es': 'Editar Perfil',
       'en': '',
     },
-    'pnqgn8ya': {
+    'h5ag2ugw': {
       'es': 'Mi Carrito',
       'en': '',
     },
-    'ovi80ig5': {
+    'cdidbm9v': {
       'es': 'Cerrar Sesión ',
       'en': '',
     },
-    'ujm9v7ar': {
+    '2kw8sq1h': {
       'es': 'Cuenta',
+      'en': '',
+    },
+  },
+  // registro
+  {
+    'auknhx7m': {
+      'es': 'Entregas',
+      'en': '',
+    },
+    'u35i37kf': {
+      'es': 'Bienvenido',
+      'en': '',
+    },
+    'emc86s9z': {
+      'es': 'Complete la información a continuación para crear a su cuenta.',
+      'en': '',
+    },
+    'ajba11pp': {
+      'es': 'Nombre',
+      'en': '',
+    },
+    'hgag4u45': {
+      'es': 'Apellido1',
+      'en': '',
+    },
+    'f4qfu4au': {
+      'es': 'Apellido2',
+      'en': '',
+    },
+    '3b0ni7vu': {
+      'es': 'Contraseña',
+      'en': '',
+    },
+    'opjoryn8': {
+      'es': 'Email',
+      'en': '',
+    },
+    'jeq5nexv': {
+      'es': 'Registrase',
+      'en': '',
+    },
+    'smh7sy49': {
+      'es': 'No tienes cuenta? ',
+      'en': '',
+    },
+    'rbrr67xn': {
+      'es': 'Regístrate aquí',
+      'en': '',
+    },
+    'cll6dafm': {
+      'es': 'Home',
       'en': '',
     },
   },
   // ProductosVacio
   {
-    'yrq3aot0': {
+    '5rofwdxu': {
       'es': 'No Hay Productos',
       'en': '',
     },

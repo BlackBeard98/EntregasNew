@@ -6,3 +6,4 @@ export '/principal/productos/productos_widget.dart' show ProductosWidget;
 export '/carrito/carrito/carrito_widget.dart' show CarritoWidget;
 export '/cuenta/prof/prof_widget.dart' show ProfWidget;
 export '/cuenta/cuenta/cuenta_widget.dart' show CuentaWidget;
+export '/auth_reg/registro/registro_widget.dart' show RegistroWidget;
