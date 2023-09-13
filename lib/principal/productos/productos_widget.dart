@@ -256,6 +256,10 @@ class _ProductosWidgetState extends State<ProductosWidget> {
                               .itemList![categoryAllIndex];
                           return FFButtonWidget(
                             onPressed: () async {
+                              setState(() {
+                                FFAppState().contains =
+                                    _model.textController.text;
+                              });
                               if (FFAppState()
                                   .pageCategories
                                   .contains(getJsonField(
