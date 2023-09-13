@@ -274,7 +274,7 @@ class _ProductosWidgetState extends State<ProductosWidget> {
                                     } else {
                                       setState(() {
                                         _model.addToPageCategories(getJsonField(
-                                          listViewCategoryallResponse.jsonBody,
+                                          categoryAllItem,
                                           r'''$._id._id''',
                                         ).toString());
                                       });
