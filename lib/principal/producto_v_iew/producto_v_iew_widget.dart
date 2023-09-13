@@ -239,10 +239,10 @@ class _ProductoVIewWidgetState extends State<ProductoVIewWidget>
                               options: CarouselOptions(
                                 initialPage: min(1, carouselImg.length - 1),
                                 viewportFraction: 0.5,
-                                disableCenter: true,
+                                disableCenter: false,
                                 enlargeCenterPage: true,
                                 enlargeFactor: 0.25,
-                                enableInfiniteScroll: true,
+                                enableInfiniteScroll: false,
                                 scrollDirection: Axis.horizontal,
                                 autoPlay: false,
                                 onPageChanged: (index, _) =>
