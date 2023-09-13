@@ -31,12 +31,7 @@ class _ProductosWidgetState extends State<ProductosWidget> {
 
     // On page load action.
     SchedulerBinding.instance.addPostFrameCallback((_) async {
-      if (FFAppState().authUser.isLogued) {
-        setState(() {
-          FFAppState().pageCategories = [].toList().cast<String>();
-          FFAppState().pageCategories = [].toList().cast<String>();
-        });
-      } else {
+      if (!FFAppState().authUser.isLogued) {
         context.pushNamed('login');
       }
     });
