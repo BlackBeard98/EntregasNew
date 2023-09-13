@@ -32,3 +32,15 @@ String getImages(List<dynamic> images) {
 
   return images.first;
 }
+
+List<String> addOrRemoveCat(
+  List<String> list,
+  String item,
+) {
+  if (list.contains(item)) {
+    list.remove(item);
+  } else {
+    list.add(item);
+  }
+  return list;
+}
