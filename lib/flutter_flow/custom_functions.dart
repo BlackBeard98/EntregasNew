@@ -14,7 +14,7 @@ dynamic transformToJSON(
   List<String>? categoriesSelected,
   String? text,
 ) {
-  String contains = text == "" ? "" : "\"name\":{\"contains\": \"k\"}";
+  String contains = text == "" ? "" : "\"name\":{\"contains\": \"$text\"}";
   String cat = "";
   if (categoriesSelected != null && !categoriesSelected.isEmpty) {
     Iterable<String> quoted = categoriesSelected.map((e) => "\"" + e + "\"");
@@ -22,7 +22,9 @@ dynamic transformToJSON(
     String middle = quoted.join(",");
     cat = "\"categoryId\":{\"in\" : [$middle]}";
   }
-  String data = [contains, cat].join(",");
+  String coma = "";
+  if (contains != "" && cat != "") coma = ",";
+  String data = "$contains $coma $cat";
 
   return jsonDecode("{$data}");
 }

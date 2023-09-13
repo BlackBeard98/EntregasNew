@@ -5,7 +5,6 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/custom_functions.dart' as functions;
-import 'package:easy_debounce/easy_debounce.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -130,16 +129,11 @@ class _ProductosWidgetState extends State<ProductosWidget> {
                       EdgeInsetsDirectional.fromSTEB(16.0, 16.0, 16.0, 8.0),
                   child: TextFormField(
                     controller: _model.textController,
-                    onChanged: (_) => EasyDebounce.debounce(
-                      '_model.textController',
-                      Duration(milliseconds: 2000),
-                      () async {
-                        setState(() {
-                          FFAppState().contains = _model.textController.text;
-                        });
-                      },
-                    ),
                     onFieldSubmitted: (_) async {
+                      setState(() {
+                        FFAppState().contains = _model.textController.text;
+                      });
+
                       context.pushNamed('Productos');
                     },
                     autofocus: true,
