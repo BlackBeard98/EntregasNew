@@ -269,7 +269,7 @@ class CartuserIdCall {
         r'''$.cartItems[:]._id''',
         true,
       );
-  dynamic producto(dynamic response) => getJsonField(
+  dynamic productos(dynamic response) => getJsonField(
         response,
         r'''$.cartItems[:].product''',
         true,

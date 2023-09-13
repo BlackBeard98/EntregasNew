@@ -176,7 +176,7 @@ class _CarritoWidgetState extends State<CarritoWidget> {
                                   return Builder(
                                     builder: (context) {
                                       final cartItems = ShopGroup.cartuserIdCall
-                                              .cartItems(
+                                              .productos(
                                                 listViewCartuserIdResponse
                                                     .jsonBody,
                                               )
