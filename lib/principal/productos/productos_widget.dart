@@ -213,112 +213,109 @@ class _ProductosWidgetState extends State<ProductosWidget> {
                         _model.textControllerValidator.asValidator(context),
                   ),
                 ),
-                if (widget.categorySelected!.toList() != null)
-                  Container(
-                    width: MediaQuery.sizeOf(context).width * 1.0,
-                    height: 35.0,
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                    ),
-                    child: Padding(
-                      padding:
-                          EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
-                      child: FutureBuilder<ApiCallResponse>(
-                        future: ShopGroup.categoryallCall.call(
-                          pageNum: 1,
-                          authToken: FFAppState().authUser.accessToken,
-                        ),
-                        builder: (context, snapshot) {
-                          // Customize what your widget looks like when it's loading.
-                          if (!snapshot.hasData) {
-                            return Center(
-                              child: SizedBox(
-                                width: 50.0,
-                                height: 50.0,
-                                child: CircularProgressIndicator(
-                                  valueColor: AlwaysStoppedAnimation<Color>(
-                                    FlutterFlowTheme.of(context).primary,
-                                  ),
+                Container(
+                  width: MediaQuery.sizeOf(context).width * 1.0,
+                  height: 35.0,
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                  ),
+                  child: Padding(
+                    padding:
+                        EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+                    child: FutureBuilder<ApiCallResponse>(
+                      future: ShopGroup.categoryallCall.call(
+                        pageNum: 1,
+                        authToken: FFAppState().authUser.accessToken,
+                      ),
+                      builder: (context, snapshot) {
+                        // Customize what your widget looks like when it's loading.
+                        if (!snapshot.hasData) {
+                          return Center(
+                            child: SizedBox(
+                              width: 50.0,
+                              height: 50.0,
+                              child: CircularProgressIndicator(
+                                valueColor: AlwaysStoppedAnimation<Color>(
+                                  FlutterFlowTheme.of(context).primary,
                                 ),
                               ),
-                            );
-                          }
-                          final listViewCategoryallResponse = snapshot.data!;
-                          return Builder(
-                            builder: (context) {
-                              final categoryAll = getJsonField(
-                                listViewCategoryallResponse.jsonBody,
-                                r'''$[*]''',
-                              ).toList();
-                              return ListView.separated(
-                                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                                shrinkWrap: true,
-                                scrollDirection: Axis.horizontal,
-                                itemCount: categoryAll.length,
-                                separatorBuilder: (_, __) =>
-                                    SizedBox(width: 16.0),
-                                itemBuilder: (context, categoryAllIndex) {
-                                  final categoryAllItem =
-                                      categoryAll[categoryAllIndex];
-                                  return FFButtonWidget(
-                                    onPressed: () async {
-                                      context.pushNamed(
-                                        'Productos',
-                                        queryParameters: {
-                                          'categorySelected': serializeParam(
-                                            functions.addOrRemoveCat(
-                                                widget.categorySelected!
-                                                    .toList(),
-                                                getJsonField(
-                                                  categoryAllItem,
-                                                  r'''$._id._id''',
-                                                ).toString()),
-                                            ParamType.String,
-                                            true,
-                                          ),
-                                        }.withoutNulls,
-                                      );
-                                    },
-                                    text: getJsonField(
-                                      categoryAllItem,
-                                      r'''$.name''',
-                                    ).toString(),
-                                    options: FFButtonOptions(
-                                      height: 10.0,
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          24.0, 0.0, 24.0, 0.0),
-                                      iconPadding:
-                                          EdgeInsetsDirectional.fromSTEB(
-                                              0.0, 0.0, 0.0, 0.0),
-                                      color: widget.categorySelected!
-                                              .contains(getJsonField(
-                                        listViewCategoryallResponse.jsonBody,
-                                        r'''$._id._id''',
-                                      ).toString())
-                                          ? Color(0xFFEE5F01)
-                                          : Color(0xFFE8A479),
-                                      textStyle: FlutterFlowTheme.of(context)
-                                          .titleSmall
-                                          .override(
-                                            fontFamily: 'Readex Pro',
-                                            color: Colors.white,
-                                          ),
-                                      elevation: 3.0,
-                                      borderSide: BorderSide(
-                                        color: Colors.transparent,
-                                        width: 1.0,
-                                      ),
-                                      borderRadius: BorderRadius.circular(8.0),
-                                    ),
-                                  );
-                                },
-                              );
-                            },
+                            ),
                           );
-                        },
-                      ),
+                        }
+                        final listViewCategoryallResponse = snapshot.data!;
+                        return Builder(
+                          builder: (context) {
+                            final categoryAll = getJsonField(
+                              listViewCategoryallResponse.jsonBody,
+                              r'''$[*]''',
+                            ).toList();
+                            return ListView.separated(
+                              padding: EdgeInsets.symmetric(horizontal: 16.0),
+                              shrinkWrap: true,
+                              scrollDirection: Axis.horizontal,
+                              itemCount: categoryAll.length,
+                              separatorBuilder: (_, __) =>
+                                  SizedBox(width: 16.0),
+                              itemBuilder: (context, categoryAllIndex) {
+                                final categoryAllItem =
+                                    categoryAll[categoryAllIndex];
+                                return FFButtonWidget(
+                                  onPressed: () async {
+                                    context.pushNamed(
+                                      'Productos',
+                                      queryParameters: {
+                                        'categorySelected': serializeParam(
+                                          functions.addOrRemoveCat(
+                                              widget.categorySelected!.toList(),
+                                              getJsonField(
+                                                categoryAllItem,
+                                                r'''$._id._id''',
+                                              ).toString()),
+                                          ParamType.String,
+                                          true,
+                                        ),
+                                      }.withoutNulls,
+                                    );
+                                  },
+                                  text: getJsonField(
+                                    categoryAllItem,
+                                    r'''$.name''',
+                                  ).toString(),
+                                  options: FFButtonOptions(
+                                    height: 10.0,
+                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                        24.0, 0.0, 24.0, 0.0),
+                                    iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                        0.0, 0.0, 0.0, 0.0),
+                                    color: widget.categorySelected!
+                                            .contains(getJsonField(
+                                      listViewCategoryallResponse.jsonBody,
+                                      r'''$._id._id''',
+                                    ).toString())
+                                        ? Color(0xFFEE5F01)
+                                        : Color(0xFFE8A479),
+                                    textStyle: FlutterFlowTheme.of(context)
+                                        .titleSmall
+                                        .override(
+                                          fontFamily: 'Readex Pro',
+                                          color: Colors.white,
+                                        ),
+                                    elevation: 3.0,
+                                    borderSide: BorderSide(
+                                      color: Colors.transparent,
+                                      width: 1.0,
+                                    ),
+                                    borderRadius: BorderRadius.circular(8.0),
+                                  ),
+                                );
+                              },
+                            );
+                          },
+                        );
+                      },
                     ),
                   ),
+                ),
                 Divider(
                   thickness: 1.0,
                   color: Color(0xFFE5E7EB),
