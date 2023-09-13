@@ -292,11 +292,15 @@ class _ProductosWidgetState extends State<ProductosWidget> {
                                         24.0, 0.0, 24.0, 0.0),
                                     iconPadding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 0.0, 0.0),
-                                    color: widget.categorySelected!
-                                            .contains(getJsonField(
-                                      listViewCategoryallResponse.jsonBody,
-                                      r'''$._id._id''',
-                                    ).toString())
+                                    color: functions
+                                            .checkNullabilty(widget
+                                                .categorySelected
+                                                ?.toList())
+                                            .toList()
+                                            .contains(valueOrDefault<String>(
+                                              categoryAllItem.toString(),
+                                              '\$,_id._Id',
+                                            ))
                                         ? Color(0xFFEE5F01)
                                         : Color(0xFFE8A479),
                                     textStyle: FlutterFlowTheme.of(context)
