@@ -245,6 +245,106 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': '',
     },
   },
+  // Carrito
+  {
+    'pnxf4zs4': {
+      'es': 'Tu Carrito',
+      'en': '',
+    },
+    'djuc3j4a': {
+      'es': 'Abajo esta la lista de items de su carrito',
+      'en': '',
+    },
+    '73aojaqv': {
+      'es': 'Size: ',
+      'en': '',
+    },
+    'kh5xbvg3': {
+      'es': '12',
+      'en': '',
+    },
+    'qfkbbtl6': {
+      'es': 'Remove',
+      'en': '',
+    },
+    'd11g6cvx': {
+      'es': 'Air Max',
+      'en': '',
+    },
+    'r4t7irry': {
+      'es': 'Size: ',
+      'en': '',
+    },
+    'jbg7lnlj': {
+      'es': '12',
+      'en': '',
+    },
+    '8j0r9m5g': {
+      'es': '\$117.00',
+      'en': '',
+    },
+    'epygxr75': {
+      'es':
+          'Men\'s Sleeveless Fitness T-Shirt\nTumbled Grey/Flat Silver/Heather/Black',
+      'en': '',
+    },
+    'oryaqhd1': {
+      'es': 'Remove',
+      'en': '',
+    },
+    '2w3tgu27': {
+      'es': 'Order Summary',
+      'en': '',
+    },
+    'n8veao96': {
+      'es': 'Below is a list of your items.',
+      'en': '',
+    },
+    'qkx8dmof': {
+      'es': 'Price Breakdown',
+      'en': '',
+    },
+    '9squbvu4': {
+      'es': 'Base Price',
+      'en': '',
+    },
+    'hfkim5er': {
+      'es': '\$156.00',
+      'en': '',
+    },
+    '850b03ti': {
+      'es': 'Taxes',
+      'en': '',
+    },
+    '4x2q6ccl': {
+      'es': '\$24.20',
+      'en': '',
+    },
+    'mk9fbo1s': {
+      'es': 'Cleaning Fee',
+      'en': '',
+    },
+    'ljlbb403': {
+      'es': '\$40.00',
+      'en': '',
+    },
+    'kda8rya0': {
+      'es': 'Total',
+      'en': '',
+    },
+    'v2qa80q1': {
+      'es': '\$230.20',
+      'en': '',
+    },
+    'ortpe3tp': {
+      'es': 'Continue to Checkout',
+      'en': '',
+    },
+    '0swvummf': {
+      'es': 'Home',
+      'en': '',
+    },
+  },
   // Miscellaneous
   {
     'z8l0t4cu': {

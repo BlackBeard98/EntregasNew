@@ -98,6 +98,13 @@ class _ProductoVIewWidgetState extends State<ProductoVIewWidget>
     super.initState();
     _model = createModel(context, () => ProductoVIewModel());
 
+    // On page load action.
+    SchedulerBinding.instance.addPostFrameCallback((_) async {
+      if (!FFAppState().authUser.isLogued) {
+        context.pushNamed('login');
+      }
+    });
+
     setupAnimations(
       animationsMap.values.where((anim) =>
           anim.trigger == AnimationTrigger.onActionTrigger ||

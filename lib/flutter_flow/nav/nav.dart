@@ -60,6 +60,11 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               name: 'Productos',
               path: 'productos',
               builder: (context, params) => ProductosWidget(),
+            ),
+            FFRoute(
+              name: 'Carrito',
+              path: 'carrito',
+              builder: (context, params) => CarritoWidget(),
             )
           ].map((r) => r.toRoute(appStateNotifier)).toList(),
         ),

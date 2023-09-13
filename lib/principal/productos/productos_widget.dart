@@ -72,7 +72,7 @@ class _ProductosWidgetState extends State<ProductosWidget> {
                 color: Color(0x4D9489F5),
                 shape: BoxShape.circle,
                 border: Border.all(
-                  color: Color(0xFF6F61EF),
+                  color: Color(0xFFE8A479),
                   width: 2.0,
                 ),
               ),
@@ -111,8 +111,8 @@ class _ProductosWidgetState extends State<ProductosWidget> {
                   color: Color(0xFF15161E),
                   size: 24.0,
                 ),
-                onPressed: () {
-                  print('IconButton pressed ...');
+                onPressed: () async {
+                  context.pushNamed('Carrito');
                 },
               ),
             ),
@@ -394,7 +394,7 @@ class _ProductosWidgetState extends State<ProductosWidget> {
                                         borderRadius:
                                             BorderRadius.circular(12.0),
                                         border: Border.all(
-                                          color: Color(0xFF6F61EF),
+                                          color: Color(0xFFEE5F01),
                                         ),
                                       ),
                                       child: Padding(
