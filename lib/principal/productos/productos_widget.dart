@@ -370,10 +370,10 @@ class _ProductosWidgetState extends State<ProductosWidget> {
                                 )
                                 ?.where((e) => FFAppState()
                                     .pageCategories
-                                    .contains(valueOrDefault<String>(
-                                      e.toString(),
-                                      '\$.categoryId._id',
-                                    )))
+                                    .contains(getJsonField(
+                                      e,
+                                      r'''$.categoryId._id''',
+                                    ).toString()))
                                 .toList()
                                 ?.toList() ??
                             [];
