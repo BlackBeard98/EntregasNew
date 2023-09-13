@@ -1,10 +1,8 @@
 import '/backend/api_requests/api_calls.dart';
-import '/flutter_flow/flutter_flow_choice_chips.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import '/flutter_flow/form_field_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -18,13 +16,10 @@ class ProductosModel extends FlutterFlowModel {
   // State field(s) for TextField widget.
   TextEditingController? textController;
   String? Function(BuildContext, String?)? textControllerValidator;
-  // State field(s) for ChoiceChips widget.
-  String? choiceChipsValue;
-  FormFieldController<List<String>>? choiceChipsValueController;
   // State field(s) for ListView widget.
 
-  PagingController<ApiPagingParams, dynamic>? listViewPagingController;
-  Function(ApiPagingParams nextPageMarker)? listViewApiCall;
+  PagingController<ApiPagingParams, dynamic>? listViewPagingController2;
+  Function(ApiPagingParams nextPageMarker)? listViewApiCall2;
 
   /// Initialization and disposal methods.
 
@@ -33,21 +28,21 @@ class ProductosModel extends FlutterFlowModel {
   void dispose() {
     unfocusNode.dispose();
     textController?.dispose();
-    listViewPagingController?.dispose();
+    listViewPagingController2?.dispose();
   }
 
   /// Action blocks are added here.
 
   /// Additional helper methods are added here.
 
-  PagingController<ApiPagingParams, dynamic> setListViewController(
+  PagingController<ApiPagingParams, dynamic> setListViewController2(
     Function(ApiPagingParams) apiCall,
   ) {
-    listViewApiCall = apiCall;
-    return listViewPagingController ??= _createListViewController(apiCall);
+    listViewApiCall2 = apiCall;
+    return listViewPagingController2 ??= _createListViewController2(apiCall);
   }
 
-  PagingController<ApiPagingParams, dynamic> _createListViewController(
+  PagingController<ApiPagingParams, dynamic> _createListViewController2(
     Function(ApiPagingParams) query,
   ) {
     final controller = PagingController<ApiPagingParams, dynamic>(
@@ -57,11 +52,11 @@ class ProductosModel extends FlutterFlowModel {
         lastResponse: null,
       ),
     );
-    return controller..addPageRequestListener(listViewProductallPage);
+    return controller..addPageRequestListener(listViewProductallPage2);
   }
 
-  void listViewProductallPage(ApiPagingParams nextPageMarker) =>
-      listViewApiCall!(nextPageMarker).then((listViewProductallResponse) {
+  void listViewProductallPage2(ApiPagingParams nextPageMarker) =>
+      listViewApiCall2!(nextPageMarker).then((listViewProductallResponse) {
         final pageItems = (getJsonField(
                   listViewProductallResponse.jsonBody,
                   r'''$[*]''',
@@ -69,7 +64,7 @@ class ProductosModel extends FlutterFlowModel {
                 [])
             .toList() as List;
         final newNumItems = nextPageMarker.numItems + pageItems.length;
-        listViewPagingController?.appendPage(
+        listViewPagingController2?.appendPage(
           pageItems,
           (pageItems.length > 0)
               ? ApiPagingParams(

@@ -1,10 +1,8 @@
 import '/backend/api_requests/api_calls.dart';
-import '/flutter_flow/flutter_flow_choice_chips.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import '/flutter_flow/form_field_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -88,9 +86,7 @@ class _ProductosWidgetState extends State<ProductosWidget> {
             ),
           ),
           title: Text(
-            FFLocalizations.of(context).getText(
-              'iwhrl9jx' /* Hey Jenny */,
-            ),
+            FFAppState().authUser.name,
             style: FlutterFlowTheme.of(context).headlineMedium.override(
                   fontFamily: 'Outfit',
                   color: Color(0xFF15161E),
@@ -211,90 +207,87 @@ class _ProductosWidgetState extends State<ProductosWidget> {
                         _model.textControllerValidator.asValidator(context),
                   ),
                 ),
-                SingleChildScrollView(
-                  scrollDirection: Axis.horizontal,
-                  child: Row(
-                    mainAxisSize: MainAxisSize.max,
-                    children: [
-                      Padding(
-                        padding:
-                            EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 0.0, 8.0),
-                        child: FlutterFlowChoiceChips(
-                          options: [
-                            ChipData(FFLocalizations.of(context).getText(
-                              'gyxknwc1' /* For You */,
-                            )),
-                            ChipData(FFLocalizations.of(context).getText(
-                              'fs1b4vh9' /* Sci-Fi */,
-                            )),
-                            ChipData(FFLocalizations.of(context).getText(
-                              '8cyec97m' /* Fiction */,
-                            )),
-                            ChipData(FFLocalizations.of(context).getText(
-                              'o9cg85jg' /* Technology */,
-                            )),
-                            ChipData(FFLocalizations.of(context).getText(
-                              'iapqw1hq' /* Ai News */,
-                            )),
-                            ChipData(FFLocalizations.of(context).getText(
-                              '7wcszmmc' /* Startups */,
-                            ))
-                          ],
-                          onChanged: (val) => setState(
-                              () => _model.choiceChipsValue = val?.first),
-                          selectedChipStyle: ChipStyle(
-                            backgroundColor: Color(0xFF6F61EF),
-                            textStyle: FlutterFlowTheme.of(context)
-                                .bodyMedium
-                                .override(
-                                  fontFamily: 'Plus Jakarta Sans',
-                                  color: Colors.white,
-                                  fontSize: 14.0,
-                                  fontWeight: FontWeight.w500,
-                                ),
-                            iconColor: Colors.white,
-                            iconSize: 18.0,
-                            elevation: 2.0,
-                            borderColor: Color(0x4D9489F5),
-                            borderWidth: 1.0,
-                            borderRadius: BorderRadius.circular(16.0),
-                          ),
-                          unselectedChipStyle: ChipStyle(
-                            backgroundColor: Color(0xFFE5E7EB),
-                            textStyle: FlutterFlowTheme.of(context)
-                                .bodyMedium
-                                .override(
-                                  fontFamily: 'Plus Jakarta Sans',
-                                  color: Color(0xFF606A85),
-                                  fontSize: 14.0,
-                                  fontWeight: FontWeight.w500,
-                                ),
-                            iconColor: Color(0xFF606A85),
-                            iconSize: 18.0,
-                            elevation: 0.0,
-                            borderColor: Color(0xFFF1F4F8),
-                            borderWidth: 1.0,
-                            borderRadius: BorderRadius.circular(16.0),
-                          ),
-                          chipSpacing: 8.0,
-                          rowSpacing: 12.0,
-                          multiselect: false,
-                          initialized: _model.choiceChipsValue != null,
-                          alignment: WrapAlignment.start,
-                          controller: _model.choiceChipsValueController ??=
-                              FormFieldController<List<String>>(
-                            [
-                              FFLocalizations.of(context).getText(
-                                'zwxrdbzg' /* For You */,
-                              )
-                            ],
-                          ),
-                          wrapped: true,
-                        ),
+                Container(
+                  width: MediaQuery.sizeOf(context).width * 1.0,
+                  height: 35.0,
+                  decoration: BoxDecoration(
+                    color: FlutterFlowTheme.of(context).secondaryBackground,
+                  ),
+                  child: Padding(
+                    padding:
+                        EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+                    child: FutureBuilder<ApiCallResponse>(
+                      future: ShopGroup.categoryallCall.call(
+                        pageNum: 1,
+                        authToken: FFAppState().authUser.accessToken,
                       ),
-                    ]
-                        .addToStart(SizedBox(width: 16.0))
-                        .addToEnd(SizedBox(width: 16.0)),
+                      builder: (context, snapshot) {
+                        // Customize what your widget looks like when it's loading.
+                        if (!snapshot.hasData) {
+                          return Center(
+                            child: SizedBox(
+                              width: 50.0,
+                              height: 50.0,
+                              child: CircularProgressIndicator(
+                                valueColor: AlwaysStoppedAnimation<Color>(
+                                  FlutterFlowTheme.of(context).primary,
+                                ),
+                              ),
+                            ),
+                          );
+                        }
+                        final listViewCategoryallResponse = snapshot.data!;
+                        return Builder(
+                          builder: (context) {
+                            final categoryAll = getJsonField(
+                              listViewCategoryallResponse.jsonBody,
+                              r'''$[*]''',
+                            ).toList();
+                            return ListView.separated(
+                              padding: EdgeInsets.symmetric(horizontal: 16.0),
+                              shrinkWrap: true,
+                              scrollDirection: Axis.horizontal,
+                              itemCount: categoryAll.length,
+                              separatorBuilder: (_, __) =>
+                                  SizedBox(width: 16.0),
+                              itemBuilder: (context, categoryAllIndex) {
+                                final categoryAllItem =
+                                    categoryAll[categoryAllIndex];
+                                return FFButtonWidget(
+                                  onPressed: () {
+                                    print('Button pressed ...');
+                                  },
+                                  text: getJsonField(
+                                    listViewCategoryallResponse.jsonBody,
+                                    r'''$.name''',
+                                  ).toString(),
+                                  options: FFButtonOptions(
+                                    height: 10.0,
+                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                        24.0, 0.0, 24.0, 0.0),
+                                    iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                        0.0, 0.0, 0.0, 0.0),
+                                    color: FlutterFlowTheme.of(context).primary,
+                                    textStyle: FlutterFlowTheme.of(context)
+                                        .titleSmall
+                                        .override(
+                                          fontFamily: 'Readex Pro',
+                                          color: Colors.white,
+                                        ),
+                                    elevation: 3.0,
+                                    borderSide: BorderSide(
+                                      color: Colors.transparent,
+                                      width: 1.0,
+                                    ),
+                                    borderRadius: BorderRadius.circular(8.0),
+                                  ),
+                                );
+                              },
+                            );
+                          },
+                        );
+                      },
+                    ),
                   ),
                 ),
                 Divider(
@@ -316,7 +309,7 @@ class _ProductosWidgetState extends State<ProductosWidget> {
                   ),
                 ),
                 PagedListView<ApiPagingParams, dynamic>(
-                  pagingController: _model.setListViewController(
+                  pagingController: _model.setListViewController2(
                     (nextPageMarker) => ShopGroup.productallCall.call(
                       filterCategoriesJson: {},
                       pageNum: nextPageMarker.nextPageNumber + 1,
@@ -360,7 +353,7 @@ class _ProductosWidgetState extends State<ProductosWidget> {
 
                     itemBuilder: (context, _, productosIndex) {
                       final productosItem = _model
-                          .listViewPagingController!.itemList![productosIndex];
+                          .listViewPagingController2!.itemList![productosIndex];
                       return Container(
                         width: 100.0,
                         decoration: BoxDecoration(),

@@ -165,44 +165,12 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // Productos
   {
-    'iwhrl9jx': {
-      'es': 'Hey Jenny',
-      'en': '',
-    },
     '3xhea9zo': {
       'es': 'Stay up to date with the latest news below.',
       'en': '',
     },
     'h4c8ksu0': {
       'es': 'Buscar Producto',
-      'en': '',
-    },
-    'gyxknwc1': {
-      'es': 'For You',
-      'en': '',
-    },
-    'fs1b4vh9': {
-      'es': 'Sci-Fi',
-      'en': '',
-    },
-    '8cyec97m': {
-      'es': 'Fiction',
-      'en': '',
-    },
-    'o9cg85jg': {
-      'es': 'Technology',
-      'en': '',
-    },
-    'iapqw1hq': {
-      'es': 'Ai News',
-      'en': '',
-    },
-    '7wcszmmc': {
-      'es': 'Startups',
-      'en': '',
-    },
-    'zwxrdbzg': {
-      'es': 'For You',
       'en': '',
     },
     'hm474b4h': {
