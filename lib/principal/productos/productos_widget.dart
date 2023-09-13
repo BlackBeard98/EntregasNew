@@ -329,8 +329,9 @@ class _ProductosWidgetState extends State<ProductosWidget> {
                 PagedListView<ApiPagingParams, dynamic>(
                   pagingController: _model.setListViewController2(
                     (nextPageMarker) => ShopGroup.productallCall.call(
-                      filterCategoriesJson: functions.transformToJSON(
-                          FFAppState().pageCategories.toList()),
+                      filterCategoriesJson: functions.transformToJSON(functions
+                          .checkNullabilty(FFAppState().pageCategories.toList())
+                          .toList()),
                       authToken: FFAppState().authUser.accessToken,
                       pageNum: nextPageMarker.nextPageNumber + 1,
                     ),
