@@ -65,7 +65,7 @@ class ProductosModel extends FlutterFlowModel {
                         .pageCategories
                         .contains(valueOrDefault<String>(
                           e.toString(),
-                          '\$..categoryId._id',
+                          '\$.categoryId._id',
                         )))
                     .toList() ??
                 [])
