@@ -293,9 +293,8 @@ class _ProductosWidgetState extends State<ProductosWidget> {
                                     iconPadding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 0.0, 0.0),
                                     color: functions
-                                            .checkNullabilty(widget
-                                                .categorySelected
-                                                ?.toList())
+                                            .checkNullabilty(
+                                                _model.pageCategories.toList())
                                             .toList()
                                             .contains(valueOrDefault<String>(
                                               categoryAllItem.toString(),
