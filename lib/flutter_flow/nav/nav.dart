@@ -65,11 +65,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               name: 'Carrito',
               path: 'carrito',
               builder: (context, params) => CarritoWidget(),
-            ),
-            FFRoute(
-              name: 'ProductosCopy',
-              path: 'productosCopy',
-              builder: (context, params) => ProductosCopyWidget(),
             )
           ].map((r) => r.toRoute(appStateNotifier)).toList(),
         ),

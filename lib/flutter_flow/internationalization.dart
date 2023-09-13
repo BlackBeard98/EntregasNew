@@ -157,78 +157,78 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // Productos
   {
-    'h4c8ksu0': {
+    'eud7yoaz': {
       'es': 'Buscar Producto',
       'en': '',
     },
-    'hm474b4h': {
+    'm0squd3z': {
       'es': 'Productos',
       'en': '',
     },
-    '4tqzjz41': {
+    '59olb95e': {
       'es': 'Ver ahora',
       'en': '',
     },
-    'fc5tmi06': {
+    '1fkm0ojg': {
       'es':
           'HSBC is getting back into consumer lending in the us according to...',
       'en': '',
     },
-    'g93suddy': {
+    '329dts94': {
       'es': 'Jackson Hewiit',
       'en': '',
     },
-    'anwz5i4y': {
+    'irs7qk5j': {
       'es': '24',
       'en': '',
     },
-    '9ywptdvd': {
+    'e6z6u4wj': {
       'es': '12h',
       'en': '',
     },
-    'da3r9g2o': {
+    'm995no19': {
       'es': 'Read Now',
       'en': '',
     },
-    'ao0bmbay': {
+    'cj2cgrjc': {
       'es':
           'HSBC is getting back into consumer lending in the us according to...',
       'en': '',
     },
-    '205y9xdn': {
+    '6ldzbvrr': {
       'es': 'Jackson Hewiit',
       'en': '',
     },
-    'ci5frk4e': {
+    '3j4f3jya': {
       'es': '24',
       'en': '',
     },
-    'vazhdp21': {
+    'z5xj9gal': {
       'es': '12h',
       'en': '',
     },
-    'e97upvdm': {
+    'deiil3ik': {
       'es': 'Read Now',
       'en': '',
     },
-    '55y9yd13': {
+    'irnwfhdw': {
       'es':
           'HSBC is getting back into consumer lending in the us according to...',
       'en': '',
     },
-    'z7lsby1j': {
+    'y8grto8j': {
       'es': 'Jackson Hewiit',
       'en': '',
     },
-    'qwjnotgs': {
+    'zok8q3rp': {
       'es': '24',
       'en': '',
     },
-    'wwsiowkm': {
+    '1szfbi9k': {
       'es': '12h',
       'en': '',
     },
-    'bsjw5dru': {
+    'p78rzwqx': {
       'es': 'Read Now',
       'en': '',
     },
@@ -329,88 +329,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': '',
     },
     '0swvummf': {
-      'es': 'Home',
-      'en': '',
-    },
-  },
-  // ProductosCopy
-  {
-    'f10wber6': {
-      'es': 'Buscar Producto',
-      'en': '',
-    },
-    '4tozl6ot': {
-      'es': 'Productos',
-      'en': '',
-    },
-    'mjjurh68': {
-      'es': 'Ver ahora',
-      'en': '',
-    },
-    'w655tc4s': {
-      'es':
-          'HSBC is getting back into consumer lending in the us according to...',
-      'en': '',
-    },
-    'g6eqqvjp': {
-      'es': 'Jackson Hewiit',
-      'en': '',
-    },
-    '7288qkxx': {
-      'es': '24',
-      'en': '',
-    },
-    'e2aue4bh': {
-      'es': '12h',
-      'en': '',
-    },
-    'gqmqxtbw': {
-      'es': 'Read Now',
-      'en': '',
-    },
-    'jv2qeg94': {
-      'es':
-          'HSBC is getting back into consumer lending in the us according to...',
-      'en': '',
-    },
-    'c6ahx2kg': {
-      'es': 'Jackson Hewiit',
-      'en': '',
-    },
-    'bywi2sls': {
-      'es': '24',
-      'en': '',
-    },
-    'f4xzfig8': {
-      'es': '12h',
-      'en': '',
-    },
-    '97tgxp8x': {
-      'es': 'Read Now',
-      'en': '',
-    },
-    'aenojh3a': {
-      'es':
-          'HSBC is getting back into consumer lending in the us according to...',
-      'en': '',
-    },
-    'bkofgf04': {
-      'es': 'Jackson Hewiit',
-      'en': '',
-    },
-    'tabb0xo1': {
-      'es': '24',
-      'en': '',
-    },
-    '2wgnqsoc': {
-      'es': '12h',
-      'en': '',
-    },
-    'gjhd9kp2': {
-      'es': 'Read Now',
-      'en': '',
-    },
-    'bp6t93mm': {
       'es': 'Home',
       'en': '',
     },

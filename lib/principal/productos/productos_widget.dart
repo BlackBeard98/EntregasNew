@@ -3,6 +3,7 @@ import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import '/flutter_flow/custom_functions.dart' as functions;
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -136,7 +137,7 @@ class _ProductosWidgetState extends State<ProductosWidget> {
                     obscureText: false,
                     decoration: InputDecoration(
                       labelText: FFLocalizations.of(context).getText(
-                        'h4c8ksu0' /* Buscar Producto */,
+                        'eud7yoaz' /* Buscar Producto */,
                       ),
                       labelStyle:
                           FlutterFlowTheme.of(context).labelMedium.override(
@@ -272,6 +273,8 @@ class _ProductosWidgetState extends State<ProductosWidget> {
                                   ).toString());
                                 });
                               }
+
+                              context.pushNamed('Productos');
                             },
                             text: getJsonField(
                               categoryAllItem,
@@ -318,7 +321,7 @@ class _ProductosWidgetState extends State<ProductosWidget> {
                   padding: EdgeInsetsDirectional.fromSTEB(16.0, 12.0, 0.0, 0.0),
                   child: Text(
                     FFLocalizations.of(context).getText(
-                      'hm474b4h' /* Productos */,
+                      'm0squd3z' /* Productos */,
                     ),
                     style: FlutterFlowTheme.of(context).labelMedium.override(
                           fontFamily: 'Plus Jakarta Sans',
@@ -330,7 +333,8 @@ class _ProductosWidgetState extends State<ProductosWidget> {
                 ),
                 FutureBuilder<ApiCallResponse>(
                   future: ShopGroup.productallCall.call(
-                    filterCategoriesJson: {},
+                    filterCategoriesJson: functions
+                        .transformToJSON(FFAppState().pageCategories.toList()),
                     authToken: FFAppState().authUser.accessToken,
                     pageNum: 1,
                   ),
@@ -356,13 +360,6 @@ class _ProductosWidgetState extends State<ProductosWidget> {
                                 .allProducts(
                                   listViewProductallResponse.jsonBody,
                                 )
-                                ?.where((e) => FFAppState()
-                                    .pageCategories
-                                    .contains(getJsonField(
-                                      e,
-                                      r'''$.categoryId._id''',
-                                    ).toString()))
-                                .toList()
                                 ?.toList() ??
                             [];
                         return ListView.builder(
@@ -528,7 +525,7 @@ class _ProductosWidgetState extends State<ProductosWidget> {
                                                 child: Text(
                                                   FFLocalizations.of(context)
                                                       .getText(
-                                                    '4tqzjz41' /* Ver ahora */,
+                                                    '59olb95e' /* Ver ahora */,
                                                   ),
                                                   style: FlutterFlowTheme.of(
                                                           context)
