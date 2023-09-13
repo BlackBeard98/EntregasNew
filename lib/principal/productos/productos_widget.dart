@@ -32,7 +32,8 @@ class _ProductosWidgetState extends State<ProductosWidget> {
     SchedulerBinding.instance.addPostFrameCallback((_) async {
       if (FFAppState().authUser.isLogued) {
         setState(() {
-          _model.pageCategories = [].toList().cast<String>();
+          FFAppState().pageCategories = [].toList().cast<String>();
+          FFAppState().pageCategories = [].toList().cast<String>();
         });
       } else {
         context.pushNamed('login');
@@ -259,13 +260,14 @@ class _ProductosWidgetState extends State<ProductosWidget> {
                                     categoryAll[categoryAllIndex];
                                 return FFButtonWidget(
                                   onPressed: () async {
-                                    if (_model.pageCategories
+                                    if (FFAppState()
+                                        .pageCategories
                                         .contains(getJsonField(
-                                      categoryAllItem,
-                                      r'''$._id._id''',
-                                    ).toString())) {
+                                          categoryAllItem,
+                                          r'''$._id._id''',
+                                        ).toString())) {
                                       setState(() {
-                                        _model.removeFromPageCategories(
+                                        FFAppState().removeFromPageCategories(
                                             getJsonField(
                                           categoryAllItem,
                                           r'''$._id._id''',
@@ -273,7 +275,8 @@ class _ProductosWidgetState extends State<ProductosWidget> {
                                       });
                                     } else {
                                       setState(() {
-                                        _model.addToPageCategories(getJsonField(
+                                        FFAppState()
+                                            .addToPageCategories(getJsonField(
                                           categoryAllItem,
                                           r'''$._id._id''',
                                         ).toString());
@@ -290,11 +293,12 @@ class _ProductosWidgetState extends State<ProductosWidget> {
                                         24.0, 0.0, 24.0, 0.0),
                                     iconPadding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 0.0, 0.0),
-                                    color: _model.pageCategories
+                                    color: FFAppState()
+                                            .pageCategories
                                             .contains(getJsonField(
-                                      categoryAllItem,
-                                      r'''$._id._id''',
-                                    ).toString())
+                                              categoryAllItem,
+                                              r'''$._id._id''',
+                                            ).toString())
                                         ? Color(0xFFEE5F01)
                                         : Color(0xFFE8A479),
                                     textStyle: FlutterFlowTheme.of(context)

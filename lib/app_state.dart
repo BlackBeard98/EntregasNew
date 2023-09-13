@@ -58,6 +58,35 @@ class FFAppState extends ChangeNotifier {
     updateFn(_authUser);
     secureStorage.setString('ff_authUser', _authUser.serialize());
   }
+
+  List<String> _pageCategories = [];
+  List<String> get pageCategories => _pageCategories;
+  set pageCategories(List<String> _value) {
+    _pageCategories = _value;
+  }
+
+  void addToPageCategories(String _value) {
+    _pageCategories.add(_value);
+  }
+
+  void removeFromPageCategories(String _value) {
+    _pageCategories.remove(_value);
+  }
+
+  void removeAtIndexFromPageCategories(int _index) {
+    _pageCategories.removeAt(_index);
+  }
+
+  void updatePageCategoriesAtIndex(
+    int _index,
+    String Function(String) updateFn,
+  ) {
+    _pageCategories[_index] = updateFn(_pageCategories[_index]);
+  }
+
+  void insertAtIndexInPageCategories(int _index, String _value) {
+    _pageCategories.insert(_index, _value);
+  }
 }
 
 LatLng? _latLngFromString(String? val) {
