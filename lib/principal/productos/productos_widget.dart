@@ -415,7 +415,10 @@ class _ProductosWidgetState extends State<ProductosWidget> {
                                   child: ClipRRect(
                                     borderRadius: BorderRadius.circular(10.0),
                                     child: Image.network(
-                                      'https://picsum.photos/seed/287/600',
+                                      functions.getImages(getJsonField(
+                                        productosItem,
+                                        r'''$.images''',
+                                      )!),
                                       width: 120.0,
                                       height: 120.0,
                                       fit: BoxFit.cover,

@@ -36,7 +36,7 @@ List<String> checkNullabilty(List<String>? list) {
 
 String getImages(List<dynamic> images) {
   if (images.isEmpty)
-    return "https://images.unsplash.com/photo-1561758033-d89a9ad46330?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHwxfHxjb21pZGF8ZW58MHx8fHwxNjkyMTQyMjQ4fDA&ixlib=rb-4.0.3&q=80&w=1080";
+    return "https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/entregas-test-3mrrb8/assets/5ssjupsu26sv/descarga.png";
 
   return images.first;
 }

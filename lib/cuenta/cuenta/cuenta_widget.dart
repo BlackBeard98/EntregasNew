@@ -115,7 +115,7 @@ class _CuentaWidgetState extends State<CuentaWidget> {
                 padding: EdgeInsetsDirectional.fromSTEB(16.0, 16.0, 0.0, 0.0),
                 child: Text(
                   FFLocalizations.of(context).getText(
-                    '9tdaruw9' /* Cuenta */,
+                    '3lcef56o' /* Cuenta */,
                   ),
                   style: FlutterFlowTheme.of(context).labelLarge.override(
                         fontFamily: 'Plus Jakarta Sans',
@@ -158,7 +158,7 @@ class _CuentaWidgetState extends State<CuentaWidget> {
                                 12.0, 0.0, 0.0, 0.0),
                             child: Text(
                               FFLocalizations.of(context).getText(
-                                'ogwl0bzc' /* Mis Direcciones */,
+                                '82iemwe0' /* Mis Direcciones */,
                               ),
                               style: FlutterFlowTheme.of(context)
                                   .bodyLarge
@@ -217,7 +217,7 @@ class _CuentaWidgetState extends State<CuentaWidget> {
                                 12.0, 0.0, 0.0, 0.0),
                             child: Text(
                               FFLocalizations.of(context).getText(
-                                'zxayjt0g' /* Mis Pedidods */,
+                                'sy0zksxk' /* Mis Pedidods */,
                               ),
                               style: FlutterFlowTheme.of(context)
                                   .bodyLarge
@@ -276,7 +276,7 @@ class _CuentaWidgetState extends State<CuentaWidget> {
                                 12.0, 0.0, 0.0, 0.0),
                             child: Text(
                               FFLocalizations.of(context).getText(
-                                '7xy8ksqa' /* Editar Perfil */,
+                                '56sdyry9' /* Editar Perfil */,
                               ),
                               style: FlutterFlowTheme.of(context)
                                   .bodyLarge
@@ -335,7 +335,7 @@ class _CuentaWidgetState extends State<CuentaWidget> {
                                 12.0, 0.0, 0.0, 0.0),
                             child: Text(
                               FFLocalizations.of(context).getText(
-                                'rvt703vj' /* Mi Carrito */,
+                                'yabkl0wb' /* Mi Carrito */,
                               ),
                               style: FlutterFlowTheme.of(context)
                                   .bodyLarge
@@ -409,7 +409,7 @@ class _CuentaWidgetState extends State<CuentaWidget> {
                                   12.0, 0.0, 0.0, 0.0),
                               child: Text(
                                 FFLocalizations.of(context).getText(
-                                  '3mq6fj8e' /* Cerrar Sesión  */,
+                                  '1zhn2dy9' /* Cerrar Sesión  */,
                                 ),
                                 style: FlutterFlowTheme.of(context)
                                     .bodyLarge
