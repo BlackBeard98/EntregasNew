@@ -147,8 +147,7 @@ class _CarritoWidgetState extends State<CarritoWidget> {
                               width: double.infinity,
                               height: 289.0,
                               decoration: BoxDecoration(
-                                color: FlutterFlowTheme.of(context)
-                                    .secondaryBackground,
+                                color: Colors.white,
                               ),
                               child: FutureBuilder<ApiCallResponse>(
                                 future: ShopGroup.cartuserIdCall.call(
