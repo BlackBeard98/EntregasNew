@@ -37,7 +37,8 @@ class _ProductosWidgetState extends State<ProductosWidget> {
       }
     });
 
-    _model.textController ??= TextEditingController();
+    _model.textController ??=
+        TextEditingController(text: FFAppState().contains);
     WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
 
