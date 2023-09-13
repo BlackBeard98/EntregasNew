@@ -208,7 +208,7 @@ class _ProductoVIewWidgetState extends State<ProductoVIewWidget>
                       width: double.infinity,
                       height: 300.0,
                       decoration: BoxDecoration(
-                        color: FlutterFlowTheme.of(context).secondaryBackground,
+                        color: Colors.white,
                       ),
                       child: Builder(
                         builder: (context) {
