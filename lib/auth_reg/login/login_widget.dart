@@ -367,7 +367,15 @@ class _LoginWidgetState extends State<LoginWidget> {
                                                             ''),
                                                       )
                                                       .toString()
-                                              ..isLogued = true,
+                                              ..isLogued = true
+                                              ..accessToken =
+                                                  IdentityGroup.authCall
+                                                      .accesstoken(
+                                                        (_model.apiResultAuth
+                                                                ?.jsonBody ??
+                                                            ''),
+                                                      )
+                                                      .toString(),
                                           );
                                         });
 
