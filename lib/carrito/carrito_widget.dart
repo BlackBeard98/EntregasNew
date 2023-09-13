@@ -54,22 +54,62 @@ class _CarritoWidgetState extends State<CarritoWidget> {
       key: scaffoldKey,
       backgroundColor: Color(0xFFF1F4F8),
       appBar: AppBar(
-        backgroundColor: Color(0xFFF1F4F8),
+        backgroundColor: Colors.white,
         automaticallyImplyLeading: false,
-        leading: FlutterFlowIconButton(
-          borderColor: Colors.transparent,
-          borderRadius: 30.0,
-          buttonSize: 46.0,
-          icon: Icon(
-            Icons.arrow_back_rounded,
-            color: Color(0xFF57636C),
-            size: 24.0,
+        leading: Padding(
+          padding: EdgeInsetsDirectional.fromSTEB(12.0, 6.0, 0.0, 6.0),
+          child: Container(
+            width: 44.0,
+            height: 44.0,
+            decoration: BoxDecoration(
+              color: Color(0x4D9489F5),
+              shape: BoxShape.circle,
+              border: Border.all(
+                color: Color(0xFFE8A479),
+                width: 2.0,
+              ),
+            ),
+            child: Padding(
+              padding: EdgeInsetsDirectional.fromSTEB(2.0, 2.0, 2.0, 2.0),
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(50.0),
+                child: Image.network(
+                  'https://picsum.photos/seed/626/600',
+                  width: 300.0,
+                  height: 200.0,
+                  fit: BoxFit.cover,
+                ),
+              ),
+            ),
           ),
-          onPressed: () async {
-            context.pop();
-          },
         ),
-        actions: [],
+        title: Text(
+          FFAppState().authUser.name,
+          style: FlutterFlowTheme.of(context).headlineMedium.override(
+                fontFamily: 'Outfit',
+                color: Color(0xFF15161E),
+                fontSize: 24.0,
+                fontWeight: FontWeight.w500,
+              ),
+        ),
+        actions: [
+          Padding(
+            padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 16.0, 0.0),
+            child: FlutterFlowIconButton(
+              borderColor: Colors.transparent,
+              borderRadius: 20.0,
+              buttonSize: 40.0,
+              icon: Icon(
+                Icons.notifications_none,
+                color: Color(0xFF15161E),
+                size: 24.0,
+              ),
+              onPressed: () async {
+                context.pushNamed('Carrito');
+              },
+            ),
+          ),
+        ],
         centerTitle: false,
         elevation: 0.0,
       ),
@@ -176,7 +216,7 @@ class _CarritoWidgetState extends State<CarritoWidget> {
                                   return Builder(
                                     builder: (context) {
                                       final cartItems = ShopGroup.cartuserIdCall
-                                              .productos(
+                                              .cartItems(
                                                 listViewCartuserIdResponse
                                                     .jsonBody,
                                               )
@@ -270,7 +310,7 @@ class _CarritoWidgetState extends State<CarritoWidget> {
                                                                 Text(
                                                                   getJsonField(
                                                                     cartItemsItem,
-                                                                    r'''$.name''',
+                                                                    r'''$.product.name''',
                                                                   ).toString(),
                                                                   style: FlutterFlowTheme.of(
                                                                           context)
@@ -304,16 +344,17 @@ class _CarritoWidgetState extends State<CarritoWidget> {
                                                                         TextSpan(
                                                                           text:
                                                                               FFLocalizations.of(context).getText(
-                                                                            '73aojaqv' /* Size:  */,
+                                                                            '73aojaqv' /* Cantidad: */,
                                                                           ),
                                                                           style:
                                                                               TextStyle(),
                                                                         ),
                                                                         TextSpan(
                                                                           text:
-                                                                              FFLocalizations.of(context).getText(
-                                                                            'kh5xbvg3' /* 12 */,
-                                                                          ),
+                                                                              getJsonField(
+                                                                            cartItemsItem,
+                                                                            r'''$.quantity''',
+                                                                          ).toString(),
                                                                           style:
                                                                               TextStyle(),
                                                                         )
@@ -349,7 +390,7 @@ class _CarritoWidgetState extends State<CarritoWidget> {
                                                           child: Text(
                                                             getJsonField(
                                                               cartItemsItem,
-                                                              r'''$.price''',
+                                                              r'''$.product.price''',
                                                             ).toString(),
                                                             textAlign:
                                                                 TextAlign.end,
@@ -380,7 +421,7 @@ class _CarritoWidgetState extends State<CarritoWidget> {
                                                     child: AutoSizeText(
                                                       getJsonField(
                                                         cartItemsItem,
-                                                        r'''$.fullDescription''',
+                                                        r'''$.product.fullDescription''',
                                                       )
                                                           .toString()
                                                           .maybeHandleOverflow(
@@ -417,7 +458,7 @@ class _CarritoWidgetState extends State<CarritoWidget> {
                                                         Icon(
                                                           Icons.delete_outline,
                                                           color:
-                                                              Color(0xFFFF5963),
+                                                              Color(0xFFE8A479),
                                                           size: 24.0,
                                                         ),
                                                         Padding(
@@ -441,7 +482,7 @@ class _CarritoWidgetState extends State<CarritoWidget> {
                                                                   fontFamily:
                                                                       'Plus Jakarta Sans',
                                                                   color: Color(
-                                                                      0xFFFF5963),
+                                                                      0xFFE8A479),
                                                                   fontSize:
                                                                       14.0,
                                                                   fontWeight:
@@ -493,7 +534,7 @@ class _CarritoWidgetState extends State<CarritoWidget> {
                           children: [
                             Text(
                               FFLocalizations.of(context).getText(
-                                '2w3tgu27' /* Order Summary */,
+                                '2w3tgu27' /* Resumen de Pedido */,
                               ),
                               style: FlutterFlowTheme.of(context)
                                   .titleLarge
@@ -509,7 +550,7 @@ class _CarritoWidgetState extends State<CarritoWidget> {
                                   0.0, 4.0, 0.0, 12.0),
                               child: Text(
                                 FFLocalizations.of(context).getText(
-                                  'n8veao96' /* Below is a list of your items. */,
+                                  'n8veao96' /* Abajo hay un resumen de su Ped... */,
                                 ),
                                 style: FlutterFlowTheme.of(context)
                                     .labelMedium
@@ -739,7 +780,7 @@ class _CarritoWidgetState extends State<CarritoWidget> {
                                     0.0, 0.0, 0.0, 0.0),
                                 iconPadding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 0.0, 0.0),
-                                color: Color(0xFF4B39EF),
+                                color: Color(0xFFEE5F01),
                                 textStyle: FlutterFlowTheme.of(context)
                                     .titleSmall
                                     .override(

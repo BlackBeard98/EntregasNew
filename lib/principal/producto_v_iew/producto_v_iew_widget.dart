@@ -5,7 +5,6 @@ import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import 'package:badges/badges.dart' as badges;
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
@@ -132,71 +131,61 @@ class _ProductoVIewWidgetState extends State<ProductoVIewWidget>
       appBar: AppBar(
         backgroundColor: Colors.white,
         automaticallyImplyLeading: false,
-        leading: InkWell(
-          splashColor: Colors.transparent,
-          focusColor: Colors.transparent,
-          hoverColor: Colors.transparent,
-          highlightColor: Colors.transparent,
-          onTap: () async {
-            context.pop();
-          },
-          child: Icon(
-            Icons.arrow_back_rounded,
-            color: Color(0xFF57636C),
-            size: 24.0,
+        leading: Padding(
+          padding: EdgeInsetsDirectional.fromSTEB(12.0, 6.0, 0.0, 6.0),
+          child: Container(
+            width: 44.0,
+            height: 44.0,
+            decoration: BoxDecoration(
+              color: Color(0x4D9489F5),
+              shape: BoxShape.circle,
+              border: Border.all(
+                color: Color(0xFFE8A479),
+                width: 2.0,
+              ),
+            ),
+            child: Padding(
+              padding: EdgeInsetsDirectional.fromSTEB(2.0, 2.0, 2.0, 2.0),
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(50.0),
+                child: Image.network(
+                  'https://picsum.photos/seed/626/600',
+                  width: 300.0,
+                  height: 200.0,
+                  fit: BoxFit.cover,
+                ),
+              ),
+            ),
           ),
         ),
         title: Text(
-          FFLocalizations.of(context).getText(
-            '9e4mnsi0' /*   */,
-          ),
-          style: FlutterFlowTheme.of(context).titleSmall.override(
-                fontFamily: 'Lexend Deca',
-                color: Color(0xFF151B1E),
-                fontSize: 16.0,
+          FFAppState().authUser.name,
+          style: FlutterFlowTheme.of(context).headlineMedium.override(
+                fontFamily: 'Outfit',
+                color: Color(0xFF15161E),
+                fontSize: 24.0,
                 fontWeight: FontWeight.w500,
               ),
         ),
         actions: [
           Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 24.0, 0.0),
-            child: badges.Badge(
-              badgeContent: Text(
-                FFLocalizations.of(context).getText(
-                  'nmanpwot' /* 3 */,
-                ),
-                style: FlutterFlowTheme.of(context).bodyMedium.override(
-                      fontFamily: 'Plus Jakarta Sans',
-                      color: Colors.white,
-                      fontSize: 14.0,
-                      fontWeight: FontWeight.normal,
-                    ),
+            padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 16.0, 0.0),
+            child: FlutterFlowIconButton(
+              borderColor: Colors.transparent,
+              borderRadius: 20.0,
+              buttonSize: 40.0,
+              icon: Icon(
+                Icons.notifications_none,
+                color: Color(0xFF15161E),
+                size: 24.0,
               ),
-              showBadge: true,
-              shape: badges.BadgeShape.circle,
-              badgeColor: Color(0xFFEE5F01),
-              elevation: 4.0,
-              padding: EdgeInsetsDirectional.fromSTEB(8.0, 8.0, 8.0, 8.0),
-              position: badges.BadgePosition.topEnd(),
-              animationType: badges.BadgeAnimationType.scale,
-              toAnimate: true,
-              child: FlutterFlowIconButton(
-                borderColor: Colors.transparent,
-                borderRadius: 30.0,
-                buttonSize: 48.0,
-                icon: Icon(
-                  Icons.shopping_cart_outlined,
-                  color: Color(0xFFEE5F01),
-                  size: 30.0,
-                ),
-                onPressed: () {
-                  print('IconButton pressed ...');
-                },
-              ),
+              onPressed: () async {
+                context.pushNamed('Carrito');
+              },
             ),
           ),
         ],
-        centerTitle: true,
+        centerTitle: false,
         elevation: 0.0,
       ),
       body: Column(
