@@ -87,6 +87,12 @@ class FFAppState extends ChangeNotifier {
   void insertAtIndexInPageCategories(int _index, String _value) {
     _pageCategories.insert(_index, _value);
   }
+
+  String _contains = '';
+  String get contains => _contains;
+  set contains(String _value) {
+    _contains = _value;
+  }
 }
 
 LatLng? _latLngFromString(String? val) {

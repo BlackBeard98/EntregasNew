@@ -57,7 +57,7 @@ class _ProductosVacioWidgetState extends State<ProductosVacioWidget> {
           ),
           Text(
             FFLocalizations.of(context).getText(
-              '4xe3xccq' /* No Hay Productos */,
+              'u9drb6fo' /* No Hay Productos */,
             ),
             style: FlutterFlowTheme.of(context).bodyMedium,
           ),

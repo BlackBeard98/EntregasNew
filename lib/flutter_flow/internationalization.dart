@@ -335,61 +335,61 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // prof
   {
-    'xgzo6tm4': {
+    '5fq00zx3': {
       'es': 'Edit Profile',
       'en': '',
     },
-    'lab1wa0t': {
+    '33s5a4rc': {
       'es': 'Change Password',
       'en': '',
     },
-    'c5ccqkmj': {
+    'k2tyznds': {
       'es': 'Notification Settings',
       'en': '',
     },
-    'kc98cdpi': {
+    'mgidhj8i': {
       'es': 'Terms of Services',
       'en': '',
     },
-    '4e8p7929': {
+    'ghr5sa9m': {
       'es': 'Log Out',
       'en': '',
     },
   },
   // Cuenta
   {
-    'ixn2xl9q': {
+    '88y3owks': {
       'es': 'Cuenta',
       'en': '',
     },
-    'fxy31tyl': {
+    'y6s8drw3': {
       'es': 'Mis Direcciones',
       'en': '',
     },
-    'cfgza21n': {
+    'gqruu529': {
       'es': 'Mis Pedidods',
       'en': '',
     },
-    'ubwh3cy0': {
+    '9wzcin7w': {
       'es': 'Editar Perfil',
       'en': '',
     },
-    'mk2iuj27': {
+    '2pwfzbbj': {
       'es': 'Mi Carrito',
       'en': '',
     },
-    '7y5t6zh6': {
+    '5fx75p5j': {
       'es': 'Cerrar Sesión ',
       'en': '',
     },
-    'q0brshwt': {
+    'm63mzj4a': {
       'es': 'Cuenta',
       'en': '',
     },
   },
   // ProductosVacio
   {
-    '4xe3xccq': {
+    'u9drb6fo': {
       'es': 'No Hay Productos',
       'en': '',
     },

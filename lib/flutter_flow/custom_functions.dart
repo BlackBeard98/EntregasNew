@@ -10,15 +10,21 @@ import 'place.dart';
 import 'uploaded_file.dart';
 import '/backend/schema/structs/index.dart';
 
-dynamic transformToJSON(List<String>? categoriesSelected) {
-  if (categoriesSelected == null) return jsonDecode("{}");
+dynamic transformToJSON(
+  List<String>? categoriesSelected,
+  String? text,
+) {
+  String contains = text == "" ? "" : "\"name\":{\"contains\": \"k\"}";
+  String cat = "";
+  if (categoriesSelected != null && !categoriesSelected.isEmpty) {
+    Iterable<String> quoted = categoriesSelected.map((e) => "\"" + e + "\"");
 
-  if (categoriesSelected.isEmpty) return jsonDecode("{}");
-  Iterable<String> quoted = categoriesSelected.map((e) => "\"" + e + "\"");
+    String middle = quoted.join(",");
+    cat = "\"categoryId\":{\"in\" : [$middle]}";
+  }
+  String data = [contains, cat].join(",");
 
-  String middle = quoted.join(",");
-
-  return jsonDecode("{\"categoryId\":{\"in\" : [$middle]}}");
+  return jsonDecode("{$data}");
 }
 
 List<String> checkNullabilty(List<String>? list) {

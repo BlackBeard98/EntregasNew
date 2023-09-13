@@ -5,6 +5,7 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/custom_functions.dart' as functions;
+import 'package:easy_debounce/easy_debounce.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -129,6 +130,18 @@ class _ProductosWidgetState extends State<ProductosWidget> {
                       EdgeInsetsDirectional.fromSTEB(16.0, 16.0, 16.0, 8.0),
                   child: TextFormField(
                     controller: _model.textController,
+                    onChanged: (_) => EasyDebounce.debounce(
+                      '_model.textController',
+                      Duration(milliseconds: 2000),
+                      () async {
+                        setState(() {
+                          FFAppState().contains = _model.textController.text;
+                        });
+                      },
+                    ),
+                    onFieldSubmitted: (_) async {
+                      context.pushNamed('Productos');
+                    },
                     autofocus: true,
                     obscureText: false,
                     decoration: InputDecoration(
@@ -330,9 +343,12 @@ class _ProductosWidgetState extends State<ProductosWidget> {
                 PagedListView<ApiPagingParams, dynamic>(
                   pagingController: _model.setListViewController2(
                     (nextPageMarker) => ShopGroup.productallCall.call(
-                      filterCategoriesJson: functions.transformToJSON(functions
-                          .checkNullabilty(FFAppState().pageCategories.toList())
-                          .toList()),
+                      filterCategoriesJson: functions.transformToJSON(
+                          functions
+                              .checkNullabilty(
+                                  FFAppState().pageCategories.toList())
+                              .toList(),
+                          FFAppState().contains),
                       authToken: FFAppState().authUser.accessToken,
                       pageNum: nextPageMarker.nextPageNumber + 1,
                     ),
