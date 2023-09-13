@@ -201,53 +201,57 @@ class _ProductoVIewWidgetState extends State<ProductoVIewWidget>
                 mainAxisSize: MainAxisSize.min,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Container(
-                    width: double.infinity,
-                    height: 300.0,
-                    decoration: BoxDecoration(
-                      color: FlutterFlowTheme.of(context).secondaryBackground,
-                    ),
-                    child: Builder(
-                      builder: (context) {
-                        final carouselImg = getJsonField(
-                          widget.producto,
-                          r'''$.images''',
-                        ).toList();
-                        return Container(
-                          width: double.infinity,
-                          height: 180.0,
-                          child: CarouselSlider.builder(
-                            itemCount: carouselImg.length,
-                            itemBuilder: (context, carouselImgIndex, _) {
-                              final carouselImgItem =
-                                  carouselImg[carouselImgIndex];
-                              return ClipRRect(
-                                borderRadius: BorderRadius.circular(8.0),
-                                child: Image.network(
-                                  carouselImgItem,
-                                  width: 300.0,
-                                  height: 200.0,
-                                  fit: BoxFit.cover,
-                                ),
-                              );
-                            },
-                            carouselController: _model.carouselController ??=
-                                CarouselController(),
-                            options: CarouselOptions(
-                              initialPage: min(1, carouselImg.length - 1),
-                              viewportFraction: 0.5,
-                              disableCenter: true,
-                              enlargeCenterPage: true,
-                              enlargeFactor: 0.25,
-                              enableInfiniteScroll: true,
-                              scrollDirection: Axis.horizontal,
-                              autoPlay: false,
-                              onPageChanged: (index, _) =>
-                                  _model.carouselCurrentIndex = index,
+                  Padding(
+                    padding:
+                        EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+                    child: Container(
+                      width: double.infinity,
+                      height: 300.0,
+                      decoration: BoxDecoration(
+                        color: FlutterFlowTheme.of(context).secondaryBackground,
+                      ),
+                      child: Builder(
+                        builder: (context) {
+                          final carouselImg = getJsonField(
+                            widget.producto,
+                            r'''$.images''',
+                          ).toList();
+                          return Container(
+                            width: double.infinity,
+                            height: 180.0,
+                            child: CarouselSlider.builder(
+                              itemCount: carouselImg.length,
+                              itemBuilder: (context, carouselImgIndex, _) {
+                                final carouselImgItem =
+                                    carouselImg[carouselImgIndex];
+                                return ClipRRect(
+                                  borderRadius: BorderRadius.circular(8.0),
+                                  child: Image.network(
+                                    carouselImgItem,
+                                    width: 300.0,
+                                    height: 200.0,
+                                    fit: BoxFit.cover,
+                                  ),
+                                );
+                              },
+                              carouselController: _model.carouselController ??=
+                                  CarouselController(),
+                              options: CarouselOptions(
+                                initialPage: min(1, carouselImg.length - 1),
+                                viewportFraction: 0.5,
+                                disableCenter: true,
+                                enlargeCenterPage: true,
+                                enlargeFactor: 0.25,
+                                enableInfiniteScroll: true,
+                                scrollDirection: Axis.horizontal,
+                                autoPlay: false,
+                                onPageChanged: (index, _) =>
+                                    _model.carouselCurrentIndex = index,
+                              ),
                             ),
-                          ),
-                        );
-                      },
+                          );
+                        },
+                      ),
                     ),
                   ),
                   Opacity(
