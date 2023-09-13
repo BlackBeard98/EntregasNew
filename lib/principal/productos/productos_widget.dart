@@ -3,7 +3,6 @@ import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import '/flutter_flow/custom_functions.dart' as functions;
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -13,12 +12,7 @@ import 'productos_model.dart';
 export 'productos_model.dart';
 
 class ProductosWidget extends StatefulWidget {
-  const ProductosWidget({
-    Key? key,
-    required this.categorySelected,
-  }) : super(key: key);
-
-  final List<String>? categorySelected;
+  const ProductosWidget({Key? key}) : super(key: key);
 
   @override
   _ProductosWidgetState createState() => _ProductosWidgetState();
@@ -38,8 +32,7 @@ class _ProductosWidgetState extends State<ProductosWidget> {
     SchedulerBinding.instance.addPostFrameCallback((_) async {
       if (FFAppState().authUser.isLogued) {
         setState(() {
-          _model.pageCategories =
-              widget.categorySelected!.toList().cast<String>();
+          _model.pageCategories = [].toList().cast<String>();
         });
       } else {
         context.pushNamed('login');
@@ -266,21 +259,12 @@ class _ProductosWidgetState extends State<ProductosWidget> {
                                     categoryAll[categoryAllIndex];
                                 return FFButtonWidget(
                                   onPressed: () async {
-                                    context.pushNamed(
-                                      'Productos',
-                                      queryParameters: {
-                                        'categorySelected': serializeParam(
-                                          functions.addOrRemoveCat(
-                                              _model.pageCategories.toList(),
-                                              getJsonField(
-                                                categoryAllItem,
-                                                r'''$._id._id''',
-                                              ).toString()),
-                                          ParamType.String,
-                                          true,
-                                        ),
-                                      }.withoutNulls,
-                                    );
+                                    setState(() {
+                                      _model.addToPageCategories(getJsonField(
+                                        listViewCategoryallResponse.jsonBody,
+                                        r'''$._id._id''',
+                                      ).toString());
+                                    });
                                   },
                                   text: getJsonField(
                                     categoryAllItem,
@@ -292,16 +276,7 @@ class _ProductosWidgetState extends State<ProductosWidget> {
                                         24.0, 0.0, 24.0, 0.0),
                                     iconPadding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 0.0, 0.0),
-                                    color: functions
-                                            .checkNullabilty(
-                                                _model.pageCategories.toList())
-                                            .toList()
-                                            .contains(valueOrDefault<String>(
-                                              categoryAllItem.toString(),
-                                              '\$,_id._Id',
-                                            ))
-                                        ? Color(0xFFEE5F01)
-                                        : Color(0xFFE8A479),
+                                    color: Color(0xFFE8A479),
                                     textStyle: FlutterFlowTheme.of(context)
                                         .titleSmall
                                         .override(
