@@ -6,6 +6,7 @@ import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:infinite_scroll_pagination/infinite_scroll_pagination.dart';
 import 'package:provider/provider.dart';
 
 class ProductosModel extends FlutterFlowModel {
@@ -15,6 +16,10 @@ class ProductosModel extends FlutterFlowModel {
   // State field(s) for TextField widget.
   TextEditingController? textController;
   String? Function(BuildContext, String?)? textControllerValidator;
+  // State field(s) for ListView widget.
+
+  PagingController<ApiPagingParams, dynamic>? listViewPagingController2;
+  Function(ApiPagingParams nextPageMarker)? listViewApiCall2;
 
   /// Initialization and disposal methods.
 
@@ -23,9 +28,57 @@ class ProductosModel extends FlutterFlowModel {
   void dispose() {
     unfocusNode.dispose();
     textController?.dispose();
+    listViewPagingController2?.dispose();
   }
 
   /// Action blocks are added here.
 
   /// Additional helper methods are added here.
+
+  PagingController<ApiPagingParams, dynamic> setListViewController2(
+    Function(ApiPagingParams) apiCall,
+  ) {
+    listViewApiCall2 = apiCall;
+    return listViewPagingController2 ??= _createListViewController2(apiCall);
+  }
+
+  PagingController<ApiPagingParams, dynamic> _createListViewController2(
+    Function(ApiPagingParams) query,
+  ) {
+    final controller = PagingController<ApiPagingParams, dynamic>(
+      firstPageKey: ApiPagingParams(
+        nextPageNumber: 0,
+        numItems: 0,
+        lastResponse: null,
+      ),
+    );
+    return controller..addPageRequestListener(listViewProductallPage2);
+  }
+
+  void listViewProductallPage2(ApiPagingParams nextPageMarker) =>
+      listViewApiCall2!(nextPageMarker).then((listViewProductallResponse) {
+        final pageItems = (ShopGroup.productallCall
+                    .allProducts(
+                      listViewProductallResponse.jsonBody,
+                    )!
+                    .where((e) =>
+                        FFAppState().pageCategories.contains(getJsonField(
+                              e,
+                              r'''$.categoryId._id''',
+                            ).toString().toString()))
+                    .toList() ??
+                [])
+            .toList() as List;
+        final newNumItems = nextPageMarker.numItems + pageItems.length;
+        listViewPagingController2?.appendPage(
+          pageItems,
+          (pageItems.length > 0)
+              ? ApiPagingParams(
+                  nextPageNumber: nextPageMarker.nextPageNumber + 1,
+                  numItems: newNumItems,
+                  lastResponse: listViewProductallResponse,
+                )
+              : null,
+        );
+      });
 }
