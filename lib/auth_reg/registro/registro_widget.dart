@@ -663,14 +663,14 @@ class _RegistroWidgetState extends State<RegistroWidget> {
                                         TextSpan(
                                           text: FFLocalizations.of(context)
                                               .getText(
-                                            'smh7sy49' /* No tienes cuenta?  */,
+                                            'smh7sy49' /* Ya tienes cuenta?  */,
                                           ),
                                           style: TextStyle(),
                                         ),
                                         TextSpan(
                                           text: FFLocalizations.of(context)
                                               .getText(
-                                            'rbrr67xn' /* Regístrate aquí */,
+                                            'rbrr67xn' /* Accede aquí */,
                                           ),
                                           style: FlutterFlowTheme.of(context)
                                               .bodyMedium
@@ -680,6 +680,11 @@ class _RegistroWidgetState extends State<RegistroWidget> {
                                                 fontSize: 14.0,
                                                 fontWeight: FontWeight.w600,
                                               ),
+                                          mouseCursor: SystemMouseCursors.click,
+                                          recognizer: TapGestureRecognizer()
+                                            ..onTap = () async {
+                                              context.pushNamed('login');
+                                            },
                                         )
                                       ],
                                       style: FlutterFlowTheme.of(context)

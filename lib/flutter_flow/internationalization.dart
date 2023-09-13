@@ -335,54 +335,54 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // prof
   {
-    'xvdh1a8k': {
+    'z8sjz2i1': {
       'es': 'Edit Profile',
       'en': '',
     },
-    'yfedy11t': {
+    'ztf3panw': {
       'es': 'Change Password',
       'en': '',
     },
-    'ufpl3d5c': {
+    '9huxixh4': {
       'es': 'Notification Settings',
       'en': '',
     },
-    'qytov7z3': {
+    '49ps4fil': {
       'es': 'Terms of Services',
       'en': '',
     },
-    'je9xmycv': {
+    'v121ndgk': {
       'es': 'Log Out',
       'en': '',
     },
   },
   // Cuenta
   {
-    'friyr6ie': {
+    '3ze8jno1': {
       'es': 'Cuenta',
       'en': '',
     },
-    '711oh1ed': {
+    'e5sukugg': {
       'es': 'Mis Direcciones',
       'en': '',
     },
-    'wodfdmog': {
+    'vz2ra0gz': {
       'es': 'Mis Pedidods',
       'en': '',
     },
-    '1sxbgy29': {
+    'p4vvuxwb': {
       'es': 'Editar Perfil',
       'en': '',
     },
-    'h5ag2ugw': {
+    'ol3xjw75': {
       'es': 'Mi Carrito',
       'en': '',
     },
-    'cdidbm9v': {
+    '0rmr6hs8': {
       'es': 'Cerrar Sesión ',
       'en': '',
     },
-    '2kw8sq1h': {
+    'a70y2ubw': {
       'es': 'Cuenta',
       'en': '',
     },
@@ -426,11 +426,11 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': '',
     },
     'smh7sy49': {
-      'es': 'No tienes cuenta? ',
+      'es': 'Ya tienes cuenta? ',
       'en': '',
     },
     'rbrr67xn': {
-      'es': 'Regístrate aquí',
+      'es': 'Accede aquí',
       'en': '',
     },
     'cll6dafm': {
@@ -440,7 +440,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // ProductosVacio
   {
-    '5rofwdxu': {
+    'n2f8gwdi': {
       'es': 'No Hay Productos',
       'en': '',
     },
