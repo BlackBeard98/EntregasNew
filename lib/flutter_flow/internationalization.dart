@@ -157,7 +157,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // Productos
   {
-    'm6fr8k66': {
+    'druo4sl4': {
       'es': 'Comprando en ',
       'en': '',
     },
@@ -472,7 +472,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'Search for an item...',
       'en': '',
     },
-    '2w6m4onk': {
+    'is1bu1jv': {
       'es': 'Avanzar a Comprar',
       'en': '',
     },

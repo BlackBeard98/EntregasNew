@@ -113,7 +113,7 @@ class _ProductosWidgetState extends State<ProductosWidget> {
                   children: [
                     TextSpan(
                       text: FFLocalizations.of(context).getText(
-                        'm6fr8k66' /* Comprando en  */,
+                        'druo4sl4' /* Comprando en  */,
                       ),
                       style: FlutterFlowTheme.of(context).bodyMedium.override(
                             fontFamily: 'Readex Pro',

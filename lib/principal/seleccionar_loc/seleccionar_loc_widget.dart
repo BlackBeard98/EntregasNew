@@ -532,11 +532,18 @@ class _SeleccionarLocWidgetState extends State<SeleccionarLocWidget> {
                                                     0.0, 24.0, 0.0, 0.0),
                                             child: FFButtonWidget(
                                               onPressed: () async {
+                                                setState(() {
+                                                  FFAppState().ProvinceApp =
+                                                      FFAppState().Provincia;
+                                                  FFAppState().MunicipalityApp =
+                                                      FFAppState().Municipality;
+                                                });
+
                                                 context.pushNamed('Productos');
                                               },
                                               text: FFLocalizations.of(context)
                                                   .getText(
-                                                '2w6m4onk' /* Avanzar a Comprar */,
+                                                'is1bu1jv' /* Avanzar a Comprar */,
                                               ),
                                               options: FFButtonOptions(
                                                 height: 40.0,
