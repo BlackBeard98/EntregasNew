@@ -286,8 +286,8 @@ class _SeleccionarLocWidgetState extends State<SeleccionarLocWidget> {
                                                                   .dropDownValue1 =
                                                               val);
                                                           setState(() {
-                                                            _model
-                                                                .updateProvinceStruct(
+                                                            FFAppState()
+                                                                .updateProvinciaStruct(
                                                               (e) => e
                                                                 ..name = _model
                                                                     .dropDownValue1
@@ -324,13 +324,13 @@ class _SeleccionarLocWidgetState extends State<SeleccionarLocWidget> {
                                                             FFLocalizations.of(
                                                                     context)
                                                                 .getText(
-                                                          'ca4clq70' /* Please select... */,
+                                                          '0spnh94r' /* Please select... */,
                                                         ),
                                                         searchHintText:
                                                             FFLocalizations.of(
                                                                     context)
                                                                 .getText(
-                                                          '1m59894q' /* Search for an item... */,
+                                                          '1nbv2dw3' /* Search for an item... */,
                                                         ),
                                                         icon: Icon(
                                                           Icons
@@ -444,7 +444,7 @@ class _SeleccionarLocWidgetState extends State<SeleccionarLocWidget> {
                                                                   .dropDownValue2 =
                                                               val);
                                                           setState(() {
-                                                            _model
+                                                            FFAppState()
                                                                 .updateMunicipalityStruct(
                                                               (e) => e
                                                                 ..name = _model
@@ -482,13 +482,13 @@ class _SeleccionarLocWidgetState extends State<SeleccionarLocWidget> {
                                                             FFLocalizations.of(
                                                                     context)
                                                                 .getText(
-                                                          'u3cy4kmv' /* Please select... */,
+                                                          'olt7wxdv' /* Please select... */,
                                                         ),
                                                         searchHintText:
                                                             FFLocalizations.of(
                                                                     context)
                                                                 .getText(
-                                                          '97h93swy' /* Search for an item... */,
+                                                          'chogp8cx' /* Search for an item... */,
                                                         ),
                                                         icon: Icon(
                                                           Icons
@@ -514,8 +514,9 @@ class _SeleccionarLocWidgetState extends State<SeleccionarLocWidget> {
                                                                     16.0,
                                                                     4.0),
                                                         hidesUnderline: true,
-                                                        disabled: !_model
-                                                            .province!.isSet,
+                                                        disabled: !FFAppState()
+                                                            .Provincia
+                                                            .isSet,
                                                         isSearchable: true,
                                                         isMultiSelect: false,
                                                       );
@@ -523,52 +524,6 @@ class _SeleccionarLocWidgetState extends State<SeleccionarLocWidget> {
                                                   ),
                                                 ),
                                               ],
-                                            ),
-                                          ),
-                                          Padding(
-                                            padding:
-                                                EdgeInsetsDirectional.fromSTEB(
-                                                    0.0, 24.0, 0.0, 0.0),
-                                            child: FFButtonWidget(
-                                              onPressed: _model.municipality!
-                                                      .hasIsSet()
-                                                  ? null
-                                                  : () async {
-                                                      context
-                                                          .goNamed('Productos');
-                                                    },
-                                              text: FFLocalizations.of(context)
-                                                  .getText(
-                                                'xp3lh2ic' /* Ir a comprar */,
-                                              ),
-                                              options: FFButtonOptions(
-                                                height: 40.0,
-                                                padding: EdgeInsetsDirectional
-                                                    .fromSTEB(
-                                                        24.0, 0.0, 24.0, 0.0),
-                                                iconPadding:
-                                                    EdgeInsetsDirectional
-                                                        .fromSTEB(
-                                                            0.0, 0.0, 0.0, 0.0),
-                                                color:
-                                                    FlutterFlowTheme.of(context)
-                                                        .primary,
-                                                textStyle:
-                                                    FlutterFlowTheme.of(context)
-                                                        .titleSmall
-                                                        .override(
-                                                          fontFamily:
-                                                              'Readex Pro',
-                                                          color: Colors.white,
-                                                        ),
-                                                elevation: 3.0,
-                                                borderSide: BorderSide(
-                                                  color: Colors.transparent,
-                                                  width: 1.0,
-                                                ),
-                                                borderRadius:
-                                                    BorderRadius.circular(8.0),
-                                              ),
                                             ),
                                           ),
                                         ],

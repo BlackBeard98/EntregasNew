@@ -18,10 +18,6 @@ class SeleccionarLocModel extends FlutterFlowModel {
   void updateProvinceStruct(Function(NameIDStruct) updateFn) =>
       updateFn(province ??= NameIDStruct());
 
-  NameIDStruct? municipality;
-  void updateMunicipalityStruct(Function(NameIDStruct) updateFn) =>
-      updateFn(municipality ??= NameIDStruct());
-
   ///  State fields for stateful widgets in this page.
 
   final unfocusNode = FocusNode();

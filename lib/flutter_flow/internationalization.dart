@@ -444,32 +444,28 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'Escoja el municipio donde va a comprar',
       'en': '',
     },
-    'jmq3u9ec': {
+    'z9u4k587': {
       'es': 'Option 1',
       'en': '',
     },
-    'ca4clq70': {
+    '0spnh94r': {
       'es': 'Please select...',
       'en': '',
     },
-    '1m59894q': {
+    '1nbv2dw3': {
       'es': 'Search for an item...',
       'en': '',
     },
-    'wzzuxfve': {
+    '4c52kgyi': {
       'es': 'Option 1',
       'en': '',
     },
-    'u3cy4kmv': {
+    'olt7wxdv': {
       'es': 'Please select...',
       'en': '',
     },
-    '97h93swy': {
+    'chogp8cx': {
       'es': 'Search for an item...',
-      'en': '',
-    },
-    'xp3lh2ic': {
-      'es': 'Ir a comprar',
       'en': '',
     },
     '70rwjpl6': {
