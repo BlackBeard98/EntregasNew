@@ -5,6 +5,7 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/custom_functions.dart' as functions;
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
@@ -93,14 +94,42 @@ class _ProductosWidgetState extends State<ProductosWidget> {
               ),
             ),
           ),
-          title: Text(
-            FFAppState().authUser.name,
-            style: FlutterFlowTheme.of(context).headlineMedium.override(
-                  fontFamily: 'Outfit',
-                  color: Color(0xFF15161E),
-                  fontSize: 24.0,
-                  fontWeight: FontWeight.w500,
+          title: Column(
+            mainAxisSize: MainAxisSize.max,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                FFAppState().authUser.name,
+                style: FlutterFlowTheme.of(context).headlineMedium.override(
+                      fontFamily: 'Outfit',
+                      color: Color(0xFF15161E),
+                      fontSize: 24.0,
+                      fontWeight: FontWeight.w500,
+                    ),
+              ),
+              RichText(
+                textScaleFactor: MediaQuery.of(context).textScaleFactor,
+                text: TextSpan(
+                  children: [
+                    TextSpan(
+                      text: FFLocalizations.of(context).getText(
+                        'm6fr8k66' /* Comprando en  */,
+                      ),
+                      style: FlutterFlowTheme.of(context).bodyMedium.override(
+                            fontFamily: 'Readex Pro',
+                            color: FlutterFlowTheme.of(context).primary,
+                            fontWeight: FontWeight.bold,
+                          ),
+                    ),
+                    TextSpan(
+                      text: FFAppState().Municipality.name,
+                      style: TextStyle(),
+                    )
+                  ],
+                  style: FlutterFlowTheme.of(context).bodyMedium,
                 ),
+              ),
+            ],
           ),
           actions: [
             Padding(
