@@ -138,6 +138,7 @@ class _SeleccionarLocWidgetState extends State<SeleccionarLocWidget> {
                               : MediaQuery.sizeOf(context).width,
                           600.0,
                         ),
+                        height: 300.0,
                         constraints: BoxConstraints(
                           maxWidth: 430.0,
                         ),
@@ -169,6 +170,7 @@ class _SeleccionarLocWidgetState extends State<SeleccionarLocWidget> {
                               : MediaQuery.sizeOf(context).width,
                           600.0,
                         ),
+                        height: 300.0,
                         decoration: BoxDecoration(
                           color: Colors.white,
                           boxShadow: [
@@ -281,12 +283,12 @@ class _SeleccionarLocWidgetState extends State<SeleccionarLocWidget> {
                                               hintText:
                                                   FFLocalizations.of(context)
                                                       .getText(
-                                                'trzti2d2' /* Please select... */,
+                                                '88q0mb5d' /* Please select... */,
                                               ),
                                               searchHintText:
                                                   FFLocalizations.of(context)
                                                       .getText(
-                                                'zq3b1ktd' /* Search for an item... */,
+                                                '1kvbkwtb' /* Search for an item... */,
                                               ),
                                               icon: Icon(
                                                 Icons
