@@ -156,7 +156,7 @@ class _SeleccionarLocWidgetState extends State<SeleccionarLocWidget> {
                           borderRadius: BorderRadius.circular(12.0),
                           child: Image.network(
                             'https://picsum.photos/seed/665/600',
-                            width: 300.0,
+                            width: double.infinity,
                             height: 330.0,
                             fit: BoxFit.cover,
                           ),
@@ -281,12 +281,12 @@ class _SeleccionarLocWidgetState extends State<SeleccionarLocWidget> {
                                               hintText:
                                                   FFLocalizations.of(context)
                                                       .getText(
-                                                'nxfsdrzh' /* Please select... */,
+                                                'sl9r5fjy' /* Please select... */,
                                               ),
                                               searchHintText:
                                                   FFLocalizations.of(context)
                                                       .getText(
-                                                '7rsptxyd' /* Search for an item... */,
+                                                'mtubzi1y' /* Search for an item... */,
                                               ),
                                               icon: Icon(
                                                 Icons
