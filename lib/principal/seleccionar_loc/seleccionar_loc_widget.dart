@@ -514,7 +514,7 @@ class _SeleccionarLocWidgetState extends State<SeleccionarLocWidget> {
                                                                     16.0,
                                                                     4.0),
                                                         hidesUnderline: true,
-                                                        disabled: FFAppState()
+                                                        disabled: !FFAppState()
                                                             .Province
                                                             .isSet,
                                                         isSearchable: true,
