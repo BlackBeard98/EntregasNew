@@ -531,19 +531,28 @@ class _SeleccionarLocWidgetState extends State<SeleccionarLocWidget> {
                                                 EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 24.0, 0.0, 0.0),
                                             child: FFButtonWidget(
-                                              onPressed: () async {
-                                                setState(() {
-                                                  FFAppState().ProvinceApp =
-                                                      FFAppState().Provincia;
-                                                  FFAppState().MunicipalityApp =
-                                                      FFAppState().Municipality;
-                                                });
+                                              onPressed: FFAppState()
+                                                      .Municipality
+                                                      .isSet
+                                                  ? null
+                                                  : () async {
+                                                      setState(() {
+                                                        FFAppState()
+                                                                .ProvinceApp =
+                                                            FFAppState()
+                                                                .Provincia;
+                                                        FFAppState()
+                                                                .MunicipalityApp =
+                                                            FFAppState()
+                                                                .Municipality;
+                                                      });
 
-                                                context.pushNamed('Productos');
-                                              },
+                                                      context.pushNamed(
+                                                          'Productos');
+                                                    },
                                               text: FFLocalizations.of(context)
                                                   .getText(
-                                                'qj05gakn' /* Avanzar a Comprar */,
+                                                'gustybjg' /* Avanzar a Comprar */,
                                               ),
                                               options: FFButtonOptions(
                                                 height: 40.0,
