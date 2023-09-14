@@ -109,16 +109,15 @@ class _SeleccionarLocWidgetState extends State<SeleccionarLocWidget> {
         ),
         body: SafeArea(
           top: true,
-          child: Container(
-            width: double.infinity,
-            height: double.infinity,
-            decoration: BoxDecoration(
-              color: Colors.white,
-            ),
-            child: Column(
-              mainAxisSize: MainAxisSize.max,
-              children: [
-                Padding(
+          child: Column(
+            mainAxisSize: MainAxisSize.max,
+            children: [
+              Container(
+                width: double.infinity,
+                decoration: BoxDecoration(
+                  color: FlutterFlowTheme.of(context).secondaryBackground,
+                ),
+                child: Padding(
                   padding:
                       EdgeInsetsDirectional.fromSTEB(16.0, 16.0, 16.0, 24.0),
                   child: Wrap(
@@ -189,7 +188,7 @@ class _SeleccionarLocWidgetState extends State<SeleccionarLocWidget> {
                             children: [
                               Text(
                                 FFLocalizations.of(context).getText(
-                                  '0ao5p9d3' /* Escoja el municipio donde va a... */,
+                                  'bxu7pfo6' /* Escoja el municipio donde va a... */,
                                 ),
                                 style: FlutterFlowTheme.of(context)
                                     .titleLarge
@@ -281,12 +280,12 @@ class _SeleccionarLocWidgetState extends State<SeleccionarLocWidget> {
                                               hintText:
                                                   FFLocalizations.of(context)
                                                       .getText(
-                                                'sl9r5fjy' /* Please select... */,
+                                                'csf4b9x7' /* Please select... */,
                                               ),
                                               searchHintText:
                                                   FFLocalizations.of(context)
                                                       .getText(
-                                                'mtubzi1y' /* Search for an item... */,
+                                                'rpb17zm0' /* Search for an item... */,
                                               ),
                                               icon: Icon(
                                                 Icons
@@ -324,8 +323,8 @@ class _SeleccionarLocWidgetState extends State<SeleccionarLocWidget> {
                     ],
                   ),
                 ),
-              ],
-            ),
+              ),
+            ],
           ),
         ),
       ),

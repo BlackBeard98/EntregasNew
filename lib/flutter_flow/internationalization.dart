@@ -440,19 +440,19 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // SeleccionarLoc
   {
-    '0ao5p9d3': {
+    'bxu7pfo6': {
       'es': 'Escoja el municipio donde va a comprar',
       'en': '',
     },
-    'pqsla25m': {
+    'vpv7i1q1': {
       'es': 'Option 1',
       'en': '',
     },
-    'sl9r5fjy': {
+    'csf4b9x7': {
       'es': 'Please select...',
       'en': '',
     },
-    'mtubzi1y': {
+    'rpb17zm0': {
       'es': 'Search for an item...',
       'en': '',
     },
