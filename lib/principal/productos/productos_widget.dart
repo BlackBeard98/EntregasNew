@@ -7,6 +7,7 @@ import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/custom_functions.dart' as functions;
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:infinite_scroll_pagination/infinite_scroll_pagination.dart';
 import 'package:provider/provider.dart';
@@ -228,24 +229,22 @@ class _ProductosWidgetState extends State<ProductosWidget> {
                         // Customize what your widget looks like when it's loading the first page.
                         firstPageProgressIndicatorBuilder: (_) => Center(
                           child: SizedBox(
-                            width: 50.0,
-                            height: 50.0,
-                            child: CircularProgressIndicator(
-                              valueColor: AlwaysStoppedAnimation<Color>(
-                                FlutterFlowTheme.of(context).primary,
-                              ),
+                            width: 40.0,
+                            height: 40.0,
+                            child: SpinKitFadingCircle(
+                              color: FlutterFlowTheme.of(context).primary,
+                              size: 40.0,
                             ),
                           ),
                         ),
                         // Customize what your widget looks like when it's loading another page.
                         newPageProgressIndicatorBuilder: (_) => Center(
                           child: SizedBox(
-                            width: 50.0,
-                            height: 50.0,
-                            child: CircularProgressIndicator(
-                              valueColor: AlwaysStoppedAnimation<Color>(
-                                FlutterFlowTheme.of(context).primary,
-                              ),
+                            width: 40.0,
+                            height: 40.0,
+                            child: SpinKitFadingCircle(
+                              color: FlutterFlowTheme.of(context).primary,
+                              size: 40.0,
                             ),
                           ),
                         ),
@@ -366,24 +365,22 @@ class _ProductosWidgetState extends State<ProductosWidget> {
                     // Customize what your widget looks like when it's loading the first page.
                     firstPageProgressIndicatorBuilder: (_) => Center(
                       child: SizedBox(
-                        width: 50.0,
-                        height: 50.0,
-                        child: CircularProgressIndicator(
-                          valueColor: AlwaysStoppedAnimation<Color>(
-                            FlutterFlowTheme.of(context).primary,
-                          ),
+                        width: 40.0,
+                        height: 40.0,
+                        child: SpinKitFadingCircle(
+                          color: FlutterFlowTheme.of(context).primary,
+                          size: 40.0,
                         ),
                       ),
                     ),
                     // Customize what your widget looks like when it's loading another page.
                     newPageProgressIndicatorBuilder: (_) => Center(
                       child: SizedBox(
-                        width: 50.0,
-                        height: 50.0,
-                        child: CircularProgressIndicator(
-                          valueColor: AlwaysStoppedAnimation<Color>(
-                            FlutterFlowTheme.of(context).primary,
-                          ),
+                        width: 40.0,
+                        height: 40.0,
+                        child: SpinKitFadingCircle(
+                          color: FlutterFlowTheme.of(context).primary,
+                          size: 40.0,
                         ),
                       ),
                     ),
