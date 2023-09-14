@@ -324,13 +324,13 @@ class _SeleccionarLocWidgetState extends State<SeleccionarLocWidget> {
                                                             FFLocalizations.of(
                                                                     context)
                                                                 .getText(
-                                                          'wd4yximc' /* Please select... */,
+                                                          'ca4clq70' /* Please select... */,
                                                         ),
                                                         searchHintText:
                                                             FFLocalizations.of(
                                                                     context)
                                                                 .getText(
-                                                          'gk9trten' /* Search for an item... */,
+                                                          '1m59894q' /* Search for an item... */,
                                                         ),
                                                         icon: Icon(
                                                           Icons
@@ -482,13 +482,13 @@ class _SeleccionarLocWidgetState extends State<SeleccionarLocWidget> {
                                                             FFLocalizations.of(
                                                                     context)
                                                                 .getText(
-                                                          'v89k8mn4' /* Please select... */,
+                                                          'u3cy4kmv' /* Please select... */,
                                                         ),
                                                         searchHintText:
                                                             FFLocalizations.of(
                                                                     context)
                                                                 .getText(
-                                                          '3667ots8' /* Search for an item... */,
+                                                          '97h93swy' /* Search for an item... */,
                                                         ),
                                                         icon: Icon(
                                                           Icons
@@ -514,9 +514,8 @@ class _SeleccionarLocWidgetState extends State<SeleccionarLocWidget> {
                                                                     16.0,
                                                                     4.0),
                                                         hidesUnderline: true,
-                                                        disabled: !FFAppState()
-                                                            .Provincia
-                                                            .isSet,
+                                                        disabled: !_model
+                                                            .province!.isSet,
                                                         isSearchable: true,
                                                         isMultiSelect: false,
                                                       );
@@ -540,7 +539,7 @@ class _SeleccionarLocWidgetState extends State<SeleccionarLocWidget> {
                                                     },
                                               text: FFLocalizations.of(context)
                                                   .getText(
-                                                'pz3xaj2p' /* Ir a comprar */,
+                                                'xp3lh2ic' /* Ir a comprar */,
                                               ),
                                               options: FFButtonOptions(
                                                 height: 40.0,
