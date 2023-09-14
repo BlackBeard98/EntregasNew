@@ -358,6 +358,7 @@ class _ProductosWidgetState extends State<ProductosWidget> {
                     0,
                     44.0,
                   ),
+                  primary: false,
                   shrinkWrap: true,
                   reverse: false,
                   scrollDirection: Axis.vertical,
