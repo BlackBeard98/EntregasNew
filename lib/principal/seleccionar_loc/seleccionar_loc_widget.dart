@@ -324,13 +324,13 @@ class _SeleccionarLocWidgetState extends State<SeleccionarLocWidget> {
                                                             FFLocalizations.of(
                                                                     context)
                                                                 .getText(
-                                                          'u0twokhz' /* Please select... */,
+                                                          '1a8vkroj' /* Please select... */,
                                                         ),
                                                         searchHintText:
                                                             FFLocalizations.of(
                                                                     context)
                                                                 .getText(
-                                                          'z95hxi2a' /* Search for an item... */,
+                                                          'fxd68g8g' /* Search for an item... */,
                                                         ),
                                                         icon: Icon(
                                                           Icons
@@ -463,13 +463,13 @@ class _SeleccionarLocWidgetState extends State<SeleccionarLocWidget> {
                                                             FFLocalizations.of(
                                                                     context)
                                                                 .getText(
-                                                          'cc92c036' /* Please select... */,
+                                                          'doe6dzbf' /* Please select... */,
                                                         ),
                                                         searchHintText:
                                                             FFLocalizations.of(
                                                                     context)
                                                                 .getText(
-                                                          'he50tl2m' /* Search for an item... */,
+                                                          'p1nrmbin' /* Search for an item... */,
                                                         ),
                                                         icon: Icon(
                                                           Icons

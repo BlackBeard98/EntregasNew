@@ -31,7 +31,11 @@ class _LoginWidgetState extends State<LoginWidget> {
     // On page load action.
     SchedulerBinding.instance.addPostFrameCallback((_) async {
       if (FFAppState().authUser.isLogued) {
-        context.pushNamed('Productos');
+        if (FFAppState().Provincia.hasIsSet()) {
+          context.goNamed('Productos');
+        } else {
+          context.goNamed('SeleccionarLoc');
+        }
       }
     });
 
