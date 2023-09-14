@@ -109,208 +109,223 @@ class _SeleccionarLocWidgetState extends State<SeleccionarLocWidget> {
         ),
         body: SafeArea(
           top: true,
-          child: Column(
-            mainAxisSize: MainAxisSize.max,
-            children: [
-              Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(16.0, 16.0, 16.0, 24.0),
-                child: Wrap(
-                  spacing: 16.0,
-                  runSpacing: 16.0,
-                  alignment: WrapAlignment.start,
-                  crossAxisAlignment: WrapCrossAlignment.start,
-                  direction: Axis.horizontal,
-                  runAlignment: WrapAlignment.start,
-                  verticalDirection: VerticalDirection.down,
-                  clipBehavior: Clip.none,
-                  children: [
-                    Container(
-                      width: valueOrDefault<double>(
-                        MediaQuery.sizeOf(context).width >= 1280.0
-                            ? (MediaQuery.sizeOf(context).width * 0.5)
-                            : MediaQuery.sizeOf(context).width,
-                        600.0,
-                      ),
-                      constraints: BoxConstraints(
-                        maxWidth: 430.0,
-                      ),
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        boxShadow: [
-                          BoxShadow(
-                            blurRadius: 4.0,
-                            color: Color(0x33000000),
-                            offset: Offset(0.0, 2.0),
-                          )
-                        ],
-                        borderRadius: BorderRadius.circular(12.0),
-                      ),
-                      child: ClipRRect(
-                        borderRadius: BorderRadius.circular(12.0),
-                        child: Image.network(
-                          'https://picsum.photos/seed/665/600',
-                          width: 300.0,
-                          height: 330.0,
-                          fit: BoxFit.cover,
+          child: Container(
+            width: double.infinity,
+            height: double.infinity,
+            decoration: BoxDecoration(
+              color: FlutterFlowTheme.of(context).secondaryBackground,
+            ),
+            child: Column(
+              mainAxisSize: MainAxisSize.max,
+              children: [
+                Padding(
+                  padding:
+                      EdgeInsetsDirectional.fromSTEB(16.0, 16.0, 16.0, 24.0),
+                  child: Wrap(
+                    spacing: 16.0,
+                    runSpacing: 16.0,
+                    alignment: WrapAlignment.start,
+                    crossAxisAlignment: WrapCrossAlignment.start,
+                    direction: Axis.horizontal,
+                    runAlignment: WrapAlignment.start,
+                    verticalDirection: VerticalDirection.down,
+                    clipBehavior: Clip.none,
+                    children: [
+                      Container(
+                        width: valueOrDefault<double>(
+                          MediaQuery.sizeOf(context).width >= 1280.0
+                              ? (MediaQuery.sizeOf(context).width * 0.5)
+                              : MediaQuery.sizeOf(context).width,
+                          600.0,
+                        ),
+                        constraints: BoxConstraints(
+                          maxWidth: 430.0,
+                        ),
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          boxShadow: [
+                            BoxShadow(
+                              blurRadius: 4.0,
+                              color: Color(0x33000000),
+                              offset: Offset(0.0, 2.0),
+                            )
+                          ],
+                          borderRadius: BorderRadius.circular(12.0),
+                        ),
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(12.0),
+                          child: Image.network(
+                            'https://picsum.photos/seed/665/600',
+                            width: 300.0,
+                            height: 330.0,
+                            fit: BoxFit.cover,
+                          ),
                         ),
                       ),
-                    ),
-                    Container(
-                      width: valueOrDefault<double>(
-                        MediaQuery.sizeOf(context).width >= 1280.0
-                            ? (MediaQuery.sizeOf(context).width * 0.5)
-                            : MediaQuery.sizeOf(context).width,
-                        600.0,
-                      ),
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        boxShadow: [
-                          BoxShadow(
-                            blurRadius: 4.0,
-                            color: Color(0x33000000),
-                            offset: Offset(0.0, 2.0),
-                          )
-                        ],
-                        borderRadius: BorderRadius.circular(12.0),
-                      ),
-                      child: Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(
-                            16.0, 16.0, 16.0, 16.0),
-                        child: Column(
-                          mainAxisSize: MainAxisSize.max,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              FFLocalizations.of(context).getText(
-                                '0ao5p9d3' /* Escoja el municipio donde va a... */,
-                              ),
-                              style: FlutterFlowTheme.of(context)
-                                  .titleLarge
-                                  .override(
-                                    fontFamily: 'Outfit',
-                                    color: Color(0xFF14181B),
-                                    fontSize: 22.0,
-                                    fontWeight: FontWeight.w500,
-                                  ),
-                            ),
-                            Container(
-                              width: double.infinity,
-                              height: 232.0,
-                              decoration: BoxDecoration(
-                                color: Colors.white,
-                              ),
-                              child: Container(
-                                width: double.infinity,
-                                height: double.infinity,
-                                decoration: BoxDecoration(
-                                  color: FlutterFlowTheme.of(context)
-                                      .secondaryBackground,
+                      Container(
+                        width: valueOrDefault<double>(
+                          MediaQuery.sizeOf(context).width >= 1280.0
+                              ? (MediaQuery.sizeOf(context).width * 0.5)
+                              : MediaQuery.sizeOf(context).width,
+                          600.0,
+                        ),
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          boxShadow: [
+                            BoxShadow(
+                              blurRadius: 4.0,
+                              color: Color(0x33000000),
+                              offset: Offset(0.0, 2.0),
+                            )
+                          ],
+                          borderRadius: BorderRadius.circular(12.0),
+                        ),
+                        child: Padding(
+                          padding: EdgeInsetsDirectional.fromSTEB(
+                              16.0, 16.0, 16.0, 16.0),
+                          child: Column(
+                            mainAxisSize: MainAxisSize.max,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                FFLocalizations.of(context).getText(
+                                  '0ao5p9d3' /* Escoja el municipio donde va a... */,
                                 ),
-                                child: Column(
-                                  mainAxisSize: MainAxisSize.max,
-                                  children: [
-                                    Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          0.0, 24.0, 0.0, 0.0),
-                                      child: FutureBuilder<ApiCallResponse>(
-                                        future: ShopGroup.provinceallCall.call(
-                                          authToken:
-                                              FFAppState().authUser.accessToken,
-                                        ),
-                                        builder: (context, snapshot) {
-                                          // Customize what your widget looks like when it's loading.
-                                          if (!snapshot.hasData) {
-                                            return Center(
-                                              child: SizedBox(
-                                                width: 50.0,
-                                                height: 50.0,
-                                                child:
-                                                    CircularProgressIndicator(
-                                                  valueColor:
-                                                      AlwaysStoppedAnimation<
-                                                          Color>(
-                                                    FlutterFlowTheme.of(context)
-                                                        .primary,
+                                style: FlutterFlowTheme.of(context)
+                                    .titleLarge
+                                    .override(
+                                      fontFamily: 'Outfit',
+                                      color: Color(0xFF14181B),
+                                      fontSize: 22.0,
+                                      fontWeight: FontWeight.w500,
+                                    ),
+                              ),
+                              Container(
+                                width: double.infinity,
+                                height: 232.0,
+                                decoration: BoxDecoration(
+                                  color: Colors.white,
+                                ),
+                                child: Container(
+                                  width: double.infinity,
+                                  height: double.infinity,
+                                  decoration: BoxDecoration(
+                                    color: Colors.white,
+                                  ),
+                                  child: Column(
+                                    mainAxisSize: MainAxisSize.max,
+                                    children: [
+                                      Padding(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                            0.0, 24.0, 0.0, 0.0),
+                                        child: FutureBuilder<ApiCallResponse>(
+                                          future:
+                                              ShopGroup.provinceallCall.call(
+                                            authToken: FFAppState()
+                                                .authUser
+                                                .accessToken,
+                                          ),
+                                          builder: (context, snapshot) {
+                                            // Customize what your widget looks like when it's loading.
+                                            if (!snapshot.hasData) {
+                                              return Center(
+                                                child: SizedBox(
+                                                  width: 50.0,
+                                                  height: 50.0,
+                                                  child:
+                                                      CircularProgressIndicator(
+                                                    valueColor:
+                                                        AlwaysStoppedAnimation<
+                                                            Color>(
+                                                      FlutterFlowTheme.of(
+                                                              context)
+                                                          .primary,
+                                                    ),
                                                   ),
                                                 ),
-                                              ),
-                                            );
-                                          }
-                                          final dropDownProvinceallResponse =
-                                              snapshot.data!;
-                                          return FlutterFlowDropDown<String>(
-                                            controller: _model
-                                                    .dropDownValueController ??=
-                                                FormFieldController<String>(
-                                                    null),
-                                            options: (ShopGroup.provinceallCall
-                                                    .names(
-                                              dropDownProvinceallResponse
-                                                  .jsonBody,
-                                            ) as List)
-                                                .map<String>(
-                                                    (s) => s.toString())
-                                                .toList()!
-                                                .map((e) => e.toString())
-                                                .toList(),
-                                            onChanged: (val) => setState(() =>
-                                                _model.dropDownValue = val),
-                                            width: 300.0,
-                                            height: 50.0,
-                                            searchHintTextStyle:
-                                                FlutterFlowTheme.of(context)
-                                                    .labelMedium,
-                                            textStyle:
-                                                FlutterFlowTheme.of(context)
-                                                    .bodyMedium,
-                                            hintText:
-                                                FFLocalizations.of(context)
-                                                    .getText(
-                                              'arnghkk7' /* Please select... */,
-                                            ),
-                                            searchHintText:
-                                                FFLocalizations.of(context)
-                                                    .getText(
-                                              '1xht7uwf' /* Search for an item... */,
-                                            ),
-                                            icon: Icon(
-                                              Icons.keyboard_arrow_down_rounded,
-                                              color:
+                                              );
+                                            }
+                                            final dropDownProvinceallResponse =
+                                                snapshot.data!;
+                                            return FlutterFlowDropDown<String>(
+                                              controller: _model
+                                                      .dropDownValueController ??=
+                                                  FormFieldController<String>(
+                                                      null),
+                                              options: (ShopGroup
+                                                      .provinceallCall
+                                                      .names(
+                                                dropDownProvinceallResponse
+                                                    .jsonBody,
+                                              ) as List)
+                                                  .map<String>(
+                                                      (s) => s.toString())
+                                                  .toList()!
+                                                  .map((e) => e.toString())
+                                                  .toList(),
+                                              onChanged: (val) => setState(() =>
+                                                  _model.dropDownValue = val),
+                                              width: 300.0,
+                                              height: 50.0,
+                                              searchHintTextStyle:
                                                   FlutterFlowTheme.of(context)
-                                                      .secondaryText,
-                                              size: 24.0,
-                                            ),
-                                            fillColor:
-                                                FlutterFlowTheme.of(context)
-                                                    .secondaryBackground,
-                                            elevation: 2.0,
-                                            borderColor:
-                                                FlutterFlowTheme.of(context)
-                                                    .alternate,
-                                            borderWidth: 2.0,
-                                            borderRadius: 8.0,
-                                            margin:
-                                                EdgeInsetsDirectional.fromSTEB(
-                                                    16.0, 4.0, 16.0, 4.0),
-                                            hidesUnderline: true,
-                                            isSearchable: true,
-                                            isMultiSelect: false,
-                                          );
-                                        },
+                                                      .labelMedium,
+                                              textStyle:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyMedium
+                                                      .override(
+                                                        fontFamily:
+                                                            'Readex Pro',
+                                                        color: Colors.black,
+                                                      ),
+                                              hintText:
+                                                  FFLocalizations.of(context)
+                                                      .getText(
+                                                '1rcnwwor' /* Please select... */,
+                                              ),
+                                              searchHintText:
+                                                  FFLocalizations.of(context)
+                                                      .getText(
+                                                '90eo0fwb' /* Search for an item... */,
+                                              ),
+                                              icon: Icon(
+                                                Icons
+                                                    .keyboard_arrow_down_rounded,
+                                                color:
+                                                    FlutterFlowTheme.of(context)
+                                                        .secondaryText,
+                                                size: 24.0,
+                                              ),
+                                              fillColor: Colors.white,
+                                              elevation: 2.0,
+                                              borderColor:
+                                                  FlutterFlowTheme.of(context)
+                                                      .alternate,
+                                              borderWidth: 2.0,
+                                              borderRadius: 8.0,
+                                              margin: EdgeInsetsDirectional
+                                                  .fromSTEB(
+                                                      16.0, 4.0, 16.0, 4.0),
+                                              hidesUnderline: true,
+                                              isSearchable: true,
+                                              isMultiSelect: false,
+                                            );
+                                          },
+                                        ),
                                       ),
-                                    ),
-                                  ],
+                                    ],
+                                  ),
                                 ),
                               ),
-                            ),
-                          ],
+                            ],
+                          ),
                         ),
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
       ),
