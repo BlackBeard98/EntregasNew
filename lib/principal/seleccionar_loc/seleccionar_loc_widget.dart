@@ -538,13 +538,28 @@ class _SeleccionarLocWidgetState extends State<SeleccionarLocWidget> {
                                                   : () async {
                                                       setState(() {
                                                         FFAppState()
-                                                                .ProvinceApp =
-                                                            FFAppState()
-                                                                .Provincia;
+                                                            .updateProvinceAppStruct(
+                                                          (e) => e
+                                                            ..name =
+                                                                FFAppState()
+                                                                    .Provincia
+                                                                    .name
+                                                            ..id = FFAppState()
+                                                                .Provincia
+                                                                .id
+                                                            ..isSet = true,
+                                                        );
                                                         FFAppState()
-                                                                .MunicipalityApp =
-                                                            FFAppState()
-                                                                .Municipality;
+                                                            .updateMunicipalityAppStruct(
+                                                          (e) => e
+                                                            ..name = FFAppState()
+                                                                .Municipality
+                                                                .name
+                                                            ..id = FFAppState()
+                                                                .Municipality
+                                                                .id
+                                                            ..isSet = true,
+                                                        );
                                                       });
 
                                                       context.pushNamed(
@@ -552,7 +567,7 @@ class _SeleccionarLocWidgetState extends State<SeleccionarLocWidget> {
                                                     },
                                               text: FFLocalizations.of(context)
                                                   .getText(
-                                                'zdrhxgn0' /* Avanzar a Comprar */,
+                                                'ufrnpf30' /* Avanzar a Comprar */,
                                               ),
                                               options: FFButtonOptions(
                                                 height: 40.0,
