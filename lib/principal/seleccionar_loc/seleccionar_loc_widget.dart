@@ -156,7 +156,7 @@ class _SeleccionarLocWidgetState extends State<SeleccionarLocWidget> {
                             borderRadius: BorderRadius.circular(12.0),
                             child: Image.network(
                               'https://picsum.photos/seed/665/600',
-                              fit: BoxFit.cover,
+                              fit: BoxFit.fill,
                             ),
                           ),
                         ),
@@ -303,13 +303,13 @@ class _SeleccionarLocWidgetState extends State<SeleccionarLocWidget> {
                                                             FFLocalizations.of(
                                                                     context)
                                                                 .getText(
-                                                          'zsky52k8' /* Please select... */,
+                                                          'z4z3cmfn' /* Please select... */,
                                                         ),
                                                         searchHintText:
                                                             FFLocalizations.of(
                                                                     context)
                                                                 .getText(
-                                                          'lnwknha4' /* Search for an item... */,
+                                                          '3mxd3rzf' /* Search for an item... */,
                                                         ),
                                                         icon: Icon(
                                                           Icons
@@ -429,13 +429,13 @@ class _SeleccionarLocWidgetState extends State<SeleccionarLocWidget> {
                                                             FFLocalizations.of(
                                                                     context)
                                                                 .getText(
-                                                          'vv8by9o6' /* Please select... */,
+                                                          'x1gkkcbi' /* Please select... */,
                                                         ),
                                                         searchHintText:
                                                             FFLocalizations.of(
                                                                     context)
                                                                 .getText(
-                                                          '3tpwn4hn' /* Search for an item... */,
+                                                          'myhrf6zw' /* Search for an item... */,
                                                         ),
                                                         icon: Icon(
                                                           Icons
