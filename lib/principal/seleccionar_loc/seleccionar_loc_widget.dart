@@ -46,7 +46,7 @@ class _SeleccionarLocWidgetState extends State<SeleccionarLocWidget> {
       onTap: () => FocusScope.of(context).requestFocus(_model.unfocusNode),
       child: Scaffold(
         key: scaffoldKey,
-        backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
+        backgroundColor: Colors.white,
         appBar: AppBar(
           backgroundColor: Colors.white,
           automaticallyImplyLeading: false,
@@ -150,8 +150,6 @@ class _SeleccionarLocWidgetState extends State<SeleccionarLocWidget> {
                         borderRadius: BorderRadius.circular(12.0),
                         child: Image.network(
                           'https://picsum.photos/seed/665/600',
-                          width: double.infinity,
-                          height: 330.0,
                           fit: BoxFit.cover,
                         ),
                       ),
@@ -280,12 +278,12 @@ class _SeleccionarLocWidgetState extends State<SeleccionarLocWidget> {
                                                 hintText:
                                                     FFLocalizations.of(context)
                                                         .getText(
-                                                  'i8x2moa5' /* Please select... */,
+                                                  'jza4af0t' /* Please select... */,
                                                 ),
                                                 searchHintText:
                                                     FFLocalizations.of(context)
                                                         .getText(
-                                                  '6jajmws8' /* Search for an item... */,
+                                                  'spctzppl' /* Search for an item... */,
                                                 ),
                                                 icon: Icon(
                                                   Icons
