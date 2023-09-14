@@ -52,3 +52,10 @@ List<String> addOrRemoveCat(
   }
   return list;
 }
+
+String filterJsonList(
+  List<dynamic> list,
+  String? name,
+) {
+  return list.where((x) => (x["name"] == name)).first["_id"]["_id"];
+}

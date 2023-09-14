@@ -93,6 +93,17 @@ class FFAppState extends ChangeNotifier {
   set contains(String _value) {
     _contains = _value;
   }
+
+  NameIDStruct _Provincia =
+      NameIDStruct.fromSerializableMap(jsonDecode('{\"isSet\":\"false\"}'));
+  NameIDStruct get Provincia => _Provincia;
+  set Provincia(NameIDStruct _value) {
+    _Provincia = _value;
+  }
+
+  void updateProvinciaStruct(Function(NameIDStruct) updateFn) {
+    updateFn(_Provincia);
+  }
 }
 
 LatLng? _latLngFromString(String? val) {

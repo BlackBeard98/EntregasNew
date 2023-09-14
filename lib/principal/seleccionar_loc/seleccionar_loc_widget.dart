@@ -1,10 +1,12 @@
 import '/backend/api_requests/api_calls.dart';
+import '/backend/schema/structs/index.dart';
 import '/flutter_flow/flutter_flow_drop_down.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/form_field_controller.dart';
+import '/flutter_flow/custom_functions.dart' as functions;
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
@@ -279,10 +281,29 @@ class _SeleccionarLocWidgetState extends State<SeleccionarLocWidget> {
                                                             .map((e) =>
                                                                 e.toString())
                                                             .toList(),
-                                                        onChanged: (val) =>
-                                                            setState(() => _model
-                                                                    .dropDownValue1 =
-                                                                val),
+                                                        onChanged: (val) async {
+                                                          setState(() => _model
+                                                                  .dropDownValue1 =
+                                                              val);
+                                                          setState(() {
+                                                            FFAppState()
+                                                                .updateProvinciaStruct(
+                                                              (e) => e
+                                                                ..name = _model
+                                                                    .dropDownValue1
+                                                                ..id = functions
+                                                                    .filterJsonList(
+                                                                        getJsonField(
+                                                                          dropDownProvinceallResponse
+                                                                              .jsonBody,
+                                                                          r'''$[*]''',
+                                                                        )!,
+                                                                        _model
+                                                                            .dropDownValue1)
+                                                                ..isSet = true,
+                                                            );
+                                                          });
+                                                        },
                                                         width: 300.0,
                                                         height: 50.0,
                                                         searchHintTextStyle:
@@ -303,13 +324,13 @@ class _SeleccionarLocWidgetState extends State<SeleccionarLocWidget> {
                                                             FFLocalizations.of(
                                                                     context)
                                                                 .getText(
-                                                          'z4z3cmfn' /* Please select... */,
+                                                          '6x904iz4' /* Please select... */,
                                                         ),
                                                         searchHintText:
                                                             FFLocalizations.of(
                                                                     context)
                                                                 .getText(
-                                                          '3mxd3rzf' /* Search for an item... */,
+                                                          'i7samku8' /* Search for an item... */,
                                                         ),
                                                         icon: Icon(
                                                           Icons
@@ -429,13 +450,13 @@ class _SeleccionarLocWidgetState extends State<SeleccionarLocWidget> {
                                                             FFLocalizations.of(
                                                                     context)
                                                                 .getText(
-                                                          'x1gkkcbi' /* Please select... */,
+                                                          'n3w02kgg' /* Please select... */,
                                                         ),
                                                         searchHintText:
                                                             FFLocalizations.of(
                                                                     context)
                                                                 .getText(
-                                                          'myhrf6zw' /* Search for an item... */,
+                                                          'ropatrqh' /* Search for an item... */,
                                                         ),
                                                         icon: Icon(
                                                           Icons
@@ -461,6 +482,9 @@ class _SeleccionarLocWidgetState extends State<SeleccionarLocWidget> {
                                                                     16.0,
                                                                     4.0),
                                                         hidesUnderline: true,
+                                                        disabled: FFAppState()
+                                                            .Provincia
+                                                            .isSet,
                                                         isSearchable: true,
                                                         isMultiSelect: false,
                                                       );
