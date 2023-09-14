@@ -5,7 +5,6 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/custom_functions.dart' as functions;
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
@@ -107,27 +106,9 @@ class _ProductosWidgetState extends State<ProductosWidget> {
                       fontWeight: FontWeight.w500,
                     ),
               ),
-              RichText(
-                textScaleFactor: MediaQuery.of(context).textScaleFactor,
-                text: TextSpan(
-                  children: [
-                    TextSpan(
-                      text: FFLocalizations.of(context).getText(
-                        'u7oamerp' /* Comprando en  */,
-                      ),
-                      style: FlutterFlowTheme.of(context).bodyMedium.override(
-                            fontFamily: 'Readex Pro',
-                            color: FlutterFlowTheme.of(context).primary,
-                            fontWeight: FontWeight.bold,
-                          ),
-                    ),
-                    TextSpan(
-                      text: FFAppState().MunicipalityApp.name,
-                      style: TextStyle(),
-                    )
-                  ],
-                  style: FlutterFlowTheme.of(context).bodyMedium,
-                ),
+              Text(
+                FFAppState().MunicipalityApp.name,
+                style: FlutterFlowTheme.of(context).bodyMedium,
               ),
             ],
           ),
