@@ -531,7 +531,7 @@ class _SeleccionarLocWidgetState extends State<SeleccionarLocWidget> {
                                                 EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 24.0, 0.0, 0.0),
                                             child: FFButtonWidget(
-                                              onPressed: FFAppState()
+                                              onPressed: !FFAppState()
                                                       .Municipality
                                                       .isSet
                                                   ? null
@@ -552,7 +552,7 @@ class _SeleccionarLocWidgetState extends State<SeleccionarLocWidget> {
                                                     },
                                               text: FFLocalizations.of(context)
                                                   .getText(
-                                                'gustybjg' /* Avanzar a Comprar */,
+                                                'zdrhxgn0' /* Avanzar a Comprar */,
                                               ),
                                               options: FFButtonOptions(
                                                 height: 40.0,
