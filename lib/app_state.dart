@@ -115,6 +115,28 @@ class FFAppState extends ChangeNotifier {
   void updateMunicipalityStruct(Function(NameIDStruct) updateFn) {
     updateFn(_Municipality);
   }
+
+  NameIDStruct _ProvinceApp =
+      NameIDStruct.fromSerializableMap(jsonDecode('{\"isSet\":\"false\"}'));
+  NameIDStruct get ProvinceApp => _ProvinceApp;
+  set ProvinceApp(NameIDStruct _value) {
+    _ProvinceApp = _value;
+  }
+
+  void updateProvinceAppStruct(Function(NameIDStruct) updateFn) {
+    updateFn(_ProvinceApp);
+  }
+
+  NameIDStruct _MunicipalityApp =
+      NameIDStruct.fromSerializableMap(jsonDecode('{\"isSet\":\"false\"}'));
+  NameIDStruct get MunicipalityApp => _MunicipalityApp;
+  set MunicipalityApp(NameIDStruct _value) {
+    _MunicipalityApp = _value;
+  }
+
+  void updateMunicipalityAppStruct(Function(NameIDStruct) updateFn) {
+    updateFn(_MunicipalityApp);
+  }
 }
 
 LatLng? _latLngFromString(String? val) {
