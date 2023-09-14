@@ -86,6 +86,11 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               name: 'registro',
               path: 'registro',
               builder: (context, params) => RegistroWidget(),
+            ),
+            FFRoute(
+              name: 'SeleccionarLoc',
+              path: 'seleccionarLoc',
+              builder: (context, params) => SeleccionarLocWidget(),
             )
           ].map((r) => r.toRoute(appStateNotifier)).toList(),
         ),

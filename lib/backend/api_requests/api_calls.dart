@@ -153,7 +153,9 @@ class ProveedorallCall {
 }
 
 class ProvinceallCall {
-  Future<ApiCallResponse> call() {
+  Future<ApiCallResponse> call({
+    String? authToken = '',
+  }) {
     final ffApiRequestBody = '''
 {
   "pageParams": {
@@ -168,6 +170,7 @@ class ProvinceallCall {
       callType: ApiCallType.POST,
       headers: {
         ...ShopGroup.headers,
+        'Authorization': 'Bearer ${authToken}',
       },
       params: {},
       body: ffApiRequestBody,
@@ -178,6 +181,12 @@ class ProvinceallCall {
       cache: false,
     );
   }
+
+  dynamic names(dynamic response) => getJsonField(
+        response,
+        r'''$[:].name''',
+        true,
+      );
 }
 
 class CartitemsaddproductCall {

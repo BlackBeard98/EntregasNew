@@ -7,3 +7,5 @@ export '/carrito/carrito/carrito_widget.dart' show CarritoWidget;
 export '/cuenta/prof/prof_widget.dart' show ProfWidget;
 export '/cuenta/cuenta/cuenta_widget.dart' show CuentaWidget;
 export '/auth_reg/registro/registro_widget.dart' show RegistroWidget;
+export '/principal/seleccionar_loc/seleccionar_loc_widget.dart'
+    show SeleccionarLocWidget;

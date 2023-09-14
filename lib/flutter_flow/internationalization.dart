@@ -438,6 +438,29 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': '',
     },
   },
+  // SeleccionarLoc
+  {
+    '0ao5p9d3': {
+      'es': 'Escoja el municipio donde va a comprar',
+      'en': '',
+    },
+    'nv2s6hwk': {
+      'es': 'Option 1',
+      'en': '',
+    },
+    '8ifa1fuz': {
+      'es': 'Please select...',
+      'en': '',
+    },
+    'q1ikehcc': {
+      'es': 'Search for an item...',
+      'en': '',
+    },
+    '70rwjpl6': {
+      'es': 'Home',
+      'en': '',
+    },
+  },
   // ProductosVacio
   {
     'uyg67hek': {
