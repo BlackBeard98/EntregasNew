@@ -122,7 +122,7 @@ class _ProductosWidgetState extends State<ProductosWidget> {
                           ),
                     ),
                     TextSpan(
-                      text: FFAppState().Municipality.name,
+                      text: FFAppState().MunicipalityApp.name,
                       style: TextStyle(),
                     )
                   ],
