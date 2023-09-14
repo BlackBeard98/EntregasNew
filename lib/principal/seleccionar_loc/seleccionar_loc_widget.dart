@@ -287,7 +287,7 @@ class _SeleccionarLocWidgetState extends State<SeleccionarLocWidget> {
                                                               val);
                                                           setState(() {
                                                             FFAppState()
-                                                                .updateProvinciaStruct(
+                                                                .updateProvinceStruct(
                                                               (e) => e
                                                                 ..name = _model
                                                                     .dropDownValue1
@@ -431,7 +431,7 @@ class _SeleccionarLocWidgetState extends State<SeleccionarLocWidget> {
                                                                       r'''$[*]''',
                                                                     )!,
                                                                     FFAppState()
-                                                                        .Provincia
+                                                                        .Province
                                                                         .id,
                                                                     e
                                                                         .toString()))
@@ -514,8 +514,8 @@ class _SeleccionarLocWidgetState extends State<SeleccionarLocWidget> {
                                                                     16.0,
                                                                     4.0),
                                                         hidesUnderline: true,
-                                                        disabled: !FFAppState()
-                                                            .Provincia
+                                                        disabled: FFAppState()
+                                                            .Province
                                                             .isSet,
                                                         isSearchable: true,
                                                         isMultiSelect: false,
@@ -542,10 +542,10 @@ class _SeleccionarLocWidgetState extends State<SeleccionarLocWidget> {
                                                           (e) => e
                                                             ..name =
                                                                 FFAppState()
-                                                                    .Provincia
+                                                                    .Province
                                                                     .name
                                                             ..id = FFAppState()
-                                                                .Provincia
+                                                                .Province
                                                                 .id
                                                             ..isSet = true,
                                                         );
@@ -567,7 +567,7 @@ class _SeleccionarLocWidgetState extends State<SeleccionarLocWidget> {
                                                     },
                                               text: FFLocalizations.of(context)
                                                   .getText(
-                                                'ufrnpf30' /* Avanzar a Comprar */,
+                                                'x3xh1i3e' /* Avanzar a Comprar */,
                                               ),
                                               options: FFButtonOptions(
                                                 height: 40.0,

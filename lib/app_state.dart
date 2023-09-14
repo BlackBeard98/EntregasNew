@@ -33,6 +33,30 @@ class FFAppState extends ChangeNotifier {
         }
       }
     });
+    await _safeInitAsync(() async {
+      if (await secureStorage.read(key: 'ff_ProvinceApp') != null) {
+        try {
+          final serializedData =
+              await secureStorage.getString('ff_ProvinceApp') ?? '{}';
+          _ProvinceApp =
+              NameIDStruct.fromSerializableMap(jsonDecode(serializedData));
+        } catch (e) {
+          print("Can't decode persisted data type. Error: $e.");
+        }
+      }
+    });
+    await _safeInitAsync(() async {
+      if (await secureStorage.read(key: 'ff_MunicipalityApp') != null) {
+        try {
+          final serializedData =
+              await secureStorage.getString('ff_MunicipalityApp') ?? '{}';
+          _MunicipalityApp =
+              NameIDStruct.fromSerializableMap(jsonDecode(serializedData));
+        } catch (e) {
+          print("Can't decode persisted data type. Error: $e.");
+        }
+      }
+    });
   }
 
   void update(VoidCallback callback) {
@@ -94,15 +118,38 @@ class FFAppState extends ChangeNotifier {
     _contains = _value;
   }
 
-  NameIDStruct _Provincia =
+  NameIDStruct _ProvinceApp =
       NameIDStruct.fromSerializableMap(jsonDecode('{\"isSet\":\"false\"}'));
-  NameIDStruct get Provincia => _Provincia;
-  set Provincia(NameIDStruct _value) {
-    _Provincia = _value;
+  NameIDStruct get ProvinceApp => _ProvinceApp;
+  set ProvinceApp(NameIDStruct _value) {
+    _ProvinceApp = _value;
+    secureStorage.setString('ff_ProvinceApp', _value.serialize());
   }
 
-  void updateProvinciaStruct(Function(NameIDStruct) updateFn) {
-    updateFn(_Provincia);
+  void deleteProvinceApp() {
+    secureStorage.delete(key: 'ff_ProvinceApp');
+  }
+
+  void updateProvinceAppStruct(Function(NameIDStruct) updateFn) {
+    updateFn(_ProvinceApp);
+    secureStorage.setString('ff_ProvinceApp', _ProvinceApp.serialize());
+  }
+
+  NameIDStruct _MunicipalityApp =
+      NameIDStruct.fromSerializableMap(jsonDecode('{\"isSet\":\"false\"}'));
+  NameIDStruct get MunicipalityApp => _MunicipalityApp;
+  set MunicipalityApp(NameIDStruct _value) {
+    _MunicipalityApp = _value;
+    secureStorage.setString('ff_MunicipalityApp', _value.serialize());
+  }
+
+  void deleteMunicipalityApp() {
+    secureStorage.delete(key: 'ff_MunicipalityApp');
+  }
+
+  void updateMunicipalityAppStruct(Function(NameIDStruct) updateFn) {
+    updateFn(_MunicipalityApp);
+    secureStorage.setString('ff_MunicipalityApp', _MunicipalityApp.serialize());
   }
 
   NameIDStruct _Municipality =
@@ -116,26 +163,15 @@ class FFAppState extends ChangeNotifier {
     updateFn(_Municipality);
   }
 
-  NameIDStruct _ProvinceApp =
+  NameIDStruct _Province =
       NameIDStruct.fromSerializableMap(jsonDecode('{\"isSet\":\"false\"}'));
-  NameIDStruct get ProvinceApp => _ProvinceApp;
-  set ProvinceApp(NameIDStruct _value) {
-    _ProvinceApp = _value;
+  NameIDStruct get Province => _Province;
+  set Province(NameIDStruct _value) {
+    _Province = _value;
   }
 
-  void updateProvinceAppStruct(Function(NameIDStruct) updateFn) {
-    updateFn(_ProvinceApp);
-  }
-
-  NameIDStruct _MunicipalityApp =
-      NameIDStruct.fromSerializableMap(jsonDecode('{\"isSet\":\"false\"}'));
-  NameIDStruct get MunicipalityApp => _MunicipalityApp;
-  set MunicipalityApp(NameIDStruct _value) {
-    _MunicipalityApp = _value;
-  }
-
-  void updateMunicipalityAppStruct(Function(NameIDStruct) updateFn) {
-    updateFn(_MunicipalityApp);
+  void updateProvinceStruct(Function(NameIDStruct) updateFn) {
+    updateFn(_Province);
   }
 }
 
