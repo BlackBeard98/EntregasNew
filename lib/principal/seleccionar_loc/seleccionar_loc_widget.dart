@@ -186,18 +186,24 @@ class _SeleccionarLocWidgetState extends State<SeleccionarLocWidget> {
                                 mainAxisSize: MainAxisSize.max,
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  Text(
-                                    FFLocalizations.of(context).getText(
-                                      '4rnftfr6' /* Escoja el municipio donde va a... */,
-                                    ),
-                                    style: FlutterFlowTheme.of(context)
-                                        .titleLarge
-                                        .override(
-                                          fontFamily: 'Outfit',
-                                          color: Color(0xFF14181B),
-                                          fontSize: 22.0,
-                                          fontWeight: FontWeight.w500,
+                                  Row(
+                                    mainAxisSize: MainAxisSize.max,
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      Text(
+                                        FFLocalizations.of(context).getText(
+                                          '4rnftfr6' /* Escoja el municipio donde va a... */,
                                         ),
+                                        style: FlutterFlowTheme.of(context)
+                                            .titleLarge
+                                            .override(
+                                              fontFamily: 'Outfit',
+                                              color: Color(0xFF14181B),
+                                              fontSize: 22.0,
+                                              fontWeight: FontWeight.w500,
+                                            ),
+                                      ),
+                                    ],
                                   ),
                                   Container(
                                     decoration: BoxDecoration(
@@ -299,13 +305,13 @@ class _SeleccionarLocWidgetState extends State<SeleccionarLocWidget> {
                                                               FFLocalizations.of(
                                                                       context)
                                                                   .getText(
-                                                            'e7a5qjw8' /* Please select... */,
+                                                            'vy2maado' /* Please select... */,
                                                           ),
                                                           searchHintText:
                                                               FFLocalizations.of(
                                                                       context)
                                                                   .getText(
-                                                            'wr35j8kg' /* Search for an item... */,
+                                                            '1mzegzvv' /* Search for an item... */,
                                                           ),
                                                           icon: Icon(
                                                             Icons
@@ -357,7 +363,11 @@ class _SeleccionarLocWidgetState extends State<SeleccionarLocWidget> {
                                                         ApiCallResponse>(
                                                       future: ShopGroup
                                                           .municipalityallCall
-                                                          .call(),
+                                                          .call(
+                                                        authToken: FFAppState()
+                                                            .authUser
+                                                            .accessToken,
+                                                      ),
                                                       builder:
                                                           (context, snapshot) {
                                                         // Customize what your widget looks like when it's loading.
@@ -395,7 +405,10 @@ class _SeleccionarLocWidgetState extends State<SeleccionarLocWidget> {
                                                           ) as List)
                                                               .map<String>((s) =>
                                                                   s.toString())
-                                                              .toList()!,
+                                                              .toList()!
+                                                              .map((e) =>
+                                                                  e.toString())
+                                                              .toList(),
                                                           onChanged: (val) =>
                                                               setState(() =>
                                                                   _model.dropDownValue2 =
@@ -420,13 +433,13 @@ class _SeleccionarLocWidgetState extends State<SeleccionarLocWidget> {
                                                               FFLocalizations.of(
                                                                       context)
                                                                   .getText(
-                                                            'wsifalin' /* Please select... */,
+                                                            'hohox3j3' /* Please select... */,
                                                           ),
                                                           searchHintText:
                                                               FFLocalizations.of(
                                                                       context)
                                                                   .getText(
-                                                            'zxcqgl2y' /* Search for an item... */,
+                                                            'zyi8gyby' /* Search for an item... */,
                                                           ),
                                                           icon: Icon(
                                                             Icons

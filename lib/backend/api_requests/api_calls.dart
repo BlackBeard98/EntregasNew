@@ -503,6 +503,12 @@ class MunicipalityallCall {
       cache: false,
     );
   }
+
+  dynamic names(dynamic response) => getJsonField(
+        response,
+        r'''$[:].name''',
+        true,
+      );
 }
 
 /// End Shop Group Code
