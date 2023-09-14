@@ -324,13 +324,13 @@ class _SeleccionarLocWidgetState extends State<SeleccionarLocWidget> {
                                                             FFLocalizations.of(
                                                                     context)
                                                                 .getText(
-                                                          '6x904iz4' /* Please select... */,
+                                                          'lturznmk' /* Please select... */,
                                                         ),
                                                         searchHintText:
                                                             FFLocalizations.of(
                                                                     context)
                                                                 .getText(
-                                                          'i7samku8' /* Search for an item... */,
+                                                          'p3ocbi7d' /* Search for an item... */,
                                                         ),
                                                         icon: Icon(
                                                           Icons
@@ -450,13 +450,13 @@ class _SeleccionarLocWidgetState extends State<SeleccionarLocWidget> {
                                                             FFLocalizations.of(
                                                                     context)
                                                                 .getText(
-                                                          'n3w02kgg' /* Please select... */,
+                                                          '1ya87rst' /* Please select... */,
                                                         ),
                                                         searchHintText:
                                                             FFLocalizations.of(
                                                                     context)
                                                                 .getText(
-                                                          'ropatrqh' /* Search for an item... */,
+                                                          's4q73ego' /* Search for an item... */,
                                                         ),
                                                         icon: Icon(
                                                           Icons
@@ -482,7 +482,7 @@ class _SeleccionarLocWidgetState extends State<SeleccionarLocWidget> {
                                                                     16.0,
                                                                     4.0),
                                                         hidesUnderline: true,
-                                                        disabled: FFAppState()
+                                                        disabled: !FFAppState()
                                                             .Provincia
                                                             .isSet,
                                                         isSearchable: true,
