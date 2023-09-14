@@ -28,6 +28,7 @@ class ShopGroup {
   static OrderallCall orderallCall = OrderallCall();
   static OrderallmeCall orderallmeCall = OrderallmeCall();
   static OrderidCall orderidCall = OrderidCall();
+  static MunicipalityallCall municipalityallCall = MunicipalityallCall();
 }
 
 class ProductallCall {
@@ -160,7 +161,7 @@ class ProvinceallCall {
 {
   "pageParams": {
     "pageNum": 1,
-    "pageLimit": 10
+    "pageLimit": 20
   },
   "filter": {}
 }''';
@@ -471,6 +472,37 @@ class OrderidCall {
         response,
         r'''$.finalPrice''',
       );
+}
+
+class MunicipalityallCall {
+  Future<ApiCallResponse> call({
+    String? authToken = '',
+  }) {
+    final ffApiRequestBody = '''
+{
+  "pageParams": {
+    "pageNum": 1,
+    "pageLimit": 100
+  },
+  "filter": {}
+}''';
+    return ApiManager.instance.makeApiCall(
+      callName: 'municipalityall',
+      apiUrl: '${ShopGroup.baseUrl}/municipality/all',
+      callType: ApiCallType.POST,
+      headers: {
+        ...ShopGroup.headers,
+        'Authorization': 'Bearer ${authToken}',
+      },
+      params: {},
+      body: ffApiRequestBody,
+      bodyType: BodyType.JSON,
+      returnBody: true,
+      encodeBodyUtf8: false,
+      decodeUtf8: false,
+      cache: false,
+    );
+  }
 }
 
 /// End Shop Group Code
