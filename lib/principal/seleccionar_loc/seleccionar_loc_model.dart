@@ -12,6 +12,16 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
 class SeleccionarLocModel extends FlutterFlowModel {
+  ///  Local state fields for this page.
+
+  NameIDStruct? province;
+  void updateProvinceStruct(Function(NameIDStruct) updateFn) =>
+      updateFn(province ??= NameIDStruct());
+
+  NameIDStruct? municipality;
+  void updateMunicipalityStruct(Function(NameIDStruct) updateFn) =>
+      updateFn(municipality ??= NameIDStruct());
+
   ///  State fields for stateful widgets in this page.
 
   final unfocusNode = FocusNode();
