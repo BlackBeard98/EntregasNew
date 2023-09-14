@@ -387,7 +387,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                                           );
                                         });
 
-                                        context.goNamed('Productos');
+                                        context.goNamed('SeleccionarLoc');
                                       } else {
                                         ScaffoldMessenger.of(context)
                                             .showSnackBar(

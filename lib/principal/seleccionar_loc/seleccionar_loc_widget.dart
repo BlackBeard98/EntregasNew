@@ -266,12 +266,12 @@ class _SeleccionarLocWidgetState extends State<SeleccionarLocWidget> {
                                             hintText:
                                                 FFLocalizations.of(context)
                                                     .getText(
-                                              '8ifa1fuz' /* Please select... */,
+                                              'p0bco9vn' /* Please select... */,
                                             ),
                                             searchHintText:
                                                 FFLocalizations.of(context)
                                                     .getText(
-                                              'q1ikehcc' /* Search for an item... */,
+                                              'ouwusmja' /* Search for an item... */,
                                             ),
                                             icon: Icon(
                                               Icons.keyboard_arrow_down_rounded,
