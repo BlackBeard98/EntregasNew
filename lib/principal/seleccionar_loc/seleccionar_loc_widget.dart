@@ -536,7 +536,7 @@ class _SeleccionarLocWidgetState extends State<SeleccionarLocWidget> {
                                               },
                                               text: FFLocalizations.of(context)
                                                   .getText(
-                                                '37fo49nd' /* Avanzar a Comprar */,
+                                                '6tdi79x8' /* Avanzar a Comprar */,
                                               ),
                                               options: FFButtonOptions(
                                                 height: 40.0,
