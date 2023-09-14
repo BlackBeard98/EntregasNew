@@ -324,13 +324,13 @@ class _SeleccionarLocWidgetState extends State<SeleccionarLocWidget> {
                                                             FFLocalizations.of(
                                                                     context)
                                                                 .getText(
-                                                          'lturznmk' /* Please select... */,
+                                                          'u0twokhz' /* Please select... */,
                                                         ),
                                                         searchHintText:
                                                             FFLocalizations.of(
                                                                     context)
                                                                 .getText(
-                                                          'p3ocbi7d' /* Search for an item... */,
+                                                          'z95hxi2a' /* Search for an item... */,
                                                         ),
                                                         icon: Icon(
                                                           Icons
@@ -423,6 +423,19 @@ class _SeleccionarLocWidgetState extends State<SeleccionarLocWidget> {
                                                             .map<String>((s) =>
                                                                 s.toString())
                                                             .toList()!
+                                                            .where((e) => functions
+                                                                .newCustomFunction(
+                                                                    getJsonField(
+                                                                      dropDownMunicipalityallResponse
+                                                                          .jsonBody,
+                                                                      r'''$[*]''',
+                                                                    )!,
+                                                                    FFAppState()
+                                                                        .Provincia
+                                                                        .id,
+                                                                    e
+                                                                        .toString()))
+                                                            .toList()
                                                             .map((e) =>
                                                                 e.toString())
                                                             .toList(),
@@ -450,13 +463,13 @@ class _SeleccionarLocWidgetState extends State<SeleccionarLocWidget> {
                                                             FFLocalizations.of(
                                                                     context)
                                                                 .getText(
-                                                          '1ya87rst' /* Please select... */,
+                                                          'cc92c036' /* Please select... */,
                                                         ),
                                                         searchHintText:
                                                             FFLocalizations.of(
                                                                     context)
                                                                 .getText(
-                                                          's4q73ego' /* Search for an item... */,
+                                                          'he50tl2m' /* Search for an item... */,
                                                         ),
                                                         icon: Icon(
                                                           Icons

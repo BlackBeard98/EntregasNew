@@ -59,3 +59,12 @@ String filterJsonList(
 ) {
   return list.where((x) => (x["name"] == name)).first["_id"]["_id"];
 }
+
+bool newCustomFunction(
+  List<dynamic> list,
+  String id,
+  String name,
+) {
+  return list.where((x) => (x["name"] == name)).first["provinceId"]["_id"] ==
+      id;
+}
