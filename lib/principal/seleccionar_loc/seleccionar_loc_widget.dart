@@ -113,7 +113,7 @@ class _SeleccionarLocWidgetState extends State<SeleccionarLocWidget> {
             width: double.infinity,
             height: double.infinity,
             decoration: BoxDecoration(
-              color: FlutterFlowTheme.of(context).secondaryBackground,
+              color: Colors.white,
             ),
             child: Column(
               mainAxisSize: MainAxisSize.max,
@@ -281,12 +281,12 @@ class _SeleccionarLocWidgetState extends State<SeleccionarLocWidget> {
                                               hintText:
                                                   FFLocalizations.of(context)
                                                       .getText(
-                                                '1rcnwwor' /* Please select... */,
+                                                'nxfsdrzh' /* Please select... */,
                                               ),
                                               searchHintText:
                                                   FFLocalizations.of(context)
                                                       .getText(
-                                                '90eo0fwb' /* Search for an item... */,
+                                                '7rsptxyd' /* Search for an item... */,
                                               ),
                                               icon: Icon(
                                                 Icons
