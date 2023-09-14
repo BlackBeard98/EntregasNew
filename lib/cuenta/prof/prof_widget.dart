@@ -139,7 +139,7 @@ class _ProfWidgetState extends State<ProfWidget> {
                     children: [
                       Text(
                         FFLocalizations.of(context).getText(
-                          'pftsqfg4' /* Edit Profile */,
+                          'zh5m3dfz' /* Edit Profile */,
                         ),
                         style: FlutterFlowTheme.of(context).bodyLarge.override(
                               fontFamily: 'Plus Jakarta Sans',
@@ -188,7 +188,7 @@ class _ProfWidgetState extends State<ProfWidget> {
                     children: [
                       Text(
                         FFLocalizations.of(context).getText(
-                          'gtnqp6mc' /* Change Password */,
+                          'yaa4t65l' /* Change Password */,
                         ),
                         style: FlutterFlowTheme.of(context).bodyLarge.override(
                               fontFamily: 'Plus Jakarta Sans',
@@ -237,7 +237,7 @@ class _ProfWidgetState extends State<ProfWidget> {
                     children: [
                       Text(
                         FFLocalizations.of(context).getText(
-                          'duwadtcn' /* Notification Settings */,
+                          'hynsq462' /* Notification Settings */,
                         ),
                         style: FlutterFlowTheme.of(context).bodyLarge.override(
                               fontFamily: 'Plus Jakarta Sans',
@@ -286,7 +286,7 @@ class _ProfWidgetState extends State<ProfWidget> {
                     children: [
                       Text(
                         FFLocalizations.of(context).getText(
-                          'sx76ae9s' /* Terms of Services */,
+                          '0qw4ul1f' /* Terms of Services */,
                         ),
                         style: FlutterFlowTheme.of(context).bodyLarge.override(
                               fontFamily: 'Plus Jakarta Sans',
@@ -308,7 +308,7 @@ class _ProfWidgetState extends State<ProfWidget> {
                 print('Button pressed ...');
               },
               text: FFLocalizations.of(context).getText(
-                '0l54u1qc' /* Log Out */,
+                '5dymk0il' /* Log Out */,
               ),
               options: FFButtonOptions(
                 width: 110.0,
