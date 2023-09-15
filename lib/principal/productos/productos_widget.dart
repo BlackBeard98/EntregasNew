@@ -377,153 +377,173 @@ class _ProductosWidgetState extends State<ProductosWidget> {
                           ),
                     ),
                   ),
-                  Flexible(
-                    child: PagedListView<ApiPagingParams, dynamic>(
-                      pagingController: _model.setListViewController2(
-                        (nextPageMarker) => ShopGroup.productallCall.call(
-                          filterCategoriesJson: functions.transformToJSON(
-                              functions
-                                  .checkNullabilty(
-                                      FFAppState().pageCategories.toList())
-                                  .toList(),
-                              FFAppState().contains),
-                          authToken: FFAppState().authUser.accessToken,
-                          pageNum: nextPageMarker.nextPageNumber + 1,
-                        ),
+                  PagedListView<ApiPagingParams, dynamic>(
+                    pagingController: _model.setListViewController2(
+                      (nextPageMarker) => ShopGroup.productallCall.call(
+                        filterCategoriesJson: functions.transformToJSON(
+                            functions
+                                .checkNullabilty(
+                                    FFAppState().pageCategories.toList())
+                                .toList(),
+                            FFAppState().contains),
+                        authToken: FFAppState().authUser.accessToken,
+                        pageNum: nextPageMarker.nextPageNumber + 1,
                       ),
-                      padding: EdgeInsets.fromLTRB(
-                        0,
-                        8.0,
-                        0,
-                        44.0,
-                      ),
-                      primary: false,
-                      shrinkWrap: true,
-                      reverse: false,
-                      scrollDirection: Axis.vertical,
-                      builderDelegate: PagedChildBuilderDelegate<dynamic>(
-                        // Customize what your widget looks like when it's loading the first page.
-                        firstPageProgressIndicatorBuilder: (_) => Center(
-                          child: SizedBox(
-                            width: 40.0,
-                            height: 40.0,
-                            child: SpinKitFadingCircle(
-                              color: FlutterFlowTheme.of(context).primary,
-                              size: 40.0,
-                            ),
+                    ),
+                    padding: EdgeInsets.fromLTRB(
+                      0,
+                      8.0,
+                      0,
+                      44.0,
+                    ),
+                    primary: false,
+                    shrinkWrap: true,
+                    reverse: false,
+                    scrollDirection: Axis.vertical,
+                    builderDelegate: PagedChildBuilderDelegate<dynamic>(
+                      // Customize what your widget looks like when it's loading the first page.
+                      firstPageProgressIndicatorBuilder: (_) => Center(
+                        child: SizedBox(
+                          width: 40.0,
+                          height: 40.0,
+                          child: SpinKitFadingCircle(
+                            color: FlutterFlowTheme.of(context).primary,
+                            size: 40.0,
                           ),
                         ),
-                        // Customize what your widget looks like when it's loading another page.
-                        newPageProgressIndicatorBuilder: (_) => Center(
-                          child: SizedBox(
-                            width: 40.0,
-                            height: 40.0,
-                            child: SpinKitFadingCircle(
-                              color: FlutterFlowTheme.of(context).primary,
-                              size: 40.0,
-                            ),
+                      ),
+                      // Customize what your widget looks like when it's loading another page.
+                      newPageProgressIndicatorBuilder: (_) => Center(
+                        child: SizedBox(
+                          width: 40.0,
+                          height: 40.0,
+                          child: SpinKitFadingCircle(
+                            color: FlutterFlowTheme.of(context).primary,
+                            size: 40.0,
                           ),
                         ),
-                        noItemsFoundIndicatorBuilder: (_) =>
-                            ProductosVacioWidget(),
-                        itemBuilder: (context, _, productosIndex) {
-                          final productosItem = _model
-                              .listViewPagingController2!
-                              .itemList![productosIndex];
-                          return Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
-                                24.0, 24.0, 24.0, 24.0),
-                            child: Container(
-                              width: 0.0,
-                              height: 400.0,
-                              decoration: BoxDecoration(
-                                color: Colors.white,
-                                boxShadow: [
-                                  BoxShadow(
-                                    blurRadius: 4.0,
-                                    color: Color(0x33000000),
-                                    offset: Offset(0.0, 2.0),
-                                  )
-                                ],
-                                borderRadius: BorderRadius.circular(24.0),
-                              ),
-                              child: Column(
-                                mainAxisSize: MainAxisSize.max,
-                                children: [
-                                  Flexible(
-                                    child: Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          16.0, 12.0, 16.0, 12.0),
-                                      child: Row(
-                                        mainAxisSize: MainAxisSize.max,
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.start,
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.center,
-                                        children: [
-                                          Flexible(
-                                            child: Container(
-                                              decoration: BoxDecoration(
-                                                color: Color(0x4D9489F5),
-                                                borderRadius:
-                                                    BorderRadius.circular(12.0),
-                                                border: Border.all(
-                                                  color: Color(0xFFEE5F01),
-                                                ),
+                      ),
+                      noItemsFoundIndicatorBuilder: (_) =>
+                          ProductosVacioWidget(),
+                      itemBuilder: (context, _, productosIndex) {
+                        final productosItem = _model.listViewPagingController2!
+                            .itemList![productosIndex];
+                        return Padding(
+                          padding: EdgeInsetsDirectional.fromSTEB(
+                              24.0, 24.0, 24.0, 24.0),
+                          child: Container(
+                            width: 100.0,
+                            height: 400.0,
+                            decoration: BoxDecoration(
+                              color: Colors.white,
+                              boxShadow: [
+                                BoxShadow(
+                                  blurRadius: 4.0,
+                                  color: Color(0x33000000),
+                                  offset: Offset(0.0, 2.0),
+                                )
+                              ],
+                              borderRadius: BorderRadius.circular(24.0),
+                            ),
+                            child: Column(
+                              mainAxisSize: MainAxisSize.max,
+                              children: [
+                                Flexible(
+                                  child: Padding(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                        16.0, 12.0, 16.0, 12.0),
+                                    child: Row(
+                                      mainAxisSize: MainAxisSize.max,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.start,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.center,
+                                      children: [
+                                        Flexible(
+                                          child: Container(
+                                            decoration: BoxDecoration(
+                                              color: Color(0x4D9489F5),
+                                              borderRadius:
+                                                  BorderRadius.circular(12.0),
+                                              border: Border.all(
+                                                color: Color(0xFFEE5F01),
                                               ),
-                                              child: Padding(
-                                                padding: EdgeInsetsDirectional
-                                                    .fromSTEB(
-                                                        2.0, 2.0, 2.0, 2.0),
-                                                child: ClipRRect(
-                                                  borderRadius:
-                                                      BorderRadius.circular(
-                                                          10.0),
-                                                  child: Image.network(
-                                                    functions
-                                                        .getImages(getJsonField(
-                                                      productosItem,
-                                                      r'''$.images''',
-                                                    )!),
-                                                    width: 400.0,
-                                                    height: 200.0,
-                                                    fit: BoxFit.cover,
-                                                  ),
+                                            ),
+                                            child: Padding(
+                                              padding: EdgeInsetsDirectional
+                                                  .fromSTEB(2.0, 2.0, 2.0, 2.0),
+                                              child: ClipRRect(
+                                                borderRadius:
+                                                    BorderRadius.circular(10.0),
+                                                child: Image.network(
+                                                  functions
+                                                      .getImages(getJsonField(
+                                                    productosItem,
+                                                    r'''$.images''',
+                                                  )!),
+                                                  width: 400.0,
+                                                  height: 200.0,
+                                                  fit: BoxFit.cover,
                                                 ),
                                               ),
                                             ),
                                           ),
-                                          Flexible(
-                                            child: Row(
-                                              mainAxisSize: MainAxisSize.max,
-                                              mainAxisAlignment:
-                                                  MainAxisAlignment.end,
-                                              children: [
-                                                Flexible(
-                                                  child: Padding(
-                                                    padding:
-                                                        EdgeInsetsDirectional
-                                                            .fromSTEB(12.0, 0.0,
-                                                                0.0, 0.0),
-                                                    child: Column(
-                                                      mainAxisSize:
-                                                          MainAxisSize.max,
-                                                      mainAxisAlignment:
-                                                          MainAxisAlignment
-                                                              .center,
-                                                      crossAxisAlignment:
-                                                          CrossAxisAlignment
-                                                              .start,
-                                                      children: [
-                                                        Flexible(
+                                        ),
+                                        Flexible(
+                                          child: Row(
+                                            mainAxisSize: MainAxisSize.max,
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.end,
+                                            children: [
+                                              Flexible(
+                                                child: Padding(
+                                                  padding: EdgeInsetsDirectional
+                                                      .fromSTEB(
+                                                          12.0, 0.0, 0.0, 0.0),
+                                                  child: Column(
+                                                    mainAxisSize:
+                                                        MainAxisSize.max,
+                                                    mainAxisAlignment:
+                                                        MainAxisAlignment
+                                                            .center,
+                                                    crossAxisAlignment:
+                                                        CrossAxisAlignment
+                                                            .start,
+                                                    children: [
+                                                      Flexible(
+                                                        child: Text(
+                                                          getJsonField(
+                                                            productosItem,
+                                                            r'''$.name''',
+                                                          ).toString(),
+                                                          style: FlutterFlowTheme
+                                                                  .of(context)
+                                                              .headlineLarge
+                                                              .override(
+                                                                fontFamily:
+                                                                    'Outfit',
+                                                                color: Colors
+                                                                    .black,
+                                                              ),
+                                                        ),
+                                                      ),
+                                                      Flexible(
+                                                        child: Padding(
+                                                          padding:
+                                                              EdgeInsetsDirectional
+                                                                  .fromSTEB(
+                                                                      0.0,
+                                                                      0.0,
+                                                                      12.0,
+                                                                      0.0),
                                                           child: Text(
-                                                            getJsonField(
+                                                            'Disponibilidad: ${getJsonField(
                                                               productosItem,
-                                                              r'''$.name''',
-                                                            ).toString(),
+                                                              r'''$.stockQuantity''',
+                                                            ).toString()}',
                                                             style: FlutterFlowTheme
                                                                     .of(context)
-                                                                .headlineLarge
+                                                                .headlineMedium
                                                                 .override(
                                                                   fontFamily:
                                                                       'Outfit',
@@ -532,118 +552,91 @@ class _ProductosWidgetState extends State<ProductosWidget> {
                                                                 ),
                                                           ),
                                                         ),
-                                                        Flexible(
-                                                          child: Padding(
-                                                            padding:
-                                                                EdgeInsetsDirectional
-                                                                    .fromSTEB(
-                                                                        0.0,
-                                                                        0.0,
-                                                                        12.0,
-                                                                        0.0),
-                                                            child: Text(
-                                                              'Disponibilidad: ${getJsonField(
-                                                                productosItem,
-                                                                r'''$.stockQuantity''',
-                                                              ).toString()}',
-                                                              style: FlutterFlowTheme
-                                                                      .of(context)
-                                                                  .headlineMedium
-                                                                  .override(
-                                                                    fontFamily:
-                                                                        'Outfit',
-                                                                    color: Colors
-                                                                        .black,
-                                                                  ),
-                                                            ),
+                                                      ),
+                                                      Flexible(
+                                                        child: Padding(
+                                                          padding:
+                                                              EdgeInsetsDirectional
+                                                                  .fromSTEB(
+                                                                      0.0,
+                                                                      0.0,
+                                                                      12.0,
+                                                                      0.0),
+                                                          child: Text(
+                                                            'Precio: ${getJsonField(
+                                                              productosItem,
+                                                              r'''$.price''',
+                                                            ).toString()}',
+                                                            style: FlutterFlowTheme
+                                                                    .of(context)
+                                                                .headlineSmall
+                                                                .override(
+                                                                  fontFamily:
+                                                                      'Outfit',
+                                                                  color: Colors
+                                                                      .black,
+                                                                ),
                                                           ),
                                                         ),
-                                                        Flexible(
-                                                          child: Padding(
-                                                            padding:
-                                                                EdgeInsetsDirectional
-                                                                    .fromSTEB(
-                                                                        0.0,
-                                                                        0.0,
-                                                                        12.0,
-                                                                        0.0),
-                                                            child: Text(
-                                                              'Precio: ${getJsonField(
-                                                                productosItem,
-                                                                r'''$.price''',
-                                                              ).toString()}',
-                                                              style: FlutterFlowTheme
-                                                                      .of(context)
-                                                                  .headlineSmall
-                                                                  .override(
-                                                                    fontFamily:
-                                                                        'Outfit',
-                                                                    color: Colors
-                                                                        .black,
-                                                                  ),
-                                                            ),
-                                                          ),
-                                                        ),
-                                                      ].divide(SizedBox(
-                                                          height: 4.0)),
-                                                    ),
+                                                      ),
+                                                    ].divide(
+                                                        SizedBox(height: 4.0)),
                                                   ),
                                                 ),
-                                              ],
-                                            ),
+                                              ),
+                                            ],
                                           ),
-                                        ],
-                                      ),
-                                    ),
-                                  ),
-                                  Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        24.0, 24.0, 24.0, 24.0),
-                                    child: FFButtonWidget(
-                                      onPressed: () async {
-                                        context.pushNamed(
-                                          'ProductoVIew',
-                                          queryParameters: {
-                                            'producto': serializeParam(
-                                              productosItem,
-                                              ParamType.JSON,
-                                            ),
-                                          }.withoutNulls,
-                                        );
-                                      },
-                                      text: FFLocalizations.of(context).getText(
-                                        'fivaiy12' /* Ver Detalles */,
-                                      ),
-                                      options: FFButtonOptions(
-                                        height: 40.0,
-                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                            24.0, 0.0, 24.0, 0.0),
-                                        iconPadding:
-                                            EdgeInsetsDirectional.fromSTEB(
-                                                0.0, 0.0, 0.0, 0.0),
-                                        color: Color(0xFFE27C46),
-                                        textStyle: FlutterFlowTheme.of(context)
-                                            .titleSmall
-                                            .override(
-                                              fontFamily: 'Readex Pro',
-                                              color: Colors.white,
-                                            ),
-                                        elevation: 3.0,
-                                        borderSide: BorderSide(
-                                          color: Colors.transparent,
-                                          width: 1.0,
                                         ),
-                                        borderRadius:
-                                            BorderRadius.circular(8.0),
-                                      ),
+                                      ],
                                     ),
                                   ),
-                                ],
-                              ),
+                                ),
+                                Padding(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                      24.0, 24.0, 24.0, 24.0),
+                                  child: FFButtonWidget(
+                                    onPressed: () async {
+                                      context.pushNamed(
+                                        'ProductoVIew',
+                                        queryParameters: {
+                                          'producto': serializeParam(
+                                            productosItem,
+                                            ParamType.JSON,
+                                          ),
+                                        }.withoutNulls,
+                                      );
+                                    },
+                                    text: FFLocalizations.of(context).getText(
+                                      'uydq457m' /* Ver Detalles */,
+                                    ),
+                                    options: FFButtonOptions(
+                                      height: 40.0,
+                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                          24.0, 0.0, 24.0, 0.0),
+                                      iconPadding:
+                                          EdgeInsetsDirectional.fromSTEB(
+                                              0.0, 0.0, 0.0, 0.0),
+                                      color: Color(0xFFE27C46),
+                                      textStyle: FlutterFlowTheme.of(context)
+                                          .titleSmall
+                                          .override(
+                                            fontFamily: 'Readex Pro',
+                                            color: Colors.white,
+                                          ),
+                                      elevation: 3.0,
+                                      borderSide: BorderSide(
+                                        color: Colors.transparent,
+                                        width: 1.0,
+                                      ),
+                                      borderRadius: BorderRadius.circular(8.0),
+                                    ),
+                                  ),
+                                ),
+                              ],
                             ),
-                          );
-                        },
-                      ),
+                          ),
+                        );
+                      },
                     ),
                   ),
                 ],
