@@ -409,7 +409,24 @@ class _ProductoVIewWidgetState extends State<ProductoVIewWidget>
                           authToken: FFAppState().authUser.accessToken,
                           municipalityId: FFAppState().MunicipalityApp.id,
                         );
-                        if (!(_model.apiResulthn6?.succeeded ?? true)) {
+                        if ((_model.apiResulthn6?.succeeded ?? true)) {
+                          ScaffoldMessenger.of(context).showSnackBar(
+                            SnackBar(
+                              content: Text(
+                                'Producto Añadido',
+                                style: TextStyle(
+                                  color:
+                                      FlutterFlowTheme.of(context).primaryText,
+                                ),
+                              ),
+                              duration: Duration(milliseconds: 4000),
+                              backgroundColor:
+                                  FlutterFlowTheme.of(context).secondary,
+                            ),
+                          );
+
+                          context.pushNamed('Productos');
+                        } else {
                           ScaffoldMessenger.of(context).showSnackBar(
                             SnackBar(
                               content: Text(
