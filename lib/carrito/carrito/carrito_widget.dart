@@ -162,7 +162,7 @@ class _CarritoWidgetState extends State<CarritoWidget> {
                                 children: [
                                   TextSpan(
                                     text: FFLocalizations.of(context).getText(
-                                      '6jxriy2x' /* Comprando en  */,
+                                      'ld3oa0qv' /* Comprando en  */,
                                     ),
                                     style: FlutterFlowTheme.of(context)
                                         .bodyMedium
@@ -181,7 +181,7 @@ class _CarritoWidgetState extends State<CarritoWidget> {
                                   ),
                                   TextSpan(
                                     text: FFLocalizations.of(context).getText(
-                                      '5cymfgdh' /*  Cambiar? */,
+                                      'y58jk8b4' /*  Cambiar? */,
                                     ),
                                     style: TextStyle(
                                       color: Color(0xFFE27C46),
@@ -405,7 +405,7 @@ class _CarritoWidgetState extends State<CarritoWidget> {
                                                                       .getImages(
                                                                           getJsonField(
                                                                     cartItemsItem,
-                                                                    r'''$''',
+                                                                    r'''$.product.images''',
                                                                   )!),
                                                                   width: 70.0,
                                                                   height: 70.0,
