@@ -69,29 +69,35 @@ class _LoginWidgetState extends State<LoginWidget> {
                 mainAxisSize: MainAxisSize.max,
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Padding(
-                    padding:
-                        EdgeInsetsDirectional.fromSTEB(0.0, 32.0, 0.0, 32.0),
-                    child: Container(
-                      width: 200.0,
-                      height: 70.0,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(16.0),
-                      ),
-                      alignment: AlignmentDirectional(0.00, 0.00),
-                      child: Text(
-                        FFLocalizations.of(context).getText(
-                          'po69vlq3' /* Entregas */,
-                        ),
-                        style:
-                            FlutterFlowTheme.of(context).displaySmall.override(
+                  Row(
+                    mainAxisSize: MainAxisSize.max,
+                    children: [
+                      Padding(
+                        padding: EdgeInsetsDirectional.fromSTEB(
+                            0.0, 32.0, 0.0, 32.0),
+                        child: Container(
+                          width: 200.0,
+                          height: 70.0,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(16.0),
+                          ),
+                          alignment: AlignmentDirectional(0.00, 0.00),
+                          child: Text(
+                            FFLocalizations.of(context).getText(
+                              'po69vlq3' /* Entregas */,
+                            ),
+                            style: FlutterFlowTheme.of(context)
+                                .displaySmall
+                                .override(
                                   fontFamily: 'Plus Jakarta Sans',
                                   color: Color(0xFF101213),
                                   fontSize: 36.0,
                                   fontWeight: FontWeight.w600,
                                 ),
+                          ),
+                        ),
                       ),
-                    ),
+                    ],
                   ),
                   Padding(
                     padding:
