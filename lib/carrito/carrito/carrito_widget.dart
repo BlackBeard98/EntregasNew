@@ -162,7 +162,7 @@ class _CarritoWidgetState extends State<CarritoWidget> {
                                 children: [
                                   TextSpan(
                                     text: FFLocalizations.of(context).getText(
-                                      'ld3oa0qv' /* Comprando en  */,
+                                      '3oue5bqv' /* Comprando en  */,
                                     ),
                                     style: FlutterFlowTheme.of(context)
                                         .bodyMedium
@@ -181,7 +181,7 @@ class _CarritoWidgetState extends State<CarritoWidget> {
                                   ),
                                   TextSpan(
                                     text: FFLocalizations.of(context).getText(
-                                      'y58jk8b4' /*  Cambiar? */,
+                                      'ojsjoeub' /*  Cambiar? */,
                                     ),
                                     style: TextStyle(
                                       color: Color(0xFFE27C46),
@@ -589,26 +589,120 @@ class _CarritoWidgetState extends State<CarritoWidget> {
                                                                           0.0,
                                                                           0.0,
                                                                           0.0),
-                                                              child: Text(
-                                                                FFLocalizations.of(
-                                                                        context)
-                                                                    .getText(
-                                                                  'qfkbbtl6' /* Remove */,
-                                                                ),
-                                                                style: FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .bodyMedium
-                                                                    .override(
-                                                                      fontFamily:
-                                                                          'Plus Jakarta Sans',
-                                                                      color: Color(
-                                                                          0xFFE8A479),
-                                                                      fontSize:
-                                                                          14.0,
-                                                                      fontWeight:
-                                                                          FontWeight
-                                                                              .normal,
+                                                              child: InkWell(
+                                                                splashColor: Colors
+                                                                    .transparent,
+                                                                focusColor: Colors
+                                                                    .transparent,
+                                                                hoverColor: Colors
+                                                                    .transparent,
+                                                                highlightColor:
+                                                                    Colors
+                                                                        .transparent,
+                                                                onTap:
+                                                                    () async {
+                                                                  _model.apiResulti84 =
+                                                                      await ShopGroup
+                                                                          .cartitemsaddproductCall
+                                                                          .call(
+                                                                    productId:
+                                                                        getJsonField(
+                                                                      cartItemsItem,
+                                                                      r'''$._id._id''',
+                                                                    ).toString(),
+                                                                    userId: FFAppState()
+                                                                        .authUser
+                                                                        .id,
+                                                                    authToken: FFAppState()
+                                                                        .authUser
+                                                                        .accessToken,
+                                                                    number:
+                                                                        -getJsonField(
+                                                                      cartItemsItem,
+                                                                      r'''$.quantity''',
                                                                     ),
+                                                                    municipalityId: ShopGroup
+                                                                        .cartuserIdCall
+                                                                        .municipalityId(
+                                                                          carritoCartuserIdResponse
+                                                                              .jsonBody,
+                                                                        )
+                                                                        .toString(),
+                                                                  );
+                                                                  if ((_model
+                                                                          .apiResulti84
+                                                                          ?.succeeded ??
+                                                                      true)) {
+                                                                    ScaffoldMessenger.of(
+                                                                            context)
+                                                                        .showSnackBar(
+                                                                      SnackBar(
+                                                                        content:
+                                                                            Text(
+                                                                          'Eliminado con éxito ',
+                                                                          style:
+                                                                              TextStyle(
+                                                                            color:
+                                                                                FlutterFlowTheme.of(context).primaryText,
+                                                                          ),
+                                                                        ),
+                                                                        duration:
+                                                                            Duration(milliseconds: 4000),
+                                                                        backgroundColor:
+                                                                            FlutterFlowTheme.of(context).secondary,
+                                                                      ),
+                                                                    );
+                                                                    await Future.delayed(const Duration(
+                                                                        milliseconds:
+                                                                            4000));
+
+                                                                    context.pushNamed(
+                                                                        'Carrito');
+                                                                  } else {
+                                                                    ScaffoldMessenger.of(
+                                                                            context)
+                                                                        .showSnackBar(
+                                                                      SnackBar(
+                                                                        content:
+                                                                            Text(
+                                                                          'Algo salió mal',
+                                                                          style:
+                                                                              TextStyle(
+                                                                            color:
+                                                                                FlutterFlowTheme.of(context).primaryText,
+                                                                          ),
+                                                                        ),
+                                                                        duration:
+                                                                            Duration(milliseconds: 4000),
+                                                                        backgroundColor:
+                                                                            Color(0x59E27C46),
+                                                                      ),
+                                                                    );
+                                                                  }
+
+                                                                  setState(
+                                                                      () {});
+                                                                },
+                                                                child: Text(
+                                                                  FFLocalizations.of(
+                                                                          context)
+                                                                      .getText(
+                                                                    'qfkbbtl6' /* Remove */,
+                                                                  ),
+                                                                  style: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .bodyMedium
+                                                                      .override(
+                                                                        fontFamily:
+                                                                            'Plus Jakarta Sans',
+                                                                        color: Color(
+                                                                            0xFFE8A479),
+                                                                        fontSize:
+                                                                            14.0,
+                                                                        fontWeight:
+                                                                            FontWeight.normal,
+                                                                      ),
+                                                                ),
                                                               ),
                                                             ),
                                                           ],
