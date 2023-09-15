@@ -169,7 +169,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'Productos',
       'en': '',
     },
-    '0038pmq2': {
+    'f2tm4m37': {
       'es': 'Ver Detalles',
       'en': '',
     },
@@ -574,7 +574,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'Productos',
       'en': '',
     },
-    'dmtdd80f': {
+    'uwymt329': {
       'es': 'Ver Detalles',
       'en': '',
     },

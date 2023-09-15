@@ -599,7 +599,7 @@ class _ProductosCopyWidgetState extends State<ProductosCopyWidget> {
                                       );
                                     },
                                     text: FFLocalizations.of(context).getText(
-                                      'dmtdd80f' /* Ver Detalles */,
+                                      'uwymt329' /* Ver Detalles */,
                                     ),
                                     options: FFButtonOptions(
                                       height: 40.0,

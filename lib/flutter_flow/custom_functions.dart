@@ -75,3 +75,10 @@ bool filterProductByMunicipality(
 ) {
   return !(list.where((x) => (x["municipalityId"] == municipalityId)).isEmpty);
 }
+
+String getMunicipalityNameByID(
+  String id,
+  List<dynamic> list,
+) {
+  return list.where((x) => (x["_id"]["_id"] == id)).first["name"];
+}

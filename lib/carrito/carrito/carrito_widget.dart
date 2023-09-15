@@ -3,6 +3,7 @@ import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import '/flutter_flow/custom_functions.dart' as functions;
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
@@ -205,14 +206,12 @@ class _CarritoWidgetState extends State<CarritoWidget> {
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     Text(
-                                      'Su Carrito está en: ${(ShopGroup.municipalityallCall.all(
-                                        columnMunicipalityallResponse.jsonBody,
-                                      ) as List).map<String>((s) => s.toString()).toList().where((e) => getJsonField(
-                                            e,
-                                            r'''$._id._id''',
-                                          ) == ShopGroup.cartuserIdCall.municipalityId(
+                                      'Su Carrito está en: ${functions.getMunicipalityNameByID(ShopGroup.cartuserIdCall.municipalityId(
                                             carritoCartuserIdResponse.jsonBody,
-                                          )).toList().first.toString()}',
+                                          ).toString(), ShopGroup.municipalityallCall.all(
+                                            columnMunicipalityallResponse
+                                                .jsonBody,
+                                          )!.toList())}',
                                       style: FlutterFlowTheme.of(context)
                                           .titleLarge
                                           .override(
