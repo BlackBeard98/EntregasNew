@@ -136,7 +136,7 @@ class _CuentaWidgetState extends State<CuentaWidget> {
                               children: [
                                 TextSpan(
                                   text: FFLocalizations.of(context).getText(
-                                    '98c3my3t' /* Comprando en  */,
+                                    'jg0eh42q' /* Comprando en  */,
                                   ),
                                   style: FlutterFlowTheme.of(context)
                                       .bodyMedium
@@ -155,7 +155,7 @@ class _CuentaWidgetState extends State<CuentaWidget> {
                                 ),
                                 TextSpan(
                                   text: FFLocalizations.of(context).getText(
-                                    'e8ab6uuy' /*  Cambiar? */,
+                                    'btjijc6r' /*  Cambiar? */,
                                   ),
                                   style: TextStyle(
                                     color: Color(0xFFE27C46),
