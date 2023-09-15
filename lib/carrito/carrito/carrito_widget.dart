@@ -216,7 +216,7 @@ class _CarritoWidgetState extends State<CarritoWidget> {
                                                       .jsonBody,
                                                 )
                                                 .toString() !=
-                                            (null))
+                                            ("null"))
                                           Flexible(
                                             child: Text(
                                               'Su Carrito está en: ${functions.getMunicipalityNameByID(ShopGroup.cartuserIdCall.municipalityId(
@@ -296,7 +296,7 @@ class _CarritoWidgetState extends State<CarritoWidget> {
                                             },
                                             text: FFLocalizations.of(context)
                                                 .getText(
-                                              'vrmdmatu' /* Eliminar */,
+                                              'u89yamdj' /* Eliminar */,
                                             ),
                                             icon: Icon(
                                               Icons
