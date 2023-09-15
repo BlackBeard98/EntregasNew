@@ -68,3 +68,10 @@ bool newCustomFunction(
   return list.where((x) => (x["name"] == name)).first["provinceId"]["_id"] ==
       id;
 }
+
+bool filterProductByMunicipality(
+  List<dynamic> list,
+  String municipalityId,
+) {
+  return !(list.where((x) => (x["municipalityId"] == municipalityId)).isEmpty);
+}
