@@ -10,3 +10,5 @@ export '/auth_reg/registro/registro_widget.dart' show RegistroWidget;
 export '/principal/seleccionar_loc/seleccionar_loc_widget.dart'
     show SeleccionarLocWidget;
 export '/checkout6/checkout6_widget.dart' show Checkout6Widget;
+export '/principal/productos_copy/productos_copy_widget.dart'
+    show ProductosCopyWidget;

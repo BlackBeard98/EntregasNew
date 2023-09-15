@@ -116,6 +116,7 @@ class _NavBarPageState extends State<NavBarPage> {
       'Productos': ProductosWidget(),
       'Carrito': CarritoWidget(),
       'Cuenta': CuentaWidget(),
+      'ProductosCopy': ProductosCopyWidget(),
     };
     final currentIndex = tabs.keys.toList().indexOf(_currentPageName);
 
@@ -161,6 +162,16 @@ class _NavBarPageState extends State<NavBarPage> {
             ),
             label: FFLocalizations.of(context).getText(
               'sfux1xfn' /* Cuenta */,
+            ),
+            tooltip: '',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.home_outlined,
+              size: 24.0,
+            ),
+            label: FFLocalizations.of(context).getText(
+              'u9rg2icw' /* Productos */,
             ),
             tooltip: '',
           )

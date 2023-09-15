@@ -169,7 +169,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'Productos',
       'en': '',
     },
-    'yln84loa': {
+    '5c8i5fqw': {
       'es': 'Ver Detalles',
       'en': '',
     },
@@ -561,6 +561,29 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'oq0mbqaa': {
       'es': 'Home',
+      'en': '',
+    },
+  },
+  // ProductosCopy
+  {
+    'zhxta0cf': {
+      'es': 'Comprando en ',
+      'en': '',
+    },
+    '9an139nf': {
+      'es': 'Buscar Producto',
+      'en': '',
+    },
+    '65udvxah': {
+      'es': 'Productos',
+      'en': '',
+    },
+    't14cy3pw': {
+      'es': 'Ver Detalles',
+      'en': '',
+    },
+    'u9rg2icw': {
+      'es': 'Productos',
       'en': '',
     },
   },

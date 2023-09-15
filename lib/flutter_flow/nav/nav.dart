@@ -96,6 +96,13 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               name: 'Checkout6',
               path: 'checkout6',
               builder: (context, params) => Checkout6Widget(),
+            ),
+            FFRoute(
+              name: 'ProductosCopy',
+              path: 'productosCopy',
+              builder: (context, params) => params.isEmpty
+                  ? NavBarPage(initialPage: 'ProductosCopy')
+                  : ProductosCopyWidget(),
             )
           ].map((r) => r.toRoute(appStateNotifier)).toList(),
         ),
