@@ -1,4 +1,5 @@
 import '/backend/api_requests/api_calls.dart';
+import '/backend/schema/structs/index.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
@@ -144,6 +145,29 @@ class _CarritoWidgetState extends State<CarritoWidget> {
                         style: TextStyle(
                           color: Colors.black,
                         ),
+                      ),
+                      TextSpan(
+                        text: FFLocalizations.of(context).getText(
+                          'ckr0pjm1' /*  Cambiar? */,
+                        ),
+                        style: TextStyle(
+                          color: Color(0xFFE27C46),
+                        ),
+                        mouseCursor: SystemMouseCursors.click,
+                        recognizer: TapGestureRecognizer()
+                          ..onTap = () async {
+                            setState(() {
+                              FFAppState().deleteMunicipalityApp();
+                              FFAppState().MunicipalityApp =
+                                  NameIDStruct.fromSerializableMap(
+                                      jsonDecode('{\"isSet\":\"false\"}'));
+
+                              FFAppState().deleteProvinceApp();
+                              FFAppState().ProvinceApp =
+                                  NameIDStruct.fromSerializableMap(
+                                      jsonDecode('{\"isSet\":\"false\"}'));
+                            });
+                          },
                       )
                     ],
                     style: FlutterFlowTheme.of(context).bodyMedium,
