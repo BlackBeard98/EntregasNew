@@ -169,7 +169,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'Productos',
       'en': '',
     },
-    'f2tm4m37': {
+    'o3l4a889': {
       'es': 'Ver Detalles',
       'en': '',
     },
@@ -243,6 +243,10 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // Carrito
   {
+    '11ozgxvt': {
+      'es': 'Comprando en ',
+      'en': '',
+    },
     'djuc3j4a': {
       'es': 'Abajo esta la lista de items de su carrito',
       'en': '',
@@ -574,7 +578,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'Productos',
       'en': '',
     },
-    'uwymt329': {
+    '0t79fcxk': {
       'es': 'Ver Detalles',
       'en': '',
     },

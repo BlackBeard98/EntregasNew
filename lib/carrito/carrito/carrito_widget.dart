@@ -112,14 +112,44 @@ class _CarritoWidgetState extends State<CarritoWidget> {
                 ),
               ),
             ),
-            title: Text(
-              FFAppState().authUser.name,
-              style: FlutterFlowTheme.of(context).headlineMedium.override(
-                    fontFamily: 'Outfit',
-                    color: Color(0xFF15161E),
-                    fontSize: 24.0,
-                    fontWeight: FontWeight.w500,
+            title: Column(
+              mainAxisSize: MainAxisSize.max,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  FFAppState().authUser.name,
+                  style: FlutterFlowTheme.of(context).headlineMedium.override(
+                        fontFamily: 'Outfit',
+                        color: Color(0xFF15161E),
+                        fontSize: 24.0,
+                        fontWeight: FontWeight.w500,
+                      ),
+                ),
+                RichText(
+                  textScaleFactor: MediaQuery.of(context).textScaleFactor,
+                  text: TextSpan(
+                    children: [
+                      TextSpan(
+                        text: FFLocalizations.of(context).getText(
+                          '11ozgxvt' /* Comprando en  */,
+                        ),
+                        style: FlutterFlowTheme.of(context).bodyMedium.override(
+                              fontFamily: 'Readex Pro',
+                              color: FlutterFlowTheme.of(context).primary,
+                              fontWeight: FontWeight.bold,
+                            ),
+                      ),
+                      TextSpan(
+                        text: FFAppState().MunicipalityApp.name,
+                        style: TextStyle(
+                          color: Colors.black,
+                        ),
+                      )
+                    ],
+                    style: FlutterFlowTheme.of(context).bodyMedium,
                   ),
+                ),
+              ],
             ),
             actions: [
               Padding(
