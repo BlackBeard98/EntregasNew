@@ -146,7 +146,7 @@ class _ProductosWidgetState extends State<ProductosWidget> {
                   size: 24.0,
                 ),
                 onPressed: () async {
-                  context.pushNamed('ProductosCopy');
+                  context.pushNamed('Carrito');
                 },
               ),
             ),
@@ -607,7 +607,7 @@ class _ProductosWidgetState extends State<ProductosWidget> {
                                       );
                                     },
                                     text: FFLocalizations.of(context).getText(
-                                      '64uhm1ht' /* Ver Detalles */,
+                                      '0o95qgw7' /* Ver Detalles */,
                                     ),
                                     options: FFButtonOptions(
                                       height: 40.0,

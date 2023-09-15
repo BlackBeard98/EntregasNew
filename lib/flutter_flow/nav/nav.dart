@@ -100,9 +100,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
             FFRoute(
               name: 'ProductosCopy',
               path: 'productosCopy',
-              builder: (context, params) => params.isEmpty
-                  ? NavBarPage(initialPage: 'ProductosCopy')
-                  : ProductosCopyWidget(),
+              builder: (context, params) => ProductosCopyWidget(),
             )
           ].map((r) => r.toRoute(appStateNotifier)).toList(),
         ),
