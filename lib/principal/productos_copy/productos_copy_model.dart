@@ -24,6 +24,11 @@ class ProductosCopyModel extends FlutterFlowModel {
   PagingController<ApiPagingParams, dynamic>? listViewPagingController;
   Function(ApiPagingParams nextPageMarker)? listViewApiCall;
 
+  // State field(s) for GridView widget.
+
+  PagingController<ApiPagingParams, dynamic>? gridViewPagingController;
+  Function(ApiPagingParams nextPageMarker)? gridViewApiCall;
+
   /// Initialization and disposal methods.
 
   void initState(BuildContext context) {}
@@ -32,6 +37,7 @@ class ProductosCopyModel extends FlutterFlowModel {
     unfocusNode.dispose();
     textController?.dispose();
     listViewPagingController?.dispose();
+    gridViewPagingController?.dispose();
   }
 
   /// Action blocks are added here.
@@ -74,6 +80,47 @@ class ProductosCopyModel extends FlutterFlowModel {
                   nextPageNumber: nextPageMarker.nextPageNumber + 1,
                   numItems: newNumItems,
                   lastResponse: listViewCategoryallResponse,
+                )
+              : null,
+        );
+      });
+
+  PagingController<ApiPagingParams, dynamic> setGridViewController(
+    Function(ApiPagingParams) apiCall,
+  ) {
+    gridViewApiCall = apiCall;
+    return gridViewPagingController ??= _createGridViewController(apiCall);
+  }
+
+  PagingController<ApiPagingParams, dynamic> _createGridViewController(
+    Function(ApiPagingParams) query,
+  ) {
+    final controller = PagingController<ApiPagingParams, dynamic>(
+      firstPageKey: ApiPagingParams(
+        nextPageNumber: 0,
+        numItems: 0,
+        lastResponse: null,
+      ),
+    );
+    return controller..addPageRequestListener(gridViewProductallPage);
+  }
+
+  void gridViewProductallPage(ApiPagingParams nextPageMarker) =>
+      gridViewApiCall!(nextPageMarker).then((gridViewProductallResponse) {
+        final pageItems = (getJsonField(
+                  gridViewProductallResponse.jsonBody,
+                  r'''$[*]''',
+                ) ??
+                [])
+            .toList() as List;
+        final newNumItems = nextPageMarker.numItems + pageItems.length;
+        gridViewPagingController?.appendPage(
+          pageItems,
+          (pageItems.length > 0)
+              ? ApiPagingParams(
+                  nextPageNumber: nextPageMarker.nextPageNumber + 1,
+                  numItems: newNumItems,
+                  lastResponse: gridViewProductallResponse,
                 )
               : null,
         );
