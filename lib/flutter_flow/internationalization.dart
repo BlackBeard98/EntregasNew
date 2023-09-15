@@ -481,25 +481,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': '',
     },
   },
-  // ProductosCopy
-  {
-    'ghnaban7': {
-      'es': 'Comprando en ',
-      'en': '',
-    },
-    'l1gh0m8v': {
-      'es': 'Buscar Producto',
-      'en': '',
-    },
-    'x6yfrav7': {
-      'es': 'Productos',
-      'en': '',
-    },
-    'nskqqv5q': {
-      'es': 'Productos',
-      'en': '',
-    },
-  },
   // Checkout6
   {
     'equuqv8b': {
