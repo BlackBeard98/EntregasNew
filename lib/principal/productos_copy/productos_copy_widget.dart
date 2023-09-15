@@ -602,7 +602,7 @@ class _ProductosCopyWidgetState extends State<ProductosCopyWidget> {
                                           },
                                           text: FFLocalizations.of(context)
                                               .getText(
-                                            't14cy3pw' /* Ver Detalles */,
+                                            'c7e1gws7' /* Ver Detalles */,
                                           ),
                                           options: FFButtonOptions(
                                             height: 40.0,
