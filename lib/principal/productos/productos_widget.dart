@@ -489,7 +489,7 @@ class _ProductosWidgetState extends State<ProductosWidget> {
                                             ),
                                           ),
                                         ),
-                                        Expanded(
+                                        Flexible(
                                           child: Row(
                                             mainAxisSize: MainAxisSize.max,
                                             mainAxisAlignment:
@@ -603,7 +603,7 @@ class _ProductosWidgetState extends State<ProductosWidget> {
                                       );
                                     },
                                     text: FFLocalizations.of(context).getText(
-                                      'sgkt9mnu' /* Ver Detalles */,
+                                      'bu723lu1' /* Ver Detalles */,
                                     ),
                                     options: FFButtonOptions(
                                       height: 40.0,
