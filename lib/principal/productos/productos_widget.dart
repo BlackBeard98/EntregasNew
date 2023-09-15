@@ -607,7 +607,7 @@ class _ProductosWidgetState extends State<ProductosWidget> {
                                       );
                                     },
                                     text: FFLocalizations.of(context).getText(
-                                      '0o95qgw7' /* Ver Detalles */,
+                                      '0038pmq2' /* Ver Detalles */,
                                     ),
                                     options: FFButtonOptions(
                                       height: 40.0,

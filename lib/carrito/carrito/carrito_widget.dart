@@ -205,9 +205,14 @@ class _CarritoWidgetState extends State<CarritoWidget> {
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     Text(
-                                      FFLocalizations.of(context).getText(
-                                        'pnxf4zs4' /* Tu Carrito */,
-                                      ),
+                                      'Su Carrito está en: ${(ShopGroup.municipalityallCall.all(
+                                        columnMunicipalityallResponse.jsonBody,
+                                      ) as List).map<String>((s) => s.toString()).toList().where((e) => getJsonField(
+                                            e,
+                                            r'''$._id._id''',
+                                          ) == ShopGroup.cartuserIdCall.municipalityId(
+                                            carritoCartuserIdResponse.jsonBody,
+                                          )).toList().first.toString()}',
                                       style: FlutterFlowTheme.of(context)
                                           .titleLarge
                                           .override(

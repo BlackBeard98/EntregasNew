@@ -433,11 +433,7 @@ class _SeleccionarLocWidgetState extends State<SeleccionarLocWidget> {
                                                                     FFAppState()
                                                                         .Province
                                                                         .id,
-                                                                    e
-                                                                        .toString()))
-                                                            .toList()
-                                                            .map((e) =>
-                                                                e.toString())
+                                                                    e.toString()))
                                                             .toList(),
                                                         onChanged: (val) async {
                                                           setState(() => _model

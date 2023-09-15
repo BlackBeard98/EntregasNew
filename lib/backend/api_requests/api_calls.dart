@@ -286,6 +286,10 @@ class CartuserIdCall {
         r'''$.cartItems[:].product''',
         true,
       );
+  dynamic municipalityId(dynamic response) => getJsonField(
+        response,
+        r'''$.municipalityId''',
+      );
 }
 
 class CartitemscleancartIdCall {
@@ -509,6 +513,11 @@ class MunicipalityallCall {
   dynamic names(dynamic response) => getJsonField(
         response,
         r'''$[:].name''',
+        true,
+      );
+  dynamic all(dynamic response) => getJsonField(
+        response,
+        r'''$[*]''',
         true,
       );
 }
