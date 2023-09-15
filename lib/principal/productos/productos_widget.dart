@@ -513,10 +513,15 @@ class _ProductosWidgetState extends State<ProductosWidget> {
                                                           productosItem,
                                                           r'''$.name''',
                                                         ).toString(),
-                                                        style:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .headlineLarge,
+                                                        style: FlutterFlowTheme
+                                                                .of(context)
+                                                            .headlineLarge
+                                                            .override(
+                                                              fontFamily:
+                                                                  'Outfit',
+                                                              color:
+                                                                  Colors.black,
+                                                            ),
                                                       ),
                                                     ),
                                                     Flexible(
@@ -586,7 +591,7 @@ class _ProductosWidgetState extends State<ProductosWidget> {
                                       );
                                     },
                                     text: FFLocalizations.of(context).getText(
-                                      'gm5gxipo' /* Ver Detalles */,
+                                      'l8implm0' /* Ver Detalles */,
                                     ),
                                     options: FFButtonOptions(
                                       height: 40.0,
