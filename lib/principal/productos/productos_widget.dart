@@ -495,52 +495,30 @@ class _ProductosWidgetState extends State<ProductosWidget> {
                                             mainAxisAlignment:
                                                 MainAxisAlignment.end,
                                             children: [
-                                              Padding(
-                                                padding: EdgeInsetsDirectional
-                                                    .fromSTEB(
-                                                        12.0, 0.0, 0.0, 0.0),
-                                                child: Column(
-                                                  mainAxisSize:
-                                                      MainAxisSize.max,
-                                                  mainAxisAlignment:
-                                                      MainAxisAlignment.center,
-                                                  crossAxisAlignment:
-                                                      CrossAxisAlignment.start,
-                                                  children: [
-                                                    Flexible(
-                                                      child: Text(
-                                                        getJsonField(
-                                                          productosItem,
-                                                          r'''$.name''',
-                                                        ).toString(),
-                                                        style: FlutterFlowTheme
-                                                                .of(context)
-                                                            .headlineLarge
-                                                            .override(
-                                                              fontFamily:
-                                                                  'Outfit',
-                                                              color:
-                                                                  Colors.black,
-                                                            ),
-                                                      ),
-                                                    ),
-                                                    Flexible(
-                                                      child: Padding(
-                                                        padding:
-                                                            EdgeInsetsDirectional
-                                                                .fromSTEB(
-                                                                    0.0,
-                                                                    0.0,
-                                                                    12.0,
-                                                                    0.0),
+                                              Flexible(
+                                                child: Padding(
+                                                  padding: EdgeInsetsDirectional
+                                                      .fromSTEB(
+                                                          12.0, 0.0, 0.0, 0.0),
+                                                  child: Column(
+                                                    mainAxisSize:
+                                                        MainAxisSize.max,
+                                                    mainAxisAlignment:
+                                                        MainAxisAlignment
+                                                            .center,
+                                                    crossAxisAlignment:
+                                                        CrossAxisAlignment
+                                                            .start,
+                                                    children: [
+                                                      Flexible(
                                                         child: Text(
-                                                          'Disponibilidad: ${getJsonField(
+                                                          getJsonField(
                                                             productosItem,
-                                                            r'''$.stockQuantity''',
-                                                          ).toString()}',
+                                                            r'''$.name''',
+                                                          ).toString(),
                                                           style: FlutterFlowTheme
                                                                   .of(context)
-                                                              .headlineMedium
+                                                              .headlineLarge
                                                               .override(
                                                                 fontFamily:
                                                                     'Outfit',
@@ -549,35 +527,61 @@ class _ProductosWidgetState extends State<ProductosWidget> {
                                                               ),
                                                         ),
                                                       ),
-                                                    ),
-                                                    Flexible(
-                                                      child: Padding(
-                                                        padding:
-                                                            EdgeInsetsDirectional
-                                                                .fromSTEB(
-                                                                    0.0,
-                                                                    0.0,
-                                                                    12.0,
-                                                                    0.0),
-                                                        child: Text(
-                                                          'Precio: ${getJsonField(
-                                                            productosItem,
-                                                            r'''$.price''',
-                                                          ).toString()}',
-                                                          style: FlutterFlowTheme
-                                                                  .of(context)
-                                                              .headlineSmall
-                                                              .override(
-                                                                fontFamily:
-                                                                    'Outfit',
-                                                                color: Colors
-                                                                    .black,
-                                                              ),
+                                                      Flexible(
+                                                        child: Padding(
+                                                          padding:
+                                                              EdgeInsetsDirectional
+                                                                  .fromSTEB(
+                                                                      0.0,
+                                                                      0.0,
+                                                                      12.0,
+                                                                      0.0),
+                                                          child: Text(
+                                                            'Disponibilidad: ${getJsonField(
+                                                              productosItem,
+                                                              r'''$.stockQuantity''',
+                                                            ).toString()}',
+                                                            style: FlutterFlowTheme
+                                                                    .of(context)
+                                                                .headlineMedium
+                                                                .override(
+                                                                  fontFamily:
+                                                                      'Outfit',
+                                                                  color: Colors
+                                                                      .black,
+                                                                ),
+                                                          ),
                                                         ),
                                                       ),
-                                                    ),
-                                                  ].divide(
-                                                      SizedBox(height: 4.0)),
+                                                      Flexible(
+                                                        child: Padding(
+                                                          padding:
+                                                              EdgeInsetsDirectional
+                                                                  .fromSTEB(
+                                                                      0.0,
+                                                                      0.0,
+                                                                      12.0,
+                                                                      0.0),
+                                                          child: Text(
+                                                            'Precio: ${getJsonField(
+                                                              productosItem,
+                                                              r'''$.price''',
+                                                            ).toString()}',
+                                                            style: FlutterFlowTheme
+                                                                    .of(context)
+                                                                .headlineSmall
+                                                                .override(
+                                                                  fontFamily:
+                                                                      'Outfit',
+                                                                  color: Colors
+                                                                      .black,
+                                                                ),
+                                                          ),
+                                                        ),
+                                                      ),
+                                                    ].divide(
+                                                        SizedBox(height: 4.0)),
+                                                  ),
                                                 ),
                                               ),
                                             ],
@@ -603,7 +607,7 @@ class _ProductosWidgetState extends State<ProductosWidget> {
                                       );
                                     },
                                     text: FFLocalizations.of(context).getText(
-                                      'bu723lu1' /* Ver Detalles */,
+                                      'yln84loa' /* Ver Detalles */,
                                     ),
                                     options: FFButtonOptions(
                                       height: 40.0,
