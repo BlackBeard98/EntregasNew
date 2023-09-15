@@ -181,7 +181,7 @@ class _CarritoWidgetState extends State<CarritoWidget> {
                                   ),
                                   TextSpan(
                                     text: FFLocalizations.of(context).getText(
-                                      'rtg8vakm' /*  Cambiar? */,
+                                      '5jclgjg3' /*  Cambiar? */,
                                     ),
                                     style: TextStyle(
                                       color: Color(0xFFE27C46),
@@ -399,12 +399,7 @@ class _CarritoWidgetState extends State<CarritoWidget> {
                                                                             12.0),
                                                                 child: Image
                                                                     .network(
-                                                                  functions
-                                                                      .getImages(
-                                                                          getJsonField(
-                                                                    cartItemsItem,
-                                                                    r'''$.product.images''',
-                                                                  )!),
+                                                                  'https://static.nike.com/a/images/t_prod_ss/w_640,c_limit,f_auto/95c8dcbe-3d3f-46a9-9887-43161ef949c5/sleepers-of-the-week-release-date.jpg',
                                                                   width: 70.0,
                                                                   height: 70.0,
                                                                   fit: BoxFit

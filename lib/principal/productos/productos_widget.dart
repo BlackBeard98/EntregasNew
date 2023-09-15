@@ -1,5 +1,4 @@
 import '/backend/api_requests/api_calls.dart';
-import '/backend/schema/structs/index.dart';
 import '/components/productos_vacio_widget.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
@@ -65,143 +64,95 @@ class _ProductosWidgetState extends State<ProductosWidget> {
       child: Scaffold(
         key: scaffoldKey,
         backgroundColor: Colors.white,
-        appBar: PreferredSize(
-          preferredSize: Size.fromHeight(80.0),
-          child: AppBar(
-            backgroundColor: Colors.white,
-            automaticallyImplyLeading: false,
-            leading: Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(12.0, 6.0, 0.0, 6.0),
-              child: Container(
-                width: 44.0,
-                height: 44.0,
-                decoration: BoxDecoration(
-                  color: Color(0x4D9489F5),
-                  shape: BoxShape.circle,
-                  border: Border.all(
-                    color: Color(0xFFE8A479),
-                    width: 2.0,
-                  ),
+        appBar: AppBar(
+          backgroundColor: Colors.white,
+          automaticallyImplyLeading: false,
+          leading: Padding(
+            padding: EdgeInsetsDirectional.fromSTEB(12.0, 6.0, 0.0, 6.0),
+            child: Container(
+              width: 44.0,
+              height: 44.0,
+              decoration: BoxDecoration(
+                color: Color(0x4D9489F5),
+                shape: BoxShape.circle,
+                border: Border.all(
+                  color: Color(0xFFE8A479),
+                  width: 2.0,
                 ),
-                child: Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(2.0, 2.0, 2.0, 2.0),
-                  child: ClipRRect(
-                    borderRadius: BorderRadius.circular(50.0),
-                    child: Image.network(
-                      'https://picsum.photos/seed/626/600',
-                      width: 300.0,
-                      height: 200.0,
-                      fit: BoxFit.cover,
-                    ),
+              ),
+              child: Padding(
+                padding: EdgeInsetsDirectional.fromSTEB(2.0, 2.0, 2.0, 2.0),
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(50.0),
+                  child: Image.network(
+                    'https://picsum.photos/seed/626/600',
+                    width: 300.0,
+                    height: 200.0,
+                    fit: BoxFit.cover,
                   ),
                 ),
               ),
             ),
-            actions: [
-              Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 16.0, 0.0),
-                child: FlutterFlowIconButton(
-                  borderColor: Colors.transparent,
-                  borderRadius: 20.0,
-                  buttonSize: 40.0,
-                  icon: Icon(
-                    Icons.notifications_none,
-                    color: Color(0xFF15161E),
-                    size: 24.0,
-                  ),
-                  onPressed: () async {
-                    context.pushNamed('Carrito');
-                  },
+          ),
+          title: Column(
+            mainAxisSize: MainAxisSize.max,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                FFAppState().authUser.name,
+                style: FlutterFlowTheme.of(context).headlineMedium.override(
+                      fontFamily: 'Outfit',
+                      color: Color(0xFF15161E),
+                      fontSize: 24.0,
+                      fontWeight: FontWeight.w500,
+                    ),
+              ),
+              RichText(
+                textScaleFactor: MediaQuery.of(context).textScaleFactor,
+                text: TextSpan(
+                  children: [
+                    TextSpan(
+                      text: FFLocalizations.of(context).getText(
+                        'u7oamerp' /* Comprando en  */,
+                      ),
+                      style: FlutterFlowTheme.of(context).bodyMedium.override(
+                            fontFamily: 'Readex Pro',
+                            color: FlutterFlowTheme.of(context).primary,
+                            fontWeight: FontWeight.bold,
+                          ),
+                    ),
+                    TextSpan(
+                      text: FFAppState().MunicipalityApp.name,
+                      style: TextStyle(
+                        color: Colors.black,
+                      ),
+                    )
+                  ],
+                  style: FlutterFlowTheme.of(context).bodyMedium,
                 ),
               ),
             ],
-            flexibleSpace: FlexibleSpaceBar(
-              title: Align(
-                alignment: AlignmentDirectional(0.00, 0.00),
-                child: Column(
-                  mainAxisSize: MainAxisSize.max,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      FFAppState().authUser.name,
-                      style:
-                          FlutterFlowTheme.of(context).headlineMedium.override(
-                                fontFamily: 'Outfit',
-                                color: Color(0xFF15161E),
-                                fontSize: 24.0,
-                                fontWeight: FontWeight.w500,
-                              ),
-                    ),
-                    Row(
-                      mainAxisSize: MainAxisSize.max,
-                      children: [
-                        Flexible(
-                          child: RichText(
-                            textScaleFactor:
-                                MediaQuery.of(context).textScaleFactor,
-                            text: TextSpan(
-                              children: [
-                                TextSpan(
-                                  text: FFLocalizations.of(context).getText(
-                                    '3lfnk11d' /* Comprando en  */,
-                                  ),
-                                  style: FlutterFlowTheme.of(context)
-                                      .bodyMedium
-                                      .override(
-                                        fontFamily: 'Readex Pro',
-                                        color: FlutterFlowTheme.of(context)
-                                            .primary,
-                                        fontWeight: FontWeight.bold,
-                                      ),
-                                ),
-                                TextSpan(
-                                  text: FFAppState().MunicipalityApp.name,
-                                  style: TextStyle(
-                                    color: Colors.black,
-                                  ),
-                                ),
-                                TextSpan(
-                                  text: FFLocalizations.of(context).getText(
-                                    'oab5anpm' /*  Cambiar? */,
-                                  ),
-                                  style: TextStyle(
-                                    color: Color(0xFFE27C46),
-                                  ),
-                                  mouseCursor: SystemMouseCursors.click,
-                                  recognizer: TapGestureRecognizer()
-                                    ..onTap = () async {
-                                      setState(() {
-                                        FFAppState().deleteMunicipalityApp();
-                                        FFAppState().MunicipalityApp =
-                                            NameIDStruct.fromSerializableMap(
-                                                jsonDecode(
-                                                    '{\"isSet\":\"false\"}'));
-
-                                        FFAppState().deleteProvinceApp();
-                                        FFAppState().ProvinceApp =
-                                            NameIDStruct.fromSerializableMap(
-                                                jsonDecode(
-                                                    '{\"isSet\":\"false\"}'));
-                                      });
-
-                                      context.goNamed('SeleccionarLoc');
-                                    },
-                                )
-                              ],
-                              style: FlutterFlowTheme.of(context).bodyMedium,
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
-              ),
-              centerTitle: false,
-              expandedTitleScale: 1.0,
-            ),
-            elevation: 0.0,
           ),
+          actions: [
+            Padding(
+              padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 16.0, 0.0),
+              child: FlutterFlowIconButton(
+                borderColor: Colors.transparent,
+                borderRadius: 20.0,
+                buttonSize: 40.0,
+                icon: Icon(
+                  Icons.notifications_none,
+                  color: Color(0xFF15161E),
+                  size: 24.0,
+                ),
+                onPressed: () async {
+                  context.pushNamed('Carrito');
+                },
+              ),
+            ),
+          ],
+          centerTitle: false,
+          elevation: 0.0,
         ),
         body: SafeArea(
           top: true,
@@ -661,7 +612,7 @@ class _ProductosWidgetState extends State<ProductosWidget> {
                                         );
                                       },
                                       text: FFLocalizations.of(context).getText(
-                                        'kgltcoze' /* Ver Detalles */,
+                                        'fivaiy12' /* Ver Detalles */,
                                       ),
                                       options: FFButtonOptions(
                                         height: 40.0,
