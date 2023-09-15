@@ -379,7 +379,7 @@ class _ProductosCopyWidgetState extends State<ProductosCopyWidget> {
                   Container(
                     height: 535.0,
                     decoration: BoxDecoration(
-                      color: FlutterFlowTheme.of(context).secondaryBackground,
+                      color: Colors.white,
                     ),
                     child: FutureBuilder<ApiCallResponse>(
                       future: ShopGroup.productallCall.call(
@@ -425,8 +425,7 @@ class _ProductosCopyWidgetState extends State<ProductosCopyWidget> {
                                 final productosItem = productos[productosIndex];
                                 return Container(
                                   decoration: BoxDecoration(
-                                    color: FlutterFlowTheme.of(context)
-                                        .secondaryBackground,
+                                    color: Colors.white,
                                   ),
                                   child: Column(
                                     mainAxisSize: MainAxisSize.max,
@@ -602,7 +601,7 @@ class _ProductosCopyWidgetState extends State<ProductosCopyWidget> {
                                           },
                                           text: FFLocalizations.of(context)
                                               .getText(
-                                            'c7e1gws7' /* Ver Detalles */,
+                                            '5efjvttq' /* Ver Detalles */,
                                           ),
                                           options: FFButtonOptions(
                                             height: 40.0,
