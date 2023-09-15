@@ -99,8 +99,12 @@ class _ProductoVIewWidgetState extends State<ProductoVIewWidget>
 
     // On page load action.
     SchedulerBinding.instance.addPostFrameCallback((_) async {
-      if (!FFAppState().authUser.isLogued) {
-        context.pushNamed('login');
+      if (FFAppState().authUser.isLogued) {
+        if (!FFAppState().MunicipalityApp.isSet) {
+          context.goNamed('SeleccionarLoc');
+        }
+      } else {
+        context.goNamed('login');
       }
     });
 
@@ -403,6 +407,7 @@ class _ProductoVIewWidgetState extends State<ProductoVIewWidget>
                           userId: FFAppState().authUser.id,
                           number: _model.countControllerValue,
                           authToken: FFAppState().authUser.accessToken,
+                          municipalityId: FFAppState().MunicipalityApp.id,
                         );
                         if (!(_model.apiResulthn6?.succeeded ?? true)) {
                           ScaffoldMessenger.of(context).showSnackBar(

@@ -169,7 +169,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'Productos',
       'en': '',
     },
-    '59olb95e': {
+    'vz216kuo': {
       'es': 'Ver ahora',
       'en': '',
     },
@@ -477,6 +477,108 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': '',
     },
     '70rwjpl6': {
+      'es': 'Home',
+      'en': '',
+    },
+  },
+  // ProductosCopy
+  {
+    'ghnaban7': {
+      'es': 'Comprando en ',
+      'en': '',
+    },
+    'l1gh0m8v': {
+      'es': 'Buscar Producto',
+      'en': '',
+    },
+    'x6yfrav7': {
+      'es': 'Productos',
+      'en': '',
+    },
+    'nskqqv5q': {
+      'es': 'Productos',
+      'en': '',
+    },
+  },
+  // Checkout6
+  {
+    'equuqv8b': {
+      'es': 'Below are the items in your cart.',
+      'en': '',
+    },
+    'cgc2mlvg': {
+      'es': 'AirMax Low',
+      'en': '',
+    },
+    'zqdkf8vl': {
+      'es': '\$120.00',
+      'en': '',
+    },
+    '752vceih': {
+      'es': 'Quanity: 1',
+      'en': '',
+    },
+    'z8e09agx': {
+      'es': 'Zion 1',
+      'en': '',
+    },
+    'v9h966c7': {
+      'es': '\$120.00',
+      'en': '',
+    },
+    'nb5eyd0r': {
+      'es': 'Quanity: 1',
+      'en': '',
+    },
+    'ddun6rfb': {
+      'es': 'Jumpsuit',
+      'en': '',
+    },
+    'wrh5tn26': {
+      'es': '\$120.00',
+      'en': '',
+    },
+    'glysdrcu': {
+      'es': 'Quanity: 1',
+      'en': '',
+    },
+    'mowllo3a': {
+      'es': 'Price Breakdown',
+      'en': '',
+    },
+    'rz0l11c5': {
+      'es': 'Base Price',
+      'en': '',
+    },
+    'wuepo5n1': {
+      'es': '\$120.00',
+      'en': '',
+    },
+    'd1n0mrsi': {
+      'es': 'Taxes',
+      'en': '',
+    },
+    'xuopge7z': {
+      'es': '\$12.25',
+      'en': '',
+    },
+    '6zh40sct': {
+      'es': 'Total',
+      'en': '',
+    },
+    'ws71eec7': {
+      'es': '\$137.75',
+      'en': '',
+    },
+    'qlbmf754': {
+      'es': 'Checkout (\$137.75)',
+      'en': '',
+    },
+    'w0lucjja': {
+      'es': 'My Cart',
+      'en': '',
+    },
+    'oq0mbqaa': {
       'es': 'Home',
       'en': '',
     },
