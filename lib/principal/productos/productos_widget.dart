@@ -143,7 +143,7 @@ class _ProductosWidgetState extends State<ProductosWidget> {
                               children: [
                                 TextSpan(
                                   text: FFLocalizations.of(context).getText(
-                                    'n75k8hqf' /* Comprando en  */,
+                                    '7b3dh6fn' /* Comprando en  */,
                                   ),
                                   style: FlutterFlowTheme.of(context)
                                       .bodyMedium
@@ -162,7 +162,7 @@ class _ProductosWidgetState extends State<ProductosWidget> {
                                 ),
                                 TextSpan(
                                   text: FFLocalizations.of(context).getText(
-                                    'or8lsr5v' /*  Cambiar? */,
+                                    'wezlptb8' /*  Cambiar? */,
                                   ),
                                   style: TextStyle(
                                     color: Color(0xFFE27C46),
@@ -215,7 +215,7 @@ class _ProductosWidgetState extends State<ProductosWidget> {
                     maxWidth: 600.0,
                   ),
                   decoration: BoxDecoration(
-                    color: FlutterFlowTheme.of(context).secondaryBackground,
+                    color: Colors.white,
                   ),
                   child: Visibility(
                     visible: FFAppState().MunicipalityApp.isSet,
