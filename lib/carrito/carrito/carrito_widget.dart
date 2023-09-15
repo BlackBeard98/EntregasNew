@@ -83,118 +83,142 @@ class _CarritoWidgetState extends State<CarritoWidget> {
         return Scaffold(
           key: scaffoldKey,
           backgroundColor: Color(0xFFF1F4F8),
-          appBar: AppBar(
-            backgroundColor: Colors.white,
-            automaticallyImplyLeading: false,
-            leading: Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(12.0, 6.0, 0.0, 6.0),
-              child: Container(
-                width: 44.0,
-                height: 44.0,
-                decoration: BoxDecoration(
-                  color: Color(0x4D9489F5),
-                  shape: BoxShape.circle,
-                  border: Border.all(
-                    color: Color(0xFFE8A479),
-                    width: 2.0,
+          appBar: PreferredSize(
+            preferredSize: Size.fromHeight(80.0),
+            child: AppBar(
+              backgroundColor: Colors.white,
+              automaticallyImplyLeading: false,
+              leading: Padding(
+                padding: EdgeInsetsDirectional.fromSTEB(12.0, 6.0, 0.0, 6.0),
+                child: Container(
+                  width: 44.0,
+                  height: 44.0,
+                  decoration: BoxDecoration(
+                    color: Color(0x4D9489F5),
+                    shape: BoxShape.circle,
+                    border: Border.all(
+                      color: Color(0xFFE8A479),
+                      width: 2.0,
+                    ),
                   ),
-                ),
-                child: Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(2.0, 2.0, 2.0, 2.0),
-                  child: ClipRRect(
-                    borderRadius: BorderRadius.circular(50.0),
-                    child: Image.network(
-                      'https://picsum.photos/seed/626/600',
-                      width: 300.0,
-                      height: 200.0,
-                      fit: BoxFit.cover,
+                  child: Padding(
+                    padding: EdgeInsetsDirectional.fromSTEB(2.0, 2.0, 2.0, 2.0),
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(50.0),
+                      child: Image.network(
+                        'https://picsum.photos/seed/626/600',
+                        width: 300.0,
+                        height: 200.0,
+                        fit: BoxFit.cover,
+                      ),
                     ),
                   ),
                 ),
               ),
-            ),
-            title: Column(
-              mainAxisSize: MainAxisSize.max,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  FFAppState().authUser.name,
-                  style: FlutterFlowTheme.of(context).headlineMedium.override(
-                        fontFamily: 'Outfit',
-                        color: Color(0xFF15161E),
-                        fontSize: 24.0,
-                        fontWeight: FontWeight.w500,
-                      ),
-                ),
-                RichText(
-                  textScaleFactor: MediaQuery.of(context).textScaleFactor,
-                  text: TextSpan(
-                    children: [
-                      TextSpan(
-                        text: FFLocalizations.of(context).getText(
-                          '11ozgxvt' /* Comprando en  */,
-                        ),
-                        style: FlutterFlowTheme.of(context).bodyMedium.override(
-                              fontFamily: 'Readex Pro',
-                              color: FlutterFlowTheme.of(context).primary,
-                              fontWeight: FontWeight.bold,
-                            ),
-                      ),
-                      TextSpan(
-                        text: FFAppState().MunicipalityApp.name,
-                        style: TextStyle(
-                          color: Colors.black,
-                        ),
-                      ),
-                      TextSpan(
-                        text: FFLocalizations.of(context).getText(
-                          'ckr0pjm1' /*  Cambiar? */,
-                        ),
-                        style: TextStyle(
-                          color: Color(0xFFE27C46),
-                        ),
-                        mouseCursor: SystemMouseCursors.click,
-                        recognizer: TapGestureRecognizer()
-                          ..onTap = () async {
-                            setState(() {
-                              FFAppState().deleteMunicipalityApp();
-                              FFAppState().MunicipalityApp =
-                                  NameIDStruct.fromSerializableMap(
-                                      jsonDecode('{\"isSet\":\"false\"}'));
-
-                              FFAppState().deleteProvinceApp();
-                              FFAppState().ProvinceApp =
-                                  NameIDStruct.fromSerializableMap(
-                                      jsonDecode('{\"isSet\":\"false\"}'));
-                            });
-                          },
-                      )
-                    ],
-                    style: FlutterFlowTheme.of(context).bodyMedium,
+              actions: [
+                Padding(
+                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 16.0, 0.0),
+                  child: FlutterFlowIconButton(
+                    borderColor: Colors.transparent,
+                    borderRadius: 20.0,
+                    buttonSize: 40.0,
+                    icon: Icon(
+                      Icons.notifications_none,
+                      color: Color(0xFF15161E),
+                      size: 24.0,
+                    ),
+                    onPressed: () async {
+                      context.pushNamed('Carrito');
+                    },
                   ),
                 ),
               ],
-            ),
-            actions: [
-              Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 16.0, 0.0),
-                child: FlutterFlowIconButton(
-                  borderColor: Colors.transparent,
-                  borderRadius: 20.0,
-                  buttonSize: 40.0,
-                  icon: Icon(
-                    Icons.notifications_none,
-                    color: Color(0xFF15161E),
-                    size: 24.0,
+              flexibleSpace: FlexibleSpaceBar(
+                title: Align(
+                  alignment: AlignmentDirectional(0.00, 0.00),
+                  child: Column(
+                    mainAxisSize: MainAxisSize.max,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        FFAppState().authUser.name,
+                        style: FlutterFlowTheme.of(context)
+                            .headlineMedium
+                            .override(
+                              fontFamily: 'Outfit',
+                              color: Color(0xFF15161E),
+                              fontSize: 24.0,
+                              fontWeight: FontWeight.w500,
+                            ),
+                      ),
+                      Row(
+                        mainAxisSize: MainAxisSize.max,
+                        children: [
+                          Flexible(
+                            child: RichText(
+                              textScaleFactor:
+                                  MediaQuery.of(context).textScaleFactor,
+                              text: TextSpan(
+                                children: [
+                                  TextSpan(
+                                    text: FFLocalizations.of(context).getText(
+                                      '11ozgxvt' /* Comprando en  */,
+                                    ),
+                                    style: FlutterFlowTheme.of(context)
+                                        .bodyMedium
+                                        .override(
+                                          fontFamily: 'Readex Pro',
+                                          color: FlutterFlowTheme.of(context)
+                                              .primary,
+                                          fontWeight: FontWeight.bold,
+                                        ),
+                                  ),
+                                  TextSpan(
+                                    text: FFAppState().MunicipalityApp.name,
+                                    style: TextStyle(
+                                      color: Colors.black,
+                                    ),
+                                  ),
+                                  TextSpan(
+                                    text: FFLocalizations.of(context).getText(
+                                      'usatyrlu' /*  Cambiar? */,
+                                    ),
+                                    style: TextStyle(
+                                      color: Color(0xFFE27C46),
+                                    ),
+                                    mouseCursor: SystemMouseCursors.click,
+                                    recognizer: TapGestureRecognizer()
+                                      ..onTap = () async {
+                                        setState(() {
+                                          FFAppState().deleteMunicipalityApp();
+                                          FFAppState().MunicipalityApp =
+                                              NameIDStruct.fromSerializableMap(
+                                                  jsonDecode(
+                                                      '{\"isSet\":\"false\"}'));
+
+                                          FFAppState().deleteProvinceApp();
+                                          FFAppState().ProvinceApp =
+                                              NameIDStruct.fromSerializableMap(
+                                                  jsonDecode(
+                                                      '{\"isSet\":\"false\"}'));
+                                        });
+                                      },
+                                  )
+                                ],
+                                style: FlutterFlowTheme.of(context).bodyMedium,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
                   ),
-                  onPressed: () async {
-                    context.pushNamed('Carrito');
-                  },
                 ),
+                centerTitle: false,
+                expandedTitleScale: 1.0,
               ),
-            ],
-            centerTitle: false,
-            elevation: 0.0,
+              elevation: 0.0,
+            ),
           ),
           body: Align(
             alignment: AlignmentDirectional(0.00, -1.00),
@@ -375,7 +399,12 @@ class _CarritoWidgetState extends State<CarritoWidget> {
                                                                             12.0),
                                                                 child: Image
                                                                     .network(
-                                                                  'https://static.nike.com/a/images/t_prod_ss/w_640,c_limit,f_auto/95c8dcbe-3d3f-46a9-9887-43161ef949c5/sleepers-of-the-week-release-date.jpg',
+                                                                  functions
+                                                                      .getImages(
+                                                                          getJsonField(
+                                                                    cartItemsItem,
+                                                                    r'''$.product.images''',
+                                                                  )!),
                                                                   width: 70.0,
                                                                   height: 70.0,
                                                                   fit: BoxFit

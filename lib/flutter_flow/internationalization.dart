@@ -107,6 +107,14 @@ Locale createLocale(String language) => language.contains('_')
 final kTranslationsMap = <Map<String, Map<String, String>>>[
   // ProductoVIew
   {
+    'uhnk2r22': {
+      'es': 'Comprando en ',
+      'en': '',
+    },
+    '630momti': {
+      'es': ' Cambiar?',
+      'en': '',
+    },
     'm7kl8eww': {
       'es': 'Añadir al carrito',
       'en': '',
@@ -157,8 +165,12 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // Productos
   {
-    'u7oamerp': {
+    '3lfnk11d': {
       'es': 'Comprando en ',
+      'en': '',
+    },
+    'gfmdy4le': {
+      'es': ' Cambiar?',
       'en': '',
     },
     'eud7yoaz': {
@@ -169,7 +181,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'Productos',
       'en': '',
     },
-    'hqzca57l': {
+    '9w0jihx9': {
       'es': 'Ver Detalles',
       'en': '',
     },
@@ -247,7 +259,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'Comprando en ',
       'en': '',
     },
-    'ckr0pjm1': {
+    'usatyrlu': {
       'es': ' Cambiar?',
       'en': '',
     },
@@ -582,7 +594,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'Productos',
       'en': '',
     },
-    'qctzt8gg': {
+    'pr4hsllr': {
       'es': 'Ver Detalles',
       'en': '',
     },
