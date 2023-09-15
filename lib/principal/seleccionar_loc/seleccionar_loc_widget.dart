@@ -192,18 +192,20 @@ class _SeleccionarLocWidgetState extends State<SeleccionarLocWidget> {
                                   mainAxisSize: MainAxisSize.max,
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
-                                    Text(
-                                      FFLocalizations.of(context).getText(
-                                        '9tlffo20' /* Escoja el municipio donde va a... */,
+                                    Flexible(
+                                      child: Text(
+                                        FFLocalizations.of(context).getText(
+                                          '9tlffo20' /* Escoja el municipio donde va a... */,
+                                        ),
+                                        style: FlutterFlowTheme.of(context)
+                                            .titleLarge
+                                            .override(
+                                              fontFamily: 'Outfit',
+                                              color: Color(0xFF14181B),
+                                              fontSize: 22.0,
+                                              fontWeight: FontWeight.w500,
+                                            ),
                                       ),
-                                      style: FlutterFlowTheme.of(context)
-                                          .titleLarge
-                                          .override(
-                                            fontFamily: 'Outfit',
-                                            color: Color(0xFF14181B),
-                                            fontSize: 22.0,
-                                            fontWeight: FontWeight.w500,
-                                          ),
                                     ),
                                   ],
                                 ),

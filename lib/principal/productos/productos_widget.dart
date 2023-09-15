@@ -143,7 +143,7 @@ class _ProductosWidgetState extends State<ProductosWidget> {
                               children: [
                                 TextSpan(
                                   text: FFLocalizations.of(context).getText(
-                                    '7b3dh6fn' /* Comprando en  */,
+                                    'ajooir52' /* Comprando en  */,
                                   ),
                                   style: FlutterFlowTheme.of(context)
                                       .bodyMedium
@@ -162,7 +162,7 @@ class _ProductosWidgetState extends State<ProductosWidget> {
                                 ),
                                 TextSpan(
                                   text: FFLocalizations.of(context).getText(
-                                    'wezlptb8' /*  Cambiar? */,
+                                    'vw4go5uh' /*  Cambiar? */,
                                   ),
                                   style: TextStyle(
                                     color: Color(0xFFE27C46),

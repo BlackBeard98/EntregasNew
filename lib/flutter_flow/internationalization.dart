@@ -157,11 +157,11 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // Productos
   {
-    '7b3dh6fn': {
+    'ajooir52': {
       'es': 'Comprando en ',
       'en': '',
     },
-    'wezlptb8': {
+    'vw4go5uh': {
       'es': ' Cambiar?',
       'en': '',
     },
@@ -247,11 +247,11 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // Carrito
   {
-    'dz5rf8pb': {
+    'bzwfzxbm': {
       'es': 'Comprando en ',
       'en': '',
     },
-    'qv7f8lfp': {
+    'uzjbi5si': {
       'es': ' Cambiar?',
       'en': '',
     },
@@ -370,11 +370,11 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // Cuenta
   {
-    '3vbpcn3k': {
+    'zazew3w5': {
       'es': 'Comprando en ',
       'en': '',
     },
-    'qwflwhuo': {
+    'lpksr57p': {
       'es': ' Cambiar?',
       'en': '',
     },
