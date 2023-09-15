@@ -59,7 +59,7 @@ class _ShowAndChangeLocationWidgetState
                 children: [
                   TextSpan(
                     text: FFLocalizations.of(context).getText(
-                      'asiu7xt0' /* Comprando en  */,
+                      'b0kwtnui' /* Comprando en  */,
                     ),
                     style: FlutterFlowTheme.of(context).bodyMedium.override(
                           fontFamily: 'Readex Pro',
@@ -75,7 +75,7 @@ class _ShowAndChangeLocationWidgetState
                   ),
                   TextSpan(
                     text: FFLocalizations.of(context).getText(
-                      '566v2ltr' /*  Cambiar? */,
+                      '17qzsfck' /*  Cambiar? */,
                     ),
                     style: TextStyle(
                       color: Color(0xFFE27C46),
