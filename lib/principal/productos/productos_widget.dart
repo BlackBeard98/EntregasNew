@@ -538,20 +538,30 @@ class _ProductosWidgetState extends State<ProductosWidget> {
                                                                     .start,
                                                             children: [
                                                               Flexible(
-                                                                child: Text(
-                                                                  getJsonField(
-                                                                    productosItem,
-                                                                    r'''$.name''',
-                                                                  ).toString(),
-                                                                  style: FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .headlineLarge
-                                                                      .override(
-                                                                        fontFamily:
-                                                                            'Outfit',
-                                                                        color: Colors
-                                                                            .black,
-                                                                      ),
+                                                                child: Padding(
+                                                                  padding: EdgeInsetsDirectional
+                                                                      .fromSTEB(
+                                                                          0.0,
+                                                                          0.0,
+                                                                          12.0,
+                                                                          0.0),
+                                                                  child: Text(
+                                                                    getJsonField(
+                                                                      productosItem,
+                                                                      r'''$.name''',
+                                                                    ).toString(),
+                                                                    style: FlutterFlowTheme.of(
+                                                                            context)
+                                                                        .headlineLarge
+                                                                        .override(
+                                                                          fontFamily:
+                                                                              'Outfit',
+                                                                          color:
+                                                                              Colors.black,
+                                                                          fontWeight:
+                                                                              FontWeight.w500,
+                                                                        ),
+                                                                  ),
                                                                 ),
                                                               ),
                                                               Flexible(
