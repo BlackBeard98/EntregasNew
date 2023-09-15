@@ -456,6 +456,8 @@ class _ProductosWidgetState extends State<ProductosWidget> {
                                       mainAxisSize: MainAxisSize.max,
                                       mainAxisAlignment:
                                           MainAxisAlignment.start,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.center,
                                       children: [
                                         Flexible(
                                           child: Container(
@@ -590,37 +592,40 @@ class _ProductosWidgetState extends State<ProductosWidget> {
                                     ),
                                   ),
                                 ),
-                                Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
-                                      0.0, 8.0, 12.0, 0.0),
-                                  child: InkWell(
-                                    splashColor: Colors.transparent,
-                                    focusColor: Colors.transparent,
-                                    hoverColor: Colors.transparent,
-                                    highlightColor: Colors.transparent,
-                                    onTap: () async {
-                                      context.pushNamed(
-                                        'ProductoVIew',
-                                        queryParameters: {
-                                          'producto': serializeParam(
-                                            productosItem,
-                                            ParamType.JSON,
-                                          ),
-                                        }.withoutNulls,
-                                      );
-                                    },
-                                    child: Text(
-                                      FFLocalizations.of(context).getText(
-                                        'vz216kuo' /* Ver ahora */,
+                                Transform.rotate(
+                                  angle: 0.0,
+                                  child: Padding(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                        12.0, 12.0, 12.0, 12.0),
+                                    child: InkWell(
+                                      splashColor: Colors.transparent,
+                                      focusColor: Colors.transparent,
+                                      hoverColor: Colors.transparent,
+                                      highlightColor: Colors.transparent,
+                                      onTap: () async {
+                                        context.pushNamed(
+                                          'ProductoVIew',
+                                          queryParameters: {
+                                            'producto': serializeParam(
+                                              productosItem,
+                                              ParamType.JSON,
+                                            ),
+                                          }.withoutNulls,
+                                        );
+                                      },
+                                      child: Text(
+                                        FFLocalizations.of(context).getText(
+                                          'vz216kuo' /* Ver ahora */,
+                                        ),
+                                        style: FlutterFlowTheme.of(context)
+                                            .labelSmall
+                                            .override(
+                                              fontFamily: 'Plus Jakarta Sans',
+                                              color: Color(0xFF6F61EF),
+                                              fontSize: 12.0,
+                                              fontWeight: FontWeight.w500,
+                                            ),
                                       ),
-                                      style: FlutterFlowTheme.of(context)
-                                          .labelSmall
-                                          .override(
-                                            fontFamily: 'Plus Jakarta Sans',
-                                            color: Color(0xFF6F61EF),
-                                            fontSize: 12.0,
-                                            fontWeight: FontWeight.w500,
-                                          ),
                                     ),
                                   ),
                                 ),
