@@ -39,7 +39,7 @@ class _ProductosWidgetState extends State<ProductosWidget> {
           context.pushNamed('SeleccionarLoc');
         }
       } else {
-        context.pushNamed('login');
+        context.goNamed('login');
       }
     });
 

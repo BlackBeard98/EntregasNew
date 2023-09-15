@@ -8,6 +8,7 @@ import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/form_field_controller.dart';
 import '/flutter_flow/custom_functions.dart' as functions;
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'seleccionar_loc_model.dart';
@@ -29,6 +30,17 @@ class _SeleccionarLocWidgetState extends State<SeleccionarLocWidget> {
   void initState() {
     super.initState();
     _model = createModel(context, () => SeleccionarLocModel());
+
+    // On page load action.
+    SchedulerBinding.instance.addPostFrameCallback((_) async {
+      if (FFAppState().authUser.isLogued) {
+        if (FFAppState().MunicipalityApp.isSet) {
+          context.goNamed('Productos');
+        }
+      } else {
+        context.goNamed('login');
+      }
+    });
 
     WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
