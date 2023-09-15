@@ -572,8 +572,8 @@ class _SeleccionarLocWidgetState extends State<SeleccionarLocWidget> {
                                                         );
                                                       });
 
-                                                      context.pushNamed(
-                                                          'Productos');
+                                                      context
+                                                          .goNamed('Productos');
                                                     },
                                               text: FFLocalizations.of(context)
                                                   .getText(
