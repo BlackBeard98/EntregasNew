@@ -540,7 +540,13 @@ class _ProductosWidgetState extends State<ProductosWidget> {
                                                           ).toString()}',
                                                           style: FlutterFlowTheme
                                                                   .of(context)
-                                                              .headlineMedium,
+                                                              .headlineMedium
+                                                              .override(
+                                                                fontFamily:
+                                                                    'Outfit',
+                                                                color: Colors
+                                                                    .black,
+                                                              ),
                                                         ),
                                                       ),
                                                     ),
@@ -560,7 +566,13 @@ class _ProductosWidgetState extends State<ProductosWidget> {
                                                           ).toString()}',
                                                           style: FlutterFlowTheme
                                                                   .of(context)
-                                                              .headlineSmall,
+                                                              .headlineSmall
+                                                              .override(
+                                                                fontFamily:
+                                                                    'Outfit',
+                                                                color: Colors
+                                                                    .black,
+                                                              ),
                                                         ),
                                                       ),
                                                     ),
@@ -591,7 +603,7 @@ class _ProductosWidgetState extends State<ProductosWidget> {
                                       );
                                     },
                                     text: FFLocalizations.of(context).getText(
-                                      'l8implm0' /* Ver Detalles */,
+                                      'sgkt9mnu' /* Ver Detalles */,
                                     ),
                                     options: FFButtonOptions(
                                       height: 40.0,
