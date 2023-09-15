@@ -205,21 +205,123 @@ class _CarritoWidgetState extends State<CarritoWidget> {
                                   mainAxisSize: MainAxisSize.max,
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
-                                    Text(
-                                      'Su Carrito está en: ${functions.getMunicipalityNameByID(ShopGroup.cartuserIdCall.municipalityId(
-                                            carritoCartuserIdResponse.jsonBody,
-                                          ).toString(), ShopGroup.municipalityallCall.all(
-                                            columnMunicipalityallResponse
-                                                .jsonBody,
-                                          )!.toList())}',
-                                      style: FlutterFlowTheme.of(context)
-                                          .titleLarge
-                                          .override(
-                                            fontFamily: 'Outfit',
-                                            color: Color(0xFF14181B),
-                                            fontSize: 22.0,
-                                            fontWeight: FontWeight.w500,
+                                    Row(
+                                      mainAxisSize: MainAxisSize.max,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceBetween,
+                                      children: [
+                                        Flexible(
+                                          child: Text(
+                                            'Su Carrito está en: ${functions.getMunicipalityNameByID(ShopGroup.cartuserIdCall.municipalityId(
+                                                  carritoCartuserIdResponse
+                                                      .jsonBody,
+                                                ).toString(), ShopGroup.municipalityallCall.all(
+                                                  columnMunicipalityallResponse
+                                                      .jsonBody,
+                                                )!.toList())}',
+                                            style: FlutterFlowTheme.of(context)
+                                                .titleLarge
+                                                .override(
+                                                  fontFamily: 'Outfit',
+                                                  color: Color(0xFF14181B),
+                                                  fontSize: 22.0,
+                                                  fontWeight: FontWeight.w500,
+                                                ),
                                           ),
+                                        ),
+                                        Flexible(
+                                          child: FFButtonWidget(
+                                            onPressed: () async {
+                                              _model.apiResulti2d =
+                                                  await ShopGroup
+                                                      .cartitemscleancartIdCall
+                                                      .call(
+                                                cartId: ShopGroup.cartuserIdCall
+                                                    .id(
+                                                      carritoCartuserIdResponse
+                                                          .jsonBody,
+                                                    )
+                                                    .toString(),
+                                                authToken: FFAppState()
+                                                    .authUser
+                                                    .accessToken,
+                                              );
+                                              if ((_model.apiResulti2d
+                                                      ?.succeeded ??
+                                                  true)) {
+                                                ScaffoldMessenger.of(context)
+                                                    .showSnackBar(
+                                                  SnackBar(
+                                                    content: Text(
+                                                      'Carrito Eliminado con éxito',
+                                                      style: TextStyle(
+                                                        color: Colors.black,
+                                                      ),
+                                                    ),
+                                                    duration: Duration(
+                                                        milliseconds: 4000),
+                                                    backgroundColor:
+                                                        FlutterFlowTheme.of(
+                                                                context)
+                                                            .secondary,
+                                                  ),
+                                                );
+                                              } else {
+                                                ScaffoldMessenger.of(context)
+                                                    .showSnackBar(
+                                                  SnackBar(
+                                                    content: Text(
+                                                      'Algo salió mal',
+                                                      style: TextStyle(
+                                                        color: Colors.black,
+                                                      ),
+                                                    ),
+                                                    duration: Duration(
+                                                        milliseconds: 4000),
+                                                    backgroundColor:
+                                                        Color(0x59E27C46),
+                                                  ),
+                                                );
+                                              }
+
+                                              setState(() {});
+                                            },
+                                            text: FFLocalizations.of(context)
+                                                .getText(
+                                              'hczgvj7t' /* Eliminar */,
+                                            ),
+                                            icon: Icon(
+                                              Icons
+                                                  .remove_shopping_cart_outlined,
+                                              size: 15.0,
+                                            ),
+                                            options: FFButtonOptions(
+                                              height: 40.0,
+                                              padding: EdgeInsetsDirectional
+                                                  .fromSTEB(
+                                                      24.0, 0.0, 24.0, 0.0),
+                                              iconPadding: EdgeInsetsDirectional
+                                                  .fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                              color: Color(0xFFE27C46),
+                                              textStyle:
+                                                  FlutterFlowTheme.of(context)
+                                                      .titleSmall
+                                                      .override(
+                                                        fontFamily:
+                                                            'Readex Pro',
+                                                        color: Colors.white,
+                                                      ),
+                                              elevation: 3.0,
+                                              borderSide: BorderSide(
+                                                color: Colors.transparent,
+                                                width: 1.0,
+                                              ),
+                                              borderRadius:
+                                                  BorderRadius.circular(8.0),
+                                            ),
+                                          ),
+                                        ),
+                                      ],
                                     ),
                                     Padding(
                                       padding: EdgeInsetsDirectional.fromSTEB(

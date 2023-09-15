@@ -290,6 +290,10 @@ class CartuserIdCall {
         response,
         r'''$.municipalityId''',
       );
+  dynamic id(dynamic response) => getJsonField(
+        response,
+        r'''$._id''',
+      );
 }
 
 class CartitemscleancartIdCall {

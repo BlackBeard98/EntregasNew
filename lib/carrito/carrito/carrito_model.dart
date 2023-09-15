@@ -14,6 +14,8 @@ import 'package:provider/provider.dart';
 class CarritoModel extends FlutterFlowModel {
   ///  State fields for stateful widgets in this page.
 
+  // Stores action output result for [Backend Call - API (cartitemscleancartId)] action in Button widget.
+  ApiCallResponse? apiResulti2d;
   // Stores action output result for [Backend Call - API (cartitemsaddproduct)] action in Text widget.
   ApiCallResponse? apiResulti84;
 
