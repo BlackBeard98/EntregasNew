@@ -157,8 +157,12 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // Productos
   {
-    'eqmt53y1': {
+    '0j64jg23': {
       'es': 'Comprando en ',
+      'en': '',
+    },
+    'br6wjldb': {
+      'es': ' Cambiar?',
       'en': '',
     },
     'eud7yoaz': {
