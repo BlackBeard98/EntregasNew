@@ -565,11 +565,11 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // ShowAndChangeLocation
   {
-    'w7jh5h4q': {
+    'mjwo1voh': {
       'es': 'Comprando en ',
       'en': '',
     },
-    'fnq3mcib': {
+    'vsto73d0': {
       'es': ' Cambiar?',
       'en': '',
     },

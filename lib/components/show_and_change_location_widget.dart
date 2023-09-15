@@ -47,7 +47,7 @@ class _ShowAndChangeLocationWidgetState
 
     return Container(
       decoration: BoxDecoration(
-        color: FlutterFlowTheme.of(context).secondaryBackground,
+        color: Colors.white,
       ),
       child: Row(
         mainAxisSize: MainAxisSize.max,
@@ -59,7 +59,7 @@ class _ShowAndChangeLocationWidgetState
                 children: [
                   TextSpan(
                     text: FFLocalizations.of(context).getText(
-                      'w7jh5h4q' /* Comprando en  */,
+                      'mjwo1voh' /* Comprando en  */,
                     ),
                     style: FlutterFlowTheme.of(context).bodyMedium.override(
                           fontFamily: 'Readex Pro',
@@ -75,7 +75,7 @@ class _ShowAndChangeLocationWidgetState
                   ),
                   TextSpan(
                     text: FFLocalizations.of(context).getText(
-                      'fnq3mcib' /*  Cambiar? */,
+                      'vsto73d0' /*  Cambiar? */,
                     ),
                     style: TextStyle(
                       color: Color(0xFFE27C46),
