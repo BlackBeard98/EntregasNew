@@ -230,7 +230,7 @@ class _ProductoVIewWidgetState extends State<ProductoVIewWidget>
                               ),
                               TextSpan(
                                 text: FFLocalizations.of(context).getText(
-                                  '630momti' /*  Cambiar? */,
+                                  'ocamtmz9' /*  Cambiar? */,
                                 ),
                                 style: TextStyle(
                                   color: Color(0xFFE27C46),

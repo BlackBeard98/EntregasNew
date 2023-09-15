@@ -162,7 +162,7 @@ class _ProductosWidgetState extends State<ProductosWidget> {
                                 ),
                                 TextSpan(
                                   text: FFLocalizations.of(context).getText(
-                                    'gfmdy4le' /*  Cambiar? */,
+                                    'oab5anpm' /*  Cambiar? */,
                                   ),
                                   style: TextStyle(
                                     color: Color(0xFFE27C46),
@@ -661,7 +661,7 @@ class _ProductosWidgetState extends State<ProductosWidget> {
                                         );
                                       },
                                       text: FFLocalizations.of(context).getText(
-                                        '9w0jihx9' /* Ver Detalles */,
+                                        'kgltcoze' /* Ver Detalles */,
                                       ),
                                       options: FFButtonOptions(
                                         height: 40.0,

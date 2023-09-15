@@ -111,7 +111,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'Comprando en ',
       'en': '',
     },
-    '630momti': {
+    'ocamtmz9': {
       'es': ' Cambiar?',
       'en': '',
     },
@@ -169,7 +169,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'Comprando en ',
       'en': '',
     },
-    'gfmdy4le': {
+    'oab5anpm': {
       'es': ' Cambiar?',
       'en': '',
     },
@@ -181,7 +181,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'Productos',
       'en': '',
     },
-    '9w0jihx9': {
+    'kgltcoze': {
       'es': 'Ver Detalles',
       'en': '',
     },
@@ -259,7 +259,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'Comprando en ',
       'en': '',
     },
-    'usatyrlu': {
+    'rtg8vakm': {
       'es': ' Cambiar?',
       'en': '',
     },
@@ -594,7 +594,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'Productos',
       'en': '',
     },
-    'pr4hsllr': {
+    'sjavjvnv': {
       'es': 'Ver Detalles',
       'en': '',
     },
