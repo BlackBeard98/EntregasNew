@@ -307,7 +307,7 @@ class _CarritoWidgetState extends State<CarritoWidget> {
                                               },
                                               text: FFLocalizations.of(context)
                                                   .getText(
-                                                '8zlwa9px' /* Eliminar */,
+                                                '8j9hrc07' /* Eliminar */,
                                               ),
                                               icon: Icon(
                                                 Icons

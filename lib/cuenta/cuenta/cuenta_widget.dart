@@ -229,7 +229,7 @@ class _CuentaWidgetState extends State<CuentaWidget> {
                                 12.0, 0.0, 0.0, 0.0),
                             child: Text(
                               FFLocalizations.of(context).getText(
-                                '85i4m8il' /* Mis Pedidods */,
+                                '85i4m8il' /* Mis Pedidos */,
                               ),
                               style: FlutterFlowTheme.of(context)
                                   .bodyLarge
