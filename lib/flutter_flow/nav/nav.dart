@@ -71,11 +71,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
                   : CarritoWidget(),
             ),
             FFRoute(
-              name: 'prof',
-              path: 'prof',
-              builder: (context, params) => ProfWidget(),
-            ),
-            FFRoute(
               name: 'Cuenta',
               path: 'cuenta',
               builder: (context, params) => params.isEmpty

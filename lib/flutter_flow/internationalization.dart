@@ -157,14 +157,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // Productos
   {
-    'ajooir52': {
-      'es': 'Comprando en ',
-      'en': '',
-    },
-    'vw4go5uh': {
-      'es': ' Cambiar?',
-      'en': '',
-    },
     'eud7yoaz': {
       'es': 'Buscar Producto',
       'en': '',
@@ -247,14 +239,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // Carrito
   {
-    'bzwfzxbm': {
-      'es': 'Comprando en ',
-      'en': '',
-    },
-    'uzjbi5si': {
-      'es': ' Cambiar?',
-      'en': '',
-    },
     'djuc3j4a': {
       'es': 'Abajo esta la lista de items de su carrito',
       'en': '',
@@ -345,39 +329,8 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': '',
     },
   },
-  // prof
-  {
-    'zh5m3dfz': {
-      'es': 'Edit Profile',
-      'en': '',
-    },
-    'yaa4t65l': {
-      'es': 'Change Password',
-      'en': '',
-    },
-    'hynsq462': {
-      'es': 'Notification Settings',
-      'en': '',
-    },
-    '0qw4ul1f': {
-      'es': 'Terms of Services',
-      'en': '',
-    },
-    '5dymk0il': {
-      'es': 'Log Out',
-      'en': '',
-    },
-  },
   // Cuenta
   {
-    'zazew3w5': {
-      'es': 'Comprando en ',
-      'en': '',
-    },
-    'lpksr57p': {
-      'es': ' Cambiar?',
-      'en': '',
-    },
     'y45zvm7x': {
       'es': 'Cuenta',
       'en': '',
@@ -607,6 +560,17 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   {
     'uyg67hek': {
       'es': 'No Hay Productos',
+      'en': '',
+    },
+  },
+  // ShowAndChangeLocation
+  {
+    'w7jh5h4q': {
+      'es': 'Comprando en ',
+      'en': '',
+    },
+    'fnq3mcib': {
+      'es': ' Cambiar?',
       'en': '',
     },
   },
