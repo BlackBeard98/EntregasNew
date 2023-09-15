@@ -239,7 +239,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // Carrito
   {
-    'hczgvj7t': {
+    'vrmdmatu': {
       'es': 'Eliminar',
       'en': '',
     },
@@ -569,11 +569,11 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // ShowAndChangeLocation
   {
-    '5fudlg3x': {
+    'pla1ek0h': {
       'es': 'Comprando en ',
       'en': '',
     },
-    '7rds40ca': {
+    'm0e83s7u': {
       'es': ' Cambiar?',
       'en': '',
     },

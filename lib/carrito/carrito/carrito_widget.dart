@@ -210,25 +210,33 @@ class _CarritoWidgetState extends State<CarritoWidget> {
                                       mainAxisAlignment:
                                           MainAxisAlignment.spaceBetween,
                                       children: [
-                                        Flexible(
-                                          child: Text(
-                                            'Su Carrito está en: ${functions.getMunicipalityNameByID(ShopGroup.cartuserIdCall.municipalityId(
+                                        if (ShopGroup.cartuserIdCall
+                                                .municipalityId(
                                                   carritoCartuserIdResponse
                                                       .jsonBody,
-                                                ).toString(), ShopGroup.municipalityallCall.all(
-                                                  columnMunicipalityallResponse
-                                                      .jsonBody,
-                                                )!.toList())}',
-                                            style: FlutterFlowTheme.of(context)
-                                                .titleLarge
-                                                .override(
-                                                  fontFamily: 'Outfit',
-                                                  color: Color(0xFF14181B),
-                                                  fontSize: 22.0,
-                                                  fontWeight: FontWeight.w500,
-                                                ),
+                                                )
+                                                .toString() !=
+                                            (null))
+                                          Flexible(
+                                            child: Text(
+                                              'Su Carrito está en: ${functions.getMunicipalityNameByID(ShopGroup.cartuserIdCall.municipalityId(
+                                                    carritoCartuserIdResponse
+                                                        .jsonBody,
+                                                  ).toString(), ShopGroup.municipalityallCall.all(
+                                                    columnMunicipalityallResponse
+                                                        .jsonBody,
+                                                  )!.toList())}',
+                                              style: FlutterFlowTheme.of(
+                                                      context)
+                                                  .titleLarge
+                                                  .override(
+                                                    fontFamily: 'Outfit',
+                                                    color: Color(0xFF14181B),
+                                                    fontSize: 22.0,
+                                                    fontWeight: FontWeight.w500,
+                                                  ),
+                                            ),
                                           ),
-                                        ),
                                         Flexible(
                                           child: FFButtonWidget(
                                             onPressed: () async {
@@ -288,7 +296,7 @@ class _CarritoWidgetState extends State<CarritoWidget> {
                                             },
                                             text: FFLocalizations.of(context)
                                                 .getText(
-                                              'hczgvj7t' /* Eliminar */,
+                                              'vrmdmatu' /* Eliminar */,
                                             ),
                                             icon: Icon(
                                               Icons
