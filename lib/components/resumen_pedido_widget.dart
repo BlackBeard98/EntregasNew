@@ -116,7 +116,7 @@ class _ResumenPedidoWidgetState extends State<ResumenPedidoWidget> {
                         EdgeInsetsDirectional.fromSTEB(0.0, 12.0, 0.0, 0.0),
                     child: Text(
                       FFLocalizations.of(context).getText(
-                        '1rd5pus8' /* Resumen Del Pedido */,
+                        '35di2l29' /* Resumen Del Pedido */,
                       ),
                       style:
                           FlutterFlowTheme.of(context).headlineSmall.override(
@@ -131,7 +131,7 @@ class _ResumenPedidoWidgetState extends State<ResumenPedidoWidget> {
                     padding: EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 8.0),
                     child: Text(
                       FFLocalizations.of(context).getText(
-                        'st422062' /* Revise su orden */,
+                        '2vlk14fn' /* Revise su orden */,
                       ),
                       style: FlutterFlowTheme.of(context).labelMedium.override(
                             fontFamily: 'Plus Jakarta Sans',
@@ -262,7 +262,7 @@ class _ResumenPedidoWidgetState extends State<ResumenPedidoWidget> {
                                                       FFLocalizations.of(
                                                               context)
                                                           .getText(
-                                                        'bemtn6ta' /* Secondary text */,
+                                                        'mcjuu91d' /* Secondary text */,
                                                       ),
                                                       style:
                                                           FlutterFlowTheme.of(
@@ -322,7 +322,7 @@ class _ResumenPedidoWidgetState extends State<ResumenPedidoWidget> {
                           children: [
                             Text(
                               FFLocalizations.of(context).getText(
-                                'thvkfxvb' /* Price Breakdown */,
+                                'mploia8n' /* Price Breakdown */,
                               ),
                               style: FlutterFlowTheme.of(context)
                                   .bodySmall
@@ -345,7 +345,7 @@ class _ResumenPedidoWidgetState extends State<ResumenPedidoWidget> {
                           children: [
                             Text(
                               FFLocalizations.of(context).getText(
-                                'a4hd7fux' /* Base Price */,
+                                'mfr7q5iu' /* Base Price */,
                               ),
                               style: FlutterFlowTheme.of(context)
                                   .labelMedium
@@ -358,7 +358,7 @@ class _ResumenPedidoWidgetState extends State<ResumenPedidoWidget> {
                             ),
                             Text(
                               FFLocalizations.of(context).getText(
-                                'wus3vr38' /* $156.00 */,
+                                'ybudk6wv' /* $156.00 */,
                               ),
                               style: FlutterFlowTheme.of(context)
                                   .bodyLarge
@@ -381,7 +381,7 @@ class _ResumenPedidoWidgetState extends State<ResumenPedidoWidget> {
                           children: [
                             Text(
                               FFLocalizations.of(context).getText(
-                                'dpe6nh7a' /* Taxes */,
+                                'sbog7am8' /* Taxes */,
                               ),
                               style: FlutterFlowTheme.of(context)
                                   .labelMedium
@@ -394,7 +394,7 @@ class _ResumenPedidoWidgetState extends State<ResumenPedidoWidget> {
                             ),
                             Text(
                               FFLocalizations.of(context).getText(
-                                'ejg7u7zt' /* $24.20 */,
+                                '1wz6w2u8' /* $24.20 */,
                               ),
                               style: FlutterFlowTheme.of(context)
                                   .bodyLarge
@@ -417,7 +417,7 @@ class _ResumenPedidoWidgetState extends State<ResumenPedidoWidget> {
                           children: [
                             Text(
                               FFLocalizations.of(context).getText(
-                                'cqwnomhj' /* Cleaning Fee */,
+                                'd49pn8bj' /* Cleaning Fee */,
                               ),
                               style: FlutterFlowTheme.of(context)
                                   .labelMedium
@@ -430,7 +430,7 @@ class _ResumenPedidoWidgetState extends State<ResumenPedidoWidget> {
                             ),
                             Text(
                               FFLocalizations.of(context).getText(
-                                'hmvppfsn' /* $40.00 */,
+                                'brn54sz1' /* $40.00 */,
                               ),
                               style: FlutterFlowTheme.of(context)
                                   .bodyLarge
@@ -456,7 +456,7 @@ class _ResumenPedidoWidgetState extends State<ResumenPedidoWidget> {
                               children: [
                                 Text(
                                   FFLocalizations.of(context).getText(
-                                    'u3y9zds9' /* Total */,
+                                    '2q4axwuq' /* Total */,
                                   ),
                                   style: FlutterFlowTheme.of(context)
                                       .titleMedium
@@ -485,7 +485,7 @@ class _ResumenPedidoWidgetState extends State<ResumenPedidoWidget> {
                             ),
                             Text(
                               FFLocalizations.of(context).getText(
-                                'spfwdtve' /* $230.20 */,
+                                'ee14fetk' /* $230.20 */,
                               ),
                               style: FlutterFlowTheme.of(context)
                                   .displaySmall
@@ -507,7 +507,7 @@ class _ResumenPedidoWidgetState extends State<ResumenPedidoWidget> {
                             print('Button pressed ...');
                           },
                           text: FFLocalizations.of(context).getText(
-                            'ur4zckwg' /* Proceed to Checkout */,
+                            '0es40sud' /* Proceed to Checkout */,
                           ),
                           options: FFButtonOptions(
                             width: double.infinity,

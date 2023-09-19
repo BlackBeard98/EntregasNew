@@ -109,7 +109,7 @@ class _PedidosWidgetState extends State<PedidosWidget> {
                             EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 0.0, 0.0),
                         child: Text(
                           FFLocalizations.of(context).getText(
-                            'v0sldu78' /* Pedidos */,
+                            't7w6s1xc' /* Pedidos */,
                           ),
                           style: FlutterFlowTheme.of(context)
                               .headlineMedium
@@ -126,7 +126,7 @@ class _PedidosWidgetState extends State<PedidosWidget> {
                             EdgeInsetsDirectional.fromSTEB(24.0, 4.0, 0.0, 0.0),
                         child: Text(
                           FFLocalizations.of(context).getText(
-                            'msjr7x9f' /* Abajo se puede observar una li... */,
+                            'wc28mj3n' /* Abajo se puede observar una li... */,
                           ),
                           textAlign: TextAlign.start,
                           style:
@@ -246,7 +246,8 @@ class _PedidosWidgetState extends State<PedidosWidget> {
                                                               );
                                                             },
                                                           ).then((value) =>
-                                                              setState(() {}));
+                                                              safeSetState(
+                                                                  () {}));
                                                         },
                                                         child: RichText(
                                                           textScaleFactor:
@@ -259,7 +260,7 @@ class _PedidosWidgetState extends State<PedidosWidget> {
                                                                 text: FFLocalizations.of(
                                                                         context)
                                                                     .getText(
-                                                                  'clwehwop' /* Pedido #:  */,
+                                                                  '93ykwege' /* Pedido #:  */,
                                                                 ),
                                                                 style:
                                                                     TextStyle(),
