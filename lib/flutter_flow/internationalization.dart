@@ -562,91 +562,91 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // pedidos
   {
-    't7w6s1xc': {
+    'w17fyvz0': {
       'es': 'Pedidos',
       'en': '',
     },
-    'wc28mj3n': {
+    'mqcrx22h': {
       'es': 'Abajo se puede observar una lista con sus pedidos',
       'en': '',
     },
-    '93ykwege': {
+    '4d9zgyg4': {
       'es': 'Pedido #: ',
       'en': '',
     },
-    '947t4asc': {
+    'o78yh62h': {
       'es': 'Order #: ',
       'en': '',
     },
-    'dxhm8ctg': {
+    'p0wnj5em': {
       'es': '429242424',
       'en': '',
     },
-    'ndssdk2a': {
+    'eyrl7dgp': {
       'es': 'Mon. July 3rd',
       'en': '',
     },
-    'bn526073': {
+    '3dd5r5xl': {
       'es': '2.5 lbs',
       'en': '',
     },
-    'gjlhhmnf': {
+    'wjbdpt85': {
       'es': '\$1.50',
       'en': '',
     },
-    '6vdt6oh2': {
+    '0d69xr61': {
       'es': 'Shipped',
       'en': '',
     },
-    'w38w0qqr': {
+    '9qlnvgvk': {
       'es': 'Order #: ',
       'en': '',
     },
-    'fzv2mln2': {
+    'lw745i1m': {
       'es': '429242424',
       'en': '',
     },
-    'wxk86l8l': {
+    'tjucqel7': {
       'es': 'Mon. July 3rd',
       'en': '',
     },
-    '8wmxl1fp': {
+    '87ylquc2': {
       'es': '2.5 lbs',
       'en': '',
     },
-    '8lkfpyv7': {
+    '4hg5gxke': {
       'es': '\$1.50',
       'en': '',
     },
-    'vjf876js': {
+    '9kvhhh8j': {
       'es': 'Accepted',
       'en': '',
     },
-    '3305i4y5': {
+    'dpozf0mp': {
       'es': 'Order #: ',
       'en': '',
     },
-    'scpsl6ii': {
+    'xv08gjek': {
       'es': '429242424',
       'en': '',
     },
-    'nrcw792a': {
+    '304hvuur': {
       'es': 'Mon. July 3rd',
       'en': '',
     },
-    'qroiqryw': {
+    '4lvoavp0': {
       'es': '2.5 lbs',
       'en': '',
     },
-    'uj6wzael': {
+    'kk7k0bu8': {
       'es': '\$1.50',
       'en': '',
     },
-    'w61jspjz': {
+    'cr8x21xn': {
       'es': 'Accepted',
       'en': '',
     },
-    'oxn2bki3': {
+    'f0mn8ha5': {
       'es': 'Home',
       'en': '',
     },
@@ -801,67 +801,67 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // ResumenPedido
   {
-    '35di2l29': {
+    'zwy0t6c3': {
       'es': 'Resumen Del Pedido',
       'en': '',
     },
-    '2vlk14fn': {
+    'j5uh56by': {
       'es': 'Revise su orden',
       'en': '',
     },
-    'mcjuu91d': {
+    'pm0nsf2u': {
       'es': 'Secondary text',
       'en': '',
     },
-    '7cgxfbrz': {
+    'wflmb6ao': {
       'es': 'Item Name',
       'en': '',
     },
-    'rskzj1wm': {
+    '0pgwss7e': {
       'es': 'Secondary text',
       'en': '',
     },
-    'kejacf9o': {
+    '585h5kda': {
       'es': '\$1.50',
       'en': '',
     },
-    'mploia8n': {
+    'lj2ep68o': {
       'es': 'Price Breakdown',
       'en': '',
     },
-    'mfr7q5iu': {
+    'a7nk0rdi': {
       'es': 'Base Price',
       'en': '',
     },
-    'ybudk6wv': {
+    'eeryoneb': {
       'es': '\$156.00',
       'en': '',
     },
-    'sbog7am8': {
+    '1xhmyk91': {
       'es': 'Taxes',
       'en': '',
     },
-    '1wz6w2u8': {
+    '87vt0hls': {
       'es': '\$24.20',
       'en': '',
     },
-    'd49pn8bj': {
+    'eflvojps': {
       'es': 'Cleaning Fee',
       'en': '',
     },
-    'brn54sz1': {
+    'nqwoh2d4': {
       'es': '\$40.00',
       'en': '',
     },
-    '2q4axwuq': {
+    '49sthbzb': {
       'es': 'Total',
       'en': '',
     },
-    'ee14fetk': {
+    'md3fewzl': {
       'es': '\$230.20',
       'en': '',
     },
-    '0es40sud': {
+    'k255wmo8': {
       'es': 'Proceed to Checkout',
       'en': '',
     },

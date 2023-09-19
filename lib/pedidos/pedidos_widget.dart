@@ -109,7 +109,7 @@ class _PedidosWidgetState extends State<PedidosWidget> {
                             EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 0.0, 0.0),
                         child: Text(
                           FFLocalizations.of(context).getText(
-                            't7w6s1xc' /* Pedidos */,
+                            'w17fyvz0' /* Pedidos */,
                           ),
                           style: FlutterFlowTheme.of(context)
                               .headlineMedium
@@ -126,7 +126,7 @@ class _PedidosWidgetState extends State<PedidosWidget> {
                             EdgeInsetsDirectional.fromSTEB(24.0, 4.0, 0.0, 0.0),
                         child: Text(
                           FFLocalizations.of(context).getText(
-                            'wc28mj3n' /* Abajo se puede observar una li... */,
+                            'mqcrx22h' /* Abajo se puede observar una li... */,
                           ),
                           textAlign: TextAlign.start,
                           style:
@@ -260,7 +260,7 @@ class _PedidosWidgetState extends State<PedidosWidget> {
                                                                 text: FFLocalizations.of(
                                                                         context)
                                                                     .getText(
-                                                                  '93ykwege' /* Pedido #:  */,
+                                                                  '4d9zgyg4' /* Pedido #:  */,
                                                                 ),
                                                                 style:
                                                                     TextStyle(),
