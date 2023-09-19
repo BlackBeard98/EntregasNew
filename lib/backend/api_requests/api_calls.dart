@@ -29,6 +29,7 @@ class ShopGroup {
   static OrderallmeCall orderallmeCall = OrderallmeCall();
   static OrderidCall orderidCall = OrderidCall();
   static MunicipalityallCall municipalityallCall = MunicipalityallCall();
+  static ProductidCall productidCall = ProductidCall();
 }
 
 class ProductallCall {
@@ -524,6 +525,28 @@ class MunicipalityallCall {
         r'''$[*]''',
         true,
       );
+}
+
+class ProductidCall {
+  Future<ApiCallResponse> call({
+    String? id = '',
+    String? authToken = '',
+  }) {
+    return ApiManager.instance.makeApiCall(
+      callName: 'productid',
+      apiUrl: '${ShopGroup.baseUrl}/product/${id}',
+      callType: ApiCallType.GET,
+      headers: {
+        ...ShopGroup.headers,
+        'Authorization': 'Bearer ${authToken}',
+      },
+      params: {},
+      returnBody: true,
+      encodeBodyUtf8: false,
+      decodeUtf8: false,
+      cache: false,
+    );
+  }
 }
 
 /// End Shop Group Code
