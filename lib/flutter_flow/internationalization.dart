@@ -560,6 +560,117 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': '',
     },
   },
+  // pedidos
+  {
+    'cextwrom': {
+      'es': 'Recent Orders',
+      'en': '',
+    },
+    'sddbku2g': {
+      'es': 'Below are your most recent orders',
+      'en': '',
+    },
+    'ftbcvhc4': {
+      'es': 'Order #: ',
+      'en': '',
+    },
+    'k8cr54dt': {
+      'es': '429242424',
+      'en': '',
+    },
+    'ydxosb0a': {
+      'es': 'Mon. July 3rd',
+      'en': '',
+    },
+    'kmhtrx0p': {
+      'es': '2.5 lbs',
+      'en': '',
+    },
+    '6q31wl88': {
+      'es': '\$1.50',
+      'en': '',
+    },
+    'xsvrptss': {
+      'es': 'Shipped',
+      'en': '',
+    },
+    'mx5349br': {
+      'es': 'Order #: ',
+      'en': '',
+    },
+    'jt6czw7r': {
+      'es': '429242424',
+      'en': '',
+    },
+    '68b8lu0v': {
+      'es': 'Mon. July 3rd',
+      'en': '',
+    },
+    '4o7ym7yi': {
+      'es': '2.5 lbs',
+      'en': '',
+    },
+    '9iadervy': {
+      'es': '\$1.50',
+      'en': '',
+    },
+    '5vbjg3jv': {
+      'es': 'Shipped',
+      'en': '',
+    },
+    'v2xgzrbi': {
+      'es': 'Order #: ',
+      'en': '',
+    },
+    'kg50dfgd': {
+      'es': '429242424',
+      'en': '',
+    },
+    'cndmb0a3': {
+      'es': 'Mon. July 3rd',
+      'en': '',
+    },
+    '4lgqi3w7': {
+      'es': '2.5 lbs',
+      'en': '',
+    },
+    'xvpfk7b2': {
+      'es': '\$1.50',
+      'en': '',
+    },
+    'ptf67ipa': {
+      'es': 'Accepted',
+      'en': '',
+    },
+    'kyxdyite': {
+      'es': 'Order #: ',
+      'en': '',
+    },
+    '5b80lhao': {
+      'es': '429242424',
+      'en': '',
+    },
+    'ff9q9hli': {
+      'es': 'Mon. July 3rd',
+      'en': '',
+    },
+    '034nux8o': {
+      'es': '2.5 lbs',
+      'en': '',
+    },
+    'kz6ee4e3': {
+      'es': '\$1.50',
+      'en': '',
+    },
+    'utvc6l5u': {
+      'es': 'Accepted',
+      'en': '',
+    },
+    '5na0gnzs': {
+      'es': 'Home',
+      'en': '',
+    },
+  },
   // ProductosVacio
   {
     'uyg67hek': {

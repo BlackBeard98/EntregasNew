@@ -96,6 +96,11 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               name: 'ProductosCopy',
               path: 'productosCopy',
               builder: (context, params) => ProductosCopyWidget(),
+            ),
+            FFRoute(
+              name: 'pedidos',
+              path: 'pedidos',
+              builder: (context, params) => PedidosWidget(),
             )
           ].map((r) => r.toRoute(appStateNotifier)).toList(),
         ),
