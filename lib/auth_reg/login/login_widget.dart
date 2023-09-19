@@ -144,7 +144,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                                     .displaySmall
                                     .override(
                                       fontFamily: 'Outfit',
-                                      color: Color(0xFF101213),
+                                      color: Colors.black,
                                       fontSize: 36.0,
                                       fontWeight: FontWeight.w600,
                                       useGoogleFonts: GoogleFonts.asMap()
