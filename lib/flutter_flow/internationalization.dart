@@ -562,111 +562,95 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // pedidos
   {
-    'cextwrom': {
+    'b68hl6h8': {
       'es': 'Recent Orders',
       'en': '',
     },
-    'sddbku2g': {
+    '2e3jkj8b': {
       'es': 'Below are your most recent orders',
       'en': '',
     },
-    'ftbcvhc4': {
-      'es': 'Order #: ',
+    'bq4dzmhd': {
+      'es': 'Pedido #: ',
       'en': '',
     },
-    'k8cr54dt': {
-      'es': '429242424',
-      'en': '',
-    },
-    'ydxosb0a': {
+    'j38no2wy': {
       'es': 'Mon. July 3rd',
       'en': '',
     },
-    'kmhtrx0p': {
+    'ok0s7zt5': {
+      'es': 'Order #: ',
+      'en': '',
+    },
+    'trcoyik9': {
+      'es': '429242424',
+      'en': '',
+    },
+    '5zgey004': {
+      'es': 'Mon. July 3rd',
+      'en': '',
+    },
+    '1zxlw0py': {
       'es': '2.5 lbs',
       'en': '',
     },
-    '6q31wl88': {
+    'rxyv5v3l': {
       'es': '\$1.50',
       'en': '',
     },
-    'xsvrptss': {
+    'l707g2nw': {
       'es': 'Shipped',
       'en': '',
     },
-    'mx5349br': {
+    'e259ks6s': {
       'es': 'Order #: ',
       'en': '',
     },
-    'jt6czw7r': {
+    'vouwu8f9': {
       'es': '429242424',
       'en': '',
     },
-    '68b8lu0v': {
+    'e08dqsgq': {
       'es': 'Mon. July 3rd',
       'en': '',
     },
-    '4o7ym7yi': {
+    '2h74mlgx': {
       'es': '2.5 lbs',
       'en': '',
     },
-    '9iadervy': {
+    'bcje4f6n': {
       'es': '\$1.50',
       'en': '',
     },
-    '5vbjg3jv': {
-      'es': 'Shipped',
-      'en': '',
-    },
-    'v2xgzrbi': {
-      'es': 'Order #: ',
-      'en': '',
-    },
-    'kg50dfgd': {
-      'es': '429242424',
-      'en': '',
-    },
-    'cndmb0a3': {
-      'es': 'Mon. July 3rd',
-      'en': '',
-    },
-    '4lgqi3w7': {
-      'es': '2.5 lbs',
-      'en': '',
-    },
-    'xvpfk7b2': {
-      'es': '\$1.50',
-      'en': '',
-    },
-    'ptf67ipa': {
+    'x0nfxozj': {
       'es': 'Accepted',
       'en': '',
     },
-    'kyxdyite': {
+    '6q6cif06': {
       'es': 'Order #: ',
       'en': '',
     },
-    '5b80lhao': {
+    '1tztegu4': {
       'es': '429242424',
       'en': '',
     },
-    'ff9q9hli': {
+    'y3pfpakn': {
       'es': 'Mon. July 3rd',
       'en': '',
     },
-    '034nux8o': {
+    't9xm3cri': {
       'es': '2.5 lbs',
       'en': '',
     },
-    'kz6ee4e3': {
+    'wf7oqo1k': {
       'es': '\$1.50',
       'en': '',
     },
-    'utvc6l5u': {
+    '8n5s7yvh': {
       'es': 'Accepted',
       'en': '',
     },
-    '5na0gnzs': {
+    'eg4qq8rk': {
       'es': 'Home',
       'en': '',
     },
