@@ -378,31 +378,36 @@ class _ResumenPedidoWidgetState extends State<ResumenPedidoWidget> {
                           mainAxisSize: MainAxisSize.max,
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            Text(
-                              FFLocalizations.of(context).getText(
-                                'fugywt28' /* Pedido # */,
+                            Flexible(
+                              child: Text(
+                                FFLocalizations.of(context).getText(
+                                  'fugywt28' /* Pedido # */,
+                                ),
+                                style: FlutterFlowTheme.of(context)
+                                    .labelMedium
+                                    .override(
+                                      fontFamily: 'Plus Jakarta Sans',
+                                      color: Color(0xFF57636C),
+                                      fontSize: 14.0,
+                                      fontWeight: FontWeight.normal,
+                                    ),
                               ),
-                              style: FlutterFlowTheme.of(context)
-                                  .labelMedium
-                                  .override(
-                                    fontFamily: 'Plus Jakarta Sans',
-                                    color: Color(0xFF57636C),
-                                    fontSize: 14.0,
-                                    fontWeight: FontWeight.normal,
-                                  ),
                             ),
-                            Text(
-                              '\$ ${ShopGroup.orderidCall.orderNumber(
-                                    checkoutBottomSheetOrderidResponse.jsonBody,
-                                  ).toString()}',
-                              style: FlutterFlowTheme.of(context)
-                                  .bodyLarge
-                                  .override(
-                                    fontFamily: 'Plus Jakarta Sans',
-                                    color: Color(0xFF14181B),
-                                    fontSize: 16.0,
-                                    fontWeight: FontWeight.normal,
-                                  ),
+                            Flexible(
+                              child: Text(
+                                '\$ ${ShopGroup.orderidCall.orderNumber(
+                                      checkoutBottomSheetOrderidResponse
+                                          .jsonBody,
+                                    ).toString()}',
+                                style: FlutterFlowTheme.of(context)
+                                    .bodyLarge
+                                    .override(
+                                      fontFamily: 'Plus Jakarta Sans',
+                                      color: Color(0xFF14181B),
+                                      fontSize: 16.0,
+                                      fontWeight: FontWeight.normal,
+                                    ),
+                              ),
                             ),
                           ],
                         ),
