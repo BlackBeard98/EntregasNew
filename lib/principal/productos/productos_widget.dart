@@ -171,7 +171,7 @@ class _ProductosWidgetState extends State<ProductosWidget> {
                               obscureText: false,
                               decoration: InputDecoration(
                                 labelText: FFLocalizations.of(context).getText(
-                                  'eud7yoaz' /* Buscar Producto */,
+                                  '5xgdwktk' /* Buscar Producto */,
                                 ),
                                 labelStyle: FlutterFlowTheme.of(context)
                                     .labelMedium
@@ -375,7 +375,7 @@ class _ProductosWidgetState extends State<ProductosWidget> {
                                 16.0, 12.0, 0.0, 0.0),
                             child: Text(
                               FFLocalizations.of(context).getText(
-                                'm0squd3z' /* Productos */,
+                                'broxh18x' /* Productos */,
                               ),
                               style: FlutterFlowTheme.of(context)
                                   .labelMedium
@@ -558,8 +558,6 @@ class _ProductosWidgetState extends State<ProductosWidget> {
                                                                               'Outfit',
                                                                           color:
                                                                               Colors.black,
-                                                                          fontSize:
-                                                                              24.0,
                                                                           fontWeight:
                                                                               FontWeight.w500,
                                                                         ),
@@ -587,8 +585,6 @@ class _ProductosWidgetState extends State<ProductosWidget> {
                                                                               'Outfit',
                                                                           color:
                                                                               Colors.black,
-                                                                          fontSize:
-                                                                              20.0,
                                                                         ),
                                                                   ),
                                                                 ),
@@ -614,8 +610,6 @@ class _ProductosWidgetState extends State<ProductosWidget> {
                                                                               'Outfit',
                                                                           color:
                                                                               Colors.black,
-                                                                          fontSize:
-                                                                              20.0,
                                                                         ),
                                                                   ),
                                                                 ),
@@ -650,7 +644,7 @@ class _ProductosWidgetState extends State<ProductosWidget> {
                                             },
                                             text: FFLocalizations.of(context)
                                                 .getText(
-                                              'uydq457m' /* Ver Detalles */,
+                                              '9lyi7pid' /* Ver Detalles */,
                                             ),
                                             options: FFButtonOptions(
                                               height: 40.0,
