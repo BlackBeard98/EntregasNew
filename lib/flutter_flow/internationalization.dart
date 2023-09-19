@@ -562,91 +562,91 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // pedidos
   {
-    'upfjle54': {
+    'fbspknle': {
       'es': 'Recent Orders',
       'en': '',
     },
-    '8ak2supa': {
+    '0c2s8i4f': {
       'es': 'Below are your most recent orders',
       'en': '',
     },
-    'o6ykw5eb': {
+    'tzbkzj6p': {
       'es': 'Pedido #: ',
       'en': '',
     },
-    'y08bq9di': {
+    'z3668do6': {
       'es': 'Order #: ',
       'en': '',
     },
-    '93lv5bgr': {
+    '8b8jcj1x': {
       'es': '429242424',
       'en': '',
     },
-    'wlgryqqy': {
+    '7001uj2y': {
       'es': 'Mon. July 3rd',
       'en': '',
     },
-    '6o2w0nbs': {
+    'xukm2bpn': {
       'es': '2.5 lbs',
       'en': '',
     },
-    'd8b0hxsb': {
+    '02ka4jyl': {
       'es': '\$1.50',
       'en': '',
     },
-    'hm1dgubq': {
+    'c50g1rfn': {
       'es': 'Shipped',
       'en': '',
     },
-    'aroet0in': {
+    'd59rskvm': {
       'es': 'Order #: ',
       'en': '',
     },
-    'b2fhmhvc': {
+    'eeeev24p': {
       'es': '429242424',
       'en': '',
     },
-    'o13x7zxa': {
+    '8348h6uo': {
       'es': 'Mon. July 3rd',
       'en': '',
     },
-    'mauuibwi': {
+    'xth6kx1w': {
       'es': '2.5 lbs',
       'en': '',
     },
-    'z7fteuof': {
+    '3549lo85': {
       'es': '\$1.50',
       'en': '',
     },
-    'dh3y8fra': {
+    'sto7g929': {
       'es': 'Accepted',
       'en': '',
     },
-    'xubwktay': {
+    'shdxthts': {
       'es': 'Order #: ',
       'en': '',
     },
-    'olusafol': {
+    '3we2rv35': {
       'es': '429242424',
       'en': '',
     },
-    'x6c7aqmv': {
+    'fw91dp8g': {
       'es': 'Mon. July 3rd',
       'en': '',
     },
-    's8r4sqau': {
+    'wwnk5xmu': {
       'es': '2.5 lbs',
       'en': '',
     },
-    'i6c6ib61': {
+    'ywjf8edm': {
       'es': '\$1.50',
       'en': '',
     },
-    'qvh7jy1c': {
+    '0ydb8gt3': {
       'es': 'Accepted',
       'en': '',
     },
-    '1qqvmjkj': {
+    'lawyevz0': {
       'es': 'Home',
       'en': '',
     },
