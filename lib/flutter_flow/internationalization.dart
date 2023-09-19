@@ -805,7 +805,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'Resumen del Pedido:',
       'en': '',
     },
-    'zrur1f4b': {
+    '2zmshso7': {
       'es': 'Creación ',
       'en': '',
     },

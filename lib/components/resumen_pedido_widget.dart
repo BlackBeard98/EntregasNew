@@ -115,23 +115,21 @@ class _ResumenPedidoWidgetState extends State<ResumenPedidoWidget> {
                     mainAxisSize: MainAxisSize.max,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Flexible(
-                        child: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
-                              0.0, 12.0, 0.0, 0.0),
-                          child: Text(
-                            FFLocalizations.of(context).getText(
-                              'z5522vtj' /* Resumen del Pedido: */,
-                            ),
-                            style: FlutterFlowTheme.of(context)
-                                .headlineSmall
-                                .override(
-                                  fontFamily: 'Outfit',
-                                  color: Color(0xFF14181B),
-                                  fontSize: 24.0,
-                                  fontWeight: FontWeight.w500,
-                                ),
+                      Padding(
+                        padding:
+                            EdgeInsetsDirectional.fromSTEB(0.0, 12.0, 0.0, 0.0),
+                        child: Text(
+                          FFLocalizations.of(context).getText(
+                            'z5522vtj' /* Resumen del Pedido: */,
                           ),
+                          style: FlutterFlowTheme.of(context)
+                              .headlineSmall
+                              .override(
+                                fontFamily: 'Outfit',
+                                color: Color(0xFF14181B),
+                                fontSize: 24.0,
+                                fontWeight: FontWeight.w500,
+                              ),
                         ),
                       ),
                       Padding(
@@ -160,7 +158,7 @@ class _ResumenPedidoWidgetState extends State<ResumenPedidoWidget> {
                             children: [
                               TextSpan(
                                 text: FFLocalizations.of(context).getText(
-                                  'zrur1f4b' /* Creación  */,
+                                  '2zmshso7' /* Creación  */,
                                 ),
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium

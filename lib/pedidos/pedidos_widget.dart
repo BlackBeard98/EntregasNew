@@ -235,18 +235,12 @@ class _PedidosWidgetState extends State<PedidosWidget> {
                                                                       .viewInsetsOf(
                                                                           context),
                                                                   child:
-                                                                      Container(
-                                                                    height:
-                                                                        MediaQuery.sizeOf(context).height *
-                                                                            0.5,
-                                                                    child:
-                                                                        ResumenPedidoWidget(
-                                                                      orderId:
-                                                                          getJsonField(
-                                                                        ordersItem,
-                                                                        r'''$._id._id''',
-                                                                      ).toString(),
-                                                                    ),
+                                                                      ResumenPedidoWidget(
+                                                                    orderId:
+                                                                        getJsonField(
+                                                                      ordersItem,
+                                                                      r'''$._id._id''',
+                                                                    ).toString(),
                                                                   ),
                                                                 ),
                                                               );
