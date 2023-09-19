@@ -171,7 +171,7 @@ class _ProductosWidgetState extends State<ProductosWidget> {
                               obscureText: false,
                               decoration: InputDecoration(
                                 labelText: FFLocalizations.of(context).getText(
-                                  '5xgdwktk' /* Buscar Producto */,
+                                  'my4dnu9w' /* Buscar Producto */,
                                 ),
                                 labelStyle: FlutterFlowTheme.of(context)
                                     .labelMedium
@@ -375,7 +375,7 @@ class _ProductosWidgetState extends State<ProductosWidget> {
                                 16.0, 12.0, 0.0, 0.0),
                             child: Text(
                               FFLocalizations.of(context).getText(
-                                'broxh18x' /* Productos */,
+                                'n3c8t94i' /* Productos */,
                               ),
                               style: FlutterFlowTheme.of(context)
                                   .labelMedium
@@ -644,7 +644,7 @@ class _ProductosWidgetState extends State<ProductosWidget> {
                                             },
                                             text: FFLocalizations.of(context)
                                                 .getText(
-                                              '9lyi7pid' /* Ver Detalles */,
+                                              'nl72tz5f' /* Ver Detalles */,
                                             ),
                                             options: FFButtonOptions(
                                               height: 40.0,
