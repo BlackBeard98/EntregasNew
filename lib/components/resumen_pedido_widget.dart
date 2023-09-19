@@ -3,6 +3,7 @@ import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/custom_functions.dart' as functions;
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
@@ -110,8 +111,9 @@ class _ResumenPedidoWidgetState extends State<ResumenPedidoWidget> {
                       ),
                     ],
                   ),
-                  Row(
+                  Column(
                     mainAxisSize: MainAxisSize.max,
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Flexible(
                         child: Padding(
@@ -132,21 +134,52 @@ class _ResumenPedidoWidgetState extends State<ResumenPedidoWidget> {
                           ),
                         ),
                       ),
-                      Flexible(
-                        child: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
-                              12.0, 12.0, 0.0, 0.0),
-                          child: Text(
-                            '\$ ${ShopGroup.orderidCall.orderNumber(
-                                  checkoutBottomSheetOrderidResponse.jsonBody,
-                                ).toString()}',
-                            style:
-                                FlutterFlowTheme.of(context).bodyLarge.override(
-                                      fontFamily: 'Plus Jakarta Sans',
-                                      color: Color(0xFF14181B),
-                                      fontSize: 16.0,
-                                      fontWeight: FontWeight.normal,
+                      Padding(
+                        padding:
+                            EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
+                        child: Text(
+                          '\$ ${ShopGroup.orderidCall.orderNumber(
+                                checkoutBottomSheetOrderidResponse.jsonBody,
+                              ).toString()}',
+                          style:
+                              FlutterFlowTheme.of(context).bodyLarge.override(
+                                    fontFamily: 'Plus Jakarta Sans',
+                                    color: Color(0xFF14181B),
+                                    fontSize: 16.0,
+                                    fontWeight: FontWeight.normal,
+                                  ),
+                        ),
+                      ),
+                      Padding(
+                        padding:
+                            EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
+                        child: RichText(
+                          textScaleFactor:
+                              MediaQuery.of(context).textScaleFactor,
+                          text: TextSpan(
+                            children: [
+                              TextSpan(
+                                text: FFLocalizations.of(context).getText(
+                                  'zrur1f4b' /* Creación  */,
+                                ),
+                                style: FlutterFlowTheme.of(context)
+                                    .bodyMedium
+                                    .override(
+                                      fontFamily: 'Readex Pro',
+                                      color:
+                                          FlutterFlowTheme.of(context).primary,
+                                      fontWeight: FontWeight.bold,
                                     ),
+                              ),
+                              TextSpan(
+                                text: getJsonField(
+                                  checkoutBottomSheetOrderidResponse.jsonBody,
+                                  r'''$.createdAt''',
+                                ).toString(),
+                                style: TextStyle(),
+                              )
+                            ],
+                            style: FlutterFlowTheme.of(context).bodyMedium,
                           ),
                         ),
                       ),
