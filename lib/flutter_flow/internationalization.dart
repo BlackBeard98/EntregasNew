@@ -239,7 +239,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // Carrito
   {
-    'v0jhxzhn': {
+    '5yfhfo03': {
       'es': 'Eliminar',
       'en': '',
     },
@@ -569,12 +569,142 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // ShowAndChangeLocation
   {
-    'a2nk4jrt': {
+    'lwjfocu7': {
       'es': 'Comprando en ',
       'en': '',
     },
-    '16ew326p': {
+    '0fprk0ue': {
       'es': ' Cambiar?',
+      'en': '',
+    },
+  },
+  // Header1
+  {
+    'uv7rofrv': {
+      'es': 'Welcome!',
+      'en': '',
+    },
+    'rg9o9qm5': {
+      'es': 'Find your Dream Space',
+      'en': '',
+    },
+    'bp5ql35x': {
+      'es': 'Search',
+      'en': '',
+    },
+  },
+  // Tabla
+  {
+    '7zcffw53': {
+      'es': 'Card Header',
+      'en': '',
+    },
+    '5ykg0b8i': {
+      'es': '12',
+      'en': '',
+    },
+    'jltd4kia': {
+      'es': 'Create tables and ui elements that work below.',
+      'en': '',
+    },
+    '3lcjiuc4': {
+      'es': 'Search users...',
+      'en': '',
+    },
+    '1zvce2x9': {
+      'es': 'Customer Info',
+      'en': '',
+    },
+    't6zeq6da': {
+      'es': 'Paid On',
+      'en': '',
+    },
+    'y18lle6x': {
+      'es': 'Invoice #',
+      'en': '',
+    },
+    '9054bdjs': {
+      'es': 'Status',
+      'en': '',
+    },
+    'cg97wufb': {
+      'es': 'Amount',
+      'en': '',
+    },
+    'rfjmmtbh': {
+      'es': 'Actions',
+      'en': '',
+    },
+    '98h6sq2h': {
+      'es': 'Randy Peterson',
+      'en': '',
+    },
+    'n7k80vjw': {
+      'es': 'Jan. 30th, 2023',
+      'en': '',
+    },
+    'kcexzf34': {
+      'es': '10 days ago',
+      'en': '',
+    },
+    't7ir4b4w': {
+      'es': '#42925424',
+      'en': '',
+    },
+    'ere10ypn': {
+      'es': 'Paid',
+      'en': '',
+    },
+    '4rdifbee': {
+      'es': '\$2,100.00',
+      'en': '',
+    },
+    'czqywwup': {
+      'es': 'Randy Peterson',
+      'en': '',
+    },
+    '4jh5hi14': {
+      'es': 'Jan. 30th, 2023',
+      'en': '',
+    },
+    'l3jg5jmv': {
+      'es': '10 days ago',
+      'en': '',
+    },
+    'at2j6oha': {
+      'es': '#42925424',
+      'en': '',
+    },
+    'riu2gr5r': {
+      'es': 'Paid',
+      'en': '',
+    },
+    'u10awrwl': {
+      'es': '\$2,100.00',
+      'en': '',
+    },
+    'viyiymar': {
+      'es': 'Randy Peterson',
+      'en': '',
+    },
+    'wkydvkwb': {
+      'es': 'Jan. 30th, 2023',
+      'en': '',
+    },
+    'fcbsrc98': {
+      'es': '10 days ago',
+      'en': '',
+    },
+    'mxkzcvgx': {
+      'es': '#42925424',
+      'en': '',
+    },
+    'sicablzw': {
+      'es': 'Paid',
+      'en': '',
+    },
+    'r9532fc6': {
+      'es': '\$2,100.00',
       'en': '',
     },
   },
