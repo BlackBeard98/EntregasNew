@@ -158,7 +158,7 @@ class _ResumenPedidoWidgetState extends State<ResumenPedidoWidget> {
                             children: [
                               TextSpan(
                                 text: FFLocalizations.of(context).getText(
-                                  'ong6fwew' /* Creación  */,
+                                  '9iklzwph' /* Creación  */,
                                 ),
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium

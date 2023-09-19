@@ -932,6 +932,17 @@ class _CarritoWidgetState extends State<CarritoWidget> {
                                                   .secondary,
                                         ),
                                       );
+                                      await ShopGroup.cartitemscleancartIdCall
+                                          .call(
+                                        cartId: ShopGroup.cartuserIdCall
+                                            .id(
+                                              carritoCartuserIdResponse
+                                                  .jsonBody,
+                                            )
+                                            .toString(),
+                                        authToken:
+                                            FFAppState().authUser.accessToken,
+                                      );
 
                                       context.pushNamed('Carrito');
                                     } else {
@@ -939,7 +950,7 @@ class _CarritoWidgetState extends State<CarritoWidget> {
                                           .showSnackBar(
                                         SnackBar(
                                           content: Text(
-                                            '',
+                                            'Pedido Fallido',
                                             style: TextStyle(
                                               color:
                                                   FlutterFlowTheme.of(context)
