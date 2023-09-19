@@ -229,385 +229,398 @@ class _SeleccionarLocWidgetState extends State<SeleccionarLocWidget> {
                                     mainAxisSize: MainAxisSize.max,
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
-                                      Column(
-                                        mainAxisSize: MainAxisSize.max,
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.center,
-                                        children: [
-                                          Container(
-                                            decoration: BoxDecoration(
-                                              color: Colors.white,
-                                            ),
-                                            child: Column(
-                                              mainAxisSize: MainAxisSize.max,
-                                              children: [
-                                                Padding(
-                                                  padding: EdgeInsetsDirectional
-                                                      .fromSTEB(
-                                                          0.0, 24.0, 0.0, 0.0),
-                                                  child: FutureBuilder<
-                                                      ApiCallResponse>(
-                                                    future: ShopGroup
-                                                        .provinceallCall
-                                                        .call(
-                                                      authToken: FFAppState()
-                                                          .authUser
-                                                          .accessToken,
-                                                    ),
-                                                    builder:
-                                                        (context, snapshot) {
-                                                      // Customize what your widget looks like when it's loading.
-                                                      if (!snapshot.hasData) {
-                                                        return Center(
-                                                          child: SizedBox(
-                                                            width: 50.0,
-                                                            height: 50.0,
-                                                            child:
-                                                                CircularProgressIndicator(
-                                                              valueColor:
-                                                                  AlwaysStoppedAnimation<
-                                                                      Color>(
-                                                                FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .primary,
+                                      Flexible(
+                                        child: Column(
+                                          mainAxisSize: MainAxisSize.max,
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.center,
+                                          children: [
+                                            Container(
+                                              decoration: BoxDecoration(
+                                                color: Colors.white,
+                                              ),
+                                              child: Column(
+                                                mainAxisSize: MainAxisSize.max,
+                                                children: [
+                                                  Padding(
+                                                    padding:
+                                                        EdgeInsetsDirectional
+                                                            .fromSTEB(0.0, 24.0,
+                                                                0.0, 0.0),
+                                                    child: FutureBuilder<
+                                                        ApiCallResponse>(
+                                                      future: ShopGroup
+                                                          .provinceallCall
+                                                          .call(
+                                                        authToken: FFAppState()
+                                                            .authUser
+                                                            .accessToken,
+                                                      ),
+                                                      builder:
+                                                          (context, snapshot) {
+                                                        // Customize what your widget looks like when it's loading.
+                                                        if (!snapshot.hasData) {
+                                                          return Center(
+                                                            child: SizedBox(
+                                                              width: 50.0,
+                                                              height: 50.0,
+                                                              child:
+                                                                  CircularProgressIndicator(
+                                                                valueColor:
+                                                                    AlwaysStoppedAnimation<
+                                                                        Color>(
+                                                                  FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .primary,
+                                                                ),
                                                               ),
                                                             ),
+                                                          );
+                                                        }
+                                                        final dropDownProvinceallResponse =
+                                                            snapshot.data!;
+                                                        return FlutterFlowDropDown<
+                                                            String>(
+                                                          controller: _model
+                                                                  .dropDownValueController1 ??=
+                                                              FormFieldController<
+                                                                  String>(null),
+                                                          options: (ShopGroup
+                                                                  .provinceallCall
+                                                                  .names(
+                                                            dropDownProvinceallResponse
+                                                                .jsonBody,
+                                                          ) as List)
+                                                              .map<String>((s) =>
+                                                                  s.toString())
+                                                              .toList()!
+                                                              .map((e) =>
+                                                                  e.toString())
+                                                              .toList(),
+                                                          onChanged:
+                                                              (val) async {
+                                                            setState(() => _model
+                                                                    .dropDownValue1 =
+                                                                val);
+                                                            setState(() {
+                                                              FFAppState()
+                                                                  .updateProvinceStruct(
+                                                                (e) => e
+                                                                  ..name = _model
+                                                                      .dropDownValue1
+                                                                  ..id = functions
+                                                                      .filterJsonList(
+                                                                          getJsonField(
+                                                                            dropDownProvinceallResponse.jsonBody,
+                                                                            r'''$[*]''',
+                                                                          )!,
+                                                                          _model
+                                                                              .dropDownValue1)
+                                                                  ..isSet =
+                                                                      true,
+                                                              );
+                                                            });
+                                                          },
+                                                          width: 300.0,
+                                                          height: 50.0,
+                                                          searchHintTextStyle:
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .labelMedium,
+                                                          textStyle:
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .bodyMedium
+                                                                  .override(
+                                                                    fontFamily:
+                                                                        'Readex Pro',
+                                                                    color: Colors
+                                                                        .black,
+                                                                  ),
+                                                          hintText:
+                                                              FFLocalizations.of(
+                                                                      context)
+                                                                  .getText(
+                                                            '0spnh94r' /* Please select... */,
                                                           ),
+                                                          searchHintText:
+                                                              FFLocalizations.of(
+                                                                      context)
+                                                                  .getText(
+                                                            '1nbv2dw3' /* Search for an item... */,
+                                                          ),
+                                                          icon: Icon(
+                                                            Icons
+                                                                .keyboard_arrow_down_rounded,
+                                                            color: FlutterFlowTheme
+                                                                    .of(context)
+                                                                .secondaryText,
+                                                            size: 24.0,
+                                                          ),
+                                                          fillColor:
+                                                              Colors.white,
+                                                          elevation: 2.0,
+                                                          borderColor:
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .alternate,
+                                                          borderWidth: 2.0,
+                                                          borderRadius: 8.0,
+                                                          margin:
+                                                              EdgeInsetsDirectional
+                                                                  .fromSTEB(
+                                                                      16.0,
+                                                                      4.0,
+                                                                      16.0,
+                                                                      4.0),
+                                                          hidesUnderline: true,
+                                                          isSearchable: true,
+                                                          isMultiSelect: false,
                                                         );
-                                                      }
-                                                      final dropDownProvinceallResponse =
-                                                          snapshot.data!;
-                                                      return FlutterFlowDropDown<
-                                                          String>(
-                                                        controller: _model
-                                                                .dropDownValueController1 ??=
-                                                            FormFieldController<
-                                                                String>(null),
-                                                        options: (ShopGroup
-                                                                .provinceallCall
-                                                                .names(
-                                                          dropDownProvinceallResponse
-                                                              .jsonBody,
-                                                        ) as List)
-                                                            .map<String>((s) =>
-                                                                s.toString())
-                                                            .toList()!
-                                                            .map((e) =>
-                                                                e.toString())
-                                                            .toList(),
-                                                        onChanged: (val) async {
-                                                          setState(() => _model
-                                                                  .dropDownValue1 =
-                                                              val);
-                                                          setState(() {
-                                                            FFAppState()
-                                                                .updateProvinceStruct(
-                                                              (e) => e
-                                                                ..name = _model
-                                                                    .dropDownValue1
-                                                                ..id = functions
-                                                                    .filterJsonList(
-                                                                        getJsonField(
-                                                                          dropDownProvinceallResponse
-                                                                              .jsonBody,
-                                                                          r'''$[*]''',
-                                                                        )!,
-                                                                        _model
-                                                                            .dropDownValue1)
-                                                                ..isSet = true,
-                                                            );
-                                                          });
-                                                        },
-                                                        width: 300.0,
-                                                        height: 50.0,
-                                                        searchHintTextStyle:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .labelMedium,
-                                                        textStyle:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .bodyMedium
-                                                                .override(
-                                                                  fontFamily:
-                                                                      'Readex Pro',
-                                                                  color: Colors
-                                                                      .black,
-                                                                ),
-                                                        hintText:
-                                                            FFLocalizations.of(
-                                                                    context)
-                                                                .getText(
-                                                          '0spnh94r' /* Please select... */,
-                                                        ),
-                                                        searchHintText:
-                                                            FFLocalizations.of(
-                                                                    context)
-                                                                .getText(
-                                                          '1nbv2dw3' /* Search for an item... */,
-                                                        ),
-                                                        icon: Icon(
-                                                          Icons
-                                                              .keyboard_arrow_down_rounded,
-                                                          color: FlutterFlowTheme
-                                                                  .of(context)
-                                                              .secondaryText,
-                                                          size: 24.0,
-                                                        ),
-                                                        fillColor: Colors.white,
-                                                        elevation: 2.0,
-                                                        borderColor:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .alternate,
-                                                        borderWidth: 2.0,
-                                                        borderRadius: 8.0,
-                                                        margin:
-                                                            EdgeInsetsDirectional
-                                                                .fromSTEB(
-                                                                    16.0,
-                                                                    4.0,
-                                                                    16.0,
-                                                                    4.0),
-                                                        hidesUnderline: true,
-                                                        isSearchable: true,
-                                                        isMultiSelect: false,
-                                                      );
-                                                    },
-                                                  ),
-                                                ),
-                                              ],
-                                            ),
-                                          ),
-                                          Container(
-                                            decoration: BoxDecoration(
-                                              color: Colors.white,
-                                            ),
-                                            child: Column(
-                                              mainAxisSize: MainAxisSize.max,
-                                              children: [
-                                                Padding(
-                                                  padding: EdgeInsetsDirectional
-                                                      .fromSTEB(
-                                                          0.0, 24.0, 0.0, 0.0),
-                                                  child: FutureBuilder<
-                                                      ApiCallResponse>(
-                                                    future: ShopGroup
-                                                        .municipalityallCall
-                                                        .call(
-                                                      authToken: FFAppState()
-                                                          .authUser
-                                                          .accessToken,
+                                                      },
                                                     ),
-                                                    builder:
-                                                        (context, snapshot) {
-                                                      // Customize what your widget looks like when it's loading.
-                                                      if (!snapshot.hasData) {
-                                                        return Center(
-                                                          child: SizedBox(
-                                                            width: 50.0,
-                                                            height: 50.0,
-                                                            child:
-                                                                CircularProgressIndicator(
-                                                              valueColor:
-                                                                  AlwaysStoppedAnimation<
-                                                                      Color>(
-                                                                FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .primary,
+                                                  ),
+                                                ],
+                                              ),
+                                            ),
+                                            Container(
+                                              decoration: BoxDecoration(
+                                                color: Colors.white,
+                                              ),
+                                              child: Column(
+                                                mainAxisSize: MainAxisSize.max,
+                                                children: [
+                                                  Padding(
+                                                    padding:
+                                                        EdgeInsetsDirectional
+                                                            .fromSTEB(0.0, 24.0,
+                                                                0.0, 0.0),
+                                                    child: FutureBuilder<
+                                                        ApiCallResponse>(
+                                                      future: ShopGroup
+                                                          .municipalityallCall
+                                                          .call(
+                                                        authToken: FFAppState()
+                                                            .authUser
+                                                            .accessToken,
+                                                      ),
+                                                      builder:
+                                                          (context, snapshot) {
+                                                        // Customize what your widget looks like when it's loading.
+                                                        if (!snapshot.hasData) {
+                                                          return Center(
+                                                            child: SizedBox(
+                                                              width: 50.0,
+                                                              height: 50.0,
+                                                              child:
+                                                                  CircularProgressIndicator(
+                                                                valueColor:
+                                                                    AlwaysStoppedAnimation<
+                                                                        Color>(
+                                                                  FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .primary,
+                                                                ),
                                                               ),
                                                             ),
+                                                          );
+                                                        }
+                                                        final dropDownMunicipalityallResponse =
+                                                            snapshot.data!;
+                                                        return FlutterFlowDropDown<
+                                                            String>(
+                                                          controller: _model
+                                                                  .dropDownValueController2 ??=
+                                                              FormFieldController<
+                                                                  String>(null),
+                                                          options: (ShopGroup
+                                                                  .municipalityallCall
+                                                                  .names(
+                                                            dropDownMunicipalityallResponse
+                                                                .jsonBody,
+                                                          ) as List)
+                                                              .map<String>((s) =>
+                                                                  s.toString())
+                                                              .toList()!
+                                                              .where((e) => functions
+                                                                  .newCustomFunction(
+                                                                      getJsonField(
+                                                                        dropDownMunicipalityallResponse
+                                                                            .jsonBody,
+                                                                        r'''$[*]''',
+                                                                      )!,
+                                                                      FFAppState()
+                                                                          .Province
+                                                                          .id,
+                                                                      e.toString()))
+                                                              .toList(),
+                                                          onChanged:
+                                                              (val) async {
+                                                            setState(() => _model
+                                                                    .dropDownValue2 =
+                                                                val);
+                                                            setState(() {
+                                                              FFAppState()
+                                                                  .updateMunicipalityStruct(
+                                                                (e) => e
+                                                                  ..name = _model
+                                                                      .dropDownValue2
+                                                                  ..id = functions
+                                                                      .filterJsonList(
+                                                                          getJsonField(
+                                                                            dropDownMunicipalityallResponse.jsonBody,
+                                                                            r'''$[*]''',
+                                                                          )!,
+                                                                          _model
+                                                                              .dropDownValue2)
+                                                                  ..isSet =
+                                                                      true,
+                                                              );
+                                                            });
+                                                          },
+                                                          width: 300.0,
+                                                          height: 50.0,
+                                                          searchHintTextStyle:
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .labelMedium,
+                                                          textStyle:
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .bodyMedium
+                                                                  .override(
+                                                                    fontFamily:
+                                                                        'Readex Pro',
+                                                                    color: Colors
+                                                                        .black,
+                                                                  ),
+                                                          hintText:
+                                                              FFLocalizations.of(
+                                                                      context)
+                                                                  .getText(
+                                                            'olt7wxdv' /* Please select... */,
                                                           ),
+                                                          searchHintText:
+                                                              FFLocalizations.of(
+                                                                      context)
+                                                                  .getText(
+                                                            'chogp8cx' /* Search for an item... */,
+                                                          ),
+                                                          icon: Icon(
+                                                            Icons
+                                                                .keyboard_arrow_down_rounded,
+                                                            color: FlutterFlowTheme
+                                                                    .of(context)
+                                                                .secondaryText,
+                                                            size: 24.0,
+                                                          ),
+                                                          fillColor:
+                                                              Colors.white,
+                                                          elevation: 2.0,
+                                                          borderColor:
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .alternate,
+                                                          borderWidth: 2.0,
+                                                          borderRadius: 8.0,
+                                                          margin:
+                                                              EdgeInsetsDirectional
+                                                                  .fromSTEB(
+                                                                      16.0,
+                                                                      4.0,
+                                                                      16.0,
+                                                                      4.0),
+                                                          hidesUnderline: true,
+                                                          disabled:
+                                                              !FFAppState()
+                                                                  .Province
+                                                                  .isSet,
+                                                          isSearchable: true,
+                                                          isMultiSelect: false,
                                                         );
-                                                      }
-                                                      final dropDownMunicipalityallResponse =
-                                                          snapshot.data!;
-                                                      return FlutterFlowDropDown<
-                                                          String>(
-                                                        controller: _model
-                                                                .dropDownValueController2 ??=
-                                                            FormFieldController<
-                                                                String>(null),
-                                                        options: (ShopGroup
-                                                                .municipalityallCall
-                                                                .names(
-                                                          dropDownMunicipalityallResponse
-                                                              .jsonBody,
-                                                        ) as List)
-                                                            .map<String>((s) =>
-                                                                s.toString())
-                                                            .toList()!
-                                                            .where((e) => functions
-                                                                .newCustomFunction(
-                                                                    getJsonField(
-                                                                      dropDownMunicipalityallResponse
-                                                                          .jsonBody,
-                                                                      r'''$[*]''',
-                                                                    )!,
-                                                                    FFAppState()
-                                                                        .Province
-                                                                        .id,
-                                                                    e.toString()))
-                                                            .toList(),
-                                                        onChanged: (val) async {
-                                                          setState(() => _model
-                                                                  .dropDownValue2 =
-                                                              val);
-                                                          setState(() {
-                                                            FFAppState()
-                                                                .updateMunicipalityStruct(
-                                                              (e) => e
-                                                                ..name = _model
-                                                                    .dropDownValue2
-                                                                ..id = functions
-                                                                    .filterJsonList(
-                                                                        getJsonField(
-                                                                          dropDownMunicipalityallResponse
-                                                                              .jsonBody,
-                                                                          r'''$[*]''',
-                                                                        )!,
-                                                                        _model
-                                                                            .dropDownValue2)
-                                                                ..isSet = true,
-                                                            );
-                                                          });
-                                                        },
-                                                        width: 300.0,
-                                                        height: 50.0,
-                                                        searchHintTextStyle:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .labelMedium,
-                                                        textStyle:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .bodyMedium
-                                                                .override(
-                                                                  fontFamily:
-                                                                      'Readex Pro',
-                                                                  color: Colors
-                                                                      .black,
-                                                                ),
-                                                        hintText:
-                                                            FFLocalizations.of(
-                                                                    context)
-                                                                .getText(
-                                                          'olt7wxdv' /* Please select... */,
-                                                        ),
-                                                        searchHintText:
-                                                            FFLocalizations.of(
-                                                                    context)
-                                                                .getText(
-                                                          'chogp8cx' /* Search for an item... */,
-                                                        ),
-                                                        icon: Icon(
-                                                          Icons
-                                                              .keyboard_arrow_down_rounded,
-                                                          color: FlutterFlowTheme
-                                                                  .of(context)
-                                                              .secondaryText,
-                                                          size: 24.0,
-                                                        ),
-                                                        fillColor: Colors.white,
-                                                        elevation: 2.0,
-                                                        borderColor:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .alternate,
-                                                        borderWidth: 2.0,
-                                                        borderRadius: 8.0,
-                                                        margin:
-                                                            EdgeInsetsDirectional
-                                                                .fromSTEB(
-                                                                    16.0,
-                                                                    4.0,
-                                                                    16.0,
-                                                                    4.0),
-                                                        hidesUnderline: true,
-                                                        disabled: !FFAppState()
-                                                            .Province
-                                                            .isSet,
-                                                        isSearchable: true,
-                                                        isMultiSelect: false,
-                                                      );
-                                                    },
+                                                      },
+                                                    ),
                                                   ),
-                                                ),
-                                              ],
+                                                ],
+                                              ),
                                             ),
-                                          ),
-                                          Padding(
-                                            padding:
-                                                EdgeInsetsDirectional.fromSTEB(
-                                                    0.0, 24.0, 0.0, 0.0),
-                                            child: FFButtonWidget(
-                                              onPressed: !FFAppState()
-                                                      .Municipality
-                                                      .isSet
-                                                  ? null
-                                                  : () async {
-                                                      setState(() {
-                                                        FFAppState()
-                                                            .updateProvinceAppStruct(
-                                                          (e) => e
-                                                            ..name =
-                                                                FFAppState()
-                                                                    .Province
-                                                                    .name
-                                                            ..id = FFAppState()
-                                                                .Province
-                                                                .id
-                                                            ..isSet = true,
-                                                        );
-                                                        FFAppState()
-                                                            .updateMunicipalityAppStruct(
-                                                          (e) => e
-                                                            ..name = FFAppState()
-                                                                .Municipality
-                                                                .name
-                                                            ..id = FFAppState()
-                                                                .Municipality
-                                                                .id
-                                                            ..isSet = true,
-                                                        );
-                                                      });
+                                            Padding(
+                                              padding: EdgeInsetsDirectional
+                                                  .fromSTEB(
+                                                      0.0, 24.0, 0.0, 0.0),
+                                              child: FFButtonWidget(
+                                                onPressed: !FFAppState()
+                                                        .Municipality
+                                                        .isSet
+                                                    ? null
+                                                    : () async {
+                                                        setState(() {
+                                                          FFAppState()
+                                                              .updateProvinceAppStruct(
+                                                            (e) => e
+                                                              ..name =
+                                                                  FFAppState()
+                                                                      .Province
+                                                                      .name
+                                                              ..id =
+                                                                  FFAppState()
+                                                                      .Province
+                                                                      .id
+                                                              ..isSet = true,
+                                                          );
+                                                          FFAppState()
+                                                              .updateMunicipalityAppStruct(
+                                                            (e) => e
+                                                              ..name = FFAppState()
+                                                                  .Municipality
+                                                                  .name
+                                                              ..id = FFAppState()
+                                                                  .Municipality
+                                                                  .id
+                                                              ..isSet = true,
+                                                          );
+                                                        });
 
-                                                      context
-                                                          .goNamed('Productos');
-                                                    },
-                                              text: FFLocalizations.of(context)
-                                                  .getText(
-                                                'x3xh1i3e' /* Avanzar a Comprar */,
-                                              ),
-                                              options: FFButtonOptions(
-                                                height: 40.0,
-                                                padding: EdgeInsetsDirectional
-                                                    .fromSTEB(
-                                                        24.0, 0.0, 24.0, 0.0),
-                                                iconPadding:
-                                                    EdgeInsetsDirectional
-                                                        .fromSTEB(
-                                                            0.0, 0.0, 0.0, 0.0),
-                                                color: Color(0xFFE27C46),
-                                                textStyle:
-                                                    FlutterFlowTheme.of(context)
-                                                        .titleSmall
-                                                        .override(
-                                                          fontFamily:
-                                                              'Readex Pro',
-                                                          color: Colors.white,
-                                                        ),
-                                                elevation: 3.0,
-                                                borderSide: BorderSide(
-                                                  color: Colors.transparent,
-                                                  width: 1.0,
+                                                        context.goNamed(
+                                                            'Productos');
+                                                      },
+                                                text:
+                                                    FFLocalizations.of(context)
+                                                        .getText(
+                                                  'x3xh1i3e' /* Avanzar a Comprar */,
                                                 ),
-                                                borderRadius:
-                                                    BorderRadius.circular(8.0),
+                                                options: FFButtonOptions(
+                                                  height: 40.0,
+                                                  padding: EdgeInsetsDirectional
+                                                      .fromSTEB(
+                                                          24.0, 0.0, 24.0, 0.0),
+                                                  iconPadding:
+                                                      EdgeInsetsDirectional
+                                                          .fromSTEB(0.0, 0.0,
+                                                              0.0, 0.0),
+                                                  color: Color(0xFFE27C46),
+                                                  textStyle:
+                                                      FlutterFlowTheme.of(
+                                                              context)
+                                                          .titleSmall
+                                                          .override(
+                                                            fontFamily:
+                                                                'Readex Pro',
+                                                            color: Colors.white,
+                                                          ),
+                                                  elevation: 3.0,
+                                                  borderSide: BorderSide(
+                                                    color: Colors.transparent,
+                                                    width: 1.0,
+                                                  ),
+                                                  borderRadius:
+                                                      BorderRadius.circular(
+                                                          8.0),
+                                                ),
                                               ),
                                             ),
-                                          ),
-                                        ],
+                                          ],
+                                        ),
                                       ),
                                     ],
                                   ),
