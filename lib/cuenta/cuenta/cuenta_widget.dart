@@ -94,6 +94,8 @@ class _CuentaWidgetState extends State<CuentaWidget> {
                   color: Color(0xFF15161E),
                   fontSize: 24.0,
                   fontWeight: FontWeight.w500,
+                  useGoogleFonts: GoogleFonts.asMap().containsKey(
+                      FlutterFlowTheme.of(context).headlineMediumFamily),
                 ),
           ),
           actions: [
@@ -134,6 +136,8 @@ class _CuentaWidgetState extends State<CuentaWidget> {
                         color: Color(0xFF57636C),
                         fontSize: 16.0,
                         fontWeight: FontWeight.normal,
+                        useGoogleFonts: GoogleFonts.asMap().containsKey(
+                            FlutterFlowTheme.of(context).labelLargeFamily),
                       ),
                 ),
               ),
@@ -179,6 +183,10 @@ class _CuentaWidgetState extends State<CuentaWidget> {
                                     color: Color(0xFF14181B),
                                     fontSize: 16.0,
                                     fontWeight: FontWeight.normal,
+                                    useGoogleFonts: GoogleFonts.asMap()
+                                        .containsKey(
+                                            FlutterFlowTheme.of(context)
+                                                .bodyLargeFamily),
                                   ),
                             ),
                           ),
@@ -247,6 +255,10 @@ class _CuentaWidgetState extends State<CuentaWidget> {
                                       color: Color(0xFF14181B),
                                       fontSize: 16.0,
                                       fontWeight: FontWeight.normal,
+                                      useGoogleFonts: GoogleFonts.asMap()
+                                          .containsKey(
+                                              FlutterFlowTheme.of(context)
+                                                  .bodyLargeFamily),
                                     ),
                               ),
                             ),
@@ -307,6 +319,10 @@ class _CuentaWidgetState extends State<CuentaWidget> {
                                     color: Color(0xFF14181B),
                                     fontSize: 16.0,
                                     fontWeight: FontWeight.normal,
+                                    useGoogleFonts: GoogleFonts.asMap()
+                                        .containsKey(
+                                            FlutterFlowTheme.of(context)
+                                                .bodyLargeFamily),
                                   ),
                             ),
                           ),
@@ -366,6 +382,10 @@ class _CuentaWidgetState extends State<CuentaWidget> {
                                     color: Color(0xFF14181B),
                                     fontSize: 16.0,
                                     fontWeight: FontWeight.normal,
+                                    useGoogleFonts: GoogleFonts.asMap()
+                                        .containsKey(
+                                            FlutterFlowTheme.of(context)
+                                                .bodyLargeFamily),
                                   ),
                             ),
                           ),
@@ -440,6 +460,10 @@ class _CuentaWidgetState extends State<CuentaWidget> {
                                       color: Color(0xFF14181B),
                                       fontSize: 16.0,
                                       fontWeight: FontWeight.normal,
+                                      useGoogleFonts: GoogleFonts.asMap()
+                                          .containsKey(
+                                              FlutterFlowTheme.of(context)
+                                                  .bodyLargeFamily),
                                     ),
                               ),
                             ),

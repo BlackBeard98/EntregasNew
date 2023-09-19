@@ -94,6 +94,9 @@ class _LoginWidgetState extends State<LoginWidget> {
                                   color: Color(0xFF101213),
                                   fontSize: 36.0,
                                   fontWeight: FontWeight.w600,
+                                  useGoogleFonts: GoogleFonts.asMap()
+                                      .containsKey(FlutterFlowTheme.of(context)
+                                          .displaySmallFamily),
                                 ),
                           ),
                         ),
@@ -140,10 +143,14 @@ class _LoginWidgetState extends State<LoginWidget> {
                                 style: FlutterFlowTheme.of(context)
                                     .displaySmall
                                     .override(
-                                      fontFamily: 'Plus Jakarta Sans',
+                                      fontFamily: 'Outfit',
                                       color: Color(0xFF101213),
                                       fontSize: 36.0,
                                       fontWeight: FontWeight.w600,
+                                      useGoogleFonts: GoogleFonts.asMap()
+                                          .containsKey(
+                                              FlutterFlowTheme.of(context)
+                                                  .displaySmallFamily),
                                     ),
                               ),
                               Padding(
@@ -157,10 +164,14 @@ class _LoginWidgetState extends State<LoginWidget> {
                                   style: FlutterFlowTheme.of(context)
                                       .labelLarge
                                       .override(
-                                        fontFamily: 'Plus Jakarta Sans',
+                                        fontFamily: 'Outfit',
                                         color: Color(0xFF57636C),
                                         fontSize: 16.0,
                                         fontWeight: FontWeight.w500,
+                                        useGoogleFonts: GoogleFonts.asMap()
+                                            .containsKey(
+                                                FlutterFlowTheme.of(context)
+                                                    .labelLargeFamily),
                                       ),
                                 ),
                               ),
@@ -186,6 +197,10 @@ class _LoginWidgetState extends State<LoginWidget> {
                                             color: Color(0xFF57636C),
                                             fontSize: 18.0,
                                             fontWeight: FontWeight.w500,
+                                            useGoogleFonts: GoogleFonts.asMap()
+                                                .containsKey(
+                                                    FlutterFlowTheme.of(context)
+                                                        .titleMediumFamily),
                                           ),
                                       enabledBorder: OutlineInputBorder(
                                         borderSide: BorderSide(
@@ -232,6 +247,10 @@ class _LoginWidgetState extends State<LoginWidget> {
                                           color: Colors.black,
                                           fontSize: 18.0,
                                           fontWeight: FontWeight.w500,
+                                          useGoogleFonts: GoogleFonts.asMap()
+                                              .containsKey(
+                                                  FlutterFlowTheme.of(context)
+                                                      .titleMediumFamily),
                                         ),
                                     keyboardType: TextInputType.emailAddress,
                                     validator: _model
@@ -262,6 +281,10 @@ class _LoginWidgetState extends State<LoginWidget> {
                                             color: Color(0xFF57636C),
                                             fontSize: 18.0,
                                             fontWeight: FontWeight.w500,
+                                            useGoogleFonts: GoogleFonts.asMap()
+                                                .containsKey(
+                                                    FlutterFlowTheme.of(context)
+                                                        .titleMediumFamily),
                                           ),
                                       enabledBorder: OutlineInputBorder(
                                         borderSide: BorderSide(
@@ -323,6 +346,10 @@ class _LoginWidgetState extends State<LoginWidget> {
                                           color: Colors.black,
                                           fontSize: 18.0,
                                           fontWeight: FontWeight.w500,
+                                          useGoogleFonts: GoogleFonts.asMap()
+                                              .containsKey(
+                                                  FlutterFlowTheme.of(context)
+                                                      .titleMediumFamily),
                                         ),
                                     validator: _model
                                         .passwordControllerValidator
@@ -433,10 +460,14 @@ class _LoginWidgetState extends State<LoginWidget> {
                                       textStyle: FlutterFlowTheme.of(context)
                                           .titleSmall
                                           .override(
-                                            fontFamily: 'Plus Jakarta Sans',
+                                            fontFamily: 'Outfit',
                                             color: Colors.white,
                                             fontSize: 16.0,
                                             fontWeight: FontWeight.w500,
+                                            useGoogleFonts: GoogleFonts.asMap()
+                                                .containsKey(
+                                                    FlutterFlowTheme.of(context)
+                                                        .titleSmallFamily),
                                           ),
                                       elevation: 3.0,
                                       borderSide: BorderSide(
@@ -465,7 +496,9 @@ class _LoginWidgetState extends State<LoginWidget> {
                                               .getText(
                                             '9x5ft1pu' /* No tienes cuenta?  */,
                                           ),
-                                          style: TextStyle(),
+                                          style: GoogleFonts.getFont(
+                                            'Outfit',
+                                          ),
                                         ),
                                         TextSpan(
                                           text: FFLocalizations.of(context)
@@ -475,10 +508,16 @@ class _LoginWidgetState extends State<LoginWidget> {
                                           style: FlutterFlowTheme.of(context)
                                               .bodyMedium
                                               .override(
-                                                fontFamily: 'Plus Jakarta Sans',
+                                                fontFamily: 'Outfit',
                                                 color: Color(0xFF4B39EF),
                                                 fontSize: 14.0,
                                                 fontWeight: FontWeight.w600,
+                                                useGoogleFonts: GoogleFonts
+                                                        .asMap()
+                                                    .containsKey(
+                                                        FlutterFlowTheme.of(
+                                                                context)
+                                                            .bodyMediumFamily),
                                               ),
                                           mouseCursor: SystemMouseCursors.click,
                                           recognizer: TapGestureRecognizer()
@@ -494,6 +533,10 @@ class _LoginWidgetState extends State<LoginWidget> {
                                             color: Color(0xFF101213),
                                             fontSize: 14.0,
                                             fontWeight: FontWeight.w500,
+                                            useGoogleFonts: GoogleFonts.asMap()
+                                                .containsKey(
+                                                    FlutterFlowTheme.of(context)
+                                                        .bodyMediumFamily),
                                           ),
                                     ),
                                   ),

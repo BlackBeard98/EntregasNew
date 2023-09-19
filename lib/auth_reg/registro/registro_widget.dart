@@ -87,6 +87,9 @@ class _RegistroWidgetState extends State<RegistroWidget> {
                                   color: Color(0xFF101213),
                                   fontSize: 36.0,
                                   fontWeight: FontWeight.w600,
+                                  useGoogleFonts: GoogleFonts.asMap()
+                                      .containsKey(FlutterFlowTheme.of(context)
+                                          .displaySmallFamily),
                                 ),
                       ),
                     ),
@@ -135,6 +138,10 @@ class _RegistroWidgetState extends State<RegistroWidget> {
                                       color: Color(0xFF101213),
                                       fontSize: 36.0,
                                       fontWeight: FontWeight.w600,
+                                      useGoogleFonts: GoogleFonts.asMap()
+                                          .containsKey(
+                                              FlutterFlowTheme.of(context)
+                                                  .displaySmallFamily),
                                     ),
                               ),
                               Padding(
@@ -152,6 +159,10 @@ class _RegistroWidgetState extends State<RegistroWidget> {
                                         color: Color(0xFF57636C),
                                         fontSize: 16.0,
                                         fontWeight: FontWeight.w500,
+                                        useGoogleFonts: GoogleFonts.asMap()
+                                            .containsKey(
+                                                FlutterFlowTheme.of(context)
+                                                    .labelLargeFamily),
                                       ),
                                 ),
                               ),
@@ -177,6 +188,10 @@ class _RegistroWidgetState extends State<RegistroWidget> {
                                             color: Color(0xFF57636C),
                                             fontSize: 18.0,
                                             fontWeight: FontWeight.w500,
+                                            useGoogleFonts: GoogleFonts.asMap()
+                                                .containsKey(
+                                                    FlutterFlowTheme.of(context)
+                                                        .titleMediumFamily),
                                           ),
                                       enabledBorder: OutlineInputBorder(
                                         borderSide: BorderSide(
@@ -223,6 +238,10 @@ class _RegistroWidgetState extends State<RegistroWidget> {
                                           color: Colors.black,
                                           fontSize: 18.0,
                                           fontWeight: FontWeight.w500,
+                                          useGoogleFonts: GoogleFonts.asMap()
+                                              .containsKey(
+                                                  FlutterFlowTheme.of(context)
+                                                      .titleMediumFamily),
                                         ),
                                     keyboardType: TextInputType.name,
                                     validator: _model.nameControllerValidator
@@ -252,6 +271,10 @@ class _RegistroWidgetState extends State<RegistroWidget> {
                                             color: Color(0xFF57636C),
                                             fontSize: 18.0,
                                             fontWeight: FontWeight.w500,
+                                            useGoogleFonts: GoogleFonts.asMap()
+                                                .containsKey(
+                                                    FlutterFlowTheme.of(context)
+                                                        .titleMediumFamily),
                                           ),
                                       enabledBorder: OutlineInputBorder(
                                         borderSide: BorderSide(
@@ -298,6 +321,10 @@ class _RegistroWidgetState extends State<RegistroWidget> {
                                           color: Colors.black,
                                           fontSize: 18.0,
                                           fontWeight: FontWeight.w500,
+                                          useGoogleFonts: GoogleFonts.asMap()
+                                              .containsKey(
+                                                  FlutterFlowTheme.of(context)
+                                                      .titleMediumFamily),
                                         ),
                                     keyboardType: TextInputType.name,
                                     validator: _model
@@ -328,6 +355,10 @@ class _RegistroWidgetState extends State<RegistroWidget> {
                                             color: Color(0xFF57636C),
                                             fontSize: 18.0,
                                             fontWeight: FontWeight.w500,
+                                            useGoogleFonts: GoogleFonts.asMap()
+                                                .containsKey(
+                                                    FlutterFlowTheme.of(context)
+                                                        .titleMediumFamily),
                                           ),
                                       enabledBorder: OutlineInputBorder(
                                         borderSide: BorderSide(
@@ -374,6 +405,10 @@ class _RegistroWidgetState extends State<RegistroWidget> {
                                           color: Colors.black,
                                           fontSize: 18.0,
                                           fontWeight: FontWeight.w500,
+                                          useGoogleFonts: GoogleFonts.asMap()
+                                              .containsKey(
+                                                  FlutterFlowTheme.of(context)
+                                                      .titleMediumFamily),
                                         ),
                                     keyboardType: TextInputType.name,
                                     validator: _model
@@ -404,6 +439,10 @@ class _RegistroWidgetState extends State<RegistroWidget> {
                                             color: Color(0xFF57636C),
                                             fontSize: 18.0,
                                             fontWeight: FontWeight.w500,
+                                            useGoogleFonts: GoogleFonts.asMap()
+                                                .containsKey(
+                                                    FlutterFlowTheme.of(context)
+                                                        .titleMediumFamily),
                                           ),
                                       enabledBorder: OutlineInputBorder(
                                         borderSide: BorderSide(
@@ -465,6 +504,10 @@ class _RegistroWidgetState extends State<RegistroWidget> {
                                           color: Colors.black,
                                           fontSize: 18.0,
                                           fontWeight: FontWeight.w500,
+                                          useGoogleFonts: GoogleFonts.asMap()
+                                              .containsKey(
+                                                  FlutterFlowTheme.of(context)
+                                                      .titleMediumFamily),
                                         ),
                                     validator: _model
                                         .passwordControllerValidator
@@ -494,6 +537,10 @@ class _RegistroWidgetState extends State<RegistroWidget> {
                                             color: Color(0xFF57636C),
                                             fontSize: 18.0,
                                             fontWeight: FontWeight.w500,
+                                            useGoogleFonts: GoogleFonts.asMap()
+                                                .containsKey(
+                                                    FlutterFlowTheme.of(context)
+                                                        .titleMediumFamily),
                                           ),
                                       enabledBorder: OutlineInputBorder(
                                         borderSide: BorderSide(
@@ -540,6 +587,10 @@ class _RegistroWidgetState extends State<RegistroWidget> {
                                           color: Colors.black,
                                           fontSize: 18.0,
                                           fontWeight: FontWeight.w500,
+                                          useGoogleFonts: GoogleFonts.asMap()
+                                              .containsKey(
+                                                  FlutterFlowTheme.of(context)
+                                                      .titleMediumFamily),
                                         ),
                                     keyboardType: TextInputType.emailAddress,
                                     validator: _model
@@ -637,6 +688,10 @@ class _RegistroWidgetState extends State<RegistroWidget> {
                                             color: Colors.white,
                                             fontSize: 16.0,
                                             fontWeight: FontWeight.w500,
+                                            useGoogleFonts: GoogleFonts.asMap()
+                                                .containsKey(
+                                                    FlutterFlowTheme.of(context)
+                                                        .titleSmallFamily),
                                           ),
                                       elevation: 3.0,
                                       borderSide: BorderSide(
@@ -679,6 +734,12 @@ class _RegistroWidgetState extends State<RegistroWidget> {
                                                 color: Color(0xFF4B39EF),
                                                 fontSize: 14.0,
                                                 fontWeight: FontWeight.w600,
+                                                useGoogleFonts: GoogleFonts
+                                                        .asMap()
+                                                    .containsKey(
+                                                        FlutterFlowTheme.of(
+                                                                context)
+                                                            .bodyMediumFamily),
                                               ),
                                           mouseCursor: SystemMouseCursors.click,
                                           recognizer: TapGestureRecognizer()
@@ -694,6 +755,10 @@ class _RegistroWidgetState extends State<RegistroWidget> {
                                             color: Color(0xFF101213),
                                             fontSize: 14.0,
                                             fontWeight: FontWeight.w500,
+                                            useGoogleFonts: GoogleFonts.asMap()
+                                                .containsKey(
+                                                    FlutterFlowTheme.of(context)
+                                                        .bodyMediumFamily),
                                           ),
                                     ),
                                   ),

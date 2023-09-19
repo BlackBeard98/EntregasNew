@@ -169,6 +169,8 @@ class _ProductoVIewWidgetState extends State<ProductoVIewWidget>
                 color: Color(0xFF15161E),
                 fontSize: 24.0,
                 fontWeight: FontWeight.w500,
+                useGoogleFonts: GoogleFonts.asMap().containsKey(
+                    FlutterFlowTheme.of(context).headlineMediumFamily),
               ),
         ),
         actions: [
@@ -275,6 +277,9 @@ class _ProductoVIewWidgetState extends State<ProductoVIewWidget>
                                 color: Color(0xFF14181B),
                                 fontSize: 24.0,
                                 fontWeight: FontWeight.w500,
+                                useGoogleFonts: GoogleFonts.asMap().containsKey(
+                                    FlutterFlowTheme.of(context)
+                                        .headlineSmallFamily),
                               ),
                     ),
                   ),
@@ -291,6 +296,8 @@ class _ProductoVIewWidgetState extends State<ProductoVIewWidget>
                             color: Color(0xFF57636C),
                             fontSize: 14.0,
                             fontWeight: FontWeight.normal,
+                            useGoogleFonts: GoogleFonts.asMap().containsKey(
+                                FlutterFlowTheme.of(context).labelMediumFamily),
                           ),
                     ).animateOnPageLoad(
                         animationsMap['textOnPageLoadAnimation']!),
@@ -315,6 +322,9 @@ class _ProductoVIewWidgetState extends State<ProductoVIewWidget>
                                 color: Color(0xFF14181B),
                                 fontSize: 24.0,
                                 fontWeight: FontWeight.w500,
+                                useGoogleFonts: GoogleFonts.asMap().containsKey(
+                                    FlutterFlowTheme.of(context)
+                                        .headlineSmallFamily),
                               ),
                         ),
                         Container(
@@ -353,6 +363,10 @@ class _ProductoVIewWidgetState extends State<ProductoVIewWidget>
                                     color: Color(0xFF14181B),
                                     fontSize: 24.0,
                                     fontWeight: FontWeight.w500,
+                                    useGoogleFonts: GoogleFonts.asMap()
+                                        .containsKey(
+                                            FlutterFlowTheme.of(context)
+                                                .headlineSmallFamily),
                                   ),
                             ),
                             count: _model.countControllerValue ??= 1,
@@ -462,6 +476,9 @@ class _ProductoVIewWidgetState extends State<ProductoVIewWidget>
                                   color: Colors.white,
                                   fontSize: 16.0,
                                   fontWeight: FontWeight.w500,
+                                  useGoogleFonts: GoogleFonts.asMap()
+                                      .containsKey(FlutterFlowTheme.of(context)
+                                          .titleSmallFamily),
                                 ),
                         elevation: 2.0,
                         borderSide: BorderSide(

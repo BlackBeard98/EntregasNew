@@ -98,6 +98,8 @@ class _SeleccionarLocWidgetState extends State<SeleccionarLocWidget> {
                   color: Color(0xFF15161E),
                   fontSize: 24.0,
                   fontWeight: FontWeight.w500,
+                  useGoogleFonts: GoogleFonts.asMap().containsKey(
+                      FlutterFlowTheme.of(context).headlineMediumFamily),
                 ),
           ),
           actions: [
@@ -216,6 +218,12 @@ class _SeleccionarLocWidgetState extends State<SeleccionarLocWidget> {
                                               color: Color(0xFF14181B),
                                               fontSize: 22.0,
                                               fontWeight: FontWeight.w500,
+                                              useGoogleFonts: GoogleFonts
+                                                      .asMap()
+                                                  .containsKey(
+                                                      FlutterFlowTheme.of(
+                                                              context)
+                                                          .titleLargeFamily),
                                             ),
                                       ),
                                     ),
@@ -333,9 +341,14 @@ class _SeleccionarLocWidgetState extends State<SeleccionarLocWidget> {
                                                                   .bodyMedium
                                                                   .override(
                                                                     fontFamily:
-                                                                        'Readex Pro',
+                                                                        FlutterFlowTheme.of(context)
+                                                                            .bodyMediumFamily,
                                                                     color: Colors
                                                                         .black,
+                                                                    useGoogleFonts: GoogleFonts
+                                                                            .asMap()
+                                                                        .containsKey(
+                                                                            FlutterFlowTheme.of(context).bodyMediumFamily),
                                                                   ),
                                                           hintText:
                                                               FFLocalizations.of(
@@ -490,9 +503,14 @@ class _SeleccionarLocWidgetState extends State<SeleccionarLocWidget> {
                                                                   .bodyMedium
                                                                   .override(
                                                                     fontFamily:
-                                                                        'Readex Pro',
+                                                                        FlutterFlowTheme.of(context)
+                                                                            .bodyMediumFamily,
                                                                     color: Colors
                                                                         .black,
+                                                                    useGoogleFonts: GoogleFonts
+                                                                            .asMap()
+                                                                        .containsKey(
+                                                                            FlutterFlowTheme.of(context).bodyMediumFamily),
                                                                   ),
                                                           hintText:
                                                               FFLocalizations.of(
@@ -605,8 +623,16 @@ class _SeleccionarLocWidgetState extends State<SeleccionarLocWidget> {
                                                           .titleSmall
                                                           .override(
                                                             fontFamily:
-                                                                'Readex Pro',
+                                                                FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .titleSmallFamily,
                                                             color: Colors.white,
+                                                            useGoogleFonts: GoogleFonts
+                                                                    .asMap()
+                                                                .containsKey(
+                                                                    FlutterFlowTheme.of(
+                                                                            context)
+                                                                        .titleSmallFamily),
                                                           ),
                                                   elevation: 3.0,
                                                   borderSide: BorderSide(

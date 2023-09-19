@@ -114,6 +114,9 @@ class _Header1WidgetState extends State<Header1Widget> {
                                   color: Colors.white,
                                   fontSize: 36.0,
                                   fontWeight: FontWeight.w600,
+                                  useGoogleFonts: GoogleFonts.asMap()
+                                      .containsKey(FlutterFlowTheme.of(context)
+                                          .displaySmallFamily),
                                 ),
                           ),
                         ],
@@ -137,6 +140,9 @@ class _Header1WidgetState extends State<Header1Widget> {
                                   color: Color(0xB3FFFFFF),
                                   fontSize: 22.0,
                                   fontWeight: FontWeight.w100,
+                                  useGoogleFonts: GoogleFonts.asMap()
+                                      .containsKey(FlutterFlowTheme.of(context)
+                                          .headlineMediumFamily),
                                 ),
                           ),
                         ],
@@ -206,6 +212,10 @@ class _Header1WidgetState extends State<Header1Widget> {
                                         color: Color(0xFF57636C),
                                         fontSize: 14.0,
                                         fontWeight: FontWeight.normal,
+                                        useGoogleFonts: GoogleFonts.asMap()
+                                            .containsKey(
+                                                FlutterFlowTheme.of(context)
+                                                    .bodyMediumFamily),
                                       ),
                                   maxLines: null,
                                   validator: _model.textControllerValidator
@@ -236,6 +246,10 @@ class _Header1WidgetState extends State<Header1Widget> {
                                         color: Colors.white,
                                         fontSize: 16.0,
                                         fontWeight: FontWeight.normal,
+                                        useGoogleFonts: GoogleFonts.asMap()
+                                            .containsKey(
+                                                FlutterFlowTheme.of(context)
+                                                    .titleSmallFamily),
                                       ),
                                   elevation: 2.0,
                                   borderSide: BorderSide(

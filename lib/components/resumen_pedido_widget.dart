@@ -129,6 +129,9 @@ class _ResumenPedidoWidgetState extends State<ResumenPedidoWidget> {
                                 color: Color(0xFF14181B),
                                 fontSize: 24.0,
                                 fontWeight: FontWeight.w500,
+                                useGoogleFonts: GoogleFonts.asMap().containsKey(
+                                    FlutterFlowTheme.of(context)
+                                        .headlineSmallFamily),
                               ),
                         ),
                       ),
@@ -139,13 +142,17 @@ class _ResumenPedidoWidgetState extends State<ResumenPedidoWidget> {
                           '\$ ${ShopGroup.orderidCall.orderNumber(
                                 checkoutBottomSheetOrderidResponse.jsonBody,
                               ).toString()}',
-                          style:
-                              FlutterFlowTheme.of(context).bodyLarge.override(
-                                    fontFamily: 'Plus Jakarta Sans',
-                                    color: Color(0xFF14181B),
-                                    fontSize: 16.0,
-                                    fontWeight: FontWeight.normal,
-                                  ),
+                          style: FlutterFlowTheme.of(context)
+                              .bodyLarge
+                              .override(
+                                fontFamily: 'Plus Jakarta Sans',
+                                color: Color(0xFF14181B),
+                                fontSize: 16.0,
+                                fontWeight: FontWeight.normal,
+                                useGoogleFonts: GoogleFonts.asMap().containsKey(
+                                    FlutterFlowTheme.of(context)
+                                        .bodyLargeFamily),
+                              ),
                         ),
                       ),
                       Padding(
@@ -163,10 +170,15 @@ class _ResumenPedidoWidgetState extends State<ResumenPedidoWidget> {
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(
-                                      fontFamily: 'Readex Pro',
+                                      fontFamily: FlutterFlowTheme.of(context)
+                                          .bodyMediumFamily,
                                       color:
                                           FlutterFlowTheme.of(context).primary,
                                       fontWeight: FontWeight.bold,
+                                      useGoogleFonts: GoogleFonts.asMap()
+                                          .containsKey(
+                                              FlutterFlowTheme.of(context)
+                                                  .bodyMediumFamily),
                                     ),
                               ),
                               TextSpan(
@@ -194,6 +206,8 @@ class _ResumenPedidoWidgetState extends State<ResumenPedidoWidget> {
                             color: Color(0xFF57636C),
                             fontSize: 14.0,
                             fontWeight: FontWeight.normal,
+                            useGoogleFonts: GoogleFonts.asMap().containsKey(
+                                FlutterFlowTheme.of(context).labelMediumFamily),
                           ),
                     ),
                   ),
@@ -306,6 +320,12 @@ class _ResumenPedidoWidgetState extends State<ResumenPedidoWidget> {
                                                         fontSize: 16.0,
                                                         fontWeight:
                                                             FontWeight.normal,
+                                                        useGoogleFonts: GoogleFonts
+                                                                .asMap()
+                                                            .containsKey(
+                                                                FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .bodyLargeFamily),
                                                       ),
                                                 ),
                                                 Expanded(
@@ -332,6 +352,11 @@ class _ResumenPedidoWidgetState extends State<ResumenPedidoWidget> {
                                                                 fontWeight:
                                                                     FontWeight
                                                                         .normal,
+                                                                useGoogleFonts: GoogleFonts
+                                                                        .asMap()
+                                                                    .containsKey(
+                                                                        FlutterFlowTheme.of(context)
+                                                                            .labelSmallFamily),
                                                               ),
                                                     ),
                                                   ),
@@ -353,6 +378,12 @@ class _ResumenPedidoWidgetState extends State<ResumenPedidoWidget> {
                                                 color: Color(0xFF14181B),
                                                 fontSize: 14.0,
                                                 fontWeight: FontWeight.normal,
+                                                useGoogleFonts: GoogleFonts
+                                                        .asMap()
+                                                    .containsKey(
+                                                        FlutterFlowTheme.of(
+                                                                context)
+                                                            .bodyMediumFamily),
                                               ),
                                         ),
                                       ],
@@ -386,6 +417,10 @@ class _ResumenPedidoWidgetState extends State<ResumenPedidoWidget> {
                                     color: Color(0xFF14181B),
                                     fontSize: 12.0,
                                     fontWeight: FontWeight.bold,
+                                    useGoogleFonts: GoogleFonts.asMap()
+                                        .containsKey(
+                                            FlutterFlowTheme.of(context)
+                                                .bodySmallFamily),
                                   ),
                             ),
                           ],
@@ -409,6 +444,10 @@ class _ResumenPedidoWidgetState extends State<ResumenPedidoWidget> {
                                     color: Color(0xFF57636C),
                                     fontSize: 14.0,
                                     fontWeight: FontWeight.normal,
+                                    useGoogleFonts: GoogleFonts.asMap()
+                                        .containsKey(
+                                            FlutterFlowTheme.of(context)
+                                                .labelMediumFamily),
                                   ),
                             ),
                             Text(
@@ -423,6 +462,10 @@ class _ResumenPedidoWidgetState extends State<ResumenPedidoWidget> {
                                     color: Color(0xFF14181B),
                                     fontSize: 16.0,
                                     fontWeight: FontWeight.normal,
+                                    useGoogleFonts: GoogleFonts.asMap()
+                                        .containsKey(
+                                            FlutterFlowTheme.of(context)
+                                                .bodyLargeFamily),
                                   ),
                             ),
                           ],
@@ -446,6 +489,10 @@ class _ResumenPedidoWidgetState extends State<ResumenPedidoWidget> {
                                     color: Color(0xFF57636C),
                                     fontSize: 14.0,
                                     fontWeight: FontWeight.normal,
+                                    useGoogleFonts: GoogleFonts.asMap()
+                                        .containsKey(
+                                            FlutterFlowTheme.of(context)
+                                                .labelMediumFamily),
                                   ),
                             ),
                             Container(
@@ -668,6 +715,10 @@ class _ResumenPedidoWidgetState extends State<ResumenPedidoWidget> {
                                           }(),
                                           fontSize: 14.0,
                                           fontWeight: FontWeight.w500,
+                                          useGoogleFonts: GoogleFonts.asMap()
+                                              .containsKey(
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyMediumFamily),
                                         ),
                                   ),
                                 ),
@@ -697,6 +748,10 @@ class _ResumenPedidoWidgetState extends State<ResumenPedidoWidget> {
                                         color: Color(0xFF57636C),
                                         fontSize: 18.0,
                                         fontWeight: FontWeight.normal,
+                                        useGoogleFonts: GoogleFonts.asMap()
+                                            .containsKey(
+                                                FlutterFlowTheme.of(context)
+                                                    .titleMediumFamily),
                                       ),
                                 ),
                                 FlutterFlowIconButton(
@@ -727,6 +782,10 @@ class _ResumenPedidoWidgetState extends State<ResumenPedidoWidget> {
                                     color: Color(0xFF14181B),
                                     fontSize: 36.0,
                                     fontWeight: FontWeight.w600,
+                                    useGoogleFonts: GoogleFonts.asMap()
+                                        .containsKey(
+                                            FlutterFlowTheme.of(context)
+                                                .displaySmallFamily),
                                   ),
                             ),
                           ],

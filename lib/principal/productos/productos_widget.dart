@@ -101,6 +101,8 @@ class _ProductosWidgetState extends State<ProductosWidget> {
                   color: Color(0xFF15161E),
                   fontSize: 24.0,
                   fontWeight: FontWeight.w500,
+                  useGoogleFonts: GoogleFonts.asMap().containsKey(
+                      FlutterFlowTheme.of(context).headlineMediumFamily),
                 ),
           ),
           actions: [
@@ -180,6 +182,10 @@ class _ProductosWidgetState extends State<ProductosWidget> {
                                       color: Color(0xFF606A85),
                                       fontSize: 14.0,
                                       fontWeight: FontWeight.w500,
+                                      useGoogleFonts: GoogleFonts.asMap()
+                                          .containsKey(
+                                              FlutterFlowTheme.of(context)
+                                                  .labelMediumFamily),
                                     ),
                                 hintStyle: FlutterFlowTheme.of(context)
                                     .labelMedium
@@ -188,6 +194,10 @@ class _ProductosWidgetState extends State<ProductosWidget> {
                                       color: Color(0xFF606A85),
                                       fontSize: 14.0,
                                       fontWeight: FontWeight.w500,
+                                      useGoogleFonts: GoogleFonts.asMap()
+                                          .containsKey(
+                                              FlutterFlowTheme.of(context)
+                                                  .labelMediumFamily),
                                     ),
                                 enabledBorder: OutlineInputBorder(
                                   borderSide: BorderSide(
@@ -231,6 +241,10 @@ class _ProductosWidgetState extends State<ProductosWidget> {
                                     color: Color(0xFF15161E),
                                     fontSize: 14.0,
                                     fontWeight: FontWeight.w500,
+                                    useGoogleFonts: GoogleFonts.asMap()
+                                        .containsKey(
+                                            FlutterFlowTheme.of(context)
+                                                .bodyMediumFamily),
                                   ),
                               cursorColor: Color(0xFF6F61EF),
                               validator: _model.textControllerValidator
@@ -349,8 +363,16 @@ class _ProductosWidgetState extends State<ProductosWidget> {
                                         textStyle: FlutterFlowTheme.of(context)
                                             .titleSmall
                                             .override(
-                                              fontFamily: 'Readex Pro',
+                                              fontFamily:
+                                                  FlutterFlowTheme.of(context)
+                                                      .titleSmallFamily,
                                               color: Colors.white,
+                                              useGoogleFonts: GoogleFonts
+                                                      .asMap()
+                                                  .containsKey(
+                                                      FlutterFlowTheme.of(
+                                                              context)
+                                                          .titleSmallFamily),
                                             ),
                                         elevation: 3.0,
                                         borderSide: BorderSide(
@@ -384,6 +406,10 @@ class _ProductosWidgetState extends State<ProductosWidget> {
                                     color: Color(0xFF606A85),
                                     fontSize: 14.0,
                                     fontWeight: FontWeight.w500,
+                                    useGoogleFonts: GoogleFonts.asMap()
+                                        .containsKey(
+                                            FlutterFlowTheme.of(context)
+                                                .labelMediumFamily),
                                   ),
                             ),
                           ),
@@ -555,11 +581,13 @@ class _ProductosWidgetState extends State<ProductosWidget> {
                                                                         .headlineLarge
                                                                         .override(
                                                                           fontFamily:
-                                                                              'Outfit',
+                                                                              FlutterFlowTheme.of(context).headlineLargeFamily,
                                                                           color:
                                                                               Colors.black,
                                                                           fontWeight:
                                                                               FontWeight.w500,
+                                                                          useGoogleFonts:
+                                                                              GoogleFonts.asMap().containsKey(FlutterFlowTheme.of(context).headlineLargeFamily),
                                                                         ),
                                                                   ),
                                                                 ),
@@ -582,9 +610,11 @@ class _ProductosWidgetState extends State<ProductosWidget> {
                                                                         .headlineMedium
                                                                         .override(
                                                                           fontFamily:
-                                                                              'Outfit',
+                                                                              FlutterFlowTheme.of(context).headlineMediumFamily,
                                                                           color:
                                                                               Colors.black,
+                                                                          useGoogleFonts:
+                                                                              GoogleFonts.asMap().containsKey(FlutterFlowTheme.of(context).headlineMediumFamily),
                                                                         ),
                                                                   ),
                                                                 ),
@@ -607,9 +637,11 @@ class _ProductosWidgetState extends State<ProductosWidget> {
                                                                         .headlineSmall
                                                                         .override(
                                                                           fontFamily:
-                                                                              'Outfit',
+                                                                              FlutterFlowTheme.of(context).headlineSmallFamily,
                                                                           color:
                                                                               Colors.black,
+                                                                          useGoogleFonts:
+                                                                              GoogleFonts.asMap().containsKey(FlutterFlowTheme.of(context).headlineSmallFamily),
                                                                         ),
                                                                   ),
                                                                 ),
@@ -659,8 +691,16 @@ class _ProductosWidgetState extends State<ProductosWidget> {
                                                       .titleSmall
                                                       .override(
                                                         fontFamily:
-                                                            'Readex Pro',
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .titleSmallFamily,
                                                         color: Colors.white,
+                                                        useGoogleFonts: GoogleFonts
+                                                                .asMap()
+                                                            .containsKey(
+                                                                FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .titleSmallFamily),
                                                       ),
                                               elevation: 3.0,
                                               borderSide: BorderSide(

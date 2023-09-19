@@ -56,6 +56,8 @@ class _Checkout6WidgetState extends State<Checkout6Widget> {
                   color: Color(0xFF0F1113),
                   fontSize: 32.0,
                   fontWeight: FontWeight.w500,
+                  useGoogleFonts: GoogleFonts.asMap().containsKey(
+                      FlutterFlowTheme.of(context).displaySmallFamily),
                 ),
           ),
           actions: [],
@@ -85,6 +87,9 @@ class _Checkout6WidgetState extends State<Checkout6Widget> {
                                   color: Color(0xFF57636C),
                                   fontSize: 14.0,
                                   fontWeight: FontWeight.w500,
+                                  useGoogleFonts: GoogleFonts.asMap()
+                                      .containsKey(FlutterFlowTheme.of(context)
+                                          .labelMediumFamily),
                                 ),
                       ),
                     ),
@@ -166,6 +171,12 @@ class _Checkout6WidgetState extends State<Checkout6Widget> {
                                                           fontSize: 18.0,
                                                           fontWeight:
                                                               FontWeight.w500,
+                                                          useGoogleFonts: GoogleFonts
+                                                                  .asMap()
+                                                              .containsKey(
+                                                                  FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .titleLargeFamily),
                                                         ),
                                               ),
                                             ),
@@ -183,6 +194,12 @@ class _Checkout6WidgetState extends State<Checkout6Widget> {
                                                     color: Color(0xFF57636C),
                                                     fontSize: 14.0,
                                                     fontWeight: FontWeight.w500,
+                                                    useGoogleFonts: GoogleFonts
+                                                            .asMap()
+                                                        .containsKey(
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .labelMediumFamily),
                                                   ),
                                             ),
                                             Padding(
@@ -204,6 +221,12 @@ class _Checkout6WidgetState extends State<Checkout6Widget> {
                                                           fontSize: 12.0,
                                                           fontWeight:
                                                               FontWeight.w500,
+                                                          useGoogleFonts: GoogleFonts
+                                                                  .asMap()
+                                                              .containsKey(
+                                                                  FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .labelSmallFamily),
                                                         ),
                                               ),
                                             ),
@@ -313,6 +336,12 @@ class _Checkout6WidgetState extends State<Checkout6Widget> {
                                                           fontSize: 18.0,
                                                           fontWeight:
                                                               FontWeight.w500,
+                                                          useGoogleFonts: GoogleFonts
+                                                                  .asMap()
+                                                              .containsKey(
+                                                                  FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .titleLargeFamily),
                                                         ),
                                               ),
                                             ),
@@ -330,6 +359,12 @@ class _Checkout6WidgetState extends State<Checkout6Widget> {
                                                     color: Color(0xFF57636C),
                                                     fontSize: 14.0,
                                                     fontWeight: FontWeight.w500,
+                                                    useGoogleFonts: GoogleFonts
+                                                            .asMap()
+                                                        .containsKey(
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .labelMediumFamily),
                                                   ),
                                             ),
                                             Padding(
@@ -351,6 +386,12 @@ class _Checkout6WidgetState extends State<Checkout6Widget> {
                                                           fontSize: 12.0,
                                                           fontWeight:
                                                               FontWeight.w500,
+                                                          useGoogleFonts: GoogleFonts
+                                                                  .asMap()
+                                                              .containsKey(
+                                                                  FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .labelSmallFamily),
                                                         ),
                                               ),
                                             ),
@@ -460,6 +501,12 @@ class _Checkout6WidgetState extends State<Checkout6Widget> {
                                                           fontSize: 18.0,
                                                           fontWeight:
                                                               FontWeight.w500,
+                                                          useGoogleFonts: GoogleFonts
+                                                                  .asMap()
+                                                              .containsKey(
+                                                                  FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .titleLargeFamily),
                                                         ),
                                               ),
                                             ),
@@ -477,6 +524,12 @@ class _Checkout6WidgetState extends State<Checkout6Widget> {
                                                     color: Color(0xFF57636C),
                                                     fontSize: 14.0,
                                                     fontWeight: FontWeight.w500,
+                                                    useGoogleFonts: GoogleFonts
+                                                            .asMap()
+                                                        .containsKey(
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .labelMediumFamily),
                                                   ),
                                             ),
                                             Padding(
@@ -498,6 +551,12 @@ class _Checkout6WidgetState extends State<Checkout6Widget> {
                                                           fontSize: 12.0,
                                                           fontWeight:
                                                               FontWeight.w500,
+                                                          useGoogleFonts: GoogleFonts
+                                                                  .asMap()
+                                                              .containsKey(
+                                                                  FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .labelSmallFamily),
                                                         ),
                                               ),
                                             ),
@@ -562,6 +621,10 @@ class _Checkout6WidgetState extends State<Checkout6Widget> {
                                         color: Color(0xFF0F1113),
                                         fontSize: 14.0,
                                         fontWeight: FontWeight.w500,
+                                        useGoogleFonts: GoogleFonts.asMap()
+                                            .containsKey(
+                                                FlutterFlowTheme.of(context)
+                                                    .bodyMediumFamily),
                                       ),
                                 ),
                               ],
@@ -585,6 +648,10 @@ class _Checkout6WidgetState extends State<Checkout6Widget> {
                                         color: Color(0xFF57636C),
                                         fontSize: 14.0,
                                         fontWeight: FontWeight.w500,
+                                        useGoogleFonts: GoogleFonts.asMap()
+                                            .containsKey(
+                                                FlutterFlowTheme.of(context)
+                                                    .labelMediumFamily),
                                       ),
                                 ),
                                 Text(
@@ -598,6 +665,10 @@ class _Checkout6WidgetState extends State<Checkout6Widget> {
                                         color: Color(0xFF0F1113),
                                         fontSize: 16.0,
                                         fontWeight: FontWeight.w500,
+                                        useGoogleFonts: GoogleFonts.asMap()
+                                            .containsKey(
+                                                FlutterFlowTheme.of(context)
+                                                    .bodyLargeFamily),
                                       ),
                                 ),
                               ],
@@ -621,6 +692,10 @@ class _Checkout6WidgetState extends State<Checkout6Widget> {
                                         color: Color(0xFF57636C),
                                         fontSize: 14.0,
                                         fontWeight: FontWeight.w500,
+                                        useGoogleFonts: GoogleFonts.asMap()
+                                            .containsKey(
+                                                FlutterFlowTheme.of(context)
+                                                    .labelMediumFamily),
                                       ),
                                 ),
                                 Text(
@@ -634,6 +709,10 @@ class _Checkout6WidgetState extends State<Checkout6Widget> {
                                         color: Color(0xFF0F1113),
                                         fontSize: 16.0,
                                         fontWeight: FontWeight.w500,
+                                        useGoogleFonts: GoogleFonts.asMap()
+                                            .containsKey(
+                                                FlutterFlowTheme.of(context)
+                                                    .bodyLargeFamily),
                                       ),
                                 ),
                               ],
@@ -660,6 +739,10 @@ class _Checkout6WidgetState extends State<Checkout6Widget> {
                                             color: Color(0xFF57636C),
                                             fontSize: 14.0,
                                             fontWeight: FontWeight.w500,
+                                            useGoogleFonts: GoogleFonts.asMap()
+                                                .containsKey(
+                                                    FlutterFlowTheme.of(context)
+                                                        .labelMediumFamily),
                                           ),
                                     ),
                                     FlutterFlowIconButton(
@@ -689,6 +772,10 @@ class _Checkout6WidgetState extends State<Checkout6Widget> {
                                         color: Color(0xFF0F1113),
                                         fontSize: 32.0,
                                         fontWeight: FontWeight.w500,
+                                        useGoogleFonts: GoogleFonts.asMap()
+                                            .containsKey(
+                                                FlutterFlowTheme.of(context)
+                                                    .displaySmallFamily),
                                       ),
                                 ),
                               ],
@@ -732,6 +819,8 @@ class _Checkout6WidgetState extends State<Checkout6Widget> {
                         color: Colors.white,
                         fontSize: 18.0,
                         fontWeight: FontWeight.w500,
+                        useGoogleFonts: GoogleFonts.asMap().containsKey(
+                            FlutterFlowTheme.of(context).titleMediumFamily),
                       ),
                 ),
               ),

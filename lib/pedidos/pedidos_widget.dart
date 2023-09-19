@@ -95,6 +95,9 @@ class _PedidosWidgetState extends State<PedidosWidget> {
                                 color: Color(0xFF15161E),
                                 fontSize: 24.0,
                                 fontWeight: FontWeight.w500,
+                                useGoogleFonts: GoogleFonts.asMap().containsKey(
+                                    FlutterFlowTheme.of(context)
+                                        .headlineMediumFamily),
                               ),
                     ),
                   ),
@@ -111,6 +114,8 @@ class _PedidosWidgetState extends State<PedidosWidget> {
                             color: Color(0xFF606A85),
                             fontSize: 14.0,
                             fontWeight: FontWeight.w500,
+                            useGoogleFonts: GoogleFonts.asMap().containsKey(
+                                FlutterFlowTheme.of(context).labelMediumFamily),
                           ),
                     ),
                   ),
@@ -277,6 +282,12 @@ class _PedidosWidgetState extends State<PedidosWidget> {
                                                           fontSize: 16.0,
                                                           fontWeight:
                                                               FontWeight.w600,
+                                                          useGoogleFonts: GoogleFonts
+                                                                  .asMap()
+                                                              .containsKey(
+                                                                  FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .bodyLargeFamily),
                                                         ),
                                                   ),
                                                 ),
@@ -300,6 +311,12 @@ class _PedidosWidgetState extends State<PedidosWidget> {
                                                         fontSize: 14.0,
                                                         fontWeight:
                                                             FontWeight.w500,
+                                                        useGoogleFonts: GoogleFonts
+                                                                .asMap()
+                                                            .containsKey(
+                                                                FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .labelMediumFamily),
                                                       ),
                                                 ),
                                               ),
@@ -330,6 +347,12 @@ class _PedidosWidgetState extends State<PedidosWidget> {
                                                     color: Color(0xFF15161E),
                                                     fontSize: 22.0,
                                                     fontWeight: FontWeight.bold,
+                                                    useGoogleFonts: GoogleFonts
+                                                            .asMap()
+                                                        .containsKey(
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .headlineSmallFamily),
                                                   ),
                                             ),
                                           ),
@@ -543,6 +566,12 @@ class _PedidosWidgetState extends State<PedidosWidget> {
                                                           fontSize: 14.0,
                                                           fontWeight:
                                                               FontWeight.w500,
+                                                          useGoogleFonts: GoogleFonts
+                                                                  .asMap()
+                                                              .containsKey(
+                                                                  FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .bodyMediumFamily),
                                                         ),
                                                   ),
                                                 ),

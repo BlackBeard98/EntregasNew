@@ -99,6 +99,10 @@ class _TablaWidgetState extends State<TablaWidget> {
                                         color: Color(0xFF14181B),
                                         fontSize: 24.0,
                                         fontWeight: FontWeight.normal,
+                                        useGoogleFonts: GoogleFonts.asMap()
+                                            .containsKey(
+                                                FlutterFlowTheme.of(context)
+                                                    .headlineMediumFamily),
                                       ),
                                 ),
                               ),
@@ -123,6 +127,10 @@ class _TablaWidgetState extends State<TablaWidget> {
                                           color: Color(0xFF14181B),
                                           fontSize: 14.0,
                                           fontWeight: FontWeight.normal,
+                                          useGoogleFonts: GoogleFonts.asMap()
+                                              .containsKey(
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyMediumFamily),
                                         ),
                                   ),
                                 ),
@@ -143,6 +151,10 @@ class _TablaWidgetState extends State<TablaWidget> {
                                     color: Color(0xFF14181B),
                                     fontSize: 12.0,
                                     fontWeight: FontWeight.normal,
+                                    useGoogleFonts: GoogleFonts.asMap()
+                                        .containsKey(
+                                            FlutterFlowTheme.of(context)
+                                                .bodySmallFamily),
                                   ),
                             ),
                           ),
@@ -175,6 +187,10 @@ class _TablaWidgetState extends State<TablaWidget> {
                                     color: Color(0xFF14181B),
                                     fontSize: 12.0,
                                     fontWeight: FontWeight.normal,
+                                    useGoogleFonts: GoogleFonts.asMap()
+                                        .containsKey(
+                                            FlutterFlowTheme.of(context)
+                                                .bodySmallFamily),
                                   ),
                               enabledBorder: OutlineInputBorder(
                                 borderSide: BorderSide(
@@ -217,6 +233,9 @@ class _TablaWidgetState extends State<TablaWidget> {
                                   color: Color(0xFF14181B),
                                   fontSize: 14.0,
                                   fontWeight: FontWeight.normal,
+                                  useGoogleFonts: GoogleFonts.asMap()
+                                      .containsKey(FlutterFlowTheme.of(context)
+                                          .bodyMediumFamily),
                                 ),
                             validator: _model.textControllerValidator
                                 .asValidator(context),
@@ -287,6 +306,10 @@ class _TablaWidgetState extends State<TablaWidget> {
                                         color: Color(0xFF14181B),
                                         fontSize: 12.0,
                                         fontWeight: FontWeight.normal,
+                                        useGoogleFonts: GoogleFonts.asMap()
+                                            .containsKey(
+                                                FlutterFlowTheme.of(context)
+                                                    .bodySmallFamily),
                                       ),
                                 ),
                               ],
@@ -310,6 +333,10 @@ class _TablaWidgetState extends State<TablaWidget> {
                                       color: Color(0xFF14181B),
                                       fontSize: 12.0,
                                       fontWeight: FontWeight.normal,
+                                      useGoogleFonts: GoogleFonts.asMap()
+                                          .containsKey(
+                                              FlutterFlowTheme.of(context)
+                                                  .bodySmallFamily),
                                     ),
                               ),
                             ),
@@ -332,6 +359,10 @@ class _TablaWidgetState extends State<TablaWidget> {
                                       color: Color(0xFF14181B),
                                       fontSize: 12.0,
                                       fontWeight: FontWeight.normal,
+                                      useGoogleFonts: GoogleFonts.asMap()
+                                          .containsKey(
+                                              FlutterFlowTheme.of(context)
+                                                  .bodySmallFamily),
                                     ),
                               ),
                             ),
@@ -348,6 +379,10 @@ class _TablaWidgetState extends State<TablaWidget> {
                                     color: Color(0xFF14181B),
                                     fontSize: 12.0,
                                     fontWeight: FontWeight.normal,
+                                    useGoogleFonts: GoogleFonts.asMap()
+                                        .containsKey(
+                                            FlutterFlowTheme.of(context)
+                                                .bodySmallFamily),
                                   ),
                             ),
                           ),
@@ -368,6 +403,10 @@ class _TablaWidgetState extends State<TablaWidget> {
                                       color: Color(0xFF14181B),
                                       fontSize: 12.0,
                                       fontWeight: FontWeight.normal,
+                                      useGoogleFonts: GoogleFonts.asMap()
+                                          .containsKey(
+                                              FlutterFlowTheme.of(context)
+                                                  .bodySmallFamily),
                                     ),
                               ),
                             ),
@@ -385,6 +424,10 @@ class _TablaWidgetState extends State<TablaWidget> {
                                     color: Color(0xFF14181B),
                                     fontSize: 12.0,
                                     fontWeight: FontWeight.normal,
+                                    useGoogleFonts: GoogleFonts.asMap()
+                                        .containsKey(
+                                            FlutterFlowTheme.of(context)
+                                                .bodySmallFamily),
                                   ),
                             ),
                           ),
@@ -464,6 +507,12 @@ class _TablaWidgetState extends State<TablaWidget> {
                                               color: Color(0xFF14181B),
                                               fontSize: 16.0,
                                               fontWeight: FontWeight.normal,
+                                              useGoogleFonts:
+                                                  GoogleFonts.asMap()
+                                                      .containsKey(
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .bodyLargeFamily),
                                             ),
                                       ),
                                     ],
@@ -498,6 +547,12 @@ class _TablaWidgetState extends State<TablaWidget> {
                                                 color: Color(0xFF14181B),
                                                 fontSize: 14.0,
                                                 fontWeight: FontWeight.normal,
+                                                useGoogleFonts: GoogleFonts
+                                                        .asMap()
+                                                    .containsKey(
+                                                        FlutterFlowTheme.of(
+                                                                context)
+                                                            .bodyMediumFamily),
                                               ),
                                         ),
                                       if (responsiveVisibility(
@@ -520,6 +575,12 @@ class _TablaWidgetState extends State<TablaWidget> {
                                                   color: Color(0xFF14181B),
                                                   fontSize: 12.0,
                                                   fontWeight: FontWeight.normal,
+                                                  useGoogleFonts: GoogleFonts
+                                                          .asMap()
+                                                      .containsKey(
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .bodySmallFamily),
                                                 ),
                                           ),
                                         ),
@@ -545,6 +606,10 @@ class _TablaWidgetState extends State<TablaWidget> {
                                           color: Color(0xFF14181B),
                                           fontSize: 14.0,
                                           fontWeight: FontWeight.normal,
+                                          useGoogleFonts: GoogleFonts.asMap()
+                                              .containsKey(
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyMediumFamily),
                                         ),
                                   ),
                                 ),
@@ -576,6 +641,12 @@ class _TablaWidgetState extends State<TablaWidget> {
                                                 color: Colors.white,
                                                 fontSize: 14.0,
                                                 fontWeight: FontWeight.normal,
+                                                useGoogleFonts: GoogleFonts
+                                                        .asMap()
+                                                    .containsKey(
+                                                        FlutterFlowTheme.of(
+                                                                context)
+                                                            .bodyMediumFamily),
                                               ),
                                         ),
                                       ),
@@ -600,6 +671,10 @@ class _TablaWidgetState extends State<TablaWidget> {
                                           color: Color(0xFF14181B),
                                           fontSize: 22.0,
                                           fontWeight: FontWeight.w500,
+                                          useGoogleFonts: GoogleFonts.asMap()
+                                              .containsKey(
+                                                  FlutterFlowTheme.of(context)
+                                                      .titleLargeFamily),
                                         ),
                                   ),
                                 ),
@@ -697,6 +772,12 @@ class _TablaWidgetState extends State<TablaWidget> {
                                               color: Color(0xFF14181B),
                                               fontSize: 16.0,
                                               fontWeight: FontWeight.normal,
+                                              useGoogleFonts:
+                                                  GoogleFonts.asMap()
+                                                      .containsKey(
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .bodyLargeFamily),
                                             ),
                                       ),
                                     ],
@@ -731,6 +812,12 @@ class _TablaWidgetState extends State<TablaWidget> {
                                                 color: Color(0xFF14181B),
                                                 fontSize: 14.0,
                                                 fontWeight: FontWeight.normal,
+                                                useGoogleFonts: GoogleFonts
+                                                        .asMap()
+                                                    .containsKey(
+                                                        FlutterFlowTheme.of(
+                                                                context)
+                                                            .bodyMediumFamily),
                                               ),
                                         ),
                                       if (responsiveVisibility(
@@ -753,6 +840,12 @@ class _TablaWidgetState extends State<TablaWidget> {
                                                   color: Color(0xFF14181B),
                                                   fontSize: 12.0,
                                                   fontWeight: FontWeight.normal,
+                                                  useGoogleFonts: GoogleFonts
+                                                          .asMap()
+                                                      .containsKey(
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .bodySmallFamily),
                                                 ),
                                           ),
                                         ),
@@ -778,6 +871,10 @@ class _TablaWidgetState extends State<TablaWidget> {
                                           color: Color(0xFF14181B),
                                           fontSize: 14.0,
                                           fontWeight: FontWeight.normal,
+                                          useGoogleFonts: GoogleFonts.asMap()
+                                              .containsKey(
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyMediumFamily),
                                         ),
                                   ),
                                 ),
@@ -809,6 +906,12 @@ class _TablaWidgetState extends State<TablaWidget> {
                                                 color: Colors.white,
                                                 fontSize: 14.0,
                                                 fontWeight: FontWeight.normal,
+                                                useGoogleFonts: GoogleFonts
+                                                        .asMap()
+                                                    .containsKey(
+                                                        FlutterFlowTheme.of(
+                                                                context)
+                                                            .bodyMediumFamily),
                                               ),
                                         ),
                                       ),
@@ -833,6 +936,10 @@ class _TablaWidgetState extends State<TablaWidget> {
                                           color: Color(0xFF14181B),
                                           fontSize: 22.0,
                                           fontWeight: FontWeight.w500,
+                                          useGoogleFonts: GoogleFonts.asMap()
+                                              .containsKey(
+                                                  FlutterFlowTheme.of(context)
+                                                      .titleLargeFamily),
                                         ),
                                   ),
                                 ),
@@ -930,6 +1037,12 @@ class _TablaWidgetState extends State<TablaWidget> {
                                               color: Color(0xFF14181B),
                                               fontSize: 16.0,
                                               fontWeight: FontWeight.normal,
+                                              useGoogleFonts:
+                                                  GoogleFonts.asMap()
+                                                      .containsKey(
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .bodyLargeFamily),
                                             ),
                                       ),
                                     ],
@@ -964,6 +1077,12 @@ class _TablaWidgetState extends State<TablaWidget> {
                                                 color: Color(0xFF14181B),
                                                 fontSize: 14.0,
                                                 fontWeight: FontWeight.normal,
+                                                useGoogleFonts: GoogleFonts
+                                                        .asMap()
+                                                    .containsKey(
+                                                        FlutterFlowTheme.of(
+                                                                context)
+                                                            .bodyMediumFamily),
                                               ),
                                         ),
                                       if (responsiveVisibility(
@@ -986,6 +1105,12 @@ class _TablaWidgetState extends State<TablaWidget> {
                                                   color: Color(0xFF14181B),
                                                   fontSize: 12.0,
                                                   fontWeight: FontWeight.normal,
+                                                  useGoogleFonts: GoogleFonts
+                                                          .asMap()
+                                                      .containsKey(
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .bodySmallFamily),
                                                 ),
                                           ),
                                         ),
@@ -1011,6 +1136,10 @@ class _TablaWidgetState extends State<TablaWidget> {
                                           color: Color(0xFF14181B),
                                           fontSize: 14.0,
                                           fontWeight: FontWeight.normal,
+                                          useGoogleFonts: GoogleFonts.asMap()
+                                              .containsKey(
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyMediumFamily),
                                         ),
                                   ),
                                 ),
@@ -1042,6 +1171,12 @@ class _TablaWidgetState extends State<TablaWidget> {
                                                 color: Colors.white,
                                                 fontSize: 14.0,
                                                 fontWeight: FontWeight.normal,
+                                                useGoogleFonts: GoogleFonts
+                                                        .asMap()
+                                                    .containsKey(
+                                                        FlutterFlowTheme.of(
+                                                                context)
+                                                            .bodyMediumFamily),
                                               ),
                                         ),
                                       ),
@@ -1066,6 +1201,10 @@ class _TablaWidgetState extends State<TablaWidget> {
                                           color: Color(0xFF14181B),
                                           fontSize: 22.0,
                                           fontWeight: FontWeight.w500,
+                                          useGoogleFonts: GoogleFonts.asMap()
+                                              .containsKey(
+                                                  FlutterFlowTheme.of(context)
+                                                      .titleLargeFamily),
                                         ),
                                   ),
                                 ),

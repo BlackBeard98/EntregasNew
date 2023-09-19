@@ -104,6 +104,8 @@ class _ProductosCopyWidgetState extends State<ProductosCopyWidget> {
                       color: Color(0xFF15161E),
                       fontSize: 24.0,
                       fontWeight: FontWeight.w500,
+                      useGoogleFonts: GoogleFonts.asMap().containsKey(
+                          FlutterFlowTheme.of(context).headlineMediumFamily),
                     ),
               ),
               RichText(
@@ -115,9 +117,12 @@ class _ProductosCopyWidgetState extends State<ProductosCopyWidget> {
                         'zhxta0cf' /* Comprando en  */,
                       ),
                       style: FlutterFlowTheme.of(context).bodyMedium.override(
-                            fontFamily: 'Readex Pro',
+                            fontFamily:
+                                FlutterFlowTheme.of(context).bodyMediumFamily,
                             color: FlutterFlowTheme.of(context).primary,
                             fontWeight: FontWeight.bold,
+                            useGoogleFonts: GoogleFonts.asMap().containsKey(
+                                FlutterFlowTheme.of(context).bodyMediumFamily),
                           ),
                     ),
                     TextSpan(
@@ -186,6 +191,9 @@ class _ProductosCopyWidgetState extends State<ProductosCopyWidget> {
                                   color: Color(0xFF606A85),
                                   fontSize: 14.0,
                                   fontWeight: FontWeight.w500,
+                                  useGoogleFonts: GoogleFonts.asMap()
+                                      .containsKey(FlutterFlowTheme.of(context)
+                                          .labelMediumFamily),
                                 ),
                         hintStyle:
                             FlutterFlowTheme.of(context).labelMedium.override(
@@ -193,6 +201,9 @@ class _ProductosCopyWidgetState extends State<ProductosCopyWidget> {
                                   color: Color(0xFF606A85),
                                   fontSize: 14.0,
                                   fontWeight: FontWeight.w500,
+                                  useGoogleFonts: GoogleFonts.asMap()
+                                      .containsKey(FlutterFlowTheme.of(context)
+                                          .labelMediumFamily),
                                 ),
                         enabledBorder: OutlineInputBorder(
                           borderSide: BorderSide(
@@ -234,6 +245,8 @@ class _ProductosCopyWidgetState extends State<ProductosCopyWidget> {
                             color: Color(0xFF15161E),
                             fontSize: 14.0,
                             fontWeight: FontWeight.w500,
+                            useGoogleFonts: GoogleFonts.asMap().containsKey(
+                                FlutterFlowTheme.of(context).bodyMediumFamily),
                           ),
                       cursorColor: Color(0xFF6F61EF),
                       validator:
@@ -341,8 +354,13 @@ class _ProductosCopyWidgetState extends State<ProductosCopyWidget> {
                                 textStyle: FlutterFlowTheme.of(context)
                                     .titleSmall
                                     .override(
-                                      fontFamily: 'Readex Pro',
+                                      fontFamily: FlutterFlowTheme.of(context)
+                                          .titleSmallFamily,
                                       color: Colors.white,
+                                      useGoogleFonts: GoogleFonts.asMap()
+                                          .containsKey(
+                                              FlutterFlowTheme.of(context)
+                                                  .titleSmallFamily),
                                     ),
                                 elevation: 3.0,
                                 borderSide: BorderSide(
@@ -373,6 +391,8 @@ class _ProductosCopyWidgetState extends State<ProductosCopyWidget> {
                             color: Color(0xFF606A85),
                             fontSize: 14.0,
                             fontWeight: FontWeight.w500,
+                            useGoogleFonts: GoogleFonts.asMap().containsKey(
+                                FlutterFlowTheme.of(context).labelMediumFamily),
                           ),
                     ),
                   ),
@@ -511,10 +531,16 @@ class _ProductosCopyWidgetState extends State<ProductosCopyWidget> {
                                                                   .of(context)
                                                               .headlineLarge
                                                               .override(
-                                                                fontFamily:
-                                                                    'Outfit',
+                                                                fontFamily: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .headlineLargeFamily,
                                                                 color: Colors
                                                                     .black,
+                                                                useGoogleFonts: GoogleFonts
+                                                                        .asMap()
+                                                                    .containsKey(
+                                                                        FlutterFlowTheme.of(context)
+                                                                            .headlineLargeFamily),
                                                               ),
                                                         ),
                                                       ),
@@ -537,10 +563,16 @@ class _ProductosCopyWidgetState extends State<ProductosCopyWidget> {
                                                                     .of(context)
                                                                 .headlineMedium
                                                                 .override(
-                                                                  fontFamily:
-                                                                      'Outfit',
+                                                                  fontFamily: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .headlineMediumFamily,
                                                                   color: Colors
                                                                       .black,
+                                                                  useGoogleFonts: GoogleFonts
+                                                                          .asMap()
+                                                                      .containsKey(
+                                                                          FlutterFlowTheme.of(context)
+                                                                              .headlineMediumFamily),
                                                                 ),
                                                           ),
                                                         ),
@@ -563,10 +595,16 @@ class _ProductosCopyWidgetState extends State<ProductosCopyWidget> {
                                                                     .of(context)
                                                                 .headlineSmall
                                                                 .override(
-                                                                  fontFamily:
-                                                                      'Outfit',
+                                                                  fontFamily: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .headlineSmallFamily,
                                                                   color: Colors
                                                                       .black,
+                                                                  useGoogleFonts: GoogleFonts
+                                                                          .asMap()
+                                                                      .containsKey(
+                                                                          FlutterFlowTheme.of(context)
+                                                                              .headlineSmallFamily),
                                                                 ),
                                                           ),
                                                         ),
@@ -612,8 +650,14 @@ class _ProductosCopyWidgetState extends State<ProductosCopyWidget> {
                                       textStyle: FlutterFlowTheme.of(context)
                                           .titleSmall
                                           .override(
-                                            fontFamily: 'Readex Pro',
+                                            fontFamily:
+                                                FlutterFlowTheme.of(context)
+                                                    .titleSmallFamily,
                                             color: Colors.white,
+                                            useGoogleFonts: GoogleFonts.asMap()
+                                                .containsKey(
+                                                    FlutterFlowTheme.of(context)
+                                                        .titleSmallFamily),
                                           ),
                                       elevation: 3.0,
                                       borderSide: BorderSide(

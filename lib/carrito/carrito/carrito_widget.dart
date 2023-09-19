@@ -120,6 +120,8 @@ class _CarritoWidgetState extends State<CarritoWidget> {
                     color: Color(0xFF15161E),
                     fontSize: 24.0,
                     fontWeight: FontWeight.w500,
+                    useGoogleFonts: GoogleFonts.asMap().containsKey(
+                        FlutterFlowTheme.of(context).headlineMediumFamily),
                   ),
             ),
             actions: [
@@ -244,6 +246,12 @@ class _CarritoWidgetState extends State<CarritoWidget> {
                                                           fontSize: 22.0,
                                                           fontWeight:
                                                               FontWeight.w500,
+                                                          useGoogleFonts: GoogleFonts
+                                                                  .asMap()
+                                                              .containsKey(
+                                                                  FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .titleLargeFamily),
                                                         ),
                                               ),
                                             ),
@@ -329,8 +337,16 @@ class _CarritoWidgetState extends State<CarritoWidget> {
                                                         .titleSmall
                                                         .override(
                                                           fontFamily:
-                                                              'Readex Pro',
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .titleSmallFamily,
                                                           color: Colors.white,
+                                                          useGoogleFonts: GoogleFonts
+                                                                  .asMap()
+                                                              .containsKey(
+                                                                  FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .titleSmallFamily),
                                                         ),
                                                 elevation: 3.0,
                                                 borderSide: BorderSide(
@@ -358,6 +374,12 @@ class _CarritoWidgetState extends State<CarritoWidget> {
                                               color: Color(0xFF57636C),
                                               fontSize: 14.0,
                                               fontWeight: FontWeight.normal,
+                                              useGoogleFonts: GoogleFonts
+                                                      .asMap()
+                                                  .containsKey(
+                                                      FlutterFlowTheme.of(
+                                                              context)
+                                                          .labelMediumFamily),
                                             ),
                                       ),
                                     ),
@@ -500,6 +522,7 @@ class _CarritoWidgetState extends State<CarritoWidget> {
                                                                               color: Color(0xFF14181B),
                                                                               fontSize: 22.0,
                                                                               fontWeight: FontWeight.w500,
+                                                                              useGoogleFonts: GoogleFonts.asMap().containsKey(FlutterFlowTheme.of(context).titleLargeFamily),
                                                                             ),
                                                                       ),
                                                                     ),
@@ -524,6 +547,7 @@ class _CarritoWidgetState extends State<CarritoWidget> {
                                                                               color: Color(0xFF14181B),
                                                                               fontSize: 22.0,
                                                                               fontWeight: FontWeight.w500,
+                                                                              useGoogleFonts: GoogleFonts.asMap().containsKey(FlutterFlowTheme.of(context).titleLargeFamily),
                                                                             ),
                                                                       ),
                                                                     ),
@@ -561,6 +585,7 @@ class _CarritoWidgetState extends State<CarritoWidget> {
                                                                                 color: Color(0xFF57636C),
                                                                                 fontSize: 12.0,
                                                                                 fontWeight: FontWeight.normal,
+                                                                                useGoogleFonts: GoogleFonts.asMap().containsKey(FlutterFlowTheme.of(context).labelSmallFamily),
                                                                               ),
                                                                         ),
                                                                       ),
@@ -605,6 +630,11 @@ class _CarritoWidgetState extends State<CarritoWidget> {
                                                                 fontWeight:
                                                                     FontWeight
                                                                         .normal,
+                                                                useGoogleFonts: GoogleFonts
+                                                                        .asMap()
+                                                                    .containsKey(
+                                                                        FlutterFlowTheme.of(context)
+                                                                            .labelMediumFamily),
                                                               ),
                                                         ),
                                                       ),
@@ -747,6 +777,8 @@ class _CarritoWidgetState extends State<CarritoWidget> {
                                                                             14.0,
                                                                         fontWeight:
                                                                             FontWeight.normal,
+                                                                        useGoogleFonts:
+                                                                            GoogleFonts.asMap().containsKey(FlutterFlowTheme.of(context).bodyMediumFamily),
                                                                       ),
                                                                 ),
                                                               ),
@@ -803,6 +835,10 @@ class _CarritoWidgetState extends State<CarritoWidget> {
                                         color: Color(0xFF14181B),
                                         fontSize: 22.0,
                                         fontWeight: FontWeight.w500,
+                                        useGoogleFonts: GoogleFonts.asMap()
+                                            .containsKey(
+                                                FlutterFlowTheme.of(context)
+                                                    .titleLargeFamily),
                                       ),
                                 ),
                                 Padding(
@@ -819,6 +855,10 @@ class _CarritoWidgetState extends State<CarritoWidget> {
                                           color: Color(0xFF57636C),
                                           fontSize: 14.0,
                                           fontWeight: FontWeight.normal,
+                                          useGoogleFonts: GoogleFonts.asMap()
+                                              .containsKey(
+                                                  FlutterFlowTheme.of(context)
+                                                      .labelMediumFamily),
                                         ),
                                   ),
                                 ),
@@ -861,6 +901,12 @@ class _CarritoWidgetState extends State<CarritoWidget> {
                                                         fontSize: 20.0,
                                                         fontWeight:
                                                             FontWeight.w500,
+                                                        useGoogleFonts: GoogleFonts
+                                                                .asMap()
+                                                            .containsKey(
+                                                                FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .titleMediumFamily),
                                                       ),
                                                 ),
                                                 FlutterFlowIconButton(
@@ -895,6 +941,12 @@ class _CarritoWidgetState extends State<CarritoWidget> {
                                                     color: Color(0xFF14181B),
                                                     fontSize: 36.0,
                                                     fontWeight: FontWeight.w600,
+                                                    useGoogleFonts: GoogleFonts
+                                                            .asMap()
+                                                        .containsKey(
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .displaySmallFamily),
                                                   ),
                                             ),
                                           ],
@@ -984,6 +1036,10 @@ class _CarritoWidgetState extends State<CarritoWidget> {
                                           color: Colors.white,
                                           fontSize: 16.0,
                                           fontWeight: FontWeight.w500,
+                                          useGoogleFonts: GoogleFonts.asMap()
+                                              .containsKey(
+                                                  FlutterFlowTheme.of(context)
+                                                      .titleSmallFamily),
                                         ),
                                     elevation: 2.0,
                                     borderSide: BorderSide(
