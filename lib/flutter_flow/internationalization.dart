@@ -562,95 +562,91 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // pedidos
   {
-    'b68hl6h8': {
+    'qxlysc42': {
       'es': 'Recent Orders',
       'en': '',
     },
-    '2e3jkj8b': {
+    'en851bmu': {
       'es': 'Below are your most recent orders',
       'en': '',
     },
-    'bq4dzmhd': {
+    'pdhwd30o': {
       'es': 'Pedido #: ',
       'en': '',
     },
-    'j38no2wy': {
-      'es': 'Mon. July 3rd',
-      'en': '',
-    },
-    'ok0s7zt5': {
+    'wbttahuz': {
       'es': 'Order #: ',
       'en': '',
     },
-    'trcoyik9': {
+    'egmlbp09': {
       'es': '429242424',
       'en': '',
     },
-    '5zgey004': {
+    'li8moy4t': {
       'es': 'Mon. July 3rd',
       'en': '',
     },
-    '1zxlw0py': {
+    'jap8t2f4': {
       'es': '2.5 lbs',
       'en': '',
     },
-    'rxyv5v3l': {
+    '5s686857': {
       'es': '\$1.50',
       'en': '',
     },
-    'l707g2nw': {
+    'evyxlr51': {
       'es': 'Shipped',
       'en': '',
     },
-    'e259ks6s': {
+    'fmpeimoj': {
       'es': 'Order #: ',
       'en': '',
     },
-    'vouwu8f9': {
+    '4dvqo1of': {
       'es': '429242424',
       'en': '',
     },
-    'e08dqsgq': {
+    'l3nacw0a': {
       'es': 'Mon. July 3rd',
       'en': '',
     },
-    '2h74mlgx': {
+    'i6u7bdlm': {
       'es': '2.5 lbs',
       'en': '',
     },
-    'bcje4f6n': {
+    't982x7os': {
       'es': '\$1.50',
       'en': '',
     },
-    'x0nfxozj': {
+    'p043ymj5': {
       'es': 'Accepted',
       'en': '',
     },
-    '6q6cif06': {
+    'n8nq29lb': {
       'es': 'Order #: ',
       'en': '',
     },
-    '1tztegu4': {
+    'xnibqfpb': {
       'es': '429242424',
       'en': '',
     },
-    'y3pfpakn': {
+    'vb1z5aog': {
       'es': 'Mon. July 3rd',
       'en': '',
     },
-    't9xm3cri': {
+    'd4an69sv': {
       'es': '2.5 lbs',
       'en': '',
     },
-    'wf7oqo1k': {
+    '6pzeyvg7': {
       'es': '\$1.50',
       'en': '',
     },
-    '8n5s7yvh': {
+    'h7tt4v7n': {
       'es': 'Accepted',
       'en': '',
     },
-    'eg4qq8rk': {
+    'mxfh5pur': {
       'es': 'Home',
       'en': '',
     },
