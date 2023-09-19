@@ -562,91 +562,91 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // pedidos
   {
-    'fbspknle': {
-      'es': 'Recent Orders',
+    '489dsnz9': {
+      'es': 'Pedidos',
       'en': '',
     },
-    '0c2s8i4f': {
-      'es': 'Below are your most recent orders',
+    'lznhmjxq': {
+      'es': 'Abajo se puede observar una lista con sus pedidos',
       'en': '',
     },
-    'tzbkzj6p': {
+    'm6e3ietz': {
       'es': 'Pedido #: ',
       'en': '',
     },
-    'z3668do6': {
+    'u1xgct7l': {
       'es': 'Order #: ',
       'en': '',
     },
-    '8b8jcj1x': {
+    '5hxpk7i5': {
       'es': '429242424',
       'en': '',
     },
-    '7001uj2y': {
+    'fcy2et8x': {
       'es': 'Mon. July 3rd',
       'en': '',
     },
-    'xukm2bpn': {
+    'om4oae4t': {
       'es': '2.5 lbs',
       'en': '',
     },
-    '02ka4jyl': {
+    'xwr9yjay': {
       'es': '\$1.50',
       'en': '',
     },
-    'c50g1rfn': {
+    '211iz9hh': {
       'es': 'Shipped',
       'en': '',
     },
-    'd59rskvm': {
+    'pnxfkrqk': {
       'es': 'Order #: ',
       'en': '',
     },
-    'eeeev24p': {
+    '414l18kp': {
       'es': '429242424',
       'en': '',
     },
-    '8348h6uo': {
+    'vb99wec1': {
       'es': 'Mon. July 3rd',
       'en': '',
     },
-    'xth6kx1w': {
+    'j4ljcmra': {
       'es': '2.5 lbs',
       'en': '',
     },
-    '3549lo85': {
+    'aprduu7l': {
       'es': '\$1.50',
       'en': '',
     },
-    'sto7g929': {
+    'wcpso0ju': {
       'es': 'Accepted',
       'en': '',
     },
-    'shdxthts': {
+    'xfh1anqy': {
       'es': 'Order #: ',
       'en': '',
     },
-    '3we2rv35': {
+    'z893zdef': {
       'es': '429242424',
       'en': '',
     },
-    'fw91dp8g': {
+    '9b7wcjkg': {
       'es': 'Mon. July 3rd',
       'en': '',
     },
-    'wwnk5xmu': {
+    'isfebq8n': {
       'es': '2.5 lbs',
       'en': '',
     },
-    'ywjf8edm': {
+    'pe64ao1f': {
       'es': '\$1.50',
       'en': '',
     },
-    '0ydb8gt3': {
+    'u86ebttv': {
       'es': 'Accepted',
       'en': '',
     },
-    'lawyevz0': {
+    'k3457mbe': {
       'es': 'Home',
       'en': '',
     },

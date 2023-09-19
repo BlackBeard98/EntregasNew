@@ -108,7 +108,7 @@ class _PedidosWidgetState extends State<PedidosWidget> {
                             EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 0.0, 0.0),
                         child: Text(
                           FFLocalizations.of(context).getText(
-                            'fbspknle' /* Recent Orders */,
+                            '489dsnz9' /* Pedidos */,
                           ),
                           style: FlutterFlowTheme.of(context)
                               .headlineMedium
@@ -125,7 +125,7 @@ class _PedidosWidgetState extends State<PedidosWidget> {
                             EdgeInsetsDirectional.fromSTEB(24.0, 4.0, 0.0, 0.0),
                         child: Text(
                           FFLocalizations.of(context).getText(
-                            '0c2s8i4f' /* Below are your most recent ord... */,
+                            'lznhmjxq' /* Abajo se puede observar una li... */,
                           ),
                           textAlign: TextAlign.start,
                           style:
@@ -165,7 +165,7 @@ class _PedidosWidgetState extends State<PedidosWidget> {
                                     final ordersItem = orders[ordersIndex];
                                     return Padding(
                                       padding: EdgeInsetsDirectional.fromSTEB(
-                                          16.0, 0.0, 16.0, 0.0),
+                                          16.0, 0.0, 16.0, 16.0),
                                       child: Container(
                                         width: double.infinity,
                                         constraints: BoxConstraints(
@@ -215,7 +215,7 @@ class _PedidosWidgetState extends State<PedidosWidget> {
                                                               text: FFLocalizations
                                                                       .of(context)
                                                                   .getText(
-                                                                'tzbkzj6p' /* Pedido #:  */,
+                                                                'm6e3ietz' /* Pedido #:  */,
                                                               ),
                                                               style:
                                                                   TextStyle(),
