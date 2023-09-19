@@ -108,7 +108,7 @@ class _PedidosWidgetState extends State<PedidosWidget> {
                             EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 0.0, 0.0),
                         child: Text(
                           FFLocalizations.of(context).getText(
-                            'tp7ugoqe' /* Pedidos */,
+                            'cnj0awj6' /* Pedidos */,
                           ),
                           style: FlutterFlowTheme.of(context)
                               .headlineMedium
@@ -125,7 +125,7 @@ class _PedidosWidgetState extends State<PedidosWidget> {
                             EdgeInsetsDirectional.fromSTEB(24.0, 4.0, 0.0, 0.0),
                         child: Text(
                           FFLocalizations.of(context).getText(
-                            'kgajoizi' /* Abajo se puede observar una li... */,
+                            'ctraomau' /* Abajo se puede observar una li... */,
                           ),
                           textAlign: TextAlign.start,
                           style:
@@ -215,7 +215,7 @@ class _PedidosWidgetState extends State<PedidosWidget> {
                                                               text: FFLocalizations
                                                                       .of(context)
                                                                   .getText(
-                                                                'afj8oiv4' /* Pedido #:  */,
+                                                                'o4gigduk' /* Pedido #:  */,
                                                               ),
                                                               style:
                                                                   TextStyle(),
@@ -320,8 +320,61 @@ class _PedidosWidgetState extends State<PedidosWidget> {
                                                     child: Container(
                                                       height: 32.0,
                                                       decoration: BoxDecoration(
-                                                        color:
-                                                            Color(0x4D9489F5),
+                                                        color: () {
+                                                          if ((String status) {
+                                                            return status ==
+                                                                "10";
+                                                          }(getJsonField(
+                                                            ordersItem,
+                                                            r'''$.status''',
+                                                          ).toString())) {
+                                                            return Color(
+                                                                0xFFFFA500);
+                                                          } else if ((String
+                                                              status) {
+                                                            return status ==
+                                                                "20";
+                                                          }(getJsonField(
+                                                            ordersItem,
+                                                            r'''$.status''',
+                                                          ).toString())) {
+                                                            return Color(
+                                                                0xFFFFD700);
+                                                          } else if ((String
+                                                              status) {
+                                                            return status ==
+                                                                "30";
+                                                          }(getJsonField(
+                                                            ordersItem,
+                                                            r'''$.status''',
+                                                          ).toString())) {
+                                                            return Color(
+                                                                0xFF32CD32);
+                                                          } else if ((String
+                                                              status) {
+                                                            return status ==
+                                                                "40";
+                                                          }(getJsonField(
+                                                            ordersItem,
+                                                            r'''$.status''',
+                                                          ).toString())) {
+                                                            return Color(
+                                                                0xFF00BFFF);
+                                                          } else if ((String
+                                                              status) {
+                                                            return status ==
+                                                                "50";
+                                                          }(getJsonField(
+                                                            ordersItem,
+                                                            r'''$.status''',
+                                                          ).toString())) {
+                                                            return Color(
+                                                                0xFFFF0000);
+                                                          } else {
+                                                            return Color(
+                                                                0xFFFF1493);
+                                                          }
+                                                        }(),
                                                         borderRadius:
                                                             BorderRadius
                                                                 .circular(12.0),
