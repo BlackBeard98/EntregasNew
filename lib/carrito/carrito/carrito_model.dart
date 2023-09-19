@@ -19,6 +19,8 @@ class CarritoModel extends FlutterFlowModel {
   ApiCallResponse? apiResulti2d;
   // Stores action output result for [Backend Call - API (cartitemsaddproduct)] action in Text widget.
   ApiCallResponse? apiResulti84;
+  // Stores action output result for [Backend Call - API (order)] action in Button widget.
+  ApiCallResponse? apiResult8m0;
 
   /// Initialization and disposal methods.
 

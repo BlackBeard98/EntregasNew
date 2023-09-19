@@ -30,6 +30,8 @@ class ShopGroup {
   static OrderidCall orderidCall = OrderidCall();
   static MunicipalityallCall municipalityallCall = MunicipalityallCall();
   static ProductidCall productidCall = ProductidCall();
+  static CartitemscostuserIdCall cartitemscostuserIdCall =
+      CartitemscostuserIdCall();
 }
 
 class ProductallCall {
@@ -535,6 +537,28 @@ class ProductidCall {
     return ApiManager.instance.makeApiCall(
       callName: 'productid',
       apiUrl: '${ShopGroup.baseUrl}/product/${id}',
+      callType: ApiCallType.GET,
+      headers: {
+        ...ShopGroup.headers,
+        'Authorization': 'Bearer ${authToken}',
+      },
+      params: {},
+      returnBody: true,
+      encodeBodyUtf8: false,
+      decodeUtf8: false,
+      cache: false,
+    );
+  }
+}
+
+class CartitemscostuserIdCall {
+  Future<ApiCallResponse> call({
+    String? userId = '',
+    String? authToken = '',
+  }) {
+    return ApiManager.instance.makeApiCall(
+      callName: 'cartitemscostuserId',
+      apiUrl: '${ShopGroup.baseUrl}/cart/items/cost/${userId}',
       callType: ApiCallType.GET,
       headers: {
         ...ShopGroup.headers,

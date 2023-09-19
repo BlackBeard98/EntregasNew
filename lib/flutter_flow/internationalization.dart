@@ -288,44 +288,12 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'Abajo hay un resumen de su Pedido',
       'en': '',
     },
-    'qkx8dmof': {
-      'es': 'Price Breakdown',
-      'en': '',
-    },
-    '9squbvu4': {
-      'es': 'Base Price',
-      'en': '',
-    },
-    'hfkim5er': {
-      'es': '\$156.00',
-      'en': '',
-    },
-    '850b03ti': {
-      'es': 'Taxes',
-      'en': '',
-    },
-    '4x2q6ccl': {
-      'es': '\$24.20',
-      'en': '',
-    },
-    'mk9fbo1s': {
-      'es': 'Cleaning Fee',
-      'en': '',
-    },
-    'ljlbb403': {
-      'es': '\$40.00',
-      'en': '',
-    },
     'kda8rya0': {
       'es': 'Total',
       'en': '',
     },
-    'v2qa80q1': {
-      'es': '\$230.20',
-      'en': '',
-    },
     'ortpe3tp': {
-      'es': 'Continue to Checkout',
+      'es': 'Realizar Orden',
       'en': '',
     },
     '0swvummf': {
@@ -805,7 +773,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'Resumen del Pedido:',
       'en': '',
     },
-    '2zmshso7': {
+    'ong6fwew': {
       'es': 'Creación ',
       'en': '',
     },
