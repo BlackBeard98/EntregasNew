@@ -171,7 +171,7 @@ class _ProductosWidgetState extends State<ProductosWidget> {
                               obscureText: false,
                               decoration: InputDecoration(
                                 labelText: FFLocalizations.of(context).getText(
-                                  'my4dnu9w' /* Buscar Producto */,
+                                  'rw6435c2' /* Buscar Producto */,
                                 ),
                                 labelStyle: FlutterFlowTheme.of(context)
                                     .labelMedium
@@ -375,7 +375,7 @@ class _ProductosWidgetState extends State<ProductosWidget> {
                                 16.0, 12.0, 0.0, 0.0),
                             child: Text(
                               FFLocalizations.of(context).getText(
-                                'n3c8t94i' /* Productos */,
+                                'cuiuts89' /* Productos */,
                               ),
                               style: FlutterFlowTheme.of(context)
                                   .labelMedium
@@ -538,30 +538,20 @@ class _ProductosWidgetState extends State<ProductosWidget> {
                                                                     .start,
                                                             children: [
                                                               Flexible(
-                                                                child: Padding(
-                                                                  padding: EdgeInsetsDirectional
-                                                                      .fromSTEB(
-                                                                          0.0,
-                                                                          0.0,
-                                                                          12.0,
-                                                                          0.0),
-                                                                  child: Text(
-                                                                    getJsonField(
-                                                                      productosItem,
-                                                                      r'''$.name''',
-                                                                    ).toString(),
-                                                                    style: FlutterFlowTheme.of(
-                                                                            context)
-                                                                        .headlineLarge
-                                                                        .override(
-                                                                          fontFamily:
-                                                                              'Outfit',
-                                                                          color:
-                                                                              Colors.black,
-                                                                          fontWeight:
-                                                                              FontWeight.w500,
-                                                                        ),
-                                                                  ),
+                                                                child: Text(
+                                                                  getJsonField(
+                                                                    productosItem,
+                                                                    r'''$.name''',
+                                                                  ).toString(),
+                                                                  style: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .headlineLarge
+                                                                      .override(
+                                                                        fontFamily:
+                                                                            'Outfit',
+                                                                        color: Colors
+                                                                            .black,
+                                                                      ),
                                                                 ),
                                                               ),
                                                               Flexible(
@@ -644,7 +634,7 @@ class _ProductosWidgetState extends State<ProductosWidget> {
                                             },
                                             text: FFLocalizations.of(context)
                                                 .getText(
-                                              'nl72tz5f' /* Ver Detalles */,
+                                              'xxahrhlv' /* Ver Detalles */,
                                             ),
                                             options: FFButtonOptions(
                                               height: 40.0,
