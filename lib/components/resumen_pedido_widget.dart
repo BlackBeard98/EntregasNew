@@ -55,7 +55,7 @@ class _ResumenPedidoWidgetState extends State<ResumenPedidoWidget> {
       child: FutureBuilder<ApiCallResponse>(
         future: ShopGroup.orderidCall.call(
           id: widget.orderId,
-          authToken: FFAppState().authUser.id,
+          authToken: FFAppState().authUser.accessToken,
         ),
         builder: (context, snapshot) {
           // Customize what your widget looks like when it's loading.
