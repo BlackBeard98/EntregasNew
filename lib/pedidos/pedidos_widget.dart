@@ -108,7 +108,7 @@ class _PedidosWidgetState extends State<PedidosWidget> {
                             EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 0.0, 0.0),
                         child: Text(
                           FFLocalizations.of(context).getText(
-                            'qxlysc42' /* Recent Orders */,
+                            'upfjle54' /* Recent Orders */,
                           ),
                           style: FlutterFlowTheme.of(context)
                               .headlineMedium
@@ -125,7 +125,7 @@ class _PedidosWidgetState extends State<PedidosWidget> {
                             EdgeInsetsDirectional.fromSTEB(24.0, 4.0, 0.0, 0.0),
                         child: Text(
                           FFLocalizations.of(context).getText(
-                            'en851bmu' /* Below are your most recent ord... */,
+                            '8ak2supa' /* Below are your most recent ord... */,
                           ),
                           textAlign: TextAlign.start,
                           style:
@@ -137,268 +137,144 @@ class _PedidosWidgetState extends State<PedidosWidget> {
                                   ),
                         ),
                       ),
-                      Container(
-                        width: double.infinity,
-                        height: 681.0,
-                        decoration: BoxDecoration(
-                          color:
-                              FlutterFlowTheme.of(context).secondaryBackground,
-                        ),
-                        child: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
-                              0.0, 12.0, 0.0, 24.0),
-                          child: Builder(
-                            builder: (context) {
-                              final orders = getJsonField(
-                                pedidosOrderallmeResponse.jsonBody,
-                                r'''$[*]''',
-                              ).toList();
-                              return SingleChildScrollView(
-                                primary: false,
-                                child: Column(
-                                  mainAxisSize: MainAxisSize.max,
-                                  children: List.generate(orders.length,
-                                      (ordersIndex) {
-                                    final ordersItem = orders[ordersIndex];
-                                    return Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          16.0, 0.0, 16.0, 0.0),
-                                      child: Container(
-                                        width: double.infinity,
-                                        constraints: BoxConstraints(
-                                          maxWidth: 570.0,
-                                        ),
-                                        decoration: BoxDecoration(
-                                          color: Colors.white,
-                                          borderRadius:
-                                              BorderRadius.circular(8.0),
-                                          border: Border.all(
-                                            color: Color(0xFFE5E7EB),
-                                            width: 2.0,
+                      Flexible(
+                        child: Container(
+                          width: double.infinity,
+                          constraints: BoxConstraints(
+                            maxHeight: 700.0,
+                          ),
+                          decoration: BoxDecoration(
+                            color: FlutterFlowTheme.of(context)
+                                .secondaryBackground,
+                          ),
+                          child: Padding(
+                            padding: EdgeInsetsDirectional.fromSTEB(
+                                0.0, 12.0, 0.0, 24.0),
+                            child: Builder(
+                              builder: (context) {
+                                final orders = getJsonField(
+                                  pedidosOrderallmeResponse.jsonBody,
+                                  r'''$[*]''',
+                                ).toList();
+                                return SingleChildScrollView(
+                                  primary: false,
+                                  child: Column(
+                                    mainAxisSize: MainAxisSize.max,
+                                    children: List.generate(orders.length,
+                                        (ordersIndex) {
+                                      final ordersItem = orders[ordersIndex];
+                                      return Padding(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                            16.0, 0.0, 16.0, 0.0),
+                                        child: Container(
+                                          width: double.infinity,
+                                          constraints: BoxConstraints(
+                                            maxWidth: 570.0,
                                           ),
-                                        ),
-                                        child: Padding(
-                                          padding:
-                                              EdgeInsetsDirectional.fromSTEB(
-                                                  16.0, 12.0, 16.0, 12.0),
-                                          child: Row(
-                                            mainAxisSize: MainAxisSize.max,
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.spaceBetween,
-                                            children: [
-                                              Flexible(
-                                                child: Padding(
-                                                  padding: EdgeInsetsDirectional
-                                                      .fromSTEB(
-                                                          0.0, 0.0, 12.0, 0.0),
-                                                  child: Column(
-                                                    mainAxisSize:
-                                                        MainAxisSize.max,
-                                                    mainAxisAlignment:
-                                                        MainAxisAlignment
-                                                            .center,
-                                                    crossAxisAlignment:
-                                                        CrossAxisAlignment
-                                                            .start,
-                                                    children: [
-                                                      RichText(
-                                                        textScaleFactor:
-                                                            MediaQuery.of(
-                                                                    context)
-                                                                .textScaleFactor,
-                                                        text: TextSpan(
-                                                          children: [
-                                                            TextSpan(
-                                                              text: FFLocalizations
-                                                                      .of(context)
-                                                                  .getText(
-                                                                'pdhwd30o' /* Pedido #:  */,
-                                                              ),
-                                                              style:
-                                                                  TextStyle(),
-                                                            ),
-                                                            TextSpan(
-                                                              text:
-                                                                  getJsonField(
-                                                                ordersItem,
-                                                                r'''$.orderNumber''',
-                                                              ).toString(),
-                                                              style: TextStyle(
-                                                                color: Color(
-                                                                    0xFF6F61EF),
-                                                                fontWeight:
-                                                                    FontWeight
-                                                                        .bold,
-                                                              ),
-                                                            )
-                                                          ],
-                                                          style: FlutterFlowTheme
-                                                                  .of(context)
-                                                              .bodyLarge
-                                                              .override(
-                                                                fontFamily:
-                                                                    'Plus Jakarta Sans',
-                                                                color: Color(
-                                                                    0xFF15161E),
-                                                                fontSize: 16.0,
-                                                                fontWeight:
-                                                                    FontWeight
-                                                                        .w600,
-                                                              ),
-                                                        ),
-                                                      ),
-                                                      Padding(
-                                                        padding:
-                                                            EdgeInsetsDirectional
-                                                                .fromSTEB(
-                                                                    0.0,
-                                                                    4.0,
-                                                                    0.0,
-                                                                    0.0),
-                                                        child: Text(
-                                                          getJsonField(
-                                                            ordersItem,
-                                                            r'''$.createdAt''',
-                                                          ).toString(),
-                                                          style: FlutterFlowTheme
-                                                                  .of(context)
-                                                              .labelMedium
-                                                              .override(
-                                                                fontFamily:
-                                                                    'Outfit',
-                                                                color: Color(
-                                                                    0xFF606A85),
-                                                                fontSize: 14.0,
-                                                                fontWeight:
-                                                                    FontWeight
-                                                                        .w500,
-                                                              ),
-                                                        ),
-                                                      ),
-                                                    ],
-                                                  ),
-                                                ),
-                                              ),
-                                              Column(
-                                                mainAxisSize: MainAxisSize.max,
-                                                crossAxisAlignment:
-                                                    CrossAxisAlignment.end,
-                                                children: [
-                                                  Padding(
+                                          decoration: BoxDecoration(
+                                            color: Colors.white,
+                                            borderRadius:
+                                                BorderRadius.circular(8.0),
+                                            border: Border.all(
+                                              color: Color(0xFFE5E7EB),
+                                              width: 2.0,
+                                            ),
+                                          ),
+                                          child: Padding(
+                                            padding:
+                                                EdgeInsetsDirectional.fromSTEB(
+                                                    16.0, 12.0, 16.0, 12.0),
+                                            child: Row(
+                                              mainAxisSize: MainAxisSize.max,
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment
+                                                      .spaceBetween,
+                                              children: [
+                                                Flexible(
+                                                  child: Padding(
                                                     padding:
                                                         EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 0.0,
-                                                                0.0, 12.0),
-                                                    child: Text(
-                                                      '\$ ${getJsonField(
-                                                        ordersItem,
-                                                        r'''$.price''',
-                                                      ).toString()}',
-                                                      textAlign: TextAlign.end,
-                                                      style: FlutterFlowTheme
-                                                              .of(context)
-                                                          .headlineSmall
-                                                          .override(
-                                                            fontFamily:
-                                                                'Outfit',
-                                                            color: Color(
-                                                                0xFF15161E),
-                                                            fontSize: 22.0,
-                                                            fontWeight:
-                                                                FontWeight.bold,
-                                                          ),
-                                                    ),
-                                                  ),
-                                                  Padding(
-                                                    padding:
-                                                        EdgeInsetsDirectional
-                                                            .fromSTEB(0.0, 12.0,
-                                                                0.0, 0.0),
-                                                    child: Container(
-                                                      height: 32.0,
-                                                      decoration: BoxDecoration(
-                                                        color:
-                                                            Color(0x4D9489F5),
-                                                        borderRadius:
-                                                            BorderRadius
-                                                                .circular(12.0),
-                                                        border: Border.all(
-                                                          color:
-                                                              Color(0xFF6F61EF),
-                                                          width: 2.0,
-                                                        ),
-                                                      ),
-                                                      child: Align(
-                                                        alignment:
-                                                            AlignmentDirectional(
-                                                                0.00, 0.00),
-                                                        child: Padding(
-                                                          padding:
-                                                              EdgeInsetsDirectional
-                                                                  .fromSTEB(
-                                                                      12.0,
-                                                                      0.0,
-                                                                      12.0,
-                                                                      0.0),
-                                                          child: Text(
-                                                            () {
-                                                              if ((String
-                                                                  status) {
-                                                                return status ==
-                                                                    "10";
-                                                              }(getJsonField(
-                                                                ordersItem,
-                                                                r'''$.status''',
-                                                              ).toString())) {
-                                                                return 'Pendiente';
-                                                              } else if ((String
-                                                                  status) {
-                                                                return status ==
-                                                                    "20";
-                                                              }(getJsonField(
-                                                                ordersItem,
-                                                                r'''$.status''',
-                                                              ).toString())) {
-                                                                return 'Procesando';
-                                                              } else if ((String
-                                                                  status) {
-                                                                return status ==
-                                                                    "30";
-                                                              }(getJsonField(
-                                                                ordersItem,
-                                                                r'''$.status''',
-                                                              ).toString())) {
-                                                                return 'Pagada';
-                                                              } else if ((String
-                                                                  status) {
-                                                                return status ==
-                                                                    "40";
-                                                              }(getJsonField(
-                                                                ordersItem,
-                                                                r'''$.status''',
-                                                              ).toString())) {
-                                                                return 'Completada';
-                                                              } else if ((String
-                                                                  status) {
-                                                                return status ==
-                                                                    "50";
-                                                              }(getJsonField(
-                                                                ordersItem,
-                                                                r'''$.status''',
-                                                              ).toString())) {
-                                                                return 'Cancelada';
-                                                              } else {
-                                                                return 'Retrasada';
-                                                              }
-                                                            }(),
+                                                                12.0, 0.0),
+                                                    child: Column(
+                                                      mainAxisSize:
+                                                          MainAxisSize.max,
+                                                      mainAxisAlignment:
+                                                          MainAxisAlignment
+                                                              .center,
+                                                      crossAxisAlignment:
+                                                          CrossAxisAlignment
+                                                              .start,
+                                                      children: [
+                                                        RichText(
+                                                          textScaleFactor:
+                                                              MediaQuery.of(
+                                                                      context)
+                                                                  .textScaleFactor,
+                                                          text: TextSpan(
+                                                            children: [
+                                                              TextSpan(
+                                                                text: FFLocalizations.of(
+                                                                        context)
+                                                                    .getText(
+                                                                  'o6ykw5eb' /* Pedido #:  */,
+                                                                ),
+                                                                style:
+                                                                    TextStyle(),
+                                                              ),
+                                                              TextSpan(
+                                                                text:
+                                                                    getJsonField(
+                                                                  ordersItem,
+                                                                  r'''$.orderNumber''',
+                                                                ).toString(),
+                                                                style:
+                                                                    TextStyle(
+                                                                  color: Color(
+                                                                      0xFF6F61EF),
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .bold,
+                                                                ),
+                                                              )
+                                                            ],
                                                             style: FlutterFlowTheme
                                                                     .of(context)
-                                                                .bodyMedium
+                                                                .bodyLarge
                                                                 .override(
                                                                   fontFamily:
                                                                       'Plus Jakarta Sans',
                                                                   color: Color(
-                                                                      0xFF6F61EF),
+                                                                      0xFF15161E),
+                                                                  fontSize:
+                                                                      16.0,
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .w600,
+                                                                ),
+                                                          ),
+                                                        ),
+                                                        Padding(
+                                                          padding:
+                                                              EdgeInsetsDirectional
+                                                                  .fromSTEB(
+                                                                      0.0,
+                                                                      4.0,
+                                                                      0.0,
+                                                                      0.0),
+                                                          child: Text(
+                                                            getJsonField(
+                                                              ordersItem,
+                                                              r'''$.createdAt''',
+                                                            ).toString(),
+                                                            style: FlutterFlowTheme
+                                                                    .of(context)
+                                                                .labelMedium
+                                                                .override(
+                                                                  fontFamily:
+                                                                      'Outfit',
+                                                                  color: Color(
+                                                                      0xFF606A85),
                                                                   fontSize:
                                                                       14.0,
                                                                   fontWeight:
@@ -407,20 +283,164 @@ class _PedidosWidgetState extends State<PedidosWidget> {
                                                                 ),
                                                           ),
                                                         ),
-                                                      ),
+                                                      ],
                                                     ),
                                                   ),
-                                                ],
-                                              ),
-                                            ],
+                                                ),
+                                                Column(
+                                                  mainAxisSize:
+                                                      MainAxisSize.max,
+                                                  crossAxisAlignment:
+                                                      CrossAxisAlignment.end,
+                                                  children: [
+                                                    Padding(
+                                                      padding:
+                                                          EdgeInsetsDirectional
+                                                              .fromSTEB(
+                                                                  0.0,
+                                                                  0.0,
+                                                                  0.0,
+                                                                  12.0),
+                                                      child: Text(
+                                                        '\$ ${getJsonField(
+                                                          ordersItem,
+                                                          r'''$.price''',
+                                                        ).toString()}',
+                                                        textAlign:
+                                                            TextAlign.end,
+                                                        style: FlutterFlowTheme
+                                                                .of(context)
+                                                            .headlineSmall
+                                                            .override(
+                                                              fontFamily:
+                                                                  'Outfit',
+                                                              color: Color(
+                                                                  0xFF15161E),
+                                                              fontSize: 22.0,
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .bold,
+                                                            ),
+                                                      ),
+                                                    ),
+                                                    Padding(
+                                                      padding:
+                                                          EdgeInsetsDirectional
+                                                              .fromSTEB(
+                                                                  0.0,
+                                                                  12.0,
+                                                                  0.0,
+                                                                  0.0),
+                                                      child: Container(
+                                                        height: 32.0,
+                                                        decoration:
+                                                            BoxDecoration(
+                                                          color:
+                                                              Color(0x4D9489F5),
+                                                          borderRadius:
+                                                              BorderRadius
+                                                                  .circular(
+                                                                      12.0),
+                                                          border: Border.all(
+                                                            color: Color(
+                                                                0xFF6F61EF),
+                                                            width: 2.0,
+                                                          ),
+                                                        ),
+                                                        child: Align(
+                                                          alignment:
+                                                              AlignmentDirectional(
+                                                                  0.00, 0.00),
+                                                          child: Padding(
+                                                            padding:
+                                                                EdgeInsetsDirectional
+                                                                    .fromSTEB(
+                                                                        12.0,
+                                                                        0.0,
+                                                                        12.0,
+                                                                        0.0),
+                                                            child: Text(
+                                                              () {
+                                                                if ((String
+                                                                    status) {
+                                                                  return status ==
+                                                                      "10";
+                                                                }(getJsonField(
+                                                                  ordersItem,
+                                                                  r'''$.status''',
+                                                                ).toString())) {
+                                                                  return 'Pendiente';
+                                                                } else if ((String
+                                                                    status) {
+                                                                  return status ==
+                                                                      "20";
+                                                                }(getJsonField(
+                                                                  ordersItem,
+                                                                  r'''$.status''',
+                                                                ).toString())) {
+                                                                  return 'Procesando';
+                                                                } else if ((String
+                                                                    status) {
+                                                                  return status ==
+                                                                      "30";
+                                                                }(getJsonField(
+                                                                  ordersItem,
+                                                                  r'''$.status''',
+                                                                ).toString())) {
+                                                                  return 'Pagada';
+                                                                } else if ((String
+                                                                    status) {
+                                                                  return status ==
+                                                                      "40";
+                                                                }(getJsonField(
+                                                                  ordersItem,
+                                                                  r'''$.status''',
+                                                                ).toString())) {
+                                                                  return 'Completada';
+                                                                } else if ((String
+                                                                    status) {
+                                                                  return status ==
+                                                                      "50";
+                                                                }(getJsonField(
+                                                                  ordersItem,
+                                                                  r'''$.status''',
+                                                                ).toString())) {
+                                                                  return 'Cancelada';
+                                                                } else {
+                                                                  return 'Retrasada';
+                                                                }
+                                                              }(),
+                                                              style: FlutterFlowTheme
+                                                                      .of(context)
+                                                                  .bodyMedium
+                                                                  .override(
+                                                                    fontFamily:
+                                                                        'Plus Jakarta Sans',
+                                                                    color: Color(
+                                                                        0xFF6F61EF),
+                                                                    fontSize:
+                                                                        14.0,
+                                                                    fontWeight:
+                                                                        FontWeight
+                                                                            .w500,
+                                                                  ),
+                                                            ),
+                                                          ),
+                                                        ),
+                                                      ),
+                                                    ),
+                                                  ],
+                                                ),
+                                              ],
+                                            ),
                                           ),
                                         ),
-                                      ),
-                                    );
-                                  }).divide(SizedBox(height: 12.0)),
-                                ),
-                              );
-                            },
+                                      );
+                                    }).divide(SizedBox(height: 12.0)),
+                                  ),
+                                );
+                              },
+                            ),
                           ),
                         ),
                       ),
