@@ -558,6 +558,8 @@ class _ProductosWidgetState extends State<ProductosWidget> {
                                                                               'Outfit',
                                                                           color:
                                                                               Colors.black,
+                                                                          fontSize:
+                                                                              24.0,
                                                                           fontWeight:
                                                                               FontWeight.w500,
                                                                         ),
@@ -585,6 +587,8 @@ class _ProductosWidgetState extends State<ProductosWidget> {
                                                                               'Outfit',
                                                                           color:
                                                                               Colors.black,
+                                                                          fontSize:
+                                                                              20.0,
                                                                         ),
                                                                   ),
                                                                 ),
@@ -610,6 +614,8 @@ class _ProductosWidgetState extends State<ProductosWidget> {
                                                                               'Outfit',
                                                                           color:
                                                                               Colors.black,
+                                                                          fontSize:
+                                                                              20.0,
                                                                         ),
                                                                   ),
                                                                 ),
