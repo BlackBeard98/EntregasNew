@@ -108,7 +108,7 @@ class _PedidosWidgetState extends State<PedidosWidget> {
                             EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 0.0, 0.0),
                         child: Text(
                           FFLocalizations.of(context).getText(
-                            'cnj0awj6' /* Pedidos */,
+                            'hg0jf21e' /* Pedidos */,
                           ),
                           style: FlutterFlowTheme.of(context)
                               .headlineMedium
@@ -125,7 +125,7 @@ class _PedidosWidgetState extends State<PedidosWidget> {
                             EdgeInsetsDirectional.fromSTEB(24.0, 4.0, 0.0, 0.0),
                         child: Text(
                           FFLocalizations.of(context).getText(
-                            'ctraomau' /* Abajo se puede observar una li... */,
+                            'ametzepc' /* Abajo se puede observar una li... */,
                           ),
                           textAlign: TextAlign.start,
                           style:
@@ -215,7 +215,7 @@ class _PedidosWidgetState extends State<PedidosWidget> {
                                                               text: FFLocalizations
                                                                       .of(context)
                                                                   .getText(
-                                                                'o4gigduk' /* Pedido #:  */,
+                                                                '5i6ced8s' /* Pedido #:  */,
                                                               ),
                                                               style:
                                                                   TextStyle(),
@@ -329,7 +329,7 @@ class _PedidosWidgetState extends State<PedidosWidget> {
                                                             r'''$.status''',
                                                           ).toString())) {
                                                             return Color(
-                                                                0xFFFFA500);
+                                                                0xFFFFC966);
                                                           } else if ((String
                                                               status) {
                                                             return status ==
@@ -339,7 +339,7 @@ class _PedidosWidgetState extends State<PedidosWidget> {
                                                             r'''$.status''',
                                                           ).toString())) {
                                                             return Color(
-                                                                0xFFFFD700);
+                                                                0xFFFFE58C);
                                                           } else if ((String
                                                               status) {
                                                             return status ==
@@ -349,7 +349,7 @@ class _PedidosWidgetState extends State<PedidosWidget> {
                                                             r'''$.status''',
                                                           ).toString())) {
                                                             return Color(
-                                                                0xFF32CD32);
+                                                                0xFF9CF080);
                                                           } else if ((String
                                                               status) {
                                                             return status ==
@@ -359,7 +359,7 @@ class _PedidosWidgetState extends State<PedidosWidget> {
                                                             r'''$.status''',
                                                           ).toString())) {
                                                             return Color(
-                                                                0xFF00BFFF);
+                                                                0xFF85C1FF);
                                                           } else if ((String
                                                               status) {
                                                             return status ==
@@ -369,18 +369,72 @@ class _PedidosWidgetState extends State<PedidosWidget> {
                                                             r'''$.status''',
                                                           ).toString())) {
                                                             return Color(
-                                                                0xFFFF0000);
+                                                                0xFFFF8080);
                                                           } else {
                                                             return Color(
-                                                                0xFFFF1493);
+                                                                0xFFFF94C3);
                                                           }
                                                         }(),
                                                         borderRadius:
                                                             BorderRadius
                                                                 .circular(12.0),
                                                         border: Border.all(
-                                                          color:
-                                                              Color(0xFF6F61EF),
+                                                          color: () {
+                                                            if ((String
+                                                                status) {
+                                                              return status ==
+                                                                  "10";
+                                                            }(getJsonField(
+                                                              ordersItem,
+                                                              r'''$.status''',
+                                                            ).toString())) {
+                                                              return Color(
+                                                                  0xFFFFA500);
+                                                            } else if ((String
+                                                                status) {
+                                                              return status ==
+                                                                  "20";
+                                                            }(getJsonField(
+                                                              ordersItem,
+                                                              r'''$.status''',
+                                                            ).toString())) {
+                                                              return Color(
+                                                                  0xFFFFD700);
+                                                            } else if ((String
+                                                                status) {
+                                                              return status ==
+                                                                  "30";
+                                                            }(getJsonField(
+                                                              ordersItem,
+                                                              r'''$.status''',
+                                                            ).toString())) {
+                                                              return Color(
+                                                                  0xFF32CD32);
+                                                            } else if ((String
+                                                                status) {
+                                                              return status ==
+                                                                  "40";
+                                                            }(getJsonField(
+                                                              ordersItem,
+                                                              r'''$.status''',
+                                                            ).toString())) {
+                                                              return Color(
+                                                                  0xFF00BFFF);
+                                                            } else if ((String
+                                                                status) {
+                                                              return status ==
+                                                                  "50";
+                                                            }(getJsonField(
+                                                              ordersItem,
+                                                              r'''$.status''',
+                                                            ).toString())) {
+                                                              return Color(
+                                                                  0xFFFF0000);
+                                                            } else {
+                                                              return Color(
+                                                                  0xFFFF1493);
+                                                            }
+                                                          }(),
                                                           width: 2.0,
                                                         ),
                                                       ),
@@ -453,8 +507,58 @@ class _PedidosWidgetState extends State<PedidosWidget> {
                                                                 .override(
                                                                   fontFamily:
                                                                       'Plus Jakarta Sans',
-                                                                  color: Color(
-                                                                      0xFF6F61EF),
+                                                                  color: () {
+                                                                    if ((String
+                                                                        status) {
+                                                                      return status ==
+                                                                          "10";
+                                                                    }(getJsonField(
+                                                                      ordersItem,
+                                                                      r'''$.status''',
+                                                                    ).toString())) {
+                                                                      return Color(
+                                                                          0xFFFFA500);
+                                                                    } else if ((String status) {
+                                                                      return status ==
+                                                                          "20";
+                                                                    }(getJsonField(
+                                                                      ordersItem,
+                                                                      r'''$.status''',
+                                                                    ).toString())) {
+                                                                      return Color(
+                                                                          0xFFFFD700);
+                                                                    } else if ((String status) {
+                                                                      return status ==
+                                                                          "30";
+                                                                    }(getJsonField(
+                                                                      ordersItem,
+                                                                      r'''$.status''',
+                                                                    ).toString())) {
+                                                                      return Color(
+                                                                          0xFF32CD32);
+                                                                    } else if ((String status) {
+                                                                      return status ==
+                                                                          "40";
+                                                                    }(getJsonField(
+                                                                      ordersItem,
+                                                                      r'''$.status''',
+                                                                    ).toString())) {
+                                                                      return Color(
+                                                                          0xFF00BFFF);
+                                                                    } else if ((String status) {
+                                                                      return status ==
+                                                                          "50";
+                                                                    }(getJsonField(
+                                                                      ordersItem,
+                                                                      r'''$.status''',
+                                                                    ).toString())) {
+                                                                      return Color(
+                                                                          0xFFFF0000);
+                                                                    } else {
+                                                                      return Color(
+                                                                          0xFFFF1493);
+                                                                    }
+                                                                  }(),
                                                                   fontSize:
                                                                       14.0,
                                                                   fontWeight:
