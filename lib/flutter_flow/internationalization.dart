@@ -802,15 +802,11 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   // ResumenPedido
   {
     'z5522vtj': {
-      'es': 'Resumen Del Pedido',
+      'es': 'Resumen del Pedido',
       'en': '',
     },
     'dyi626o1': {
       'es': 'Revise su orden',
-      'en': '',
-    },
-    'fomcdm1l': {
-      'es': 'Secondary text',
       'en': '',
     },
     'hbgi3l0l': {
@@ -826,43 +822,23 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': '',
     },
     'pj860l4g': {
-      'es': 'Price Breakdown',
+      'es': 'Desglose',
       'en': '',
     },
     'pi9003jq': {
-      'es': 'Base Price',
+      'es': 'Precio',
       'en': '',
     },
-    '6pxj52d1': {
-      'es': '\$156.00',
+    'fugywt28': {
+      'es': 'Pedido #',
       'en': '',
     },
-    'ku1t6zq9': {
-      'es': 'Taxes',
-      'en': '',
-    },
-    '5khvtxgv': {
-      'es': '\$24.20',
-      'en': '',
-    },
-    'c0s125su': {
-      'es': 'Cleaning Fee',
-      'en': '',
-    },
-    '07z09jn5': {
-      'es': '\$40.00',
+    'bu1l0kev': {
+      'es': 'Estado',
       'en': '',
     },
     'r05yiboj': {
-      'es': 'Total',
-      'en': '',
-    },
-    '03pmy9sq': {
-      'es': '\$230.20',
-      'en': '',
-    },
-    'kxwqki4k': {
-      'es': 'Proceed to Checkout',
+      'es': 'Precio Final',
       'en': '',
     },
   },

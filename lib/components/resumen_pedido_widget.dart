@@ -2,7 +2,6 @@ import '/backend/api_requests/api_calls.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/custom_functions.dart' as functions;
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -116,7 +115,7 @@ class _ResumenPedidoWidgetState extends State<ResumenPedidoWidget> {
                         EdgeInsetsDirectional.fromSTEB(0.0, 12.0, 0.0, 0.0),
                     child: Text(
                       FFLocalizations.of(context).getText(
-                        'z5522vtj' /* Resumen Del Pedido */,
+                        'z5522vtj' /* Resumen del Pedido */,
                       ),
                       style:
                           FlutterFlowTheme.of(context).headlineSmall.override(
@@ -259,11 +258,10 @@ class _ResumenPedidoWidgetState extends State<ResumenPedidoWidget> {
                                                             .fromSTEB(0.0, 4.0,
                                                                 0.0, 0.0),
                                                     child: Text(
-                                                      FFLocalizations.of(
-                                                              context)
-                                                          .getText(
-                                                        'fomcdm1l' /* Secondary text */,
-                                                      ),
+                                                      'Cantidad: ${getJsonField(
+                                                        itemsItem,
+                                                        r'''$.quantity''',
+                                                      ).toString()}',
                                                       style:
                                                           FlutterFlowTheme.of(
                                                                   context)
@@ -287,7 +285,7 @@ class _ResumenPedidoWidgetState extends State<ResumenPedidoWidget> {
                                         ),
                                         Text(
                                           getJsonField(
-                                            itemsItem,
+                                            containerProductidResponse.jsonBody,
                                             r'''$.price''',
                                           ).toString(),
                                           textAlign: TextAlign.end,
@@ -322,7 +320,7 @@ class _ResumenPedidoWidgetState extends State<ResumenPedidoWidget> {
                           children: [
                             Text(
                               FFLocalizations.of(context).getText(
-                                'pj860l4g' /* Price Breakdown */,
+                                'pj860l4g' /* Desglose */,
                               ),
                               style: FlutterFlowTheme.of(context)
                                   .bodySmall
@@ -345,7 +343,7 @@ class _ResumenPedidoWidgetState extends State<ResumenPedidoWidget> {
                           children: [
                             Text(
                               FFLocalizations.of(context).getText(
-                                'pi9003jq' /* Base Price */,
+                                'pi9003jq' /* Precio */,
                               ),
                               style: FlutterFlowTheme.of(context)
                                   .labelMedium
@@ -357,9 +355,10 @@ class _ResumenPedidoWidgetState extends State<ResumenPedidoWidget> {
                                   ),
                             ),
                             Text(
-                              FFLocalizations.of(context).getText(
-                                '6pxj52d1' /* $156.00 */,
-                              ),
+                              '\$ ${getJsonField(
+                                checkoutBottomSheetOrderidResponse.jsonBody,
+                                r'''$.price''',
+                              ).toString()}',
                               style: FlutterFlowTheme.of(context)
                                   .bodyLarge
                                   .override(
@@ -381,7 +380,7 @@ class _ResumenPedidoWidgetState extends State<ResumenPedidoWidget> {
                           children: [
                             Text(
                               FFLocalizations.of(context).getText(
-                                'ku1t6zq9' /* Taxes */,
+                                'fugywt28' /* Pedido # */,
                               ),
                               style: FlutterFlowTheme.of(context)
                                   .labelMedium
@@ -393,9 +392,9 @@ class _ResumenPedidoWidgetState extends State<ResumenPedidoWidget> {
                                   ),
                             ),
                             Text(
-                              FFLocalizations.of(context).getText(
-                                '5khvtxgv' /* $24.20 */,
-                              ),
+                              '\$ ${ShopGroup.orderidCall.orderNumber(
+                                    checkoutBottomSheetOrderidResponse.jsonBody,
+                                  ).toString()}',
                               style: FlutterFlowTheme.of(context)
                                   .bodyLarge
                                   .override(
@@ -417,7 +416,7 @@ class _ResumenPedidoWidgetState extends State<ResumenPedidoWidget> {
                           children: [
                             Text(
                               FFLocalizations.of(context).getText(
-                                'c0s125su' /* Cleaning Fee */,
+                                'bu1l0kev' /* Estado */,
                               ),
                               style: FlutterFlowTheme.of(context)
                                   .labelMedium
@@ -428,18 +427,230 @@ class _ResumenPedidoWidgetState extends State<ResumenPedidoWidget> {
                                     fontWeight: FontWeight.normal,
                                   ),
                             ),
-                            Text(
-                              FFLocalizations.of(context).getText(
-                                '07z09jn5' /* $40.00 */,
+                            Container(
+                              height: 32.0,
+                              decoration: BoxDecoration(
+                                color: () {
+                                  if ((String status) {
+                                    return status == "10";
+                                  }(ShopGroup.orderidCall
+                                      .status(
+                                        checkoutBottomSheetOrderidResponse
+                                            .jsonBody,
+                                      )
+                                      .toString())) {
+                                    return Color(0xFFFFC966);
+                                  } else if ((String status) {
+                                    return status == "20";
+                                  }(ShopGroup.orderidCall
+                                      .status(
+                                        checkoutBottomSheetOrderidResponse
+                                            .jsonBody,
+                                      )
+                                      .toString())) {
+                                    return Color(0xFFFFE58C);
+                                  } else if ((String status) {
+                                    return status == "30";
+                                  }(ShopGroup.orderidCall
+                                      .status(
+                                        checkoutBottomSheetOrderidResponse
+                                            .jsonBody,
+                                      )
+                                      .toString())) {
+                                    return Color(0xFF9CF080);
+                                  } else if ((String status) {
+                                    return status == "40";
+                                  }(ShopGroup.orderidCall
+                                      .status(
+                                        checkoutBottomSheetOrderidResponse
+                                            .jsonBody,
+                                      )
+                                      .toString())) {
+                                    return Color(0xFF85C1FF);
+                                  } else if ((String status) {
+                                    return status == "50";
+                                  }(ShopGroup.orderidCall
+                                      .status(
+                                        checkoutBottomSheetOrderidResponse
+                                            .jsonBody,
+                                      )
+                                      .toString())) {
+                                    return Color(0xFFFF8080);
+                                  } else {
+                                    return Color(0xFFFF94C3);
+                                  }
+                                }(),
+                                borderRadius: BorderRadius.circular(12.0),
+                                border: Border.all(
+                                  color: () {
+                                    if ((String status) {
+                                      return status == "10";
+                                    }(ShopGroup.orderidCall
+                                        .status(
+                                          checkoutBottomSheetOrderidResponse
+                                              .jsonBody,
+                                        )
+                                        .toString())) {
+                                      return Color(0xFFFFA500);
+                                    } else if ((String status) {
+                                      return status == "20";
+                                    }(ShopGroup.orderidCall
+                                        .status(
+                                          checkoutBottomSheetOrderidResponse
+                                              .jsonBody,
+                                        )
+                                        .toString())) {
+                                      return Color(0xFFFFD700);
+                                    } else if ((String status) {
+                                      return status == "30";
+                                    }(ShopGroup.orderidCall
+                                        .status(
+                                          checkoutBottomSheetOrderidResponse
+                                              .jsonBody,
+                                        )
+                                        .toString())) {
+                                      return Color(0xFF32CD32);
+                                    } else if ((String status) {
+                                      return status == "40";
+                                    }(ShopGroup.orderidCall
+                                        .status(
+                                          checkoutBottomSheetOrderidResponse
+                                              .jsonBody,
+                                        )
+                                        .toString())) {
+                                      return Color(0xFF00BFFF);
+                                    } else if ((String status) {
+                                      return status == "50";
+                                    }(ShopGroup.orderidCall
+                                        .status(
+                                          checkoutBottomSheetOrderidResponse
+                                              .jsonBody,
+                                        )
+                                        .toString())) {
+                                      return Color(0xFFFF0000);
+                                    } else {
+                                      return Color(0xFFFF1493);
+                                    }
+                                  }(),
+                                  width: 2.0,
+                                ),
                               ),
-                              style: FlutterFlowTheme.of(context)
-                                  .bodyLarge
-                                  .override(
-                                    fontFamily: 'Plus Jakarta Sans',
-                                    color: Color(0xFF14181B),
-                                    fontSize: 16.0,
-                                    fontWeight: FontWeight.normal,
+                              child: Align(
+                                alignment: AlignmentDirectional(0.00, 0.00),
+                                child: Padding(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                      12.0, 0.0, 12.0, 0.0),
+                                  child: Text(
+                                    () {
+                                      if ((String status) {
+                                        return status == "10";
+                                      }(ShopGroup.orderidCall
+                                          .status(
+                                            checkoutBottomSheetOrderidResponse
+                                                .jsonBody,
+                                          )
+                                          .toString())) {
+                                        return 'Pendiente';
+                                      } else if ((String status) {
+                                        return status == "20";
+                                      }(ShopGroup.orderidCall
+                                          .status(
+                                            checkoutBottomSheetOrderidResponse
+                                                .jsonBody,
+                                          )
+                                          .toString())) {
+                                        return 'Procesando';
+                                      } else if ((String status) {
+                                        return status == "30";
+                                      }(ShopGroup.orderidCall
+                                          .status(
+                                            checkoutBottomSheetOrderidResponse
+                                                .jsonBody,
+                                          )
+                                          .toString())) {
+                                        return 'Pagada';
+                                      } else if ((String status) {
+                                        return status == "40";
+                                      }(ShopGroup.orderidCall
+                                          .status(
+                                            checkoutBottomSheetOrderidResponse
+                                                .jsonBody,
+                                          )
+                                          .toString())) {
+                                        return 'Completada';
+                                      } else if ((String status) {
+                                        return status == "50";
+                                      }(ShopGroup.orderidCall
+                                          .status(
+                                            checkoutBottomSheetOrderidResponse
+                                                .jsonBody,
+                                          )
+                                          .toString())) {
+                                        return 'Cancelada';
+                                      } else {
+                                        return 'Retrasada';
+                                      }
+                                    }(),
+                                    style: FlutterFlowTheme.of(context)
+                                        .bodyMedium
+                                        .override(
+                                          fontFamily: 'Plus Jakarta Sans',
+                                          color: () {
+                                            if ((String status) {
+                                              return status == "10";
+                                            }(ShopGroup.orderidCall
+                                                .status(
+                                                  checkoutBottomSheetOrderidResponse
+                                                      .jsonBody,
+                                                )
+                                                .toString())) {
+                                              return Color(0xFFFFA500);
+                                            } else if ((String status) {
+                                              return status == "20";
+                                            }(ShopGroup.orderidCall
+                                                .status(
+                                                  checkoutBottomSheetOrderidResponse
+                                                      .jsonBody,
+                                                )
+                                                .toString())) {
+                                              return Color(0xFFFFD700);
+                                            } else if ((String status) {
+                                              return status == "30";
+                                            }(ShopGroup.orderidCall
+                                                .status(
+                                                  checkoutBottomSheetOrderidResponse
+                                                      .jsonBody,
+                                                )
+                                                .toString())) {
+                                              return Color(0xFF32CD32);
+                                            } else if ((String status) {
+                                              return status == "40";
+                                            }(ShopGroup.orderidCall
+                                                .status(
+                                                  checkoutBottomSheetOrderidResponse
+                                                      .jsonBody,
+                                                )
+                                                .toString())) {
+                                              return Color(0xFF00BFFF);
+                                            } else if ((String status) {
+                                              return status == "50";
+                                            }(ShopGroup.orderidCall
+                                                .status(
+                                                  checkoutBottomSheetOrderidResponse
+                                                      .jsonBody,
+                                                )
+                                                .toString())) {
+                                              return Color(0xFFFF0000);
+                                            } else {
+                                              return Color(0xFFFF1493);
+                                            }
+                                          }(),
+                                          fontSize: 14.0,
+                                          fontWeight: FontWeight.w500,
+                                        ),
                                   ),
+                                ),
+                              ),
                             ),
                           ],
                         ),
@@ -456,7 +667,7 @@ class _ResumenPedidoWidgetState extends State<ResumenPedidoWidget> {
                               children: [
                                 Text(
                                   FFLocalizations.of(context).getText(
-                                    'r05yiboj' /* Total */,
+                                    'r05yiboj' /* Precio Final */,
                                   ),
                                   style: FlutterFlowTheme.of(context)
                                       .titleMedium
@@ -484,9 +695,10 @@ class _ResumenPedidoWidgetState extends State<ResumenPedidoWidget> {
                               ],
                             ),
                             Text(
-                              FFLocalizations.of(context).getText(
-                                '03pmy9sq' /* $230.20 */,
-                              ),
+                              '\$ ${getJsonField(
+                                checkoutBottomSheetOrderidResponse.jsonBody,
+                                r'''$.finalPrice''',
+                              ).toString()}',
                               style: FlutterFlowTheme.of(context)
                                   .displaySmall
                                   .override(
@@ -497,40 +709,6 @@ class _ResumenPedidoWidgetState extends State<ResumenPedidoWidget> {
                                   ),
                             ),
                           ],
-                        ),
-                      ),
-                      Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(
-                            16.0, 0.0, 16.0, 24.0),
-                        child: FFButtonWidget(
-                          onPressed: () {
-                            print('Button pressed ...');
-                          },
-                          text: FFLocalizations.of(context).getText(
-                            'kxwqki4k' /* Proceed to Checkout */,
-                          ),
-                          options: FFButtonOptions(
-                            width: double.infinity,
-                            height: 50.0,
-                            padding: EdgeInsetsDirectional.fromSTEB(
-                                0.0, 0.0, 0.0, 0.0),
-                            iconPadding: EdgeInsetsDirectional.fromSTEB(
-                                0.0, 0.0, 0.0, 0.0),
-                            color: Color(0xFF39D2C0),
-                            textStyle: FlutterFlowTheme.of(context)
-                                .titleSmall
-                                .override(
-                                  fontFamily: 'Plus Jakarta Sans',
-                                  color: Colors.white,
-                                  fontSize: 16.0,
-                                  fontWeight: FontWeight.w500,
-                                ),
-                            elevation: 2.0,
-                            borderSide: BorderSide(
-                              color: Colors.transparent,
-                              width: 1.0,
-                            ),
-                          ),
                         ),
                       ),
                     ],
