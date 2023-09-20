@@ -82,3 +82,15 @@ String getMunicipalityNameByID(
 ) {
   return list.where((x) => (x["_id"]["_id"] == id)).first["name"];
 }
+
+String parseTime(String time) {
+  var dateValue =
+      new DateFormat("yyyy-MM-ddTHH:mm:ssZ").parseUTC(time).toLocal();
+  String formattedDate = DateFormat("dd MMM yyyy hh:mm").format(dateValue);
+  return formattedDate;
+}
+
+String currencyFormat(String price) {
+  final oCcy = new NumberFormat("#,##0.00", "en_US");
+  return oCcy.format(double.parse(price)).toString();
+}

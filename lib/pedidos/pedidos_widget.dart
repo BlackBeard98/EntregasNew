@@ -4,6 +4,7 @@ import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import '/flutter_flow/custom_functions.dart' as functions;
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -288,10 +289,11 @@ class _PedidosWidgetState extends State<PedidosWidget> {
                                                     .fromSTEB(
                                                         0.0, 4.0, 0.0, 0.0),
                                                 child: Text(
-                                                  getJsonField(
+                                                  functions
+                                                      .parseTime(getJsonField(
                                                     ordersItem,
                                                     r'''$.createdAt''',
-                                                  ).toString(),
+                                                  ).toString()),
                                                   style: FlutterFlowTheme.of(
                                                           context)
                                                       .labelMedium
@@ -325,10 +327,10 @@ class _PedidosWidgetState extends State<PedidosWidget> {
                                                 EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 0.0, 0.0, 12.0),
                                             child: Text(
-                                              '\$ ${getJsonField(
+                                              '\$ ${functions.currencyFormat(getJsonField(
                                                 ordersItem,
                                                 r'''$.price''',
-                                              ).toString()}',
+                                              ).toString())}',
                                               textAlign: TextAlign.end,
                                               style: FlutterFlowTheme.of(
                                                       context)
