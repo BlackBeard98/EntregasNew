@@ -415,7 +415,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                                         if (FFAppState()
                                             .MunicipalityApp
                                             .isSet) {
-                                          context.pushNamed('Productos');
+                                          context.goNamed('Productos');
                                         } else {
                                           context.goNamed('SeleccionarLoc');
                                         }
