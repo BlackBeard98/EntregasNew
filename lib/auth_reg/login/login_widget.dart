@@ -412,8 +412,13 @@ class _LoginWidgetState extends State<LoginWidget> {
                                                       .toString(),
                                           );
                                         });
-
-                                        context.goNamed('SeleccionarLoc');
+                                        if (FFAppState()
+                                            .MunicipalityApp
+                                            .isSet) {
+                                          context.pushNamed('Productos');
+                                        } else {
+                                          context.goNamed('SeleccionarLoc');
+                                        }
                                       } else {
                                         ScaffoldMessenger.of(context)
                                             .showSnackBar(
