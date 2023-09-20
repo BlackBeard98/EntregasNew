@@ -457,9 +457,14 @@ class _EditarPerilWidgetState extends State<EditarPerilWidget> {
                                                         ''),
                                                   )
                                                   .toString()
-                                              ..secondLastName = FFAppState()
-                                                  .authUser
-                                                  .secondLastName
+                                              ..secondLastName = IdentityGroup
+                                                  .usersupdateusermeCall
+                                                  .secondLN(
+                                                    (_model.apiResultsUpdate
+                                                            ?.jsonBody ??
+                                                        ''),
+                                                  )
+                                                  .toString()
                                               ..isLogued = true,
                                           );
                                         });
