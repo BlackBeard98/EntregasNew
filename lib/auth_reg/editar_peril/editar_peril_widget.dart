@@ -29,8 +29,8 @@ class _EditarPerilWidgetState extends State<EditarPerilWidget> {
 
     // On page load action.
     SchedulerBinding.instance.addPostFrameCallback((_) async {
-      if (FFAppState().authUser.isLogued) {
-        context.pushNamed('Productos');
+      if (!FFAppState().authUser.isLogued) {
+        context.pushNamed('login');
       }
     });
 
