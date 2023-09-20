@@ -369,44 +369,53 @@ class _CuentaWidgetState extends State<CuentaWidget> {
                     child: Padding(
                       padding:
                           EdgeInsetsDirectional.fromSTEB(8.0, 8.0, 8.0, 8.0),
-                      child: Row(
-                        mainAxisSize: MainAxisSize.max,
-                        children: [
-                          Icon(
-                            Icons.shopping_cart,
-                            color: Color(0xFF57636C),
-                            size: 24.0,
-                          ),
-                          Expanded(
-                            child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
-                                  12.0, 0.0, 0.0, 0.0),
-                              child: Text(
-                                'Mi Carrito',
-                                style: FlutterFlowTheme.of(context)
-                                    .bodyLarge
-                                    .override(
-                                      fontFamily: 'Plus Jakarta Sans',
-                                      color: Color(0xFF14181B),
-                                      fontSize: 16.0,
-                                      fontWeight: FontWeight.normal,
-                                      useGoogleFonts: GoogleFonts.asMap()
-                                          .containsKey(
-                                              FlutterFlowTheme.of(context)
-                                                  .bodyLargeFamily),
-                                    ),
+                      child: InkWell(
+                        splashColor: Colors.transparent,
+                        focusColor: Colors.transparent,
+                        hoverColor: Colors.transparent,
+                        highlightColor: Colors.transparent,
+                        onTap: () async {
+                          context.pushNamed('Carrito');
+                        },
+                        child: Row(
+                          mainAxisSize: MainAxisSize.max,
+                          children: [
+                            Icon(
+                              Icons.shopping_cart,
+                              color: Color(0xFF57636C),
+                              size: 24.0,
+                            ),
+                            Expanded(
+                              child: Padding(
+                                padding: EdgeInsetsDirectional.fromSTEB(
+                                    12.0, 0.0, 0.0, 0.0),
+                                child: Text(
+                                  'Mi Carrito',
+                                  style: FlutterFlowTheme.of(context)
+                                      .bodyLarge
+                                      .override(
+                                        fontFamily: 'Plus Jakarta Sans',
+                                        color: Color(0xFF14181B),
+                                        fontSize: 16.0,
+                                        fontWeight: FontWeight.normal,
+                                        useGoogleFonts: GoogleFonts.asMap()
+                                            .containsKey(
+                                                FlutterFlowTheme.of(context)
+                                                    .bodyLargeFamily),
+                                      ),
+                                ),
                               ),
                             ),
-                          ),
-                          Align(
-                            alignment: AlignmentDirectional(0.90, 0.00),
-                            child: Icon(
-                              Icons.arrow_forward_ios,
-                              color: Color(0xFF57636C),
-                              size: 18.0,
+                            Align(
+                              alignment: AlignmentDirectional(0.90, 0.00),
+                              child: Icon(
+                                Icons.arrow_forward_ios,
+                                color: Color(0xFF57636C),
+                                size: 18.0,
+                              ),
                             ),
-                          ),
-                        ],
+                          ],
+                        ),
                       ),
                     ),
                   ),
