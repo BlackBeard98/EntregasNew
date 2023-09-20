@@ -30,7 +30,7 @@ class _RegistroWidgetState extends State<RegistroWidget> {
     // On page load action.
     SchedulerBinding.instance.addPostFrameCallback((_) async {
       if (FFAppState().authUser.isLogued) {
-        context.pushNamed('Productos');
+        context.goNamed('Productos');
       }
     });
 
@@ -586,7 +586,7 @@ class _RegistroWidgetState extends State<RegistroWidget> {
                                   child: FFButtonWidget(
                                     onPressed: () async {
                                       if (FFAppState().authUser.isLogued) {
-                                        context.pushNamed('Productos');
+                                        context.goNamed('Productos');
                                       } else {
                                         _model.apiResultReg =
                                             await IdentityGroup.registerCall
