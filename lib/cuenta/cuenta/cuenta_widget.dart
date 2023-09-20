@@ -128,7 +128,9 @@ class _CuentaWidgetState extends State<CuentaWidget> {
               Padding(
                 padding: EdgeInsetsDirectional.fromSTEB(16.0, 16.0, 0.0, 0.0),
                 child: Text(
-                  'Cuenta',
+                  FFLocalizations.of(context).getText(
+                    'y45zvm7x' /* Cuenta */,
+                  ),
                   style: FlutterFlowTheme.of(context).labelLarge.override(
                         fontFamily: 'Plus Jakarta Sans',
                         color: Color(0xFF57636C),
@@ -171,7 +173,9 @@ class _CuentaWidgetState extends State<CuentaWidget> {
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 12.0, 0.0, 0.0, 0.0),
                             child: Text(
-                              'Mis Direcciones',
+                              FFLocalizations.of(context).getText(
+                                'vgzwxvqa' /* Mis Direcciones */,
+                              ),
                               style: FlutterFlowTheme.of(context)
                                   .bodyLarge
                                   .override(
@@ -241,7 +245,9 @@ class _CuentaWidgetState extends State<CuentaWidget> {
                               padding: EdgeInsetsDirectional.fromSTEB(
                                   12.0, 0.0, 0.0, 0.0),
                               child: Text(
-                                'Mis Pedidos',
+                                FFLocalizations.of(context).getText(
+                                  '85i4m8il' /* Mis Pedidos */,
+                                ),
                                 style: FlutterFlowTheme.of(context)
                                     .bodyLarge
                                     .override(
@@ -303,7 +309,9 @@ class _CuentaWidgetState extends State<CuentaWidget> {
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 12.0, 0.0, 0.0, 0.0),
                             child: Text(
-                              'Editar Perfil',
+                              FFLocalizations.of(context).getText(
+                                'yot0m3m0' /* Editar Perfil */,
+                              ),
                               style: FlutterFlowTheme.of(context)
                                   .bodyLarge
                                   .override(
@@ -364,7 +372,9 @@ class _CuentaWidgetState extends State<CuentaWidget> {
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 12.0, 0.0, 0.0, 0.0),
                             child: Text(
-                              'Mi Carrito',
+                              FFLocalizations.of(context).getText(
+                                '7x7khhkk' /* Mi Carrito */,
+                              ),
                               style: FlutterFlowTheme.of(context)
                                   .bodyLarge
                                   .override(
@@ -440,7 +450,9 @@ class _CuentaWidgetState extends State<CuentaWidget> {
                               padding: EdgeInsetsDirectional.fromSTEB(
                                   12.0, 0.0, 0.0, 0.0),
                               child: Text(
-                                'Cerrar Sesión ',
+                                FFLocalizations.of(context).getText(
+                                  'rhvddj3z' /* Cerrar Sesión  */,
+                                ),
                                 style: FlutterFlowTheme.of(context)
                                     .bodyLarge
                                     .override(

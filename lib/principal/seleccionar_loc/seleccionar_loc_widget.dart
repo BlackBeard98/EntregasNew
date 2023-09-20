@@ -208,7 +208,9 @@ class _SeleccionarLocWidgetState extends State<SeleccionarLocWidget> {
                                   children: [
                                     Flexible(
                                       child: Text(
-                                        'Escoja el municipio donde va a comprar',
+                                        FFLocalizations.of(context).getText(
+                                          '9tlffo20' /* Escoja el municipio donde va a... */,
+                                        ),
                                         style: FlutterFlowTheme.of(context)
                                             .titleLarge
                                             .override(
@@ -349,9 +351,17 @@ class _SeleccionarLocWidgetState extends State<SeleccionarLocWidget> {
                                                                             FlutterFlowTheme.of(context).bodyMediumFamily),
                                                                   ),
                                                           hintText:
-                                                              'Please select...',
+                                                              FFLocalizations.of(
+                                                                      context)
+                                                                  .getText(
+                                                            '0spnh94r' /* Please select... */,
+                                                          ),
                                                           searchHintText:
-                                                              'Search for an item...',
+                                                              FFLocalizations.of(
+                                                                      context)
+                                                                  .getText(
+                                                            '1nbv2dw3' /* Search for an item... */,
+                                                          ),
                                                           icon: Icon(
                                                             Icons
                                                                 .keyboard_arrow_down_rounded,
@@ -503,9 +513,17 @@ class _SeleccionarLocWidgetState extends State<SeleccionarLocWidget> {
                                                                             FlutterFlowTheme.of(context).bodyMediumFamily),
                                                                   ),
                                                           hintText:
-                                                              'Please select...',
+                                                              FFLocalizations.of(
+                                                                      context)
+                                                                  .getText(
+                                                            'olt7wxdv' /* Please select... */,
+                                                          ),
                                                           searchHintText:
-                                                              'Search for an item...',
+                                                              FFLocalizations.of(
+                                                                      context)
+                                                                  .getText(
+                                                            'chogp8cx' /* Search for an item... */,
+                                                          ),
                                                           icon: Icon(
                                                             Icons
                                                                 .keyboard_arrow_down_rounded,
@@ -584,7 +602,11 @@ class _SeleccionarLocWidgetState extends State<SeleccionarLocWidget> {
                                                         context.goNamed(
                                                             'Productos');
                                                       },
-                                                text: 'Avanzar a Comprar',
+                                                text:
+                                                    FFLocalizations.of(context)
+                                                        .getText(
+                                                  'x3xh1i3e' /* Avanzar a Comprar */,
+                                                ),
                                                 options: FFButtonOptions(
                                                   height: 40.0,
                                                   padding: EdgeInsetsDirectional

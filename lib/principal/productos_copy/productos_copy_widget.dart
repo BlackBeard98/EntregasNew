@@ -113,7 +113,9 @@ class _ProductosCopyWidgetState extends State<ProductosCopyWidget> {
                 text: TextSpan(
                   children: [
                     TextSpan(
-                      text: 'Comprando en ',
+                      text: FFLocalizations.of(context).getText(
+                        'zhxta0cf' /* Comprando en  */,
+                      ),
                       style: FlutterFlowTheme.of(context).bodyMedium.override(
                             fontFamily:
                                 FlutterFlowTheme.of(context).bodyMediumFamily,
@@ -180,7 +182,9 @@ class _ProductosCopyWidgetState extends State<ProductosCopyWidget> {
                       autofocus: true,
                       obscureText: false,
                       decoration: InputDecoration(
-                        labelText: 'Buscar Producto',
+                        labelText: FFLocalizations.of(context).getText(
+                          '9an139nf' /* Buscar Producto */,
+                        ),
                         labelStyle:
                             FlutterFlowTheme.of(context).labelMedium.override(
                                   fontFamily: 'Plus Jakarta Sans',
@@ -379,7 +383,9 @@ class _ProductosCopyWidgetState extends State<ProductosCopyWidget> {
                     padding:
                         EdgeInsetsDirectional.fromSTEB(16.0, 12.0, 0.0, 0.0),
                     child: Text(
-                      'Productos',
+                      FFLocalizations.of(context).getText(
+                        '65udvxah' /* Productos */,
+                      ),
                       style: FlutterFlowTheme.of(context).labelMedium.override(
                             fontFamily: 'Plus Jakarta Sans',
                             color: Color(0xFF606A85),
@@ -630,7 +636,9 @@ class _ProductosCopyWidgetState extends State<ProductosCopyWidget> {
                                         }.withoutNulls,
                                       );
                                     },
-                                    text: 'Ver Detalles',
+                                    text: FFLocalizations.of(context).getText(
+                                      '5sqwymw2' /* Ver Detalles */,
+                                    ),
                                     options: FFButtonOptions(
                                       height: 40.0,
                                       padding: EdgeInsetsDirectional.fromSTEB(

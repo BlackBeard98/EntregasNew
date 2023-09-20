@@ -48,7 +48,9 @@ class _Checkout6WidgetState extends State<Checkout6Widget> {
           backgroundColor: Color(0xFFF1F5F8),
           automaticallyImplyLeading: false,
           title: Text(
-            'My Cart',
+            FFLocalizations.of(context).getText(
+              'w0lucjja' /* My Cart */,
+            ),
             style: FlutterFlowTheme.of(context).displaySmall.override(
                   fontFamily: 'Outfit',
                   color: Color(0xFF0F1113),
@@ -76,7 +78,9 @@ class _Checkout6WidgetState extends State<Checkout6Widget> {
                       padding:
                           EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 0.0, 0.0),
                       child: Text(
-                        'Below are the items in your cart.',
+                        FFLocalizations.of(context).getText(
+                          'equuqv8b' /* Below are the items in your ca... */,
+                        ),
                         style:
                             FlutterFlowTheme.of(context).labelMedium.override(
                                   fontFamily: 'Plus Jakarta Sans',
@@ -152,7 +156,10 @@ class _Checkout6WidgetState extends State<Checkout6Widget> {
                                               padding: EdgeInsetsDirectional
                                                   .fromSTEB(0.0, 0.0, 0.0, 8.0),
                                               child: Text(
-                                                'AirMax Low',
+                                                FFLocalizations.of(context)
+                                                    .getText(
+                                                  'cgc2mlvg' /* AirMax Low */,
+                                                ),
                                                 style:
                                                     FlutterFlowTheme.of(context)
                                                         .titleLarge
@@ -174,7 +181,10 @@ class _Checkout6WidgetState extends State<Checkout6Widget> {
                                               ),
                                             ),
                                             Text(
-                                              '\$120.00',
+                                              FFLocalizations.of(context)
+                                                  .getText(
+                                                'zqdkf8vl' /* $120.00 */,
+                                              ),
                                               style: FlutterFlowTheme.of(
                                                       context)
                                                   .labelMedium
@@ -196,7 +206,10 @@ class _Checkout6WidgetState extends State<Checkout6Widget> {
                                               padding: EdgeInsetsDirectional
                                                   .fromSTEB(0.0, 8.0, 0.0, 0.0),
                                               child: Text(
-                                                'Quanity: 1',
+                                                FFLocalizations.of(context)
+                                                    .getText(
+                                                  '752vceih' /* Quanity: 1 */,
+                                                ),
                                                 style:
                                                     FlutterFlowTheme.of(context)
                                                         .labelSmall
@@ -308,7 +321,10 @@ class _Checkout6WidgetState extends State<Checkout6Widget> {
                                               padding: EdgeInsetsDirectional
                                                   .fromSTEB(0.0, 0.0, 0.0, 8.0),
                                               child: Text(
-                                                'Zion 1',
+                                                FFLocalizations.of(context)
+                                                    .getText(
+                                                  'z8e09agx' /* Zion 1 */,
+                                                ),
                                                 style:
                                                     FlutterFlowTheme.of(context)
                                                         .titleLarge
@@ -330,7 +346,10 @@ class _Checkout6WidgetState extends State<Checkout6Widget> {
                                               ),
                                             ),
                                             Text(
-                                              '\$120.00',
+                                              FFLocalizations.of(context)
+                                                  .getText(
+                                                'v9h966c7' /* $120.00 */,
+                                              ),
                                               style: FlutterFlowTheme.of(
                                                       context)
                                                   .labelMedium
@@ -352,7 +371,10 @@ class _Checkout6WidgetState extends State<Checkout6Widget> {
                                               padding: EdgeInsetsDirectional
                                                   .fromSTEB(0.0, 8.0, 0.0, 0.0),
                                               child: Text(
-                                                'Quanity: 1',
+                                                FFLocalizations.of(context)
+                                                    .getText(
+                                                  'nb5eyd0r' /* Quanity: 1 */,
+                                                ),
                                                 style:
                                                     FlutterFlowTheme.of(context)
                                                         .labelSmall
@@ -464,7 +486,10 @@ class _Checkout6WidgetState extends State<Checkout6Widget> {
                                               padding: EdgeInsetsDirectional
                                                   .fromSTEB(0.0, 0.0, 0.0, 8.0),
                                               child: Text(
-                                                'Jumpsuit',
+                                                FFLocalizations.of(context)
+                                                    .getText(
+                                                  'ddun6rfb' /* Jumpsuit */,
+                                                ),
                                                 style:
                                                     FlutterFlowTheme.of(context)
                                                         .titleLarge
@@ -486,7 +511,10 @@ class _Checkout6WidgetState extends State<Checkout6Widget> {
                                               ),
                                             ),
                                             Text(
-                                              '\$120.00',
+                                              FFLocalizations.of(context)
+                                                  .getText(
+                                                'wrh5tn26' /* $120.00 */,
+                                              ),
                                               style: FlutterFlowTheme.of(
                                                       context)
                                                   .labelMedium
@@ -508,7 +536,10 @@ class _Checkout6WidgetState extends State<Checkout6Widget> {
                                               padding: EdgeInsetsDirectional
                                                   .fromSTEB(0.0, 8.0, 0.0, 0.0),
                                               child: Text(
-                                                'Quanity: 1',
+                                                FFLocalizations.of(context)
+                                                    .getText(
+                                                  'glysdrcu' /* Quanity: 1 */,
+                                                ),
                                                 style:
                                                     FlutterFlowTheme.of(context)
                                                         .labelSmall
@@ -580,7 +611,9 @@ class _Checkout6WidgetState extends State<Checkout6Widget> {
                               mainAxisSize: MainAxisSize.max,
                               children: [
                                 Text(
-                                  'Price Breakdown',
+                                  FFLocalizations.of(context).getText(
+                                    'mowllo3a' /* Price Breakdown */,
+                                  ),
                                   style: FlutterFlowTheme.of(context)
                                       .bodyMedium
                                       .override(
@@ -605,7 +638,9 @@ class _Checkout6WidgetState extends State<Checkout6Widget> {
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 Text(
-                                  'Base Price',
+                                  FFLocalizations.of(context).getText(
+                                    'rz0l11c5' /* Base Price */,
+                                  ),
                                   style: FlutterFlowTheme.of(context)
                                       .labelMedium
                                       .override(
@@ -620,7 +655,9 @@ class _Checkout6WidgetState extends State<Checkout6Widget> {
                                       ),
                                 ),
                                 Text(
-                                  '\$120.00',
+                                  FFLocalizations.of(context).getText(
+                                    'wuepo5n1' /* $120.00 */,
+                                  ),
                                   style: FlutterFlowTheme.of(context)
                                       .bodyLarge
                                       .override(
@@ -645,7 +682,9 @@ class _Checkout6WidgetState extends State<Checkout6Widget> {
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 Text(
-                                  'Taxes',
+                                  FFLocalizations.of(context).getText(
+                                    'd1n0mrsi' /* Taxes */,
+                                  ),
                                   style: FlutterFlowTheme.of(context)
                                       .labelMedium
                                       .override(
@@ -660,7 +699,9 @@ class _Checkout6WidgetState extends State<Checkout6Widget> {
                                       ),
                                 ),
                                 Text(
-                                  '\$12.25',
+                                  FFLocalizations.of(context).getText(
+                                    'xuopge7z' /* $12.25 */,
+                                  ),
                                   style: FlutterFlowTheme.of(context)
                                       .bodyLarge
                                       .override(
@@ -688,7 +729,9 @@ class _Checkout6WidgetState extends State<Checkout6Widget> {
                                   mainAxisSize: MainAxisSize.max,
                                   children: [
                                     Text(
-                                      'Total',
+                                      FFLocalizations.of(context).getText(
+                                        '6zh40sct' /* Total */,
+                                      ),
                                       style: FlutterFlowTheme.of(context)
                                           .labelMedium
                                           .override(
@@ -719,7 +762,9 @@ class _Checkout6WidgetState extends State<Checkout6Widget> {
                                   ],
                                 ),
                                 Text(
-                                  '\$137.75',
+                                  FFLocalizations.of(context).getText(
+                                    'ws71eec7' /* $137.75 */,
+                                  ),
                                   style: FlutterFlowTheme.of(context)
                                       .displaySmall
                                       .override(
@@ -766,7 +811,9 @@ class _Checkout6WidgetState extends State<Checkout6Widget> {
               child: Padding(
                 padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 32.0),
                 child: Text(
-                  'Checkout (\$137.75)',
+                  FFLocalizations.of(context).getText(
+                    'qlbmf754' /* Checkout ($137.75) */,
+                  ),
                   style: FlutterFlowTheme.of(context).titleMedium.override(
                         fontFamily: 'Outfit',
                         color: Colors.white,

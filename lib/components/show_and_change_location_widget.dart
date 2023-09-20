@@ -58,7 +58,9 @@ class _ShowAndChangeLocationWidgetState
               text: TextSpan(
                 children: [
                   TextSpan(
-                    text: 'Comprando en ',
+                    text: FFLocalizations.of(context).getText(
+                      'lwjfocu7' /* Comprando en  */,
+                    ),
                     style: FlutterFlowTheme.of(context).bodyMedium.override(
                           fontFamily:
                               FlutterFlowTheme.of(context).bodyMediumFamily,
@@ -75,7 +77,9 @@ class _ShowAndChangeLocationWidgetState
                     ),
                   ),
                   TextSpan(
-                    text: ' Cambiar?',
+                    text: FFLocalizations.of(context).getText(
+                      '0fprk0ue' /*  Cambiar? */,
+                    ),
                     style: TextStyle(
                       color: Color(0xFFE27C46),
                     ),

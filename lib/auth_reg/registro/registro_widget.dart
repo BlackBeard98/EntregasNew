@@ -78,7 +78,9 @@ class _RegistroWidgetState extends State<RegistroWidget> {
                       ),
                       alignment: AlignmentDirectional(0.00, 0.00),
                       child: Text(
-                        'Entregas',
+                        FFLocalizations.of(context).getText(
+                          'auknhx7m' /* Entregas */,
+                        ),
                         style:
                             FlutterFlowTheme.of(context).displaySmall.override(
                                   fontFamily: 'Plus Jakarta Sans',
@@ -125,7 +127,9 @@ class _RegistroWidgetState extends State<RegistroWidget> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                'Bienvenido',
+                                FFLocalizations.of(context).getText(
+                                  'u35i37kf' /* Bienvenido */,
+                                ),
                                 textAlign: TextAlign.start,
                                 style: FlutterFlowTheme.of(context)
                                     .displaySmall
@@ -144,7 +148,9 @@ class _RegistroWidgetState extends State<RegistroWidget> {
                                 padding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 12.0, 0.0, 24.0),
                                 child: Text(
-                                  'Complete la información a continuación para crear a su cuenta.',
+                                  FFLocalizations.of(context).getText(
+                                    'emc86s9z' /* Complete la información a cont... */,
+                                  ),
                                   textAlign: TextAlign.start,
                                   style: FlutterFlowTheme.of(context)
                                       .labelLarge
@@ -171,7 +177,10 @@ class _RegistroWidgetState extends State<RegistroWidget> {
                                     autofillHints: [AutofillHints.name],
                                     obscureText: false,
                                     decoration: InputDecoration(
-                                      labelText: 'Nombre',
+                                      labelText:
+                                          FFLocalizations.of(context).getText(
+                                        'ajba11pp' /* Nombre */,
+                                      ),
                                       labelStyle: FlutterFlowTheme.of(context)
                                           .titleMedium
                                           .override(
@@ -251,7 +260,10 @@ class _RegistroWidgetState extends State<RegistroWidget> {
                                     autofillHints: [AutofillHints.name],
                                     obscureText: false,
                                     decoration: InputDecoration(
-                                      labelText: 'Apellido1',
+                                      labelText:
+                                          FFLocalizations.of(context).getText(
+                                        'hgag4u45' /* Apellido1 */,
+                                      ),
                                       labelStyle: FlutterFlowTheme.of(context)
                                           .titleMedium
                                           .override(
@@ -332,7 +344,10 @@ class _RegistroWidgetState extends State<RegistroWidget> {
                                     autofillHints: [AutofillHints.name],
                                     obscureText: false,
                                     decoration: InputDecoration(
-                                      labelText: 'Apellido2',
+                                      labelText:
+                                          FFLocalizations.of(context).getText(
+                                        'f4qfu4au' /* Apellido2 */,
+                                      ),
                                       labelStyle: FlutterFlowTheme.of(context)
                                           .titleMedium
                                           .override(
@@ -413,7 +428,10 @@ class _RegistroWidgetState extends State<RegistroWidget> {
                                     autofillHints: [AutofillHints.password],
                                     obscureText: !_model.passwordVisibility,
                                     decoration: InputDecoration(
-                                      labelText: 'Contraseña',
+                                      labelText:
+                                          FFLocalizations.of(context).getText(
+                                        '3b0ni7vu' /* Contraseña */,
+                                      ),
                                       labelStyle: FlutterFlowTheme.of(context)
                                           .titleMedium
                                           .override(
@@ -508,7 +526,10 @@ class _RegistroWidgetState extends State<RegistroWidget> {
                                     autofillHints: [AutofillHints.email],
                                     obscureText: false,
                                     decoration: InputDecoration(
-                                      labelText: 'Email',
+                                      labelText:
+                                          FFLocalizations.of(context).getText(
+                                        'opjoryn8' /* Email */,
+                                      ),
                                       labelStyle: FlutterFlowTheme.of(context)
                                           .titleMedium
                                           .override(
@@ -648,7 +669,9 @@ class _RegistroWidgetState extends State<RegistroWidget> {
 
                                       setState(() {});
                                     },
-                                    text: 'Registrase',
+                                    text: FFLocalizations.of(context).getText(
+                                      'jeq5nexv' /* Registrase */,
+                                    ),
                                     options: FFButtonOptions(
                                       width: 230.0,
                                       height: 52.0,
@@ -693,11 +716,17 @@ class _RegistroWidgetState extends State<RegistroWidget> {
                                     text: TextSpan(
                                       children: [
                                         TextSpan(
-                                          text: 'Ya tienes cuenta? ',
+                                          text: FFLocalizations.of(context)
+                                              .getText(
+                                            'smh7sy49' /* Ya tienes cuenta?  */,
+                                          ),
                                           style: TextStyle(),
                                         ),
                                         TextSpan(
-                                          text: 'Accede aquí',
+                                          text: FFLocalizations.of(context)
+                                              .getText(
+                                            'rbrr67xn' /* Accede aquí */,
+                                          ),
                                           style: FlutterFlowTheme.of(context)
                                               .bodyMedium
                                               .override(

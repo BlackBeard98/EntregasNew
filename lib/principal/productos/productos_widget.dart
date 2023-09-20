@@ -172,7 +172,9 @@ class _ProductosWidgetState extends State<ProductosWidget> {
                               autofocus: true,
                               obscureText: false,
                               decoration: InputDecoration(
-                                labelText: 'Buscar Producto',
+                                labelText: FFLocalizations.of(context).getText(
+                                  'jw8vjwn0' /* Buscar Producto */,
+                                ),
                                 labelStyle: FlutterFlowTheme.of(context)
                                     .labelMedium
                                     .override(
@@ -394,7 +396,9 @@ class _ProductosWidgetState extends State<ProductosWidget> {
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 16.0, 12.0, 0.0, 0.0),
                             child: Text(
-                              'Productos',
+                              FFLocalizations.of(context).getText(
+                                'wu4mn0qy' /* Productos */,
+                              ),
                               style: FlutterFlowTheme.of(context)
                                   .labelMedium
                                   .override(
@@ -670,7 +674,10 @@ class _ProductosWidgetState extends State<ProductosWidget> {
                                                 }.withoutNulls,
                                               );
                                             },
-                                            text: 'Ver Detalles',
+                                            text: FFLocalizations.of(context)
+                                                .getText(
+                                              '67sl1u81' /* Ver Detalles */,
+                                            ),
                                             options: FFButtonOptions(
                                               height: 40.0,
                                               padding: EdgeInsetsDirectional

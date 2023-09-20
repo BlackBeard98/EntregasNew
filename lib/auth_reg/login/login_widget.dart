@@ -31,7 +31,7 @@ class _LoginWidgetState extends State<LoginWidget> {
     // On page load action.
     SchedulerBinding.instance.addPostFrameCallback((_) async {
       if (FFAppState().authUser.isLogued) {
-        if (FFAppState().ProvinceApp.hasId()) {
+        if (FFAppState().MunicipalityApp.hasIsSet()) {
           context.goNamed('Productos');
         } else {
           context.goNamed('SeleccionarLoc');
@@ -84,7 +84,9 @@ class _LoginWidgetState extends State<LoginWidget> {
                           ),
                           alignment: AlignmentDirectional(0.00, 0.00),
                           child: Text(
-                            'Entregas',
+                            FFLocalizations.of(context).getText(
+                              'po69vlq3' /* Entregas */,
+                            ),
                             style: FlutterFlowTheme.of(context)
                                 .displaySmall
                                 .override(
@@ -134,7 +136,9 @@ class _LoginWidgetState extends State<LoginWidget> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                'Bienvenido',
+                                FFLocalizations.of(context).getText(
+                                  'lkqzbtqx' /* Bienvenido */,
+                                ),
                                 textAlign: TextAlign.start,
                                 style: FlutterFlowTheme.of(context)
                                     .displaySmall
@@ -153,7 +157,9 @@ class _LoginWidgetState extends State<LoginWidget> {
                                 padding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 12.0, 0.0, 24.0),
                                 child: Text(
-                                  'Complete la información a continuación para acceder a su cuenta.',
+                                  FFLocalizations.of(context).getText(
+                                    '7x891v18' /* Complete la información a cont... */,
+                                  ),
                                   textAlign: TextAlign.start,
                                   style: FlutterFlowTheme.of(context)
                                       .labelLarge
@@ -180,7 +186,10 @@ class _LoginWidgetState extends State<LoginWidget> {
                                     autofillHints: [AutofillHints.email],
                                     obscureText: false,
                                     decoration: InputDecoration(
-                                      labelText: 'Email',
+                                      labelText:
+                                          FFLocalizations.of(context).getText(
+                                        'ga4rfjjd' /* Email */,
+                                      ),
                                       labelStyle: FlutterFlowTheme.of(context)
                                           .titleMedium
                                           .override(
@@ -261,7 +270,10 @@ class _LoginWidgetState extends State<LoginWidget> {
                                     autofillHints: [AutofillHints.password],
                                     obscureText: !_model.passwordVisibility,
                                     decoration: InputDecoration(
-                                      labelText: 'Contraseña',
+                                      labelText:
+                                          FFLocalizations.of(context).getText(
+                                        '1ohqyikt' /* Contraseña */,
+                                      ),
                                       labelStyle: FlutterFlowTheme.of(context)
                                           .titleMedium
                                           .override(
@@ -433,7 +445,9 @@ class _LoginWidgetState extends State<LoginWidget> {
 
                                       setState(() {});
                                     },
-                                    text: 'Loguearse',
+                                    text: FFLocalizations.of(context).getText(
+                                      'dueczkl6' /* Loguearse */,
+                                    ),
                                     options: FFButtonOptions(
                                       width: 230.0,
                                       height: 52.0,
@@ -478,13 +492,19 @@ class _LoginWidgetState extends State<LoginWidget> {
                                     text: TextSpan(
                                       children: [
                                         TextSpan(
-                                          text: 'No tienes cuenta? ',
+                                          text: FFLocalizations.of(context)
+                                              .getText(
+                                            '9x5ft1pu' /* No tienes cuenta?  */,
+                                          ),
                                           style: GoogleFonts.getFont(
                                             'Outfit',
                                           ),
                                         ),
                                         TextSpan(
-                                          text: 'Regístrate aquí',
+                                          text: FFLocalizations.of(context)
+                                              .getText(
+                                            'csmdmikn' /* Regístrate aquí */,
+                                          ),
                                           style: FlutterFlowTheme.of(context)
                                               .bodyMedium
                                               .override(
