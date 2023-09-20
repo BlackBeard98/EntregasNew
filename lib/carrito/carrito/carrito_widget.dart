@@ -313,10 +313,7 @@ class _CarritoWidgetState extends State<CarritoWidget> {
 
                                                 setState(() {});
                                               },
-                                              text: FFLocalizations.of(context)
-                                                  .getText(
-                                                '5yfhfo03' /* Eliminar */,
-                                              ),
+                                              text: 'Eliminar',
                                               icon: Icon(
                                                 Icons
                                                     .remove_shopping_cart_outlined,
@@ -364,9 +361,7 @@ class _CarritoWidgetState extends State<CarritoWidget> {
                                       padding: EdgeInsetsDirectional.fromSTEB(
                                           0.0, 4.0, 0.0, 12.0),
                                       child: Text(
-                                        FFLocalizations.of(context).getText(
-                                          'djuc3j4a' /* Abajo esta la lista de items d... */,
-                                        ),
+                                        'Abajo esta la lista de items de su carrito',
                                         style: FlutterFlowTheme.of(context)
                                             .labelMedium
                                             .override(
@@ -565,9 +560,7 @@ class _CarritoWidgetState extends State<CarritoWidget> {
                                                                             TextSpan(
                                                                           children: [
                                                                             TextSpan(
-                                                                              text: FFLocalizations.of(context).getText(
-                                                                                '73aojaqv' /* Cantidad: */,
-                                                                              ),
+                                                                              text: 'Cantidad:',
                                                                               style: TextStyle(),
                                                                             ),
                                                                             TextSpan(
@@ -760,11 +753,7 @@ class _CarritoWidgetState extends State<CarritoWidget> {
                                                                       () {});
                                                                 },
                                                                 child: Text(
-                                                                  FFLocalizations.of(
-                                                                          context)
-                                                                      .getText(
-                                                                    'qfkbbtl6' /* Remove */,
-                                                                  ),
+                                                                  'Remove',
                                                                   style: FlutterFlowTheme.of(
                                                                           context)
                                                                       .bodyMedium
@@ -825,9 +814,7 @@ class _CarritoWidgetState extends State<CarritoWidget> {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Text(
-                                  FFLocalizations.of(context).getText(
-                                    '2w3tgu27' /* Resumen de Pedido */,
-                                  ),
+                                  'Resumen de Pedido',
                                   style: FlutterFlowTheme.of(context)
                                       .titleLarge
                                       .override(
@@ -845,9 +832,7 @@ class _CarritoWidgetState extends State<CarritoWidget> {
                                   padding: EdgeInsetsDirectional.fromSTEB(
                                       0.0, 4.0, 0.0, 12.0),
                                   child: Text(
-                                    FFLocalizations.of(context).getText(
-                                      'n8veao96' /* Abajo hay un resumen de su Ped... */,
-                                    ),
+                                    'Abajo hay un resumen de su Pedido',
                                     style: FlutterFlowTheme.of(context)
                                         .labelMedium
                                         .override(
@@ -887,10 +872,7 @@ class _CarritoWidgetState extends State<CarritoWidget> {
                                               mainAxisSize: MainAxisSize.max,
                                               children: [
                                                 Text(
-                                                  FFLocalizations.of(context)
-                                                      .getText(
-                                                    'kda8rya0' /* Total */,
-                                                  ),
+                                                  'Total',
                                                   style: FlutterFlowTheme.of(
                                                           context)
                                                       .titleMedium
@@ -1018,9 +1000,7 @@ class _CarritoWidgetState extends State<CarritoWidget> {
 
                                     setState(() {});
                                   },
-                                  text: FFLocalizations.of(context).getText(
-                                    'ortpe3tp' /* Realizar Orden */,
-                                  ),
+                                  text: 'Realizar Orden',
                                   options: FFButtonOptions(
                                     width: double.infinity,
                                     height: 50.0,

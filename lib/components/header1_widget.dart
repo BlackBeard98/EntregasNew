@@ -104,9 +104,7 @@ class _Header1WidgetState extends State<Header1Widget> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Text(
-                            FFLocalizations.of(context).getText(
-                              'uv7rofrv' /* Welcome! */,
-                            ),
+                            'Welcome!',
                             style: FlutterFlowTheme.of(context)
                                 .displaySmall
                                 .override(
@@ -130,9 +128,7 @@ class _Header1WidgetState extends State<Header1Widget> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Text(
-                            FFLocalizations.of(context).getText(
-                              'rg9o9qm5' /* Find your Dream Space */,
-                            ),
+                            'Find your Dream Space',
                             style: FlutterFlowTheme.of(context)
                                 .headlineMedium
                                 .override(
@@ -230,9 +226,7 @@ class _Header1WidgetState extends State<Header1Widget> {
                                 onPressed: () {
                                   print('Button pressed ...');
                                 },
-                                text: FFLocalizations.of(context).getText(
-                                  'bp5ql35x' /* Search */,
-                                ),
+                                text: 'Search',
                                 options: FFButtonOptions(
                                   padding: EdgeInsetsDirectional.fromSTEB(
                                       0.0, 0.0, 0.0, 0.0),

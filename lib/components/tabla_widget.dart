@@ -89,9 +89,7 @@ class _TablaWidgetState extends State<TablaWidget> {
                                 padding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 12.0, 0.0),
                                 child: Text(
-                                  FFLocalizations.of(context).getText(
-                                    '7zcffw53' /* Card Header */,
-                                  ),
+                                  'Card Header',
                                   style: FlutterFlowTheme.of(context)
                                       .headlineMedium
                                       .override(
@@ -117,9 +115,7 @@ class _TablaWidgetState extends State<TablaWidget> {
                                   padding: EdgeInsetsDirectional.fromSTEB(
                                       12.0, 0.0, 12.0, 0.0),
                                   child: Text(
-                                    FFLocalizations.of(context).getText(
-                                      '5ykg0b8i' /* 12 */,
-                                    ),
+                                    '12',
                                     style: FlutterFlowTheme.of(context)
                                         .bodyMedium
                                         .override(
@@ -141,9 +137,7 @@ class _TablaWidgetState extends State<TablaWidget> {
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 4.0, 12.0, 0.0),
                             child: Text(
-                              FFLocalizations.of(context).getText(
-                                'jltd4kia' /* Create tables and ui elements ... */,
-                              ),
+                              'Create tables and ui elements that work below.',
                               style: FlutterFlowTheme.of(context)
                                   .bodySmall
                                   .override(
@@ -177,9 +171,7 @@ class _TablaWidgetState extends State<TablaWidget> {
                             obscureText: false,
                             decoration: InputDecoration(
                               isDense: true,
-                              hintText: FFLocalizations.of(context).getText(
-                                '3lcjiuc4' /* Search users... */,
-                              ),
+                              hintText: 'Search users...',
                               hintStyle: FlutterFlowTheme.of(context)
                                   .bodySmall
                                   .override(
@@ -296,9 +288,7 @@ class _TablaWidgetState extends State<TablaWidget> {
                                   ),
                                 ),
                                 Text(
-                                  FFLocalizations.of(context).getText(
-                                    '1zvce2x9' /* Customer Info */,
-                                  ),
+                                  'Customer Info',
                                   style: FlutterFlowTheme.of(context)
                                       .bodySmall
                                       .override(
@@ -323,9 +313,7 @@ class _TablaWidgetState extends State<TablaWidget> {
                             Expanded(
                               flex: 2,
                               child: Text(
-                                FFLocalizations.of(context).getText(
-                                  't6zeq6da' /* Paid On */,
-                                ),
+                                'Paid On',
                                 style: FlutterFlowTheme.of(context)
                                     .bodySmall
                                     .override(
@@ -349,9 +337,7 @@ class _TablaWidgetState extends State<TablaWidget> {
                             Expanded(
                               flex: 2,
                               child: Text(
-                                FFLocalizations.of(context).getText(
-                                  'y18lle6x' /* Invoice # */,
-                                ),
+                                'Invoice #',
                                 style: FlutterFlowTheme.of(context)
                                     .bodySmall
                                     .override(
@@ -369,9 +355,7 @@ class _TablaWidgetState extends State<TablaWidget> {
                           Expanded(
                             flex: 2,
                             child: Text(
-                              FFLocalizations.of(context).getText(
-                                '9054bdjs' /* Status */,
-                              ),
+                              'Status',
                               style: FlutterFlowTheme.of(context)
                                   .bodySmall
                                   .override(
@@ -393,9 +377,7 @@ class _TablaWidgetState extends State<TablaWidget> {
                             Expanded(
                               flex: 2,
                               child: Text(
-                                FFLocalizations.of(context).getText(
-                                  'cg97wufb' /* Amount */,
-                                ),
+                                'Amount',
                                 style: FlutterFlowTheme.of(context)
                                     .bodySmall
                                     .override(
@@ -413,9 +395,7 @@ class _TablaWidgetState extends State<TablaWidget> {
                           Expanded(
                             flex: 1,
                             child: Text(
-                              FFLocalizations.of(context).getText(
-                                'rfjmmtbh' /* Actions */,
-                              ),
+                              'Actions',
                               textAlign: TextAlign.end,
                               style: FlutterFlowTheme.of(context)
                                   .bodySmall
@@ -497,9 +477,7 @@ class _TablaWidgetState extends State<TablaWidget> {
                                         ),
                                       ),
                                       Text(
-                                        FFLocalizations.of(context).getText(
-                                          '98h6sq2h' /* Randy Peterson */,
-                                        ),
+                                        'Randy Peterson',
                                         style: FlutterFlowTheme.of(context)
                                             .bodyLarge
                                             .override(
@@ -537,9 +515,7 @@ class _TablaWidgetState extends State<TablaWidget> {
                                         tablet: false,
                                       ))
                                         Text(
-                                          FFLocalizations.of(context).getText(
-                                            'n7k80vjw' /* Jan. 30th, 2023 */,
-                                          ),
+                                          'Jan. 30th, 2023',
                                           style: FlutterFlowTheme.of(context)
                                               .bodyMedium
                                               .override(
@@ -565,9 +541,7 @@ class _TablaWidgetState extends State<TablaWidget> {
                                               EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 4.0, 0.0, 0.0),
                                           child: Text(
-                                            FFLocalizations.of(context).getText(
-                                              'kcexzf34' /* 10 days ago */,
-                                            ),
+                                            '10 days ago',
                                             style: FlutterFlowTheme.of(context)
                                                 .bodySmall
                                                 .override(
@@ -596,9 +570,7 @@ class _TablaWidgetState extends State<TablaWidget> {
                                 Expanded(
                                   flex: 2,
                                   child: Text(
-                                    FFLocalizations.of(context).getText(
-                                      't7ir4b4w' /* #42925424 */,
-                                    ),
+                                    '#42925424',
                                     style: FlutterFlowTheme.of(context)
                                         .bodyMedium
                                         .override(
@@ -631,9 +603,7 @@ class _TablaWidgetState extends State<TablaWidget> {
                                         padding: EdgeInsetsDirectional.fromSTEB(
                                             12.0, 0.0, 12.0, 0.0),
                                         child: Text(
-                                          FFLocalizations.of(context).getText(
-                                            'ere10ypn' /* Paid */,
-                                          ),
+                                          'Paid',
                                           style: FlutterFlowTheme.of(context)
                                               .bodyMedium
                                               .override(
@@ -661,9 +631,7 @@ class _TablaWidgetState extends State<TablaWidget> {
                                 Expanded(
                                   flex: 2,
                                   child: Text(
-                                    FFLocalizations.of(context).getText(
-                                      '4rdifbee' /* $2,100.00 */,
-                                    ),
+                                    '\$2,100.00',
                                     style: FlutterFlowTheme.of(context)
                                         .titleLarge
                                         .override(
@@ -762,9 +730,7 @@ class _TablaWidgetState extends State<TablaWidget> {
                                         ),
                                       ),
                                       Text(
-                                        FFLocalizations.of(context).getText(
-                                          'czqywwup' /* Randy Peterson */,
-                                        ),
+                                        'Randy Peterson',
                                         style: FlutterFlowTheme.of(context)
                                             .bodyLarge
                                             .override(
@@ -802,9 +768,7 @@ class _TablaWidgetState extends State<TablaWidget> {
                                         tablet: false,
                                       ))
                                         Text(
-                                          FFLocalizations.of(context).getText(
-                                            '4jh5hi14' /* Jan. 30th, 2023 */,
-                                          ),
+                                          'Jan. 30th, 2023',
                                           style: FlutterFlowTheme.of(context)
                                               .bodyMedium
                                               .override(
@@ -830,9 +794,7 @@ class _TablaWidgetState extends State<TablaWidget> {
                                               EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 4.0, 0.0, 0.0),
                                           child: Text(
-                                            FFLocalizations.of(context).getText(
-                                              'l3jg5jmv' /* 10 days ago */,
-                                            ),
+                                            '10 days ago',
                                             style: FlutterFlowTheme.of(context)
                                                 .bodySmall
                                                 .override(
@@ -861,9 +823,7 @@ class _TablaWidgetState extends State<TablaWidget> {
                                 Expanded(
                                   flex: 2,
                                   child: Text(
-                                    FFLocalizations.of(context).getText(
-                                      'at2j6oha' /* #42925424 */,
-                                    ),
+                                    '#42925424',
                                     style: FlutterFlowTheme.of(context)
                                         .bodyMedium
                                         .override(
@@ -896,9 +856,7 @@ class _TablaWidgetState extends State<TablaWidget> {
                                         padding: EdgeInsetsDirectional.fromSTEB(
                                             12.0, 0.0, 12.0, 0.0),
                                         child: Text(
-                                          FFLocalizations.of(context).getText(
-                                            'riu2gr5r' /* Paid */,
-                                          ),
+                                          'Paid',
                                           style: FlutterFlowTheme.of(context)
                                               .bodyMedium
                                               .override(
@@ -926,9 +884,7 @@ class _TablaWidgetState extends State<TablaWidget> {
                                 Expanded(
                                   flex: 2,
                                   child: Text(
-                                    FFLocalizations.of(context).getText(
-                                      'u10awrwl' /* $2,100.00 */,
-                                    ),
+                                    '\$2,100.00',
                                     style: FlutterFlowTheme.of(context)
                                         .titleLarge
                                         .override(
@@ -1027,9 +983,7 @@ class _TablaWidgetState extends State<TablaWidget> {
                                         ),
                                       ),
                                       Text(
-                                        FFLocalizations.of(context).getText(
-                                          'viyiymar' /* Randy Peterson */,
-                                        ),
+                                        'Randy Peterson',
                                         style: FlutterFlowTheme.of(context)
                                             .bodyLarge
                                             .override(
@@ -1067,9 +1021,7 @@ class _TablaWidgetState extends State<TablaWidget> {
                                         tablet: false,
                                       ))
                                         Text(
-                                          FFLocalizations.of(context).getText(
-                                            'wkydvkwb' /* Jan. 30th, 2023 */,
-                                          ),
+                                          'Jan. 30th, 2023',
                                           style: FlutterFlowTheme.of(context)
                                               .bodyMedium
                                               .override(
@@ -1095,9 +1047,7 @@ class _TablaWidgetState extends State<TablaWidget> {
                                               EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 4.0, 0.0, 0.0),
                                           child: Text(
-                                            FFLocalizations.of(context).getText(
-                                              'fcbsrc98' /* 10 days ago */,
-                                            ),
+                                            '10 days ago',
                                             style: FlutterFlowTheme.of(context)
                                                 .bodySmall
                                                 .override(
@@ -1126,9 +1076,7 @@ class _TablaWidgetState extends State<TablaWidget> {
                                 Expanded(
                                   flex: 2,
                                   child: Text(
-                                    FFLocalizations.of(context).getText(
-                                      'mxkzcvgx' /* #42925424 */,
-                                    ),
+                                    '#42925424',
                                     style: FlutterFlowTheme.of(context)
                                         .bodyMedium
                                         .override(
@@ -1161,9 +1109,7 @@ class _TablaWidgetState extends State<TablaWidget> {
                                         padding: EdgeInsetsDirectional.fromSTEB(
                                             12.0, 0.0, 12.0, 0.0),
                                         child: Text(
-                                          FFLocalizations.of(context).getText(
-                                            'sicablzw' /* Paid */,
-                                          ),
+                                          'Paid',
                                           style: FlutterFlowTheme.of(context)
                                               .bodyMedium
                                               .override(
@@ -1191,9 +1137,7 @@ class _TablaWidgetState extends State<TablaWidget> {
                                 Expanded(
                                   flex: 2,
                                   child: Text(
-                                    FFLocalizations.of(context).getText(
-                                      'r9532fc6' /* $2,100.00 */,
-                                    ),
+                                    '\$2,100.00',
                                     style: FlutterFlowTheme.of(context)
                                         .titleLarge
                                         .override(

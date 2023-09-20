@@ -119,9 +119,7 @@ class _ResumenPedidoWidgetState extends State<ResumenPedidoWidget> {
                         padding:
                             EdgeInsetsDirectional.fromSTEB(0.0, 12.0, 0.0, 0.0),
                         child: Text(
-                          FFLocalizations.of(context).getText(
-                            'z5522vtj' /* Resumen del Pedido: */,
-                          ),
+                          'Resumen del Pedido:',
                           style: FlutterFlowTheme.of(context)
                               .headlineSmall
                               .override(
@@ -164,9 +162,7 @@ class _ResumenPedidoWidgetState extends State<ResumenPedidoWidget> {
                           text: TextSpan(
                             children: [
                               TextSpan(
-                                text: FFLocalizations.of(context).getText(
-                                  '9iklzwph' /* Creación  */,
-                                ),
+                                text: 'Creación ',
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(
@@ -198,9 +194,7 @@ class _ResumenPedidoWidgetState extends State<ResumenPedidoWidget> {
                   Padding(
                     padding: EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 8.0),
                     child: Text(
-                      FFLocalizations.of(context).getText(
-                        'dyi626o1' /* Revise su orden */,
-                      ),
+                      'Revise su orden',
                       style: FlutterFlowTheme.of(context).labelMedium.override(
                             fontFamily: 'Plus Jakarta Sans',
                             color: Color(0xFF57636C),
@@ -407,9 +401,7 @@ class _ResumenPedidoWidgetState extends State<ResumenPedidoWidget> {
                           mainAxisSize: MainAxisSize.max,
                           children: [
                             Text(
-                              FFLocalizations.of(context).getText(
-                                'pj860l4g' /* Desglose */,
-                              ),
+                              'Desglose',
                               style: FlutterFlowTheme.of(context)
                                   .bodySmall
                                   .override(
@@ -434,9 +426,7 @@ class _ResumenPedidoWidgetState extends State<ResumenPedidoWidget> {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Text(
-                              FFLocalizations.of(context).getText(
-                                'pi9003jq' /* Precio */,
-                              ),
+                              'Precio',
                               style: FlutterFlowTheme.of(context)
                                   .labelMedium
                                   .override(
@@ -479,9 +469,7 @@ class _ResumenPedidoWidgetState extends State<ResumenPedidoWidget> {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Text(
-                              FFLocalizations.of(context).getText(
-                                'bu1l0kev' /* Estado */,
-                              ),
+                              'Estado',
                               style: FlutterFlowTheme.of(context)
                                   .labelMedium
                                   .override(
@@ -738,9 +726,7 @@ class _ResumenPedidoWidgetState extends State<ResumenPedidoWidget> {
                               mainAxisSize: MainAxisSize.max,
                               children: [
                                 Text(
-                                  FFLocalizations.of(context).getText(
-                                    'r05yiboj' /* Precio Final */,
-                                  ),
+                                  'Precio Final',
                                   style: FlutterFlowTheme.of(context)
                                       .titleMedium
                                       .override(

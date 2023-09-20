@@ -459,9 +459,7 @@ class _ProductoVIewWidgetState extends State<ProductoVIewWidget>
 
                         setState(() {});
                       },
-                      text: FFLocalizations.of(context).getText(
-                        'm7kl8eww' /* Añadir al carrito */,
-                      ),
+                      text: 'Añadir al carrito',
                       options: FFButtonOptions(
                         width: 130.0,
                         height: 50.0,

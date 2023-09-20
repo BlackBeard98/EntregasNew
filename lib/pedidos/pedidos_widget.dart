@@ -86,9 +86,7 @@ class _PedidosWidgetState extends State<PedidosWidget> {
                     padding:
                         EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 0.0, 0.0),
                     child: Text(
-                      FFLocalizations.of(context).getText(
-                        'tbr8hqx8' /* Pedidos */,
-                      ),
+                      'Pedidos',
                       style:
                           FlutterFlowTheme.of(context).headlineMedium.override(
                                 fontFamily: 'Outfit',
@@ -105,9 +103,7 @@ class _PedidosWidgetState extends State<PedidosWidget> {
                     padding:
                         EdgeInsetsDirectional.fromSTEB(24.0, 4.0, 0.0, 0.0),
                     child: Text(
-                      FFLocalizations.of(context).getText(
-                        '2dbpv3u2' /* Abajo se puede observar una li... */,
-                      ),
+                      'Abajo se puede observar una lista con sus pedidos',
                       textAlign: TextAlign.start,
                       style: FlutterFlowTheme.of(context).labelMedium.override(
                             fontFamily: 'Outfit',
@@ -250,12 +246,7 @@ class _PedidosWidgetState extends State<PedidosWidget> {
                                                   text: TextSpan(
                                                     children: [
                                                       TextSpan(
-                                                        text:
-                                                            FFLocalizations.of(
-                                                                    context)
-                                                                .getText(
-                                                          '7l10yga2' /* Pedido #:  */,
-                                                        ),
+                                                        text: 'Pedido #: ',
                                                         style: TextStyle(),
                                                       ),
                                                       TextSpan(
