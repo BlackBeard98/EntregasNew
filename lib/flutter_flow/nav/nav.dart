@@ -101,6 +101,11 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               name: 'pedidos',
               path: 'pedidos',
               builder: (context, params) => PedidosWidget(),
+            ),
+            FFRoute(
+              name: 'editarPeril',
+              path: 'editarPeril',
+              builder: (context, params) => EditarPerilWidget(),
             )
           ].map((r) => r.toRoute(appStateNotifier)).toList(),
         ),

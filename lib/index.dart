@@ -12,3 +12,4 @@ export '/checkout6/checkout6_widget.dart' show Checkout6Widget;
 export '/principal/productos_copy/productos_copy_widget.dart'
     show ProductosCopyWidget;
 export '/pedidos/pedidos_widget.dart' show PedidosWidget;
+export '/auth_reg/editar_peril/editar_peril_widget.dart' show EditarPerilWidget;

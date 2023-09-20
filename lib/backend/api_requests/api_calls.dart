@@ -584,6 +584,9 @@ class IdentityGroup {
   static AuthCall authCall = AuthCall();
   static RegisterCall registerCall = RegisterCall();
   static UsersupdateidCall usersupdateidCall = UsersupdateidCall();
+  static UsersupdateusermeCall usersupdateusermeCall = UsersupdateusermeCall();
+  static UsersupdateuserpasswordCall usersupdateuserpasswordCall =
+      UsersupdateuserpasswordCall();
 }
 
 class AuthCall {
@@ -699,6 +702,72 @@ class UsersupdateidCall {
       callType: ApiCallType.PUT,
       headers: {
         ...IdentityGroup.headers,
+      },
+      params: {},
+      body: ffApiRequestBody,
+      bodyType: BodyType.JSON,
+      returnBody: true,
+      encodeBodyUtf8: false,
+      decodeUtf8: false,
+      cache: false,
+    );
+  }
+}
+
+class UsersupdateusermeCall {
+  Future<ApiCallResponse> call({
+    String? name = '',
+    String? firstLastName = '',
+    String? secondLastName = '',
+    List<String>? addressList,
+    String? authToken = '',
+  }) {
+    final address = _serializeList(addressList);
+
+    final ffApiRequestBody = '''
+{
+  "name": "${name}",
+  "firstLastName": "${firstLastName}",
+  "secondLastName": "${secondLastName}",
+  "address": ${address}
+}''';
+    return ApiManager.instance.makeApiCall(
+      callName: 'usersupdateuserme',
+      apiUrl: '${IdentityGroup.baseUrl}/users/update/user/me',
+      callType: ApiCallType.PUT,
+      headers: {
+        ...IdentityGroup.headers,
+        'Authorization': 'Bearer ${authToken}',
+      },
+      params: {},
+      body: ffApiRequestBody,
+      bodyType: BodyType.JSON,
+      returnBody: true,
+      encodeBodyUtf8: false,
+      decodeUtf8: false,
+      cache: false,
+    );
+  }
+}
+
+class UsersupdateuserpasswordCall {
+  Future<ApiCallResponse> call({
+    String? oldPassword = '',
+    String? newPassword = '',
+    String? authToken = '',
+  }) {
+    final ffApiRequestBody = '''
+{
+  "oldPassword": "${oldPassword}",
+  "newPassword": "${newPassword}"
+}''';
+    return ApiManager.instance.makeApiCall(
+      callName: 'usersupdateuserpassword',
+      apiUrl: '${IdentityGroup.baseUrl}/users/update/user/password',
+      callType: ApiCallType.PUT,
+      headers: {
+        ...IdentityGroup.headers,
+        'Authorization': 'Bearer ${authToken}',
       },
       params: {},
       body: ffApiRequestBody,
