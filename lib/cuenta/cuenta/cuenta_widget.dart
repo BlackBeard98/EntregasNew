@@ -64,20 +64,6 @@ class _CuentaWidgetState extends State<CuentaWidget> {
           appBar: AppBar(
             backgroundColor: Colors.white,
             automaticallyImplyLeading: false,
-            leading: InkWell(
-              splashColor: Colors.transparent,
-              focusColor: Colors.transparent,
-              hoverColor: Colors.transparent,
-              highlightColor: Colors.transparent,
-              onTap: () async {
-                context.pop();
-              },
-              child: Icon(
-                Icons.arrow_back_rounded,
-                color: Color(0xFF57636C),
-                size: 24.0,
-              ),
-            ),
             title: Row(
               mainAxisSize: MainAxisSize.max,
               children: [
@@ -137,7 +123,7 @@ class _CuentaWidgetState extends State<CuentaWidget> {
                       ),
                       showBadge: true,
                       shape: badges.BadgeShape.circle,
-                      badgeColor: Color(0xFF4B39EF),
+                      badgeColor: Color(0xFFFFA500),
                       elevation: 4.0,
                       padding:
                           EdgeInsetsDirectional.fromSTEB(8.0, 8.0, 8.0, 8.0),

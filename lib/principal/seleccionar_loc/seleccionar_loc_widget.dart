@@ -137,7 +137,7 @@ class _SeleccionarLocWidgetState extends State<SeleccionarLocWidget> {
                     ),
                     showBadge: true,
                     shape: badges.BadgeShape.circle,
-                    badgeColor: Color(0xFF4B39EF),
+                    badgeColor: Color(0xFFFFA500),
                     elevation: 4.0,
                     padding: EdgeInsetsDirectional.fromSTEB(8.0, 8.0, 8.0, 8.0),
                     position: badges.BadgePosition.topEnd(),
