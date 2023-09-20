@@ -73,7 +73,6 @@ class _MyAppState extends State<MyApp> {
       locale: _locale,
       supportedLocales: const [
         Locale('es'),
-        Locale('en'),
       ],
       theme: ThemeData(
         brightness: Brightness.light,
@@ -157,9 +156,7 @@ class _NavBarPageState extends State<NavBarPage> {
                   size: 24.0,
                 ),
                 Text(
-                  FFLocalizations.of(context).getText(
-                    'huv737bh' /* Productos */,
-                  ),
+                  'Productos',
                   overflow: TextOverflow.ellipsis,
                   style: TextStyle(
                     color: currentIndex == 0
@@ -182,9 +179,7 @@ class _NavBarPageState extends State<NavBarPage> {
                   size: 24.0,
                 ),
                 Text(
-                  FFLocalizations.of(context).getText(
-                    '0swvummf' /* Carrito */,
-                  ),
+                  'Carrito',
                   overflow: TextOverflow.ellipsis,
                   style: TextStyle(
                     color: currentIndex == 1
@@ -207,9 +202,7 @@ class _NavBarPageState extends State<NavBarPage> {
                   size: 24.0,
                 ),
                 Text(
-                  FFLocalizations.of(context).getText(
-                    'sfux1xfn' /* Cuenta */,
-                  ),
+                  'Cuenta',
                   overflow: TextOverflow.ellipsis,
                   style: TextStyle(
                     color: currentIndex == 2
