@@ -89,20 +89,6 @@ class _CarritoWidgetState extends State<CarritoWidget> {
             appBar: AppBar(
               backgroundColor: Colors.white,
               automaticallyImplyLeading: false,
-              leading: InkWell(
-                splashColor: Colors.transparent,
-                focusColor: Colors.transparent,
-                hoverColor: Colors.transparent,
-                highlightColor: Colors.transparent,
-                onTap: () async {
-                  context.pop();
-                },
-                child: Icon(
-                  Icons.arrow_back_rounded,
-                  color: Color(0xFF57636C),
-                  size: 24.0,
-                ),
-              ),
               title: Row(
                 mainAxisSize: MainAxisSize.max,
                 children: [
