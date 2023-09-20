@@ -57,6 +57,9 @@ class FFAppState extends ChangeNotifier {
         }
       }
     });
+    await _safeInitAsync(() async {
+      _CartItems = await secureStorage.getInt('ff_CartItems') ?? _CartItems;
+    });
   }
 
   void update(VoidCallback callback) {
@@ -172,6 +175,17 @@ class FFAppState extends ChangeNotifier {
 
   void updateProvinceStruct(Function(NameIDStruct) updateFn) {
     updateFn(_Province);
+  }
+
+  int _CartItems = 10;
+  int get CartItems => _CartItems;
+  set CartItems(int _value) {
+    _CartItems = _value;
+    secureStorage.setInt('ff_CartItems', _value);
+  }
+
+  void deleteCartItems() {
+    secureStorage.delete(key: 'ff_CartItems');
   }
 }
 

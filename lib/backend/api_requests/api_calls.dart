@@ -297,6 +297,14 @@ class CartuserIdCall {
         response,
         r'''$._id''',
       );
+  dynamic totalIteems(dynamic response) => getJsonField(
+        response,
+        r'''$.totalItems''',
+      );
+  dynamic totalCost(dynamic response) => getJsonField(
+        response,
+        r'''$.totalCost''',
+      );
 }
 
 class CartitemscleancartIdCall {

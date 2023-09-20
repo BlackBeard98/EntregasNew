@@ -13,3 +13,5 @@ export '/principal/productos_copy/productos_copy_widget.dart'
     show ProductosCopyWidget;
 export '/pedidos/pedidos_widget.dart' show PedidosWidget;
 export '/auth_reg/editar_peril/editar_peril_widget.dart' show EditarPerilWidget;
+export '/product6_jewelry_details/product6_jewelry_details_widget.dart'
+    show Product6JewelryDetailsWidget;
