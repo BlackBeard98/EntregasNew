@@ -75,7 +75,7 @@ class _PedidosWidgetState extends State<PedidosWidget> {
             width: 1265.0,
             height: 678.0,
             decoration: BoxDecoration(
-              color: FlutterFlowTheme.of(context).secondaryBackground,
+              color: Colors.white,
             ),
             child: SingleChildScrollView(
               child: Column(
@@ -122,7 +122,7 @@ class _PedidosWidgetState extends State<PedidosWidget> {
                       maxHeight: 700.0,
                     ),
                     decoration: BoxDecoration(
-                      color: FlutterFlowTheme.of(context).secondaryBackground,
+                      color: Colors.white,
                     ),
                     child: Padding(
                       padding:
