@@ -103,39 +103,68 @@ class _ProductosWidgetState extends State<ProductosWidget> {
             actions: [
               Padding(
                 padding: EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 24.0, 0.0),
-                child: badges.Badge(
-                  badgeContent: Text(
-                    FFAppState().CartItems.toString(),
-                    style: FlutterFlowTheme.of(context).bodyMedium.override(
-                          fontFamily: 'Plus Jakarta Sans',
-                          color: Colors.white,
-                          fontSize: 14.0,
-                          fontWeight: FontWeight.normal,
-                          useGoogleFonts: GoogleFonts.asMap().containsKey(
-                              FlutterFlowTheme.of(context).bodyMediumFamily),
+                child: FutureBuilder<ApiCallResponse>(
+                  future: ShopGroup.cartuserIdCall.call(
+                    userId: FFAppState().authUser.id,
+                    authToken: FFAppState().authUser.accessToken,
+                  ),
+                  builder: (context, snapshot) {
+                    // Customize what your widget looks like when it's loading.
+                    if (!snapshot.hasData) {
+                      return Center(
+                        child: SizedBox(
+                          width: 50.0,
+                          height: 50.0,
+                          child: CircularProgressIndicator(
+                            valueColor: AlwaysStoppedAnimation<Color>(
+                              FlutterFlowTheme.of(context).primary,
+                            ),
+                          ),
                         ),
-                  ),
-                  showBadge: true,
-                  shape: badges.BadgeShape.circle,
-                  badgeColor: Color(0xFF4B39EF),
-                  elevation: 4.0,
-                  padding: EdgeInsetsDirectional.fromSTEB(8.0, 8.0, 8.0, 8.0),
-                  position: badges.BadgePosition.topEnd(),
-                  animationType: badges.BadgeAnimationType.scale,
-                  toAnimate: true,
-                  child: FlutterFlowIconButton(
-                    borderColor: Colors.transparent,
-                    borderRadius: 30.0,
-                    buttonSize: 48.0,
-                    icon: Icon(
-                      Icons.shopping_cart_outlined,
-                      color: Color(0xFF57636C),
-                      size: 30.0,
-                    ),
-                    onPressed: () {
-                      print('IconButton pressed ...');
-                    },
-                  ),
+                      );
+                    }
+                    final badgeCartuserIdResponse = snapshot.data!;
+                    return badges.Badge(
+                      badgeContent: Text(
+                        ShopGroup.cartuserIdCall
+                            .totalIteems(
+                              badgeCartuserIdResponse.jsonBody,
+                            )
+                            .toString(),
+                        style: FlutterFlowTheme.of(context).bodyMedium.override(
+                              fontFamily: 'Plus Jakarta Sans',
+                              color: Colors.white,
+                              fontSize: 14.0,
+                              fontWeight: FontWeight.normal,
+                              useGoogleFonts: GoogleFonts.asMap().containsKey(
+                                  FlutterFlowTheme.of(context)
+                                      .bodyMediumFamily),
+                            ),
+                      ),
+                      showBadge: true,
+                      shape: badges.BadgeShape.circle,
+                      badgeColor: Color(0xFF4B39EF),
+                      elevation: 4.0,
+                      padding:
+                          EdgeInsetsDirectional.fromSTEB(8.0, 8.0, 8.0, 8.0),
+                      position: badges.BadgePosition.topEnd(),
+                      animationType: badges.BadgeAnimationType.scale,
+                      toAnimate: true,
+                      child: FlutterFlowIconButton(
+                        borderColor: Colors.transparent,
+                        borderRadius: 30.0,
+                        buttonSize: 48.0,
+                        icon: Icon(
+                          Icons.shopping_cart_outlined,
+                          color: Color(0xFF57636C),
+                          size: 30.0,
+                        ),
+                        onPressed: () {
+                          print('IconButton pressed ...');
+                        },
+                      ),
+                    );
+                  },
                 ),
               ),
             ],
