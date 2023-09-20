@@ -919,11 +919,11 @@ class _CarritoWidgetState extends State<CarritoWidget> {
                                                 ],
                                               ),
                                               Text(
-                                                getJsonField(
+                                                '\$ ${functions.currencyFormat(getJsonField(
                                                   carritoCartuserIdResponse
                                                       .jsonBody,
                                                   r'''$.totalCost''',
-                                                ).toString(),
+                                                ).toString())}',
                                                 style:
                                                     FlutterFlowTheme.of(context)
                                                         .displaySmall
