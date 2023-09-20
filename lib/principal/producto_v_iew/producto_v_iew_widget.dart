@@ -223,8 +223,8 @@ class _ProductoVIewWidgetState extends State<ProductoVIewWidget>
                       color: Color(0xFF57636C),
                       size: 30.0,
                     ),
-                    onPressed: () {
-                      print('IconButton pressed ...');
+                    onPressed: () async {
+                      context.pushNamed('Carrito');
                     },
                   ),
                 );
