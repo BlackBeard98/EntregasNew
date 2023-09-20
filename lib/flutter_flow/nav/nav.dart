@@ -88,16 +88,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               builder: (context, params) => SeleccionarLocWidget(),
             ),
             FFRoute(
-              name: 'Checkout6',
-              path: 'checkout6',
-              builder: (context, params) => Checkout6Widget(),
-            ),
-            FFRoute(
-              name: 'ProductosCopy',
-              path: 'productosCopy',
-              builder: (context, params) => ProductosCopyWidget(),
-            ),
-            FFRoute(
               name: 'pedidos',
               path: 'pedidos',
               builder: (context, params) => PedidosWidget(),

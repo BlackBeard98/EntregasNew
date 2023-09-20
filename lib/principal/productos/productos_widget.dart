@@ -88,7 +88,7 @@ class _ProductosWidgetState extends State<ProductosWidget> {
               mainAxisSize: MainAxisSize.max,
               children: [
                 Text(
-                  FFAppState().authUser.name,
+                  '${FFAppState().authUser.name} ${FFAppState().authUser.firstLastName}',
                   style: FlutterFlowTheme.of(context).titleSmall.override(
                         fontFamily: 'Lexend Deca',
                         color: Color(0xFF151B1E),
