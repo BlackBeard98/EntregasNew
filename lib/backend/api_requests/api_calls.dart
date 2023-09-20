@@ -748,6 +748,27 @@ class UsersupdateusermeCall {
       cache: false,
     );
   }
+
+  dynamic secondLN(dynamic response) => getJsonField(
+        response,
+        r'''$.secondLastName''',
+      );
+  dynamic name(dynamic response) => getJsonField(
+        response,
+        r'''$.name''',
+      );
+  dynamic firstLN(dynamic response) => getJsonField(
+        response,
+        r'''$.firstLastName''',
+      );
+  dynamic email(dynamic response) => getJsonField(
+        response,
+        r'''$.email''',
+      );
+  dynamic id(dynamic response) => getJsonField(
+        response,
+        r'''$._id''',
+      );
 }
 
 class UsersupdateuserpasswordCall {

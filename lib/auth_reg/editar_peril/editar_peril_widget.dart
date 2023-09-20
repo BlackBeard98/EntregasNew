@@ -1,4 +1,5 @@
 import '/backend/api_requests/api_calls.dart';
+import '/backend/schema/structs/index.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
@@ -421,6 +422,48 @@ class _EditarPerilWidgetState extends State<EditarPerilWidget> {
                                       );
                                       if ((_model.apiResultsUpdate?.succeeded ??
                                           true)) {
+                                        FFAppState().update(() {
+                                          FFAppState().updateAuthUserStruct(
+                                            (e) => e
+                                              ..id = IdentityGroup
+                                                  .usersupdateusermeCall
+                                                  .id(
+                                                    (_model.apiResultsUpdate
+                                                            ?.jsonBody ??
+                                                        ''),
+                                                  )
+                                                  .toString()
+                                              ..name = IdentityGroup
+                                                  .usersupdateusermeCall
+                                                  .name(
+                                                    (_model.apiResultsUpdate
+                                                            ?.jsonBody ??
+                                                        ''),
+                                                  )
+                                                  .toString()
+                                              ..mail = IdentityGroup
+                                                  .usersupdateusermeCall
+                                                  .email(
+                                                    (_model.apiResultsUpdate
+                                                            ?.jsonBody ??
+                                                        ''),
+                                                  )
+                                                  .toString()
+                                              ..firstLastName = IdentityGroup
+                                                  .usersupdateusermeCall
+                                                  .firstLN(
+                                                    (_model.apiResultsUpdate
+                                                            ?.jsonBody ??
+                                                        ''),
+                                                  )
+                                                  .toString()
+                                              ..secondLastName = FFAppState()
+                                                  .authUser
+                                                  .secondLastName
+                                              ..isLogued = true,
+                                          );
+                                        });
+
                                         context.pushNamed('Cuenta');
                                       }
 
