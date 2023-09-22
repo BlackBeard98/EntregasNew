@@ -5,7 +5,9 @@ import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import '/flutter_flow/instant_timer.dart';
 import '/flutter_flow/custom_functions.dart' as functions;
+import 'dart:async';
 import 'package:badges/badges.dart' as badges;
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
@@ -36,7 +38,17 @@ class _ProductosWidgetState extends State<ProductosWidget> {
     // On page load action.
     SchedulerBinding.instance.addPostFrameCallback((_) async {
       if (FFAppState().authUser.isLogued) {
-        if (!FFAppState().MunicipalityApp.isSet) {
+        if (FFAppState().MunicipalityApp.isSet) {
+          _model.instantTimer = InstantTimer.periodic(
+            duration: Duration(milliseconds: 1000),
+            callback: (timer) async {
+              setState(() => _model.apiRequestCompleter = null);
+              await _model.waitForApiRequestCompleted(
+                  minWait: 1000, maxWait: 1000);
+            },
+            startImmediately: true,
+          );
+        } else {
           context.pushNamed('SeleccionarLoc');
         }
       } else {
@@ -90,10 +102,13 @@ class _ProductosWidgetState extends State<ProductosWidget> {
               Padding(
                 padding: EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 24.0, 0.0),
                 child: FutureBuilder<ApiCallResponse>(
-                  future: ShopGroup.cartuserIdCall.call(
-                    userId: FFAppState().authUser.id,
-                    authToken: FFAppState().authUser.accessToken,
-                  ),
+                  future: (_model.apiRequestCompleter ??=
+                          Completer<ApiCallResponse>()
+                            ..complete(ShopGroup.cartuserIdCall.call(
+                              userId: FFAppState().authUser.id,
+                              authToken: FFAppState().authUser.accessToken,
+                            )))
+                      .future,
                   builder: (context, snapshot) {
                     // Customize what your widget looks like when it's loading.
                     if (!snapshot.hasData) {
