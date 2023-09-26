@@ -1,5 +1,6 @@
 import '/backend/api_requests/api_calls.dart';
 import '/backend/schema/structs/index.dart';
+import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
@@ -91,27 +92,22 @@ class _DireccionWidgetState extends State<DireccionWidget> {
                         mainAxisSize: MainAxisSize.max,
                         mainAxisAlignment: MainAxisAlignment.end,
                         children: [
-                          Container(
-                            width: 60.0,
-                            height: 3.0,
-                            decoration: BoxDecoration(
-                              color: Color(0xFFE0E3E7),
-                              borderRadius: BorderRadius.circular(4.0),
-                            ),
-                            child: InkWell(
-                              splashColor: Colors.transparent,
-                              focusColor: Colors.transparent,
-                              hoverColor: Colors.transparent,
-                              highlightColor: Colors.transparent,
-                              onTap: () async {
+                          Padding(
+                            padding: EdgeInsetsDirectional.fromSTEB(
+                                0.0, 0.0, 12.0, 0.0),
+                            child: FlutterFlowIconButton(
+                              borderColor: Color(0xFFE0E3E7),
+                              borderRadius: 12.0,
+                              borderWidth: 1.0,
+                              buttonSize: 44.0,
+                              icon: Icon(
+                                Icons.close_rounded,
+                                color: Color(0xFF14181B),
+                                size: 20.0,
+                              ),
+                              onPressed: () async {
                                 Navigator.pop(context);
                               },
-                              child: Icon(
-                                Icons.close_sharp,
-                                color:
-                                    FlutterFlowTheme.of(context).secondaryText,
-                                size: 24.0,
-                              ),
                             ),
                           ),
                         ],
