@@ -243,10 +243,7 @@ class _DireccionWidgetState extends State<DireccionWidget> {
                                   .hasSecondLastName()
                                   .toString(),
                               addressList: FFAppState().authUser.addresses,
-                              authToken: FFAppState()
-                                  .authUser
-                                  .hasAccessToken()
-                                  .toString(),
+                              authToken: FFAppState().authUser.accessToken,
                             );
 
                             context.pushNamed('Direcciones');

@@ -1,7 +1,7 @@
 import '/backend/api_requests/api_calls.dart';
 import '/backend/schema/structs/index.dart';
-import '/components/direccion_widget.dart';
 import '/components/productos_vacio_widget.dart';
+import '/cuenta/direccion/direccion_widget.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
@@ -107,10 +107,9 @@ class _DireccionesWidgetState extends State<DireccionesWidget> {
                   ),
                 ),
                 Container(
-                  width: 449.0,
                   height: 633.0,
                   decoration: BoxDecoration(
-                    color: FlutterFlowTheme.of(context).secondaryBackground,
+                    color: Colors.white,
                   ),
                   child: Padding(
                     padding:
@@ -252,8 +251,7 @@ class _DireccionesWidgetState extends State<DireccionesWidget> {
                                                         .addresses,
                                                     authToken: FFAppState()
                                                         .authUser
-                                                        .hasAccessToken()
-                                                        .toString(),
+                                                        .accessToken,
                                                   );
 
                                                   context
