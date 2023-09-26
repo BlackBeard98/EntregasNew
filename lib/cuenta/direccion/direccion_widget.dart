@@ -89,7 +89,7 @@ class _DireccionWidgetState extends State<DireccionWidget> {
                     children: [
                       Row(
                         mainAxisSize: MainAxisSize.max,
-                        mainAxisAlignment: MainAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.end,
                         children: [
                           Container(
                             width: 60.0,
@@ -97,6 +97,21 @@ class _DireccionWidgetState extends State<DireccionWidget> {
                             decoration: BoxDecoration(
                               color: Color(0xFFE0E3E7),
                               borderRadius: BorderRadius.circular(4.0),
+                            ),
+                            child: InkWell(
+                              splashColor: Colors.transparent,
+                              focusColor: Colors.transparent,
+                              hoverColor: Colors.transparent,
+                              highlightColor: Colors.transparent,
+                              onTap: () async {
+                                Navigator.pop(context);
+                              },
+                              child: Icon(
+                                Icons.close_sharp,
+                                color:
+                                    FlutterFlowTheme.of(context).secondaryText,
+                                size: 24.0,
+                              ),
                             ),
                           ),
                         ],
