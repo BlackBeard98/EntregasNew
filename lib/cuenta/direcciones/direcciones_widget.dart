@@ -250,9 +250,6 @@ class _DireccionesWidgetState extends State<DireccionesWidget> {
                                                         .authUser
                                                         .accessToken,
                                                   );
-
-                                                  context
-                                                      .pushNamed('Direcciones');
                                                 },
                                                 child: Icon(
                                                   Icons.delete,
