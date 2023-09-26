@@ -256,8 +256,7 @@ class _DireccionWidgetState extends State<DireccionWidget> {
                               addressList: FFAppState().authUser.addresses,
                               authToken: FFAppState().authUser.accessToken,
                             );
-
-                            context.pushNamed('Direcciones');
+                            Navigator.pop(context);
                           },
                           text: 'Añadir',
                           options: FFButtonOptions(
