@@ -14,13 +14,15 @@ class UserStruct extends BaseStruct {
     String? secondLastName,
     bool? isLogued,
     String? accessToken,
+    List<String>? addresses,
   })  : _id = id,
         _name = name,
         _mail = mail,
         _firstLastName = firstLastName,
         _secondLastName = secondLastName,
         _isLogued = isLogued,
-        _accessToken = accessToken;
+        _accessToken = accessToken,
+        _addresses = addresses;
 
   // "id" field.
   String? _id;
@@ -64,6 +66,14 @@ class UserStruct extends BaseStruct {
   set accessToken(String? val) => _accessToken = val;
   bool hasAccessToken() => _accessToken != null;
 
+  // "Addresses" field.
+  List<String>? _addresses;
+  List<String> get addresses => _addresses ?? const [];
+  set addresses(List<String>? val) => _addresses = val;
+  void updateAddresses(Function(List<String>) updateFn) =>
+      updateFn(_addresses ??= []);
+  bool hasAddresses() => _addresses != null;
+
   static UserStruct fromMap(Map<String, dynamic> data) => UserStruct(
         id: data['id'] as String?,
         name: data['name'] as String?,
@@ -72,6 +82,7 @@ class UserStruct extends BaseStruct {
         secondLastName: data['secondLastName'] as String?,
         isLogued: data['isLogued'] as bool?,
         accessToken: data['accessToken'] as String?,
+        addresses: getDataList(data['Addresses']),
       );
 
   static UserStruct? maybeFromMap(dynamic data) =>
@@ -85,6 +96,7 @@ class UserStruct extends BaseStruct {
         'secondLastName': _secondLastName,
         'isLogued': _isLogued,
         'accessToken': _accessToken,
+        'Addresses': _addresses,
       }.withoutNulls;
 
   @override
@@ -116,6 +128,11 @@ class UserStruct extends BaseStruct {
         'accessToken': serializeParam(
           _accessToken,
           ParamType.String,
+        ),
+        'Addresses': serializeParam(
+          _addresses,
+          ParamType.String,
+          true,
         ),
       }.withoutNulls;
 
@@ -156,6 +173,11 @@ class UserStruct extends BaseStruct {
           ParamType.String,
           false,
         ),
+        addresses: deserializeParam<String>(
+          data['Addresses'],
+          ParamType.String,
+          true,
+        ),
       );
 
   @override
@@ -163,6 +185,7 @@ class UserStruct extends BaseStruct {
 
   @override
   bool operator ==(Object other) {
+    const listEquality = ListEquality();
     return other is UserStruct &&
         id == other.id &&
         name == other.name &&
@@ -170,12 +193,21 @@ class UserStruct extends BaseStruct {
         firstLastName == other.firstLastName &&
         secondLastName == other.secondLastName &&
         isLogued == other.isLogued &&
-        accessToken == other.accessToken;
+        accessToken == other.accessToken &&
+        listEquality.equals(addresses, other.addresses);
   }
 
   @override
-  int get hashCode => const ListEquality().hash(
-      [id, name, mail, firstLastName, secondLastName, isLogued, accessToken]);
+  int get hashCode => const ListEquality().hash([
+        id,
+        name,
+        mail,
+        firstLastName,
+        secondLastName,
+        isLogued,
+        accessToken,
+        addresses
+      ]);
 }
 
 UserStruct createUserStruct({

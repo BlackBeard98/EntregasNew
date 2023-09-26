@@ -103,9 +103,9 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               builder: (context, params) => Product6JewelryDetailsWidget(),
             ),
             FFRoute(
-              name: 'test',
-              path: 'test',
-              builder: (context, params) => TestWidget(),
+              name: 'Direcciones',
+              path: 'direcciones',
+              builder: (context, params) => DireccionesWidget(),
             )
           ].map((r) => r.toRoute(appStateNotifier)).toList(),
         ),

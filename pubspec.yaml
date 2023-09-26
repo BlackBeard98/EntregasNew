@@ -32,7 +32,6 @@ dependencies:
   csv: 5.0.1
   dropdown_button2: 2.0.0
   equatable: 2.0.5
-  expandable: 5.0.1
   floating_bottom_navigation_bar: 1.5.2
   flutter_animate: 4.1.1+1
   flutter_cache_manager: 3.3.0
