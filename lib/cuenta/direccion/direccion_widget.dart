@@ -244,15 +244,10 @@ class _DireccionWidgetState extends State<DireccionWidget> {
                               );
                             });
                             await IdentityGroup.usersupdateusermeCall.call(
-                              name: FFAppState().authUser.hasName().toString(),
-                              firstLastName: FFAppState()
-                                  .authUser
-                                  .hasFirstLastName()
-                                  .toString(),
-                              secondLastName: FFAppState()
-                                  .authUser
-                                  .hasSecondLastName()
-                                  .toString(),
+                              name: FFAppState().authUser.name,
+                              firstLastName:
+                                  FFAppState().authUser.firstLastName,
+                              secondLastName: FFAppState().authUser.name,
                               addressList: FFAppState().authUser.addresses,
                               authToken: FFAppState().authUser.accessToken,
                             );

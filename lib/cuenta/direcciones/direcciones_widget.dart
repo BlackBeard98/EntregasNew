@@ -236,16 +236,13 @@ class _DireccionesWidgetState extends State<DireccionesWidget> {
                                                       .call(
                                                     name: FFAppState()
                                                         .authUser
-                                                        .hasName()
-                                                        .toString(),
+                                                        .name,
                                                     firstLastName: FFAppState()
                                                         .authUser
-                                                        .hasFirstLastName()
-                                                        .toString(),
+                                                        .firstLastName,
                                                     secondLastName: FFAppState()
                                                         .authUser
-                                                        .hasSecondLastName()
-                                                        .toString(),
+                                                        .name,
                                                     addressList: FFAppState()
                                                         .authUser
                                                         .addresses,
