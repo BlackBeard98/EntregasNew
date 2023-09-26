@@ -409,7 +409,19 @@ class _LoginWidgetState extends State<LoginWidget> {
                                                                 ?.jsonBody ??
                                                             ''),
                                                       )
-                                                      .toString(),
+                                                      .toString()
+                                              ..addresses = (IdentityGroup
+                                                      .authCall
+                                                      .addresses(
+                                                (_model.apiResultAuth
+                                                        ?.jsonBody ??
+                                                    ''),
+                                              ) as List)
+                                                  .map<String>(
+                                                      (s) => s.toString())
+                                                  .toList()!
+                                                  .map((e) => e.toString())
+                                                  .toList(),
                                           );
                                         });
                                         if (FFAppState()

@@ -653,6 +653,11 @@ class AuthCall {
         response,
         r'''$.payload.secondLastName''',
       );
+  dynamic addresses(dynamic response) => getJsonField(
+        response,
+        r'''$.payload.address''',
+        true,
+      );
 }
 
 class RegisterCall {
