@@ -68,7 +68,7 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
-      title: 'RecargasYa-Test',
+      title: 'LaVentanaShop',
       localizationsDelegates: [
         FFLocalizationsDelegate(),
         GlobalMaterialLocalizations.delegate,
