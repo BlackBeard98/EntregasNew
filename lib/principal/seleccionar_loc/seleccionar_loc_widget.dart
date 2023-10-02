@@ -393,7 +393,7 @@ class _SeleccionarLocWidgetState extends State<SeleccionarLocWidget> {
                                                                             FlutterFlowTheme.of(context).bodyMediumFamily),
                                                                   ),
                                                           hintText:
-                                                              'Please select...',
+                                                              'Seleccione...',
                                                           searchHintText:
                                                               'Search for an item...',
                                                           icon: Icon(
@@ -549,7 +549,7 @@ class _SeleccionarLocWidgetState extends State<SeleccionarLocWidget> {
                                                                             FlutterFlowTheme.of(context).bodyMediumFamily),
                                                                   ),
                                                           hintText:
-                                                              'Please select...',
+                                                              'Seleccione...',
                                                           searchHintText:
                                                               'Search for an item...',
                                                           icon: Icon(
