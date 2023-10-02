@@ -280,6 +280,7 @@ class _ResumenPedidoWidgetState extends State<ResumenPedidoWidget> {
                                               containerProductidResponse
                                                   .jsonBody,
                                               r'''$.images''',
+                                              true,
                                             )!),
                                             width: 40.0,
                                             height: 40.0,

@@ -510,6 +510,7 @@ class _CarritoWidgetState extends State<CarritoWidget> {
                                                                             getJsonField(
                                                                       cartItemsItem,
                                                                       r'''$.product.images''',
+                                                                      true,
                                                                     )!),
                                                                     width: 70.0,
                                                                     height:

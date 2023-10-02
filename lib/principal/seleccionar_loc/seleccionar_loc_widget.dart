@@ -58,7 +58,9 @@ class _SeleccionarLocWidgetState extends State<SeleccionarLocWidget> {
     context.watch<FFAppState>();
 
     return GestureDetector(
-      onTap: () => FocusScope.of(context).requestFocus(_model.unfocusNode),
+      onTap: () => _model.unfocusNode.canRequestFocus
+          ? FocusScope.of(context).requestFocus(_model.unfocusNode)
+          : FocusScope.of(context).unfocus(),
       child: Scaffold(
         key: scaffoldKey,
         backgroundColor: Colors.white,
@@ -360,6 +362,7 @@ class _SeleccionarLocWidgetState extends State<SeleccionarLocWidget> {
                                                                           getJsonField(
                                                                             dropDownProvinceallResponse.jsonBody,
                                                                             r'''$[*]''',
+                                                                            true,
                                                                           )!,
                                                                           _model
                                                                               .dropDownValue1)
@@ -492,6 +495,7 @@ class _SeleccionarLocWidgetState extends State<SeleccionarLocWidget> {
                                                                         dropDownMunicipalityallResponse
                                                                             .jsonBody,
                                                                         r'''$[*]''',
+                                                                        true,
                                                                       )!,
                                                                       FFAppState()
                                                                           .Province
@@ -514,6 +518,7 @@ class _SeleccionarLocWidgetState extends State<SeleccionarLocWidget> {
                                                                           getJsonField(
                                                                             dropDownMunicipalityallResponse.jsonBody,
                                                                             r'''$[*]''',
+                                                                            true,
                                                                           )!,
                                                                           _model
                                                                               .dropDownValue2)

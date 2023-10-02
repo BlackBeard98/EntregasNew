@@ -10,6 +10,4 @@ export '/principal/seleccionar_loc/seleccionar_loc_widget.dart'
     show SeleccionarLocWidget;
 export '/pedidos/pedidos_widget.dart' show PedidosWidget;
 export '/auth_reg/editar_peril/editar_peril_widget.dart' show EditarPerilWidget;
-export '/product6_jewelry_details/product6_jewelry_details_widget.dart'
-    show Product6JewelryDetailsWidget;
 export '/cuenta/direcciones/direcciones_widget.dart' show DireccionesWidget;

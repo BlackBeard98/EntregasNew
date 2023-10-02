@@ -6,6 +6,7 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:badges/badges.dart' as badges;
+import 'producto_v_iew_widget.dart' show ProductoVIewWidget;
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
@@ -13,7 +14,7 @@ import 'package:flutter_animate/flutter_animate.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
-class ProductoVIewModel extends FlutterFlowModel {
+class ProductoVIewModel extends FlutterFlowModel<ProductoVIewWidget> {
   ///  State fields for stateful widgets in this page.
 
   // State field(s) for Carousel widget.

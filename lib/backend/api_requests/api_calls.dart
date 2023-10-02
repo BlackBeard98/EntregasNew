@@ -2,7 +2,6 @@ import 'dart:convert';
 import 'dart:typed_data';
 
 import '../../flutter_flow/flutter_flow_util.dart';
-
 import 'api_manager.dart';
 
 export 'api_manager.dart' show ApiCallResponse;
@@ -54,7 +53,6 @@ class ProductallCall {
       apiUrl: '${ShopGroup.baseUrl}/product/all',
       callType: ApiCallType.POST,
       headers: {
-        ...ShopGroup.headers,
         'Authorization': 'Bearer ${authToken}',
       },
       params: {},
@@ -92,7 +90,6 @@ class CategoryallCall {
       apiUrl: '${ShopGroup.baseUrl}/category/all',
       callType: ApiCallType.POST,
       headers: {
-        ...ShopGroup.headers,
         'Authorization': 'Bearer ${authToken}',
       },
       params: {},
@@ -131,9 +128,7 @@ class ProveedorallCall {
       callName: 'proveedorall',
       apiUrl: '${ShopGroup.baseUrl}/provider/all',
       callType: ApiCallType.POST,
-      headers: {
-        ...ShopGroup.headers,
-      },
+      headers: {},
       params: {},
       body: ffApiRequestBody,
       bodyType: BodyType.JSON,
@@ -173,7 +168,6 @@ class ProvinceallCall {
       apiUrl: '${ShopGroup.baseUrl}/province/all',
       callType: ApiCallType.POST,
       headers: {
-        ...ShopGroup.headers,
         'Authorization': 'Bearer ${authToken}',
       },
       params: {},
@@ -213,7 +207,6 @@ class CartitemsaddproductCall {
       apiUrl: '${ShopGroup.baseUrl}/cart/items/add_product',
       callType: ApiCallType.POST,
       headers: {
-        ...ShopGroup.headers,
         'Authorization': 'Bearer ${authToken}',
       },
       params: {},
@@ -239,9 +232,7 @@ class CartCall {
       callName: 'cart',
       apiUrl: '${ShopGroup.baseUrl}/cart',
       callType: ApiCallType.POST,
-      headers: {
-        ...ShopGroup.headers,
-      },
+      headers: {},
       params: {},
       body: ffApiRequestBody,
       bodyType: BodyType.JSON,
@@ -263,7 +254,6 @@ class CartuserIdCall {
       apiUrl: '${ShopGroup.baseUrl}/cart/${userId}',
       callType: ApiCallType.GET,
       headers: {
-        ...ShopGroup.headers,
         'Authorization': 'Bearer ${authToken}',
       },
       params: {},
@@ -317,7 +307,6 @@ class CartitemscleancartIdCall {
       apiUrl: '${ShopGroup.baseUrl}/cart/items/clean/${cartId}',
       callType: ApiCallType.POST,
       headers: {
-        ...ShopGroup.headers,
         'Authorization': 'Bearer ${authToken}',
       },
       params: {},
@@ -348,7 +337,6 @@ class OrderCall {
       apiUrl: '${ShopGroup.baseUrl}/order',
       callType: ApiCallType.POST,
       headers: {
-        ...ShopGroup.headers,
         'Authorization': 'Bearer ${authToken}',
       },
       params: {},
@@ -376,9 +364,7 @@ class OrderallCall {
       callName: 'orderall',
       apiUrl: '${ShopGroup.baseUrl}/order/all',
       callType: ApiCallType.POST,
-      headers: {
-        ...ShopGroup.headers,
-      },
+      headers: {},
       params: {},
       body: ffApiRequestBody,
       bodyType: BodyType.JSON,
@@ -408,7 +394,6 @@ class OrderallmeCall {
       apiUrl: '${ShopGroup.baseUrl}/order/all/me',
       callType: ApiCallType.POST,
       headers: {
-        ...ShopGroup.headers,
         'Authorization': 'Bearer ${authToken}',
       },
       params: {},
@@ -432,7 +417,6 @@ class OrderidCall {
       apiUrl: '${ShopGroup.baseUrl}/order/${id}',
       callType: ApiCallType.GET,
       headers: {
-        ...ShopGroup.headers,
         'Authorization': 'Bearer ${authToken}',
       },
       params: {},
@@ -513,7 +497,6 @@ class MunicipalityallCall {
       apiUrl: '${ShopGroup.baseUrl}/municipality/all',
       callType: ApiCallType.POST,
       headers: {
-        ...ShopGroup.headers,
         'Authorization': 'Bearer ${authToken}',
       },
       params: {},
@@ -548,7 +531,6 @@ class ProductidCall {
       apiUrl: '${ShopGroup.baseUrl}/product/${id}',
       callType: ApiCallType.GET,
       headers: {
-        ...ShopGroup.headers,
         'Authorization': 'Bearer ${authToken}',
       },
       params: {},
@@ -570,7 +552,6 @@ class CartitemscostuserIdCall {
       apiUrl: '${ShopGroup.baseUrl}/cart/items/cost/${userId}',
       callType: ApiCallType.GET,
       headers: {
-        ...ShopGroup.headers,
         'Authorization': 'Bearer ${authToken}',
       },
       params: {},
@@ -611,9 +592,7 @@ class AuthCall {
       callName: 'auth',
       apiUrl: '${IdentityGroup.baseUrl}/auth',
       callType: ApiCallType.POST,
-      headers: {
-        ...IdentityGroup.headers,
-      },
+      headers: {},
       params: {},
       body: ffApiRequestBody,
       bodyType: BodyType.JSON,
@@ -681,7 +660,6 @@ class RegisterCall {
       apiUrl: '${IdentityGroup.baseUrl}/users/register',
       callType: ApiCallType.POST,
       headers: {
-        ...IdentityGroup.headers,
         'Authorization':
             'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJvb3RAbWFpbC5jb20iLCJfaWQiOiIyNDg2MTA1Yi1mYTIzLTRhNzEtYWI1MC1hODczN2UyNjZiOWMiLCJjbGFpbXMiOlsiU3VwZXJBY2Nlc3MiXSwiaWF0IjoxNjkzNDgxNDU1LCJleHAiOjE2OTQzNDU0NTV9.rzdj9s46cFogUGOwSJE6-FmwHu00ODMGi3fFpkuMUlQ',
       },
@@ -713,9 +691,7 @@ class UsersupdateidCall {
       callName: 'usersupdateid',
       apiUrl: '${IdentityGroup.baseUrl}/users/update/${id}',
       callType: ApiCallType.PUT,
-      headers: {
-        ...IdentityGroup.headers,
-      },
+      headers: {},
       params: {},
       body: ffApiRequestBody,
       bodyType: BodyType.JSON,
@@ -749,7 +725,6 @@ class UsersupdateusermeCall {
       apiUrl: '${IdentityGroup.baseUrl}/users/update/user/me',
       callType: ApiCallType.PUT,
       headers: {
-        ...IdentityGroup.headers,
         'Authorization': 'Bearer ${authToken}',
       },
       params: {},
@@ -800,7 +775,6 @@ class UsersupdateuserpasswordCall {
       apiUrl: '${IdentityGroup.baseUrl}/users/update/user/password',
       callType: ApiCallType.PUT,
       headers: {
-        ...IdentityGroup.headers,
         'Authorization': 'Bearer ${authToken}',
       },
       params: {},

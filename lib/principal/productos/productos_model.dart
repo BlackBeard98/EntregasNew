@@ -9,6 +9,7 @@ import '/flutter_flow/instant_timer.dart';
 import '/flutter_flow/custom_functions.dart' as functions;
 import 'dart:async';
 import 'package:badges/badges.dart' as badges;
+import 'productos_widget.dart' show ProductosWidget;
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
@@ -16,7 +17,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:infinite_scroll_pagination/infinite_scroll_pagination.dart';
 import 'package:provider/provider.dart';
 
-class ProductosModel extends FlutterFlowModel {
+class ProductosModel extends FlutterFlowModel<ProductosWidget> {
   ///  State fields for stateful widgets in this page.
 
   final unfocusNode = FocusNode();
@@ -143,6 +144,7 @@ class ProductosModel extends FlutterFlowModel {
                         getJsonField(
                           e,
                           r'''$.productMunicipality ''',
+                          true,
                         )!,
                         FFAppState().MunicipalityApp.id))
                     .toList() ??
